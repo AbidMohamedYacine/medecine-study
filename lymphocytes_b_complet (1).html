@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les Lymphocytes B — Édition Complète 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070b10;--surface:#0c1020;--card:#101624;--border:#192030;
+  --blue:#3b82f6;--blue2:#93c5fd;
+  --green:#10b981;--green2:#6ee7b7;
+  --violet:#8b5cf6;--violet2:#c4b5fd;
+  --rose:#f43f5e;--rose2:#fda4af;
+  --amber:#f59e0b;--amber2:#fde68a;
+  --teal:#14b8a6;--teal2:#5eead4;
+  --sky:#0ea5e9;--sky2:#7dd3fc;
+  --ok:#22c55e;--bad:#ef4444;--gold:#f59e0b;
+  --text:#dce5f5;--muted:#46526e;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;overflow-x:hidden;}
+
+/* HEADER */
+header{position:relative;padding:50px 44px 36px;overflow:hidden;border-bottom:1px solid var(--border);background:linear-gradient(135deg,#0b0f22 0%,var(--bg) 70%);}
+header::before{content:'';position:absolute;top:-120px;right:-100px;width:450px;height:450px;background:radial-gradient(circle,rgba(59,130,246,.12) 0%,transparent 70%);border-radius:50%;}
+header::after{content:'';position:absolute;bottom:-80px;left:20%;width:260px;height:260px;background:radial-gradient(circle,rgba(16,185,129,.07) 0%,transparent 70%);border-radius:50%;}
+.h-tag{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--blue2);font-weight:700;margin-bottom:12px;}
+header h1{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,52px);font-weight:900;line-height:1.1;color:#fff;}
+header h1 em{color:var(--blue2);font-style:normal;}
+.h-sub{margin-top:10px;font-size:13px;color:var(--muted);font-weight:300;max-width:620px;line-height:1.7;}
+.h-badges{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px;}
+.hb{font-size:11px;font-weight:700;letter-spacing:.8px;padding:5px 12px;border-radius:20px;}
+.hb1{background:rgba(59,130,246,.15);color:var(--blue2);border:1px solid rgba(59,130,246,.3);}
+.hb2{background:rgba(16,185,129,.12);color:var(--green2);border:1px solid rgba(16,185,129,.3);}
+.hb3{background:rgba(139,92,246,.12);color:var(--violet2);border:1px solid rgba(139,92,246,.3);}
+.hb4{background:rgba(244,63,94,.1);color:var(--rose2);border:1px solid rgba(244,63,94,.3);}
+.hb5{background:rgba(245,158,11,.1);color:var(--amber2);border:1px solid rgba(245,158,11,.3);}
+
+/* TABS */
+nav.tabs{display:flex;overflow-x:auto;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50;scrollbar-width:none;}
+nav.tabs::-webkit-scrollbar{display:none;}
+.tab{padding:13px 16px;font-size:12px;font-weight:700;color:var(--muted);cursor:pointer;white-space:nowrap;background:none;border:none;border-bottom:2px solid transparent;font-family:'Lato',sans-serif;transition:all .2s;}
+.tab:hover{color:var(--text);}
+.tab.active{color:#fff;border-bottom-color:var(--blue);}
+
+main{max-width:1100px;margin:0 auto;padding:36px 22px 90px;}
+.section{display:none;}
+.section.active{display:block;animation:up .3s ease both;}
+@keyframes up{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+
+.sec-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;margin-bottom:5px;color:#fff;}
+.sec-sub{font-size:13px;color:var(--muted);margin-bottom:24px;line-height:1.6;}
+
+/* CARDS */
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 24px;margin-bottom:16px;transition:border-color .2s;}
+.card:hover{border-color:rgba(59,130,246,.2);}
+.card-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#fff;margin-bottom:8px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.ctag{font-size:10px;font-weight:700;letter-spacing:1.5px;padding:3px 9px;border-radius:12px;font-family:'Lato',sans-serif;}
+.ct-b{background:rgba(59,130,246,.12);color:var(--blue2);border:1px solid rgba(59,130,246,.25);}
+.ct-g{background:rgba(16,185,129,.1);color:var(--green2);border:1px solid rgba(16,185,129,.25);}
+.ct-v{background:rgba(139,92,246,.12);color:var(--violet2);border:1px solid rgba(139,92,246,.25);}
+.ct-r{background:rgba(244,63,94,.1);color:var(--rose2);border:1px solid rgba(244,63,94,.25);}
+.ct-a{background:rgba(245,158,11,.1);color:var(--amber2);border:1px solid rgba(245,158,11,.25);}
+
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:11px;margin-top:11px;}
+@media(max-width:680px){.g2,.g3{grid-template-columns:1fr;}}
+.blk{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:15px 17px;}
+.blk-label{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;font-weight:700;}
+ul.li{list-style:none;}
+ul.li li{font-size:13px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:flex-start;gap:8px;line-height:1.55;}
+ul.li li:last-child{border-bottom:none;}
+ul.li li::before{content:'▸';font-size:9px;margin-top:3px;flex-shrink:0;color:var(--blue);}
+ul.li li.ok::before{color:var(--ok);}
+ul.li li.no::before{color:var(--bad);content:'✗';}
+ul.li li.warn::before{color:var(--gold);content:'⚡';}
+ul.li li b{color:#fff;}
+
+/* ALERTS */
+.alert{border-radius:10px;padding:12px 16px;font-size:13px;margin-top:10px;display:flex;gap:9px;align-items:flex-start;line-height:1.65;}
+.a-r{background:rgba(244,63,94,.08);border:1px solid rgba(244,63,94,.22);color:var(--rose2);}
+.a-g{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.22);color:var(--amber2);}
+.a-b{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.22);color:var(--blue2);}
+.a-e{background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.22);color:var(--green2);}
+.a-v{background:rgba(139,92,246,.08);border:1px solid rgba(139,92,246,.22);color:var(--violet2);}
+.ai{font-size:16px;flex-shrink:0;margin-top:1px;}
+
+/* TABLE */
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:12px;}
+.tbl th{padding:10px 12px;text-align:left;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;border-bottom:2px solid var(--border);}
+.tbl td{padding:9px 12px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5;}
+.tbl tr:last-child td{border-bottom:none;}
+.tbl tr:hover td{background:rgba(255,255,255,.02);}
+.tb{color:var(--blue2);font-weight:700;}.tg{color:var(--green2);font-weight:700;}
+.tv{color:var(--violet2);font-weight:700;}.tr{color:var(--rose2);font-weight:700;}
+.ta{color:var(--amber2);font-weight:700;}.tt{color:var(--teal2);font-weight:700;}
+
+/* DIAGRAM WRAPPER */
+.dw{background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:14px;padding:20px;margin:13px 0;overflow-x:auto;}
+.dt{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:14px;text-align:center;}
+
+/* SECTION BLOCKS */
+.zb{border-radius:12px;padding:15px 17px;margin-bottom:10px;border:1px solid;}
+.zb-b{background:rgba(59,130,246,.06);border-color:rgba(59,130,246,.2);}
+.zb-g{background:rgba(16,185,129,.06);border-color:rgba(16,185,129,.2);}
+.zb-v{background:rgba(139,92,246,.06);border-color:rgba(139,92,246,.2);}
+.zb-r{background:rgba(244,63,94,.06);border-color:rgba(244,63,94,.2);}
+.zb-a{background:rgba(245,158,11,.06);border-color:rgba(245,158,11,.2);}
+.zb-t{background:rgba(20,184,166,.06);border-color:rgba(20,184,166,.2);}
+.zt{font-weight:900;font-size:14px;margin-bottom:7px;}
+.zt-b{color:var(--blue2);}.zt-g{color:var(--green2);}.zt-v{color:var(--violet2);}
+.zt-r{color:var(--rose2);}.zt-a{color:var(--amber2);}.zt-t{color:var(--teal2);}
+
+/* ── MATURATION TIMELINE ── */
+.matura{display:flex;align-items:flex-start;overflow-x:auto;padding:8px 0 18px;gap:0;min-width:680px;}
+.mn{display:flex;flex-direction:column;align-items:center;min-width:104px;}
+.mn-c{width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;text-align:center;line-height:1.2;cursor:pointer;transition:transform .2s;flex-shrink:0;}
+.mn-c:hover{transform:scale(1.1);}
+.mn-l{font-size:10px;color:var(--muted);text-align:center;margin-top:6px;line-height:1.4;max-width:100px;}
+.mn-m{font-size:9px;color:rgba(255,255,255,.4);text-align:center;margin-top:3px;max-width:98px;line-height:1.3;}
+.mn-conn{display:flex;align-items:center;padding-top:21px;}
+.mn-line{height:2px;width:16px;background:linear-gradient(90deg,var(--blue),var(--green));}
+.mn-arr{color:var(--muted);font-size:10px;}
+/* circle colors */
+.mc1{background:rgba(59,130,246,.2);border:2px solid var(--blue);color:var(--blue2);}
+.mc2{background:rgba(20,184,166,.2);border:2px solid var(--teal);color:var(--teal2);}
+.mc3{background:rgba(139,92,246,.2);border:2px solid var(--violet);color:var(--violet2);}
+.mc4{background:rgba(245,158,11,.2);border:2px solid var(--amber);color:var(--amber2);}
+.mc5{background:rgba(16,185,129,.2);border:2px solid var(--green);color:var(--green2);}
+.mc6{background:rgba(59,130,246,.35);border:2px solid var(--blue2);color:#fff;}
+.mc7{background:rgba(244,63,94,.2);border:2px solid var(--rose);color:var(--rose2);}
+.mc8{background:rgba(245,158,11,.35);border:2px solid var(--amber2);color:#fff;}
+
+/* ── BCR SVG DIAGRAM ── */
+.bcr-wrap{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;padding:10px 0 18px;}
+
+/* ── SELECTION CARDS ── */
+.sel3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:12px;}
+@media(max-width:600px){.sel3{grid-template-columns:1fr;}}
+.sc{border-radius:10px;padding:14px;border:1px solid;text-align:center;}
+.sc-ok{background:rgba(16,185,129,.08);border-color:rgba(16,185,129,.25);}
+.sc-mort{background:rgba(244,63,94,.08);border-color:rgba(244,63,94,.25);}
+.sc-neg{background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.25);}
+
+/* ── CG diagram ── */
+.cg-wrap{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;justify-content:center;}
+.cg-zone{border-radius:12px;padding:16px;border:1px solid;flex:1;min-width:200px;}
+.cgz-s{background:rgba(59,130,246,.07);border-color:rgba(59,130,246,.25);}
+.cgz-c{background:rgba(16,185,129,.07);border-color:rgba(16,185,129,.25);}
+
+/* ── RESPONSE CHART ── */
+.resp-bars{display:flex;align-items:flex-end;gap:6px;height:130px;margin:14px 0 6px;}
+.rb{border-radius:3px 3px 0 0;display:flex;align-items:flex-end;justify-content:center;padding-bottom:3px;font-size:9px;font-weight:700;transition:height .4s;}
+.rbp{background:linear-gradient(to top,rgba(59,130,246,.7),rgba(59,130,246,.2));color:var(--blue2);}
+.rbs{background:linear-gradient(to top,rgba(16,185,129,.9),rgba(16,185,129,.2));color:var(--green2);}
+
+/* ── QCM ── */
+.qblock{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:12px;overflow:hidden;}
+.qhead{padding:15px 20px;font-size:13.5px;font-weight:700;color:#fff;line-height:1.5;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;user-select:none;}
+.qhead:hover{background:rgba(59,130,246,.05);}
+.qarr{font-size:11px;color:var(--muted);flex-shrink:0;margin-top:2px;transition:transform .2s;}
+.qblock.open .qarr{transform:rotate(180deg);}
+.qbody{display:none;padding:0 20px 17px;border-top:1px solid var(--border);}
+.qblock.open .qbody{display:block;}
+.qch{list-style:none;margin:11px 0 8px;}
+.qch li{padding:7px 12px;border-radius:8px;font-size:13px;margin-bottom:4px;border:1px solid var(--border);display:flex;gap:8px;align-items:flex-start;line-height:1.5;}
+.qch li.correct{background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.3);color:#bbf7d0;}
+.qch li.wrong{background:rgba(244,63,94,.07);border-color:rgba(244,63,94,.2);color:#fca5a5;}
+.qch li.neutral{background:rgba(255,255,255,.03);}
+.ql{font-weight:700;flex-shrink:0;width:17px;}
+.qexp{font-size:12.5px;color:#8896b0;line-height:1.65;padding:9px 12px;background:rgba(255,255,255,.03);border-radius:8px;border-left:2px solid var(--blue);}
+.src{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px;background:rgba(59,130,246,.14);color:var(--blue2);border:1px solid rgba(59,130,246,.25);vertical-align:middle;}
+
+/* ── RECAP ── */
+.recap{border-radius:14px;padding:22px 24px;margin-top:6px;background:linear-gradient(135deg,rgba(59,130,246,.09) 0%,rgba(16,185,129,.06) 100%);border:1px solid rgba(59,130,246,.22);}
+.recap h3{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:13px;}
+.rg{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;}
+.ri{background:rgba(255,255,255,.04);border-radius:9px;padding:12px 14px;border:1px solid rgba(255,255,255,.06);}
+.ri-l{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:700;}
+.ri-v{font-size:13px;line-height:1.6;}.ri-v b{color:#fff;}
+
+/* ══════════════════════════════════
+   CARTE DES CONNEXIONS (chronologique)
+   ══════════════════════════════════ */
+.cmap{display:flex;flex-direction:column;gap:0;position:relative;}
+/* vertical spine */
+.cmap::before{content:'';position:absolute;left:200px;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--blue),var(--green),var(--violet),var(--amber),var(--rose),var(--teal),var(--blue2));border-radius:3px;opacity:.25;}
+@media(max-width:620px){.cmap::before{left:30px;}}
+
+.cstep{display:flex;gap:0;align-items:stretch;position:relative;padding-bottom:30px;}
+.cstep:last-child{padding-bottom:0;}
+
+/* LEFT SIDE */
+.cleft{width:200px;flex-shrink:0;padding-right:20px;display:flex;flex-direction:column;align-items:flex-end;padding-top:4px;}
+@media(max-width:620px){.cleft{width:50px;padding-right:12px;}}
+.cnum{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:17px;font-weight:900;flex-shrink:0;margin-bottom:6px;position:relative;z-index:2;}
+.ctitle{font-family:'Playfair Display',serif;font-size:13px;font-weight:700;color:#fff;text-align:right;line-height:1.4;margin-bottom:3px;}
+.ctag2{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-align:right;}
+@media(max-width:620px){.ctitle,.ctag2{display:none;}}
+
+/* NODE dot on spine */
+.cnode{position:absolute;left:192px;top:8px;width:19px;height:19px;border-radius:50%;border:3px solid var(--bg);z-index:3;}
+@media(max-width:620px){.cnode{left:22px;}}
+
+/* RIGHT SIDE */
+.cright{flex:1;padding-left:28px;padding-top:4px;}
+@media(max-width:620px){.cright{padding-left:40px;}}
+.cbody{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:10px;}
+.cbody b,.cbody strong{color:var(--text);}
+.clink{background:rgba(255,255,255,.04);border-radius:8px;padding:10px 14px;font-size:12.5px;color:var(--muted);line-height:1.6;border-left:3px solid;margin-top:8px;}
+.clink b{color:var(--text);}
+.cwhy{font-size:12px;font-weight:700;letter-spacing:.5px;margin-bottom:4px;}
+
+/* step color vars */
+.cs1-n{background:rgba(59,130,246,.25);border:2px solid var(--blue);color:var(--blue2);}
+.cs1-d{border-color:rgba(59,130,246,.6);background:var(--blue);}
+.cs1-c{border-color:rgba(59,130,246,.5);}
+.cs2-n{background:rgba(20,184,166,.25);border:2px solid var(--teal);color:var(--teal2);}
+.cs2-d{background:var(--teal);}
+.cs2-c{border-color:rgba(20,184,166,.5);}
+.cs3-n{background:rgba(139,92,246,.25);border:2px solid var(--violet);color:var(--violet2);}
+.cs3-d{background:var(--violet);}
+.cs3-c{border-color:rgba(139,92,246,.5);}
+.cs4-n{background:rgba(245,158,11,.25);border:2px solid var(--amber);color:var(--amber2);}
+.cs4-d{background:var(--amber);}
+.cs4-c{border-color:rgba(245,158,11,.5);}
+.cs5-n{background:rgba(16,185,129,.25);border:2px solid var(--green);color:var(--green2);}
+.cs5-d{background:var(--green);}
+.cs5-c{border-color:rgba(16,185,129,.5);}
+.cs6-n{background:rgba(244,63,94,.25);border:2px solid var(--rose);color:var(--rose2);}
+.cs6-d{background:var(--rose);}
+.cs6-c{border-color:rgba(244,63,94,.5);}
+.cs7-n{background:rgba(59,130,246,.35);border:2px solid var(--blue2);color:#fff;}
+.cs7-d{background:var(--blue2);}
+.cs7-c{border-color:rgba(59,130,246,.7);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="h-tag">2ème Année Médecine · Oran · 2026 · PPTX + PDF Combined</div>
+  <h1>Les <em>Lymphocytes B</em><br>& le BCR</h1>
+  <p class="h-sub">Cours complet PPTX (cours) + PDF (Ferdj Khadidja / Fouathia Z) · Ontogénèse, BCR, Sélections, Sous-populations, Centre Germinatif, Réponses Primaire/Secondaire · Carte des Connexions Chronologique · QCM des EMD.</p>
+  <div class="h-badges">
+    <span class="hb hb1">22 QCM aux EMD</span>
+    <span class="hb hb2">BCR & Marqueurs</span>
+    <span class="hb hb3">Centre Germinatif</span>
+    <span class="hb hb4">Sélections</span>
+    <span class="hb hb5">🗺️ Carte Connexions</span>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab active" onclick="show('intro',this)">🧩 Introduction</button>
+  <button class="tab" onclick="show('ontogenese',this)">🧬 Ontogénèse</button>
+  <button class="tab" onclick="show('stades',this)">📊 Stades Détaillés</button>
+  <button class="tab" onclick="show('selection',this)">✅ Sélections</button>
+  <button class="tab" onclick="show('subpop',this)">🌈 Sous-pop B1/B2</button>
+  <button class="tab" onclick="show('bcr',this)">🔬 BCR & Marqueurs</button>
+  <button class="tab" onclick="show('activation',this)">⚡ Activation</button>
+  <button class="tab" onclick="show('cg',this)">🔴 Centre Germinatif</button>
+  <button class="tab" onclick="show('reponse',this)">📈 Réponses</button>
+  <button class="tab" onclick="show('connexions',this)">🗺️ Connexions</button>
+  <button class="tab" onclick="show('qcm',this)">📝 QCM Corrigés</button>
+  <button class="tab" onclick="show('recap',this)">✅ Récap EMD</button>
+</nav>
+
+<main>
+
+<!-- ═══ INTRODUCTION ═══ -->
+<div class="section active" id="intro">
+  <div class="sec-title">Les Lymphocytes B — Vue d'Ensemble</div>
+  <p class="sec-sub">Les LB = cellules de l'immunité humorale adaptative. Elles produisent les Ac contre les pathogènes extracellulaires et reconnaissent l'Ag à l'état natif.</p>
+
+  <div class="g3">
+    <div style="background:rgba(59,130,246,.07);border:1px solid rgba(59,130,246,.2);border-radius:12px;padding:18px;text-align:center;">
+      <div style="font-size:30px;margin-bottom:8px;">🩸</div>
+      <div style="font-weight:900;color:var(--blue2);font-size:14px;margin-bottom:5px;">Représentation</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.6;"><b style="color:#fff">10–15%</b> des lymphocytes circulants.<br>Moins nombreux que les LT (70%).</div>
+    </div>
+    <div style="background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.2);border-radius:12px;padding:18px;text-align:center;">
+      <div style="font-size:30px;margin-bottom:8px;">🎯</div>
+      <div style="font-weight:900;color:var(--green2);font-size:14px;margin-bottom:5px;">Rôle Clé</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.6;">Support de l'<b style="color:#fff">immunité humorale adaptative</b>. Lutte contre pathogènes à multiplication <b style="color:#fff">EXTRACELLULAIRE</b>.</div>
+    </div>
+    <div style="background:rgba(139,92,246,.07);border:1px solid rgba(139,92,246,.2);border-radius:12px;padding:18px;text-align:center;">
+      <div style="font-size:30px;margin-bottom:8px;">💊</div>
+      <div style="font-weight:900;color:var(--violet2);font-size:14px;margin-bottom:5px;">Produits</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.6;">Ig <b style="color:#fff">solubles</b> (Anticorps) via plasmocytes.<br>Ig <b style="color:#fff">membranaires</b> (BCR).</div>
+    </div>
+  </div>
+
+  <div class="dw" style="margin-top:18px;">
+    <div class="dt">2 Grandes Phases de la Vie d'un LB</div>
+    <div class="g2">
+      <div style="background:rgba(59,130,246,.06);border:1px solid rgba(59,130,246,.22);border-radius:12px;padding:16px;">
+        <div style="font-weight:900;color:var(--blue2);font-size:14px;margin-bottom:8px;">🧬 Phase INDÉPENDANTE de l'Ag = Lymphopoïèse</div>
+        <ul class="li">
+          <li>Lieu : sac vitellin → foie fœtal → moelle osseuse</li>
+          <li>Objectif : construire un répertoire B fonctionnel et tolérant au soi</li>
+          <li>Stades : Pro-B → Pré-B → B immature → B transitionnel</li>
+          <li>Résultat : LB mature naïf (<b>IgM + IgD</b> de surface)</li>
+          <li class="warn">75% des LB meurent par apoptose à ce stade</li>
+        </ul>
+      </div>
+      <div style="background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.22);border-radius:12px;padding:16px;">
+        <div style="font-weight:900;color:var(--green2);font-size:14px;margin-bottom:8px;">⚡ Phase DÉPENDANTE de l'Ag = Immunopoïèse</div>
+        <ul class="li">
+          <li>Lieu : organes lymphoïdes secondaires (rate, ganglions)</li>
+          <li>Objectif : répondre à l'Ag → effecteurs + mémoire</li>
+          <li>Événements : centre germinatif, switch, hypermutation</li>
+          <li>Résultat : Plasmocytes (Ac haute affinité) + LB mémoires</li>
+          <li class="ok">Base de la vaccination et protection durable</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⚖️ Différence Fondamentale LT vs LB <span class="ctag ct-r">PIÈGE EMD</span></div>
+    <div class="g2">
+      <div class="zb zb-v" style="margin-bottom:0;">
+        <div class="zt zt-v">🔵 Lymphocyte T (TCR)</div>
+        <ul class="li">
+          <li>Reconnaît un <b>peptide fragmenté (processing)</b></li>
+          <li>Toujours présenté par une <b>molécule HLA</b> sur une CPA</li>
+          <li>Ne reconnaît <b>PAS</b> l'Ag natif</li>
+          <li>Ne reconnaît <b>PAS</b> les polysaccharides</li>
+          <li>Épitope séquentiel (linéaire) uniquement</li>
+        </ul>
+      </div>
+      <div class="zb zb-b" style="margin-bottom:0;">
+        <div class="zt zt-b">🟢 Lymphocyte B (BCR)</div>
+        <ul class="li">
+          <li>Reconnaît l'Ag à l'état <b>natif (sans processing)</b></li>
+          <li><b>Sans restriction HLA</b> (directement via BCR)</li>
+          <li>Reconnaît les protéines solubles, les virus, les polysaccharides</li>
+          <li>Épitopes séquentiels ET conformationnels</li>
+          <li class="ok">Reconnaît aussi des Ag non protéiques (haptènes + porteur)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ONTOGÉNÈSE ═══ -->
+<div class="section" id="ontogenese">
+  <div class="sec-title">Ontogénèse des Lymphocytes B</div>
+  <p class="sec-sub">De la CSH jusqu'au LB mature naïf — sites de développement, dates fœtales, et hématopoïèse.</p>
+
+  <div class="card">
+    <div class="card-title">📍 Sites de Développement selon l'Âge</div>
+    <div class="g2">
+      <div class="zb zb-b" style="margin-bottom:0;">
+        <div class="zt zt-b">🤰 Foie Fœtal (vie fœtale)</div>
+        <ul class="li">
+          <li>Site principal pendant la vie fœtale</li>
+          <li>Cellules <b>pré-B</b> : <b>8ème semaine</b> de gestation</li>
+          <li>Cellules B <b>immatures</b> : <b>9ème semaine</b> de gestation</li>
+          <li>Cellules B <b>matures</b> : <b>12ème semaine</b> de gestation</li>
+        </ul>
+      </div>
+      <div class="zb zb-g" style="margin-bottom:0;">
+        <div class="zt zt-g">🦴 Moelle Osseuse (vie adulte)</div>
+        <ul class="li">
+          <li>Prend le relai en <b>milieu de gestation</b></li>
+          <li>Continue toute la <b>vie adulte</b></li>
+          <li>75% des LB en différenciation <b>meurent par apoptose</b></li>
+          <li>Cellules stromales = rôle de sélection + support de survie</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="dw">
+    <div class="dt">Timeline de Maturation — De la CSH au Plasmocyte</div>
+    <div class="matura">
+      <div class="mn"><div class="mn-c mc1">CLP</div><div class="mn-l"><b>Progéniteur Lymphoïde Commun</b></div><div class="mn-m">CD34+<br>CD10+</div></div>
+      <div class="mn-conn"><div class="mn-line"></div><div class="mn-arr">→</div></div>
+      <div class="mn"><div class="mn-c mc2">Pro-B</div><div class="mn-l"><b>Pro-B</b><br>MO</div><div class="mn-m">CD19+<br>CD10+<br>TdT+ RAG+</div></div>
+      <div class="mn-conn"><div class="mn-line"></div><div class="mn-arr">→</div></div>
+      <div class="mn"><div class="mn-c mc3" style="font-size:9px;">Pré-B<br>Large</div><div class="mn-l"><b>Pré-B Large</b><br>MO</div><div class="mn-m">Cμ+ SLC+<br>CD20+ CD22+<br>pré-BCR</div></div>
+      <div class="mn-conn"><div class="mn-line"></div><div class="mn-arr">→</div></div>
+      <div class="mn"><div class="mn-c mc3" style="font-size:9px;">Pré-B<br>Small</div><div class="mn-l"><b>Pré-B Small</b><br>MO</div><div class="mn-m">Cμ+ SLC−<br>RAG+ réarr. L</div></div>
+      <div class="mn-conn"><div class="mn-line"></div><div class="mn-arr">→</div></div>
+      <div class="mn"><div class="mn-c mc4">B imm.</div><div class="mn-l"><b>B Immature</b><br>MO→Rate</div><div class="mn-m">IgM+ surface<br>Sélec. négative</div></div>
+      <div class="mn-conn"><div class="mn-line"></div><div class="mn-arr">→</div></div>
+      <div class="mn"><div class="mn-c mc5" style="font-size:9px;">B Trans.</div><div class="mn-l"><b>B Transitionnel</b><br>Rate T1→T2</div><div class="mn-m">IgM+<br>IgD ±<br>CD21± CD23±</div></div>
+      <div class="mn-conn"><div class="mn-line"></div><div class="mn-arr">→</div></div>
+      <div class="mn"><div class="mn-c mc6">B mat.</div><div class="mn-l"><b>B Mature Naïf</b><br>OLS</div><div class="mn-m">IgM+IgD+<br>CD21+ CD23+<br>Follicules 1°</div></div>
+      <div class="mn-conn"><div class="mn-line" style="background:var(--rose);"></div><div class="mn-arr" style="color:var(--rose);">→</div></div>
+      <div class="mn"><div class="mn-c mc8">Plas.</div><div class="mn-l"><b>Plasmocyte</b><br>MO/OLS</div><div class="mn-m">CD138+<br>IgG/IgA/IgE<br>Perd CD19</div></div>
+    </div>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+      <div style="background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);border-radius:7px;padding:7px 14px;font-size:11px;color:var(--blue2);font-weight:700;">🧬 LYMPHOPOÏÈSE (indép. Ag) — Moelle Osseuse</div>
+      <div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.2);border-radius:7px;padding:7px 14px;font-size:11px;color:var(--green2);font-weight:700;">⚡ IMMUNOPOÏÈSE (dépt. Ag) — OLS</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ STADES ═══ -->
+<div class="section" id="stades">
+  <div class="sec-title">Stades Détaillés de Maturation</div>
+  <p class="sec-sub">Chaque stade avec phénotype, marqueurs et événements génétiques — les marqueurs sont très testés aux EMD.</p>
+
+  <div class="card">
+    <div class="card-title">📋 Tableau Complet des Stades</div>
+    <div style="overflow-x:auto;">
+    <table class="tbl">
+      <thead><tr>
+        <th class="tb">Stade</th><th class="tg">Lieu</th>
+        <th class="tv">Phénotype Clé</th>
+        <th class="ta">Événement Majeur</th>
+        <th class="tr">Contrôle</th>
+      </tr></thead>
+      <tbody>
+        <tr><td><b>Pro-B</b></td><td>MO</td><td>CD19+ CD10+<br>TdT+ RAG+<br>CD79a/CD79b</td><td>Gènes Ig en configuration germinale. <b>CD19 = 1er marqueur B.</b> Début réarrangement D-J de la chaine H</td><td>—</td></tr>
+        <tr><td><b>Pré-B Large</b></td><td>MO</td><td>Cμ+ SLC+<br>CD19+ CD20+ CD22+<br>TdT− RAG−</td><td>Réarrangement V-DJ complet. Expression Cμ + SLC = <b>pré-BCR</b> de surface. Expansion clonale. Apparition CD20, CD22</td><td>✅ Sélection + (pré-BCR fonctionnel ?)</td></tr>
+        <tr><td><b>Pré-B Small</b></td><td>MO</td><td>Cμ+ SLC−<br>CD19+ CD20+<br>RAG+</td><td>Arrêt réarrangement chaine H. Réarrangement gènes chaine légère κ puis λ</td><td>—</td></tr>
+        <tr><td><b>B Immature</b></td><td>MO</td><td>IgM+ surface<br>CD10+ CD19+ CD20+</td><td>BCR complet (IgM membranaire + Igα/Igβ). Test contre Ag du soi</td><td>✅ Sélection − (clones autoréactifs éliminés)</td></tr>
+        <tr><td><b>B Transitionnel T1</b></td><td>Rate</td><td>IgM↑↑ IgD−<br>CD21faible CD23+</td><td>Arrivée dans la Rate. Tolérance périphérique</td><td>Tolérance périphérique</td></tr>
+        <tr><td><b>B Transitionnel T2</b></td><td>Rate</td><td>IgM↑↑ IgD+<br>CD21↑ CD23faible</td><td>Acquisition IgD de surface → LB mature. Choix LB folliculaire ou LB ZM</td><td>—</td></tr>
+        <tr><td><b>B Mature Naïf</b></td><td>Rate+OLS</td><td><b>IgM+ IgD+</b><br>CD21+ CD23+<br>CD19+ CD20+ CD40+</td><td>LB naïf fonctionnel. Colonise follicules primaires des OLS. Prêt pour rencontrer l'Ag</td><td>—</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="alert a-g">
+      <span class="ai">📌</span>
+      <span><b>Points clés :</b> CD19 = 1er marqueur B (Pro-B), disparaît au plasmocyte. CD20 apparaît au stade Pré-B Large. CD21+CD23 = stade B mature. LB mature = <b>IgM+IgD co-exprimées</b> (même idiotype, même spécificité).</span>
+    </div>
+  </div>
+
+  <div class="g2">
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-title">🔬 Le Pré-BCR</div>
+      <ul class="li" style="margin-top:8px;">
+        <li>Formé au stade <b>Pré-B Large</b></li>
+        <li>Composé : chaine lourde <b>μ</b> + SLC (VpreB + λ5)</li>
+        <li>Rôles : différenciation et prolifération pré-B</li>
+        <li>Arrête les réarrangements de la chaine H (<b>exclusion allélique</b>)</li>
+        <li>Induit le réarrangement de la chaine légère</li>
+        <li class="ok">Si fonctionnel → signal de survie → maturation continue</li>
+        <li class="no">Si non fonctionnel → apoptose</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-title">🔑 Exclusion Allélique</div>
+      <ul class="li" style="margin-top:8px;">
+        <li><b>Chaines lourdes :</b> réarrangement productif sur un Chr 14 → inhibe le 2ème Chr 14</li>
+        <li><b>Chaines légères :</b> κ d'abord (Chr 2) → si productif, inhibe le 2ème κ ET les 2 allèles λ (Chr 22)</li>
+        <li>Résultat : <b>un seul BCR par LB</b> = une seule spécificité</li>
+        <li>Si κ échoue → tentative λ</li>
+        <li class="warn">~60% LB expriment κ, ~40% expriment λ</li>
+      </ul>
+      <div class="alert a-b" style="margin-top:8px;">
+        <span class="ai">💡</span>
+        <span>L'exclusion allélique est indispensable à la monoréactivité du LB. Chaque LB ne produit qu'un seul type d'Ac avec une seule spécificité.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SÉLECTIONS ═══ -->
+<div class="section" id="selection">
+  <div class="sec-title">Les Sélections Centrale et Périphérique</div>
+  <p class="sec-sub">La tolérance B se construit en 2 étapes. 75% des LB ne franchissent pas ces étapes.</p>
+
+  <div class="card">
+    <div class="card-title">🧪 Sélection Centrale — Moelle Osseuse (Stade B Immature)</div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:12px;line-height:1.6;">Les cellules stromales de la MO expriment les Ag du soi sur les molécules du CMH (comme les DC dans le thymus). Les LB immatures testent leur BCR contre ces Ag. 3 cas :</p>
+    <div class="sel3">
+      <div class="sc sc-mort">
+        <div style="font-size:22px;margin-bottom:7px;">💀</div>
+        <div style="font-weight:900;color:var(--rose2);font-size:13px;margin-bottom:5px;">Forte Affinité</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.5;">BCR reconnaît le soi fortement → signal de mort → <b style="color:#fff">apoptose</b> (clones auto-réactifs dangereux)</div>
+      </div>
+      <div class="sc sc-ok">
+        <div style="font-size:22px;margin-bottom:7px;">✅</div>
+        <div style="font-weight:900;color:var(--green2);font-size:13px;margin-bottom:5px;">Faible Affinité</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.5;">BCR reconnaît le soi faiblement → <b style="color:#fff">acceptable → survie</b> → continue la maturation</div>
+      </div>
+      <div class="sc sc-neg">
+        <div style="font-size:22px;margin-bottom:7px;">💀</div>
+        <div style="font-weight:900;color:var(--amber2);font-size:13px;margin-bottom:5px;">Pas d'Interaction</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.5;">BCR ne reconnaît rien → pas de signal de survie → <b style="color:#fff">mort par négligence</b></div>
+      </div>
+    </div>
+    <div class="alert a-r" style="margin-top:12px;">
+      <span class="ai">⚠️</span>
+      <span><b>Important (PDF Ferdj/Fouathia) :</b> Les LB auto-réactifs avec haute affinité peuvent aussi subir un <b>receptor editing</b> = réarrangement d'une nouvelle chaine légère pour changer la spécificité, plutôt que mourir directement. Mécanisme de "seconde chance" avant la délétion.</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🌟 Sélection Périphérique — Rate (T1 → T2 → B Mature)</div>
+    <div style="overflow-x:auto;">
+    <table class="tbl">
+      <thead><tr>
+        <th class="tb">Stade</th><th class="tg">IgM</th><th class="tv">IgD</th>
+        <th class="ta">CD21</th><th class="tr">CD23</th><th style="color:var(--muted);">Destin</th>
+      </tr></thead>
+      <tbody>
+        <tr><td><b>B Immature (MO)</b></td><td>↑↑↑</td><td>—</td><td>—</td><td>—</td><td>Quitte la MO → Rate</td></tr>
+        <tr><td><b>T1 (Rate)</b></td><td>↑↑↑</td><td>Faible</td><td>Faible</td><td>↑↑</td><td>Tolérance périphérique (élimination supplémentaire)</td></tr>
+        <tr><td><b>T2 (Rate)</b></td><td>↑↑↑</td><td>↑↑</td><td>↑↑↑</td><td>Faible</td><td>→ LB Folliculaire ou LB Zone Marginale</td></tr>
+        <tr><td><b>LB Mature Folliculaire</b></td><td>+</td><td>+</td><td>+</td><td>+</td><td>Colonise follicules primaires des OLS</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.6;">Seulement <b style="color:#fff">10-20%</b> des LB immatures rejoignent la rate. Seulement <b style="color:#fff">5-10%</b> deviendront LB naïfs matures. La sélection périphérique réduit de 50% le nombre de cellules autoréactives.</p>
+  </div>
+</div>
+
+<!-- ═══ SOUS-POPULATIONS ═══ -->
+<div class="section" id="subpop">
+  <div class="sec-title">Sous-populations B1 et B2</div>
+  <p class="sec-sub">3 sous-populations principales — B1a, B1b et B2 (folliculaires + zone marginale). Différentes par origine, phénotype, localisation et fonction.</p>
+
+  <div class="g2">
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-title">🔵 LB B1 — "Innate-like" (5%)</div>
+      <div class="zb zb-b" style="margin-top:8px;margin-bottom:8px;">
+        <div class="zt zt-b">Caractéristiques</div>
+        <ul class="li">
+          <li><b>Origine :</b> fœtale (population qui s'auto-renouvelle)</li>
+          <li><b>Localisation :</b> cavités séreuses (pleurales et péritonéales)</li>
+          <li><b>Phénotype :</b> IgM↑↑↑, IgD faible, CD11b+</li>
+          <li>~5% de la population totale des LB</li>
+        </ul>
+      </div>
+      <ul class="li">
+        <li class="warn"><b>B1a :</b> Ac naturels (IgM polyréactives, anti-phosphorylcholine)</li>
+        <li class="warn"><b>B1b :</b> Ac contre les Ag thymo-indépendants (polysaccharides bactériens)</li>
+        <li class="no">Pas de mémoire immunologique classique</li>
+        <li class="no">Pas de centre germinatif</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-title">🟢 LB B2 — Conventionnels</div>
+      <div class="zb zb-g" style="margin-top:8px;margin-bottom:8px;">
+        <div class="zt zt-g">LB Folliculaires (majorité)</div>
+        <ul class="li">
+          <li>Réponse aux Ag thymo-<b>dépendants</b> (protéines)</li>
+          <li>Formation des centres germinatifs</li>
+          <li>Précurseurs des <b>LB mémoires et plasmocytes</b></li>
+          <li>Localisation : follicules des OLS</li>
+        </ul>
+      </div>
+      <div class="zb zb-t" style="margin-bottom:0;">
+        <div class="zt zt-t">LB Zone Marginale (ZM)</div>
+        <ul class="li">
+          <li>Réponse aux polysaccharides bactériens capsulaires</li>
+          <li>Phénotype : IgM↑, IgD−, CD27+</li>
+          <li>Localisation : limite pulpe blanche de la rate</li>
+          <li>Présence d'hypermutations somatiques (homme)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ BCR & MARQUEURS ═══ -->
+<div class="section" id="bcr">
+  <div class="sec-title">BCR et Marqueurs de Surface</div>
+  <p class="sec-sub">Le BCR = marqueur le plus spécifique de la lignée B. Structure et molécules accessoires — les plus testées aux EMD.</p>
+
+  <!-- BCR SVG DIAGRAM -->
+  <div class="dw">
+    <div class="dt">Structure du Complexe BCR — IgM Membranaire + CD79a/CD79b (ITAM)</div>
+    <div class="bcr-wrap">
+      <div>
+        <svg viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:280px;height:auto;">
+          <!-- LIGHT CHAINS -->
+          <rect x="20" y="15" width="42" height="36" rx="6" fill="rgba(245,158,11,.2)" stroke="rgba(245,158,11,.5)" stroke-width="1.5"/>
+          <text x="41" y="37" text-anchor="middle" fill="#fde68a" font-size="9" font-weight="700">VL</text>
+          <rect x="20" y="53" width="42" height="36" rx="6" fill="rgba(245,158,11,.15)" stroke="rgba(245,158,11,.4)" stroke-width="1.5"/>
+          <text x="41" y="75" text-anchor="middle" fill="#fde68a" font-size="9" font-weight="700">CL</text>
+          <text x="41" y="100" text-anchor="middle" fill="rgba(253,230,138,.5)" font-size="8">Chaine légère (L)</text>
+
+          <rect x="238" y="15" width="42" height="36" rx="6" fill="rgba(245,158,11,.2)" stroke="rgba(245,158,11,.5)" stroke-width="1.5"/>
+          <text x="259" y="37" text-anchor="middle" fill="#fde68a" font-size="9" font-weight="700">VL</text>
+          <rect x="238" y="53" width="42" height="36" rx="6" fill="rgba(245,158,11,.15)" stroke="rgba(245,158,11,.4)" stroke-width="1.5"/>
+          <text x="259" y="75" text-anchor="middle" fill="#fde68a" font-size="9" font-weight="700">CL</text>
+          <text x="259" y="100" text-anchor="middle" fill="rgba(253,230,138,.5)" font-size="8">Chaine légère (L)</text>
+
+          <!-- HEAVY CHAINS upper -->
+          <rect x="66" y="15" width="44" height="36" rx="6" fill="rgba(59,130,246,.25)" stroke="rgba(59,130,246,.5)" stroke-width="1.5"/>
+          <text x="88" y="37" text-anchor="middle" fill="#93c5fd" font-size="9" font-weight="700">VH</text>
+          <rect x="66" y="53" width="44" height="36" rx="6" fill="rgba(59,130,246,.2)" stroke="rgba(59,130,246,.4)" stroke-width="1.5"/>
+          <text x="88" y="75" text-anchor="middle" fill="#93c5fd" font-size="9" font-weight="700">CH1</text>
+          <text x="88" y="100" text-anchor="middle" fill="rgba(147,197,253,.5)" font-size="8">Chaine lourde (H)</text>
+
+          <rect x="190" y="15" width="44" height="36" rx="6" fill="rgba(59,130,246,.25)" stroke="rgba(59,130,246,.5)" stroke-width="1.5"/>
+          <text x="212" y="37" text-anchor="middle" fill="#93c5fd" font-size="9" font-weight="700">VH</text>
+          <rect x="190" y="53" width="44" height="36" rx="6" fill="rgba(59,130,246,.2)" stroke="rgba(59,130,246,.4)" stroke-width="1.5"/>
+          <text x="212" y="75" text-anchor="middle" fill="#93c5fd" font-size="9" font-weight="700">CH1</text>
+          <text x="212" y="100" text-anchor="middle" fill="rgba(147,197,253,.5)" font-size="8">Chaine lourde (H)</text>
+
+          <!-- PARATOPE label -->
+          <rect x="18" y="11" width="96" height="46" rx="5" fill="rgba(245,158,11,.07)" stroke="rgba(245,158,11,.35)" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="66" y="8" text-anchor="middle" fill="#fde68a" font-size="9" font-weight="700">Paratope (VH+VL)</text>
+          <rect x="186" y="11" width="96" height="46" rx="5" fill="rgba(245,158,11,.07)" stroke="rgba(245,158,11,.35)" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="234" y="8" text-anchor="middle" fill="#fde68a" font-size="9" font-weight="700">Paratope (VH+VL)</text>
+
+          <!-- Heavy chain lower -->
+          <rect x="110" y="110" width="44" height="36" rx="6" fill="rgba(59,130,246,.2)" stroke="rgba(59,130,246,.4)" stroke-width="1.5"/>
+          <text x="132" y="132" text-anchor="middle" fill="#93c5fd" font-size="9" font-weight="700">CH2</text>
+          <rect x="146" y="110" width="44" height="36" rx="6" fill="rgba(59,130,246,.2)" stroke="rgba(59,130,246,.4)" stroke-width="1.5"/>
+          <text x="168" y="132" text-anchor="middle" fill="#93c5fd" font-size="9" font-weight="700">CH2</text>
+          <rect x="110" y="148" width="44" height="36" rx="6" fill="rgba(59,130,246,.2)" stroke="rgba(59,130,246,.4)" stroke-width="1.5"/>
+          <text x="132" y="170" text-anchor="middle" fill="#93c5fd" font-size="9" font-weight="700">CH3</text>
+          <rect x="146" y="148" width="44" height="36" rx="6" fill="rgba(59,130,246,.2)" stroke="rgba(59,130,246,.4)" stroke-width="1.5"/>
+          <text x="168" y="170" text-anchor="middle" fill="#93c5fd" font-size="9" font-weight="700">CH3</text>
+
+          <!-- Transmembrane -->
+          <rect x="115" y="186" width="35" height="22" rx="4" fill="rgba(244,63,94,.25)" stroke="rgba(244,63,94,.5)" stroke-width="1.5"/>
+          <text x="132" y="201" text-anchor="middle" fill="#fda4af" font-size="8">TM</text>
+          <rect x="150" y="186" width="35" height="22" rx="4" fill="rgba(244,63,94,.25)" stroke="rgba(244,63,94,.5)" stroke-width="1.5"/>
+          <text x="167" y="201" text-anchor="middle" fill="#fda4af" font-size="8">TM</text>
+
+          <!-- MEMBRANE LINE -->
+          <rect x="5" y="208" width="290" height="14" rx="3" fill="rgba(255,255,255,.06)" stroke="var(--border)" stroke-width="1"/>
+          <text x="150" y="219" text-anchor="middle" fill="rgba(255,255,255,.25)" font-size="8">MEMBRANE CELLULAIRE</text>
+
+          <!-- CD79a CD79b -->
+          <rect x="62" y="222" width="30" height="50" rx="7" fill="rgba(16,185,129,.2)" stroke="rgba(16,185,129,.5)" stroke-width="1.5"/>
+          <text x="77" y="248" text-anchor="middle" fill="#6ee7b7" font-size="9" font-weight="700">Igβ</text>
+          <text x="77" y="260" text-anchor="middle" fill="#6ee7b7" font-size="8">CD79b</text>
+          <rect x="77" y="265" width="30" height="22" rx="5" fill="rgba(16,185,129,.3)" stroke="rgba(16,185,129,.6)" stroke-width="1.5"/>
+          <text x="92" y="280" text-anchor="middle" fill="#6ee7b7" font-size="8" font-weight="700">ITAM</text>
+
+          <rect x="208" y="222" width="30" height="50" rx="7" fill="rgba(16,185,129,.2)" stroke="rgba(16,185,129,.5)" stroke-width="1.5"/>
+          <text x="223" y="248" text-anchor="middle" fill="#6ee7b7" font-size="9" font-weight="700">Igα</text>
+          <text x="223" y="260" text-anchor="middle" fill="#6ee7b7" font-size="8">CD79a</text>
+          <rect x="208" y="265" width="30" height="22" rx="5" fill="rgba(16,185,129,.3)" stroke="rgba(16,185,129,.6)" stroke-width="1.5"/>
+          <text x="223" y="280" text-anchor="middle" fill="#6ee7b7" font-size="8" font-weight="700">ITAM</text>
+
+          <!-- Labels -->
+          <text x="150" y="310" text-anchor="middle" fill="var(--blue2)" font-size="10" font-weight="700">Module Reconnaissance</text>
+          <text x="150" y="324" text-anchor="middle" fill="#fda4af" font-size="9">IgM membranaire (VH+CH1+CH2+CH3+TM)</text>
+
+          <text x="77" y="300" text-anchor="middle" fill="var(--green2)" font-size="9" font-weight="700">Module Transduction</text>
+          <text x="223" y="300" text-anchor="middle" fill="var(--green2)" font-size="9" font-weight="700">Module Transduction</text>
+          <!-- S-S bridge indicator -->
+          <line x1="92" y1="255" x2="208" y2="255" stroke="rgba(16,185,129,.4)" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <text x="150" y="251" text-anchor="middle" fill="rgba(110,231,183,.4)" font-size="8">S—S</text>
+        </svg>
+      </div>
+      <!-- LEGEND -->
+      <div style="max-width:230px;display:flex;flex-direction:column;gap:8px;justify-content:center;">
+        <div style="font-size:13px;font-weight:700;color:#fff;margin-bottom:4px;">Légende</div>
+        <div style="display:flex;align-items:center;gap:8px;"><div style="width:13px;height:13px;background:rgba(245,158,11,.4);border:1px solid rgba(245,158,11,.6);border-radius:3px;flex-shrink:0;"></div><div style="font-size:12px;color:var(--muted);"><b style="color:var(--amber2);">Chaines légères (VL+CL)</b> — κ ou λ. PM 25 kDa.</div></div>
+        <div style="display:flex;align-items:center;gap:8px;"><div style="width:13px;height:13px;background:rgba(59,130,246,.4);border:1px solid rgba(59,130,246,.6);border-radius:3px;flex-shrink:0;"></div><div style="font-size:12px;color:var(--muted);"><b style="color:var(--blue2);">Chaines lourdes μ (VH+CH1-3)</b> — région TM = ~20 AA hydrophobes. Queue intracytoplasmique très courte.</div></div>
+        <div style="display:flex;align-items:center;gap:8px;"><div style="width:13px;height:13px;background:rgba(245,158,11,.15);border:2px dashed rgba(245,158,11,.5);border-radius:3px;flex-shrink:0;"></div><div style="font-size:12px;color:var(--muted);"><b style="color:var(--amber2);">Paratope (VH+VL)</b> — site de reconnaissance de l'Ag.</div></div>
+        <div style="display:flex;align-items:center;gap:8px;"><div style="width:13px;height:13px;background:rgba(16,185,129,.4);border:1px solid rgba(16,185,129,.6);border-radius:3px;flex-shrink:0;"></div><div style="font-size:12px;color:var(--muted);"><b style="color:var(--green2);">Igα/Igβ (CD79a/b)</b> — hétérodimère lié S-S, motifs ITAM → transduction signal via tyrosine kinases.</div></div>
+        <div style="display:flex;align-items:center;gap:8px;"><div style="width:13px;height:13px;background:rgba(244,63,94,.3);border:1px solid rgba(244,63,94,.6);border-radius:3px;flex-shrink:0;"></div><div style="font-size:12px;color:var(--muted);"><b style="color:var(--rose2);">Région TM</b> — ancre le BCR dans la membrane. Différencie IgM membranaire de l'IgM soluble.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏷️ Marqueurs de Surface du LB Mature</div>
+    <table class="tbl">
+      <thead><tr>
+        <th class="tb">Marqueur</th><th class="tg">Stade d'apparition</th>
+        <th class="tv">Fonction</th><th class="tr">Disparaît</th>
+      </tr></thead>
+      <tbody>
+        <tr><td><b class="tb">CD19</b></td><td>Pro-B (1er marqueur B)</td><td>Marqueur spécifique LB. Co-récepteur BCR (avec CD21/CD81) → amplifie signal BCR</td><td>Au stade plasmocyte</td></tr>
+        <tr><td><b class="tb">CD79a/CD79b (Igα/Igβ)</b></td><td>Pré-B</td><td>Module de transduction. Motifs ITAM → kinases. Codés par b29 et mb1</td><td>—</td></tr>
+        <tr><td><b class="tb">CD20</b></td><td>Pré-B Large</td><td>Canal calcique. Cible thérapeutique = <b>Rituximab</b></td><td>Au stade plasmocyte</td></tr>
+        <tr><td><b class="tb">CD21</b></td><td>B mature</td><td>Récepteur du C3dg (complément). Co-récepteur BCR. Récepteur EBV</td><td>—</td></tr>
+        <tr><td><b class="tb">CD22</b></td><td>B immature</td><td>Régulation négative du signal BCR (motifs ITIM)</td><td>—</td></tr>
+        <tr><td><b class="tb">CD23</b></td><td>B mature</td><td>Récepteur de faible affinité pour IgE (FcεRII)</td><td>—</td></tr>
+        <tr><td><b class="tb">CD40</b></td><td>B immature/mature</td><td>Lie CD40L (CD154) du LT → <b>commutation isotypique (switch)</b> indispensable</td><td>—</td></tr>
+        <tr><td><b class="tb">CD80/CD86 (B7)</b></td><td>Après activation</td><td>Lie CD28/CTLA-4 sur LT → costimulation coopération T/B</td><td>—</td></tr>
+        <tr><td><b class="tb">HLA I + II</b></td><td>B immature (constitutif)</td><td>HLA II : présente aux LT CD4+. Exprimé même à l'état immature</td><td>—</td></tr>
+        <tr><td><b class="tb">IgM membrane</b></td><td>B immature</td><td>BCR de base. Module de reconnaissance. Différent de l'IgM soluble (queue TM)</td><td>—</td></tr>
+        <tr><td><b class="tb">IgD membrane</b></td><td>B mature naïf (Rate)</td><td>Marqueur de maturation finale. Même idiotype qu'IgM (épissage alternatif)</td><td>—</td></tr>
+        <tr><td><b class="tb">CD138 (Syndecan-1)</b></td><td>Plasmocyte</td><td>Marqueur spécifique des plasmocytes. Adhesion MO</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <div class="alert a-r">
+      <span class="ai">⚠️</span>
+      <span><b>Piège EMD :</b> Dans les muqueuses (intestin), les LB expriment essentiellement une <b>IgA de surface</b> (pas IgM+IgD). Les LB circulants naïfs = IgM+IgD. Les LB mémoires = IgG, IgA, ou IgE (jamais IgM ni IgD).</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ACTIVATION ═══ -->
+<div class="section" id="activation">
+  <div class="sec-title">Activation et Différenciation des LB</div>
+  <p class="sec-sub">2 voies d'activation selon la nature de l'Ag : TD (protéines, avec help T) et TI (polysaccharides, sans LT).</p>
+
+  <div class="dw">
+    <div class="dt">Ag Thymo-Dépendants vs Thymo-Indépendants</div>
+    <div class="g2">
+      <div style="background:rgba(59,130,246,.07);border:2px solid rgba(59,130,246,.3);border-radius:12px;padding:17px;">
+        <div style="font-weight:900;color:var(--blue2);font-size:14px;margin-bottom:10px;">🔵 Ag Thymo-DÉPENDANTS (TD)</div>
+        <ul class="li">
+          <li><b>Nature :</b> Protéines (essentiellement)</li>
+          <li>Coopération obligatoire LT-LB (CD40/CD40L)</li>
+          <li class="ok">Formation du Centre Germinatif ✓</li>
+          <li class="ok">Commutation isotypique → IgG, IgA, IgE ✓</li>
+          <li class="ok">Hypermutation somatique → maturation d'affinité ✓</li>
+          <li class="ok">LB mémoires + plasmocytes longue durée ✓</li>
+          <li>Réponse primaire : IgM<br>Réponse secondaire : IgG, IgA, IgE</li>
+        </ul>
+      </div>
+      <div style="background:rgba(245,158,11,.07);border:2px solid rgba(245,158,11,.3);border-radius:12px;padding:17px;">
+        <div style="font-weight:900;color:var(--amber2);font-size:14px;margin-bottom:10px;">🟡 Ag Thymo-INDÉPENDANTS (TI)</div>
+        <ul class="li">
+          <li><b>Nature :</b> Polysaccharides, LPS, motifs répétitifs</li>
+          <li>Pas de coopération LT nécessaire</li>
+          <li><b>TI-1 :</b> mitogènes (LPS) → LB matures + immatures</li>
+          <li><b>TI-2 :</b> polysaccharides → LB matures seulement</li>
+          <li class="no">PAS de Centre Germinatif ✗</li>
+          <li class="no">PAS de switch (IgM uniquement) ✗</li>
+          <li class="no">PAS de LB mémoires classiques ✗</li>
+          <li>Réponse primaire ET secondaire : IgM (faible)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🤝 La Coopération LT-LB (Réponse TD)</div>
+    <div class="g2">
+      <div class="blk">
+        <div class="blk-label">Signal 1 — BCR + Ag</div>
+        <ul class="li">
+          <li>BCR du LB reconnaît l'Ag natif (sans processing)</li>
+          <li>Internalisation de l'Ag par le LB → dégradation → présentation de peptides sur HLA II</li>
+          <li>LT helper CD4+ reconnaît peptide-HLA II → interaction LT-LB</li>
+        </ul>
+      </div>
+      <div class="blk">
+        <div class="blk-label">Signal 2 — CD40/CD40L + Cytokines</div>
+        <ul class="li">
+          <li><b>CD40 (LB) + CD40L (LT)</b> = indispensable pour le switch</li>
+          <li>Cytokines du LT orientent l'isotype :<br>IL-4 → IgE. TGF-β → IgA. IFN-γ → IgG</li>
+          <li>CD80/CD86 (LB) + CD28 (LT) → activation du LT</li>
+        </ul>
+      </div>
+    </div>
+    <div class="g2" style="margin-top:12px;">
+      <div style="background:rgba(59,130,246,.06);border:1px solid rgba(59,130,246,.2);border-radius:10px;padding:14px;">
+        <div style="font-weight:700;color:var(--blue2);margin-bottom:6px;font-size:13px;">Voie Extrafolliculaire</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;">LB activés → plasmocytes à IgM à courte durée de vie (Ig non mutées). Pas de maturation d'affinité.</div>
+      </div>
+      <div style="background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.2);border-radius:10px;padding:14px;">
+        <div style="font-weight:700;color:var(--green2);margin-bottom:6px;font-size:13px;">Réaction du Centre Germinatif</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;">LB activés → follicule secondaire → plasmocytes haute affinité + LB mémoires (Ig mutées).</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CENTRE GERMINATIF ═══ -->
+<div class="section" id="cg">
+  <div class="sec-title">Le Centre Germinatif (CG)</div>
+  <p class="sec-sub">Le lieu des 3 événements majeurs de la réponse B TD — hypermutation, switch, mémoire.</p>
+
+  <div class="dw">
+    <div class="dt">Zone Sombre → Zone Claire — Sélection Darwinienne des LB</div>
+    <div class="cg-wrap">
+      <div class="cg-zone cgz-s">
+        <div style="font-weight:900;color:var(--blue2);font-size:14px;margin-bottom:10px;">🔵 Zone Sombre</div>
+        <ul class="li">
+          <li>LB activés → <b>Centroblastes</b> (grandes cellules)</li>
+          <li>N'expriment PAS le BCR en surface (temporairement)</li>
+          <li><b>Hypermutation somatique</b> dans les régions variables des gènes d'Ig (enzyme AID)</li>
+          <li>Mutations aléatoires → certains BCR gagnent en affinité</li>
+          <li>Prolifération intense (expansion clonale)</li>
+        </ul>
+      </div>
+      <div style="display:flex;align-items:center;font-size:22px;color:var(--muted);">→</div>
+      <div class="cg-zone cgz-c">
+        <div style="font-weight:900;color:var(--green2);font-size:14px;margin-bottom:10px;">🟢 Zone Claire</div>
+        <ul class="li">
+          <li>Centroblastes → <b>Centrocytes</b> (petites cellules)</li>
+          <li>Ré-expriment leur BCR (muté)</li>
+          <li>Test contre Ag des <b>CDF</b> (cellules dendritiques folliculaires)</li>
+          <li class="ok">Haute affinité + aide LT TFH → <b>Plasmocytes</b> + <b>LB mémoires</b></li>
+          <li class="no">Faible affinité → apoptose (sélection darwinienne)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="g3">
+    <div style="background:rgba(59,130,246,.07);border:1px solid rgba(59,130,246,.22);border-radius:12px;padding:15px;text-align:center;">
+      <div style="font-size:24px;margin-bottom:7px;">🎯</div>
+      <div style="font-weight:900;color:var(--blue2);font-size:13px;margin-bottom:7px;">1. Maturation de l'Affinité</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.5;">Hypermutation somatique + sélection → Ac de plus en plus spécifiques et efficaces</div>
+    </div>
+    <div style="background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.22);border-radius:12px;padding:15px;text-align:center;">
+      <div style="font-size:24px;margin-bottom:7px;">🔄</div>
+      <div style="font-weight:900;color:var(--amber2);font-size:13px;margin-bottom:7px;">2. Commutation Isotypique</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.5;">Switch IgM → IgG/IgA/IgE via CD40/CD40L + cytokines (AID). Nouvelles fonctions biologiques</div>
+    </div>
+    <div style="background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.22);border-radius:12px;padding:15px;text-align:center;">
+      <div style="font-size:24px;margin-bottom:7px;">🧠</div>
+      <div style="font-weight:900;color:var(--green2);font-size:13px;margin-bottom:7px;">3. Génération de la Mémoire</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.5;">LB mémoires (IgG/IgA/IgE, jamais IgM/IgD) + Plasmocytes longue durée (MO, CXCR4/CXCL12)</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px;">
+    <div class="card-title">🏠 Plasmocytes à Longue Durée de Vie</div>
+    <div class="g2">
+      <ul class="li" style="margin-top:8px;">
+        <li>Quittent le CG → retournent dans la <b>Moelle Osseuse</b></li>
+        <li>90% des plasmocytes IgG+ CD138+ sont près des cellules stromales de la MO</li>
+        <li>Guidés par : <b>CXCR4 / CXCL12</b></li>
+        <li>Adhésion : <b>Syndecan-1 / VCAM-1 + VLA-4</b></li>
+      </ul>
+      <ul class="li" style="margin-top:8px;">
+        <li><b>CD138+ (Syndecan-1)</b> = marqueur spécifique des plasmocytes</li>
+        <li>Perdent CD19 et CD20 (marqueurs LB)</li>
+        <li>Plus de BCR de surface</li>
+        <li>Sécrètent des Ac de haute affinité pendant des années → protection durable</li>
+      </ul>
+    </div>
+    <div class="alert a-r">
+      <span class="ai">⚠️</span>
+      <span><b>PIÈGE :</b> LB mémoires = IgG, IgA, ou IgE — JAMAIS IgM ni IgD. CD27 = marqueur LB mémoires. Plasmocyte = CD138+, perd CD19. Ces deux cellules sont souvent confondues dans les QCM.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ RÉPONSES ═══ -->
+<div class="section" id="reponse">
+  <div class="sec-title">Réponse Primaire vs Réponse Secondaire</div>
+  <p class="sec-sub">Les caractéristiques cinétiques, isotypiques et quantitatives — la mémoire immunitaire en chiffres.</p>
+
+  <div class="dw">
+    <div class="dt">Cinétique de la Réponse Anticorps — Réponse Primaire puis Secondaire</div>
+    <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:flex-end;justify-content:center;padding:10px 0 18px;">
+      <div style="text-align:center;min-width:175px;">
+        <div style="font-weight:900;color:var(--blue2);font-size:13px;margin-bottom:10px;">💉 RÉPONSE PRIMAIRE</div>
+        <div class="resp-bars" style="justify-content:center;">
+          <div class="rb rbp" style="width:13px;height:18px;"></div>
+          <div class="rb rbp" style="width:13px;height:42px;"></div>
+          <div class="rb rbp" style="width:13px;height:85px;"></div>
+          <div class="rb rbp" style="width:13px;height:105px;"></div>
+          <div class="rb rbp" style="width:13px;height:95px;"></div>
+          <div class="rb rbp" style="width:13px;height:62px;"></div>
+          <div class="rb rbp" style="width:13px;height:28px;"></div>
+        </div>
+        <div style="height:2px;background:var(--border);margin:4px 0;"></div>
+        <div style="font-size:10px;color:var(--muted);">J0-J7 (latence) → J14 (plateau)</div>
+        <div style="font-size:11px;color:var(--blue2);font-weight:700;margin-top:5px;">Isotype : IgM</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 0;gap:5px;">
+        <div style="font-size:22px;color:var(--muted);">→</div>
+        <div style="font-size:10px;color:var(--muted);text-align:center;">Mémoire<br>LB mémoires</div>
+        <div style="font-size:22px;color:var(--muted);">→</div>
+      </div>
+      <div style="text-align:center;min-width:175px;">
+        <div style="font-weight:900;color:var(--green2);font-size:13px;margin-bottom:10px;">💉💉 RÉPONSE SECONDAIRE</div>
+        <div class="resp-bars" style="justify-content:center;">
+          <div class="rb rbs" style="width:13px;height:35px;"></div>
+          <div class="rb rbs" style="width:13px;height:85px;"></div>
+          <div class="rb rbs" style="width:13px;height:130px;"></div>
+          <div class="rb rbs" style="width:13px;height:130px;"></div>
+          <div class="rb rbs" style="width:13px;height:122px;"></div>
+          <div class="rb rbs" style="width:13px;height:110px;"></div>
+          <div class="rb rbs" style="width:13px;height:88px;"></div>
+        </div>
+        <div style="height:2px;background:var(--border);margin:4px 0;"></div>
+        <div style="font-size:10px;color:var(--muted);">Latence courte → pic rapide → plateau long</div>
+        <div style="font-size:11px;color:var(--green2);font-weight:700;margin-top:5px;">Isotype : IgG / IgA / IgE</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📊 Comparaison Primaire vs Secondaire</div>
+    <table class="tbl">
+      <thead><tr>
+        <th style="color:var(--muted);">Caractéristique</th>
+        <th class="tb">Réponse Primaire</th>
+        <th class="tg">Réponse Secondaire</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="color:var(--muted);font-size:11px;">Phase de latence</td><td>J0 à J7 (longue)</td><td><b class="tg">Courte</b></td></tr>
+        <tr><td style="color:var(--muted);font-size:11px;">Amplitude (titre Ac)</td><td>Modérée</td><td><b class="tg">10× plus élevée</b></td></tr>
+        <tr><td style="color:var(--muted);font-size:11px;">Durée du plateau</td><td>~14 jours</td><td><b class="tg">Plus longue, décroit plus lentement</b></td></tr>
+        <tr><td style="color:var(--muted);font-size:11px;">Isotype principal</td><td><b class="tb">IgM</b></td><td><b class="tg">IgG, IgA, IgE (switch)</b></td></tr>
+        <tr><td style="color:var(--muted);font-size:11px;">Affinité des Ac</td><td>Faible à modérée</td><td><b class="tg">Haute (maturation d'affinité)</b></td></tr>
+        <tr><td style="color:var(--muted);font-size:11px;">Cellules responsables</td><td>LB naïfs</td><td><b class="tg">LB mémoires</b></td></tr>
+        <tr><td style="color:var(--muted);font-size:11px;">Spécificité Ag</td><td>Spécifique de l'Ag A</td><td>Spécifique de l'Ag A (pas de réponse à Ag B différent)</td></tr>
+      </tbody>
+    </table>
+    <div class="alert a-b" style="margin-top:12px;">
+      <span class="ai">📌</span>
+      <span>Lors d'une injection ultérieure de l'<b>MÊME Ag A</b> : réponse secondaire forte. Injection simultanée d'Ag B différent : réponse primaire normale à Ag B. La mémoire est <b>spécifique à chaque Ag</b>.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CONNEXIONS ═══ -->
+<div class="section" id="connexions">
+  <div class="sec-title">🗺️ Carte des Connexions — Le LB de A à Z</div>
+  <p class="sec-sub">7 étapes chronologiques reliées. Chaque étape explique <em>pourquoi</em> elle existe et <em>comment</em> elle conduit à la suivante — pour mémoriser le cours comme une histoire cohérente.</p>
+
+  <div class="cmap">
+
+    <!-- ══ ÉTAPE 1 ══ -->
+    <div class="cstep">
+      <div class="cleft cs1-c" style="border-right-color:rgba(59,130,246,.5);">
+        <div class="cnum cs1-n">1</div>
+        <div class="ctitle">CSH → Pro-B<br>Naissance de l'Identité B</div>
+        <div class="ctag2" style="color:var(--blue2);">Naissance</div>
+      </div>
+      <div class="cnode cs1-d"></div>
+      <div class="cright">
+        <div class="cbody">
+          Tout commence avec la <b>Cellule Souche Hématopoïétique (CSH)</b> qui, dans la moelle osseuse, s'engage vers la lignée lymphoïde → <b>CLP</b> → puis vers la lignée B avec l'apparition de facteurs de transcription spécifiques B (E2A, EBF, PAX5).<br><br>
+          Au stade <b>Pro-B</b>, les gènes des Ig sont encore en <b>configuration germinale</b> (non réarrangés). Mais voici la grande nouveauté : <b>CD19</b> apparaît — c'est le <em>tout premier marqueur spécifique de la lignée B</em>. Les enzymes TdT et RAG1/RAG2 sont actives, prêtes à initier les réarrangements.
+        </div>
+        <div class="clink cs1-c">
+          <div class="cwhy" style="color:var(--blue2);">🔗 Pourquoi CD19 est si important ?</div>
+          CD19 ne disparaît qu'au stade plasmocyte. Il amplifie le signal BCR via le co-récepteur CD19/CD21/CD81 → sans lui, les LB ne peuvent pas s'activer efficacement. C'est aussi la cible du Rituximab (traitement des lymphomes B). Sa présence à TOUS les stades intermédiaires en fait un marqueur de référence pour diagnostiquer les leucémies B.
+        </div>
+        <div style="font-size:11px;color:rgba(59,130,246,.7);margin-top:8px;font-weight:700;">↓ Ce stade initie les réarrangements D-J de la chaine lourde</div>
+      </div>
+    </div>
+
+    <!-- ══ ÉTAPE 2 ══ -->
+    <div class="cstep">
+      <div class="cleft cs2-c" style="border-right-color:rgba(20,184,166,.5);">
+        <div class="cnum cs2-n">2</div>
+        <div class="ctitle">Pré-BCR<br>1er Point de Contrôle</div>
+        <div class="ctag2" style="color:var(--teal2);">Sélection Positive</div>
+      </div>
+      <div class="cnode cs2-d"></div>
+      <div class="cright">
+        <div class="cbody">
+          Au stade <b>Pré-B Large</b>, le réarrangement V-DJ est complet. La chaine lourde μ s'associe à la <b>SLC</b> (VpreB + λ5) pour former le <b>pré-BCR</b> en surface.<br><br>
+          Le pré-BCR est soumis à la <b>1ère sélection (positive)</b> : la cellule teste si son pré-BCR est fonctionnel. Si oui → signal de survie → prolifération → réarrangement de la chaine légère. Simultanément, l'<b>exclusion allélique</b> se met en place : le réarrangement productif d'un allèle inhibe les autres. <b>1 LB = 1 BCR = 1 spécificité.</b><br><br>
+          CD20 et CD22 apparaissent à ce stade.
+        </div>
+        <div class="clink cs2-c" style="border-color:rgba(20,184,166,.5);">
+          <div class="cwhy" style="color:var(--teal2);">🔗 Pourquoi l'exclusion allélique est-elle fondamentale ?</div>
+          Sans exclusion allélique, un LB pourrait exprimer deux BCR différents → reconnaître deux Ag différents → réponse humorale non spécifique → chaos. L'exclusion allélique garantit que chaque clone LB produit des Ac d'une seule et même spécificité → c'est la base de la spécificité de la réponse humorale.
+        </div>
+        <div style="font-size:11px;color:rgba(20,184,166,.7);margin-top:8px;font-weight:700;">↓ Si succès → réarrangement chaine légère κ puis λ si nécessaire</div>
+      </div>
+    </div>
+
+    <!-- ══ ÉTAPE 3 ══ -->
+    <div class="cstep">
+      <div class="cleft cs3-c" style="border-right-color:rgba(139,92,246,.5);">
+        <div class="cnum cs3-n">3</div>
+        <div class="ctitle">BCR Complet<br>Tolérance Centrale</div>
+        <div class="ctag2" style="color:var(--violet2);">Sélection Négative</div>
+      </div>
+      <div class="cnode cs3-d"></div>
+      <div class="cright">
+        <div class="cbody">
+          Au stade <b>B Immature</b>, la chaine légère est réarrangée → <b>BCR complet = IgM de surface</b>. Le LB peut maintenant reconnaître des Ag.<br><br>
+          C'est l'étape critique de la <b>tolérance centrale</b> : les cellules stromales de la MO présentent les Ag du soi sur les molécules du CMH. La <b>sélection négative</b> élimine les LB auto-réactifs :<br>
+          • <b>Forte affinité pour le soi</b> → délétion (apoptose)<br>
+          • <b>Affinité modérée</b> → <em>receptor editing</em> (réarrangement d'une nouvelle chaine L) ou anergie<br>
+          • <b>Faible affinité</b> → survie<br>
+          • <b>Pas d'interaction</b> → mort par négligence<br><br>
+          75% des LB n'survivent pas à cette étape.
+        </div>
+        <div class="clink cs3-c" style="border-color:rgba(139,92,246,.5);">
+          <div class="cwhy" style="color:var(--violet2);">🔗 Connexion avec la Tolérance T et les Maladies Auto-Immunes</div>
+          Cette sélection est l'analogue de la sélection négative des LT dans le thymus (mTEC + AIRE). Les deux mécanismes visent la même chose : éliminer les clones auto-réactifs avant la périphérie. Si cette étape échoue (défaut des cellules stromales ou des molécules du CMH) → des LB auto-réactifs entrent en circulation → risque de <b>maladie auto-immune</b> (ex : lupus, syndrome de Sjögren).
+        </div>
+        <div style="font-size:11px;color:rgba(139,92,246,.7);margin-top:8px;font-weight:700;">↓ Survivants → quittent la MO → Rate pour sélection périphérique</div>
+      </div>
+    </div>
+
+    <!-- ══ ÉTAPE 4 ══ -->
+    <div class="cstep">
+      <div class="cleft cs4-c" style="border-right-color:rgba(245,158,11,.5);">
+        <div class="cnum cs4-n">4</div>
+        <div class="ctitle">LB Mature Naïf<br>IgM + IgD</div>
+        <div class="ctag2" style="color:var(--amber2);">Maturation Finale</div>
+      </div>
+      <div class="cnode cs4-d"></div>
+      <div class="cright">
+        <div class="cbody">
+          Les LB immatures survivants arrivent dans la <b>Rate</b> (stades transitoires T1 → T2). Dans la Rate, ils acquièrent <b>IgD de surface</b> → deviennent des LB matures naïfs co-exprimant <b>IgM + IgD</b>.<br><br>
+          IgM et IgD ont le <b>même idiotype</b> (même paratope, même spécificité) mais des fonctions légèrement différentes. Elles proviennent du même ARNm par <b>épissage alternatif</b> (pas de switch génique). CD21 et CD23 apparaissent. Le LB colonise les <b>follicules primaires</b> des OLS.
+        </div>
+        <div class="clink cs4-c" style="border-color:rgba(245,158,11,.5);">
+          <div class="cwhy" style="color:var(--amber2);">🔗 Pourquoi IgM ET IgD sur le même LB mature ?</div>
+          Ce n'est pas une redondance inutile. IgM : forte activation initiale, activation du complément. IgD : rôle dans la signalisation fine et dans la maintenance de la survie du LB. Les deux ont strictement la <b>même spécificité antigénique</b> (même région variable). Quand le LB s'active, il perd IgD → switch vers IgG/IgA/IgE. Le LB mémoire n'exprimera jamais plus ni IgM ni IgD.
+        </div>
+        <div style="font-size:11px;color:rgba(245,158,11,.7);margin-top:8px;font-weight:700;">↓ LB naïf prêt à rencontrer l'Ag dans les OLS</div>
+      </div>
+    </div>
+
+    <!-- ══ ÉTAPE 5 ══ -->
+    <div class="cstep">
+      <div class="cleft cs5-c" style="border-right-color:rgba(16,185,129,.5);">
+        <div class="cnum cs5-n">5</div>
+        <div class="ctitle">Rencontre l'Ag<br>Activation</div>
+        <div class="ctag2" style="color:var(--green2);">Immunopoïèse</div>
+      </div>
+      <div class="cnode cs5-d"></div>
+      <div class="cright">
+        <div class="cbody">
+          Dans les OLS, le LB naïf rencontre son Ag spécifique :<br><br>
+          <b>Signal 1 :</b> BCR reconnaît l'Ag natif → activation des ITAM de CD79a/CD79b → cascade de signalisation.<br><br>
+          <b>Si Ag TD (protéine) :</b> Le LB présente des peptides de l'Ag aux <b>LT helpers CD4+</b> via HLA II. Le LT active le LB via <b>CD40L-CD40</b> → signal du switch. Les cytokines du LT (IL-4, TGF-β, IFN-γ) déterminent l'isotype final (IgE, IgA, IgG).<br><br>
+          <b>Si Ag TI :</b> BCR crosslinké par les motifs répétitifs → activation directe → réponse IgM seule.
+        </div>
+        <div class="clink cs5-c" style="border-color:rgba(16,185,129,.5);">
+          <div class="cwhy" style="color:var(--green2);">🔗 CD40/CD40L : La paire moléculaire qui fait TOUT</div>
+          CD40 sur le LB + CD40L (CD154) sur le LT = signal indispensable pour le switch isotypique. Sans CD40L → <b>Syndrome Hyper-IgM</b> (immunodéficience) : le patient produit des IgM normalement mais AUCUNE IgG/IgA/IgE. Les patients ont des infections sévères à germes encapsulés. C'est la preuve clinique que CD40/CD40L est indispensable au switch.
+        </div>
+        <div style="font-size:11px;color:rgba(16,185,129,.7);margin-top:8px;font-weight:700;">↓ 2 voies : extrafolliculaire (IgM rapide) OU Centre Germinatif (Ig haute affinité)</div>
+      </div>
+    </div>
+
+    <!-- ══ ÉTAPE 6 ══ -->
+    <div class="cstep">
+      <div class="cleft cs6-c" style="border-right-color:rgba(244,63,94,.5);">
+        <div class="cnum cs6-n">6</div>
+        <div class="ctitle">Centre Germinatif<br>Évolution Darwinienne</div>
+        <div class="ctag2" style="color:var(--rose2);">Switch + Mémoire</div>
+      </div>
+      <div class="cnode cs6-d"></div>
+      <div class="cright">
+        <div class="cbody">
+          Les LB activés entrent dans les follicules primaires → formation du <b>Centre Germinatif (CG)</b> → follicule secondaire. Le CG est le "creuset de la spécificité immunitaire".<br><br>
+          <b>Zone sombre :</b> centroblastes → hypermutation somatique (AID introduit des mutations dans VH/VL). Résultat : diversité de BCR avec des affinités variées.<br><br>
+          <b>Zone claire :</b> centrocytes testent leur BCR contre les Ag des CDF. Sélection darwinienne : seuls les clones à haute affinité, aidés par les TFH, survivent → switch isotypique → plasmocytes haute affinité + LB mémoires.<br><br>
+          Les LB mémoires quittent le CG avec une Ig commutée (IgG, IgA, ou IgE) et un BCR de haute affinité. Ils circulent longtemps.
+        </div>
+        <div class="clink cs6-c" style="border-color:rgba(244,63,94,.5);">
+          <div class="cwhy" style="color:var(--rose2);">🔗 LB Mémoires ≠ LB Naïfs ≠ Plasmocytes — 3 cellules distinctes</div>
+          <b>LB naïf :</b> IgM+IgD, BCR non muté, dans les follicules primaires.<br>
+          <b>LB mémoire :</b> IgG/IgA/IgE (jamais IgM/IgD), BCR muté haute affinité, CD27+, longue durée de vie.<br>
+          <b>Plasmocyte :</b> CD138+, perd CD19/CD20, ne reconnaît plus l'Ag (pas de BCR de surface), sécrète massivement des Ac. Les plasmocytes à longue durée de vie dans la MO sont guidés par CXCR4/CXCL12.
+        </div>
+        <div style="font-size:11px;color:rgba(244,63,94,.7);margin-top:8px;font-weight:700;">↓ Plasmocytes → MO (longue durée). LB mémoires → circulation + OLS</div>
+      </div>
+    </div>
+
+    <!-- ══ ÉTAPE 7 ══ -->
+    <div class="cstep">
+      <div class="cleft cs7-c" style="border-right-color:rgba(59,130,246,.6);">
+        <div class="cnum cs7-n">7</div>
+        <div class="ctitle">Réponse Secondaire<br>& Protection</div>
+        <div class="ctag2" style="color:var(--blue2);">Mémoire Immunitaire</div>
+      </div>
+      <div class="cnode cs7-d"></div>
+      <div class="cright">
+        <div class="cbody">
+          Lors d'une 2ème exposition au même Ag :<br>
+          • <b>LB mémoires</b> se réactivent rapidement (BCR muté haute affinité)<br>
+          • Phase de latence courte<br>
+          • Titre Ac <b>10× plus élevé</b><br>
+          • Isotype IgG/IgA/IgE<br>
+          • Plateau long, déclin lent<br><br>
+          Les <b>plasmocytes longue durée</b> dans la MO continuent à produire des Ac même sans re-exposition à l'Ag → protection durable sans rappel nécessaire.<br><br>
+          La spécificité est maintenue : la réponse secondaire à Ag A ne réagit pas à Ag B différent.
+        </div>
+        <div class="clink cs7-c" style="border-color:rgba(59,130,246,.6);">
+          <div class="cwhy" style="color:var(--blue2);">🔗 Boucle Complète : Vaccin → Protection</div>
+          Vaccin = Ag (atténué/modifié) → réponse primaire → LB mémoires + plasmocytes longue durée → lors de l'infection réelle → réponse secondaire rapide et massive avant que la maladie ne s'installe. La <b>maturation d'affinité</b> (étape 6) explique pourquoi les rappels vaccinaux produisent des Ac de plus en plus efficaces : chaque réactivation du CG sélectionne des clones encore plus affins.
+          <br><br><b style="color:var(--blue2);">🔑 Résumé de la Boucle :</b> CSH → Pro-B (CD19) → Pré-B (pré-BCR + exclusion allélique) → B Immature (BCR + sélection négative) → B Mature naïf (IgM+IgD) → Rencontre Ag → CG (hypermutation + switch + sélection) → Plasmocytes + LB mémoires → Protection durable ✓
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ QCM ═══ -->
+<div class="section" id="qcm">
+  <div class="sec-title">QCM — Corrigés &amp; Expliqués</div>
+  <p class="sec-sub">22 QCM sur les Lymphocytes B des EMD d'Oran. Cliquez pour développer.</p>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>01. Concernant les lymphocytes B :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="correct"><span class="ql">A.</span>Représentent 10 à 15% des lymphocytes circulants ✓</li>
+      <li class="wrong"><span class="ql">B.</span>Reconnaissent les antigènes uniquement après processing par les CPA ✗</li>
+      <li class="correct"><span class="ql">C.</span>Sont le support de l'immunité humorale adaptative ✓</li>
+      <li class="correct"><span class="ql">D.</span>Expriment à maturité à la fois IgM et IgD de surface ✓</li>
+      <li class="wrong"><span class="ql">E.</span>Sont plus nombreux que les lymphocytes T dans le sang ✗</li>
+    </ul><div class="qexp">✅ <b>Réponse ACD.</b> B = FAUX — le LB reconnaît l'Ag à l'état <b>natif</b> (pas de processing). E = FAUX — LT = 70%, LB = 10-15%.</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>02. Le CD19 :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="correct"><span class="ql">A.</span>Est le premier marqueur spécifique de la lignée B ✓</li>
+      <li class="wrong"><span class="ql">B.</span>Apparaît au stade B mature ✗</li>
+      <li class="correct"><span class="ql">C.</span>Est exprimé dès le stade Pro-B ✓</li>
+      <li class="wrong"><span class="ql">D.</span>Est toujours présent sur les plasmocytes ✗</li>
+      <li class="correct"><span class="ql">E.</span>Participe au co-récepteur du BCR avec CD21 et CD81 ✓</li>
+    </ul><div class="qexp">✅ <b>Réponse ACE.</b> B = FAUX (apparaît dès le Pro-B). D = FAUX (disparaît au stade plasmocyte).</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>03. Le pré-BCR :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="correct"><span class="ql">A.</span>Est composé d'une chaine lourde μ et d'une chaine légère de substitution (SLC) ✓</li>
+      <li class="wrong"><span class="ql">B.</span>Apparaît au stade B immature ✗</li>
+      <li class="correct"><span class="ql">C.</span>Permet l'exclusion allélique de la chaine lourde ✓</li>
+      <li class="correct"><span class="ql">D.</span>Induit le réarrangement de la chaine légère ✓</li>
+      <li class="wrong"><span class="ql">E.</span>Est identique au BCR mature ✗</li>
+    </ul><div class="qexp">✅ <b>Réponse ACD.</b> B = FAUX (pré-BCR = stade <b>Pré-B Large</b>). E = FAUX (pré-BCR = μ + SLC; BCR mature = μ/δ/γ/ε/α + vraie chaine légère κ ou λ).</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>04. L'hétérodimère Igα/Igβ (CD79a/CD79b) du BCR :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="wrong"><span class="ql">A.</span>Assure la reconnaissance de l'antigène ✗</li>
+      <li class="correct"><span class="ql">B.</span>Assure la transduction du signal d'activation ✓</li>
+      <li class="correct"><span class="ql">C.</span>Possède des motifs ITAM dans sa région cytoplasmique ✓</li>
+      <li class="correct"><span class="ql">D.</span>Est lié à l'IgM membranaire par un pont disulfure ✓</li>
+      <li class="wrong"><span class="ql">E.</span>Reconnaît directement le peptide antigénique ✗</li>
+    </ul><div class="qexp">✅ <b>Réponse BCD.</b> A et E = FAUX — la reconnaissance est assurée par l'IgM membranaire. Igα/Igβ = transduction du signal uniquement (ITAM → tyrosine kinases).</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>05. Lors de la sélection négative centrale des LB :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="wrong"><span class="ql">A.</span>Les LB qui ne reconnaissent aucun Ag du soi survivent systématiquement ✗</li>
+      <li class="correct"><span class="ql">B.</span>Les LB qui reconnaissent le soi avec forte affinité reçoivent un signal de mort ✓</li>
+      <li class="correct"><span class="ql">C.</span>Elle se déroule au stade B immature dans la moelle osseuse ✓</li>
+      <li class="correct"><span class="ql">D.</span>75% des LB meurent au cours de la maturation médullaire ✓</li>
+      <li class="wrong"><span class="ql">E.</span>Elle ne concerne que les LB ayant un BCR avec forte affinité pour le soi ✗</li>
+    </ul><div class="qexp">✅ <b>Réponse BCD.</b> A = FAUX — les LB sans interaction (rien) reçoivent aussi un signal de mort. E = FAUX — les LB sans interaction meurent aussi (3 cas : forte affinité → mort, faible affinité → survie, pas d'interaction → mort).</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>06. Le LB mature naïf :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="correct"><span class="ql">A.</span>Exprime IgM et IgD de surface ayant le même site anticorps ✓</li>
+      <li class="wrong"><span class="ql">B.</span>Exprime uniquement IgM de surface ✗</li>
+      <li class="correct"><span class="ql">C.</span>Acquiert l'IgD de surface au niveau de la Rate ✓</li>
+      <li class="correct"><span class="ql">D.</span>Exprime CD21 et CD23 ✓</li>
+      <li class="wrong"><span class="ql">E.</span>N'exprime pas de HLA II ✗</li>
+    </ul><div class="qexp">✅ <b>Réponse ACD.</b> B = FAUX (IgM+IgD co-exprimées). E = FAUX (HLA II est exprimé même à l'état immature, constitutif chez les LB).</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>07. Le centre germinatif est caractérisé par :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="correct"><span class="ql">A.</span>L'hypermutation somatique dans la zone sombre ✓</li>
+      <li class="correct"><span class="ql">B.</span>La commutation isotypique ✓</li>
+      <li class="correct"><span class="ql">C.</span>La génération de LB mémoires et de plasmocytes de haute affinité ✓</li>
+      <li class="wrong"><span class="ql">D.</span>Sa formation lors d'une réponse aux Ag thymo-indépendants ✗</li>
+      <li class="wrong"><span class="ql">E.</span>L'absence de sélection des LB dans la zone claire ✗</li>
+    </ul><div class="qexp">✅ <b>Réponse ABC.</b> D = FAUX — CG uniquement avec Ag thymo-<b>dépendants</b>. E = FAUX — la zone claire est précisément le lieu de la sélection darwinienne des clones à haute affinité.</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>08. Les LB mémoires :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="wrong"><span class="ql">A.</span>Expriment IgM et IgD de surface ✗</li>
+      <li class="correct"><span class="ql">B.</span>Expriment une seule classe d'Ig (IgG, IgA ou IgE) ✓</li>
+      <li class="correct"><span class="ql">C.</span>Sont le support de la réponse secondaire ✓</li>
+      <li class="correct"><span class="ql">D.</span>Sont générés dans le centre germinatif lors d'une réponse TD ✓</li>
+      <li class="wrong"><span class="ql">E.</span>Sont identiques aux plasmocytes ✗</li>
+    </ul><div class="qexp">✅ <b>Réponse BCD.</b> A = FAUX — LB mémoires = jamais IgM ni IgD. E = FAUX — LB mémoires circulants (BCR+, CD27+) ≠ plasmocytes (CD138+, pas de BCR de surface, sécrètent massivement des Ac).</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>09. La commutation isotypique (switch) :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="correct"><span class="ql">A.</span>Nécessite l'interaction CD40/CD40L ✓</li>
+      <li class="correct"><span class="ql">B.</span>Se produit dans le centre germinatif ✓</li>
+      <li class="wrong"><span class="ql">C.</span>Change la spécificité de l'anticorps ✗</li>
+      <li class="correct"><span class="ql">D.</span>Est orientée par les cytokines des LT helpers ✓</li>
+      <li class="wrong"><span class="ql">E.</span>Peut survenir lors d'une réponse aux Ag thymo-indépendants ✗</li>
+    </ul><div class="qexp">✅ <b>Réponse ABD.</b> C = FAUX — le switch change la <b>classe</b> (isotype) mais préserve exactement la même <b>spécificité</b> (mêmes régions variables). E = FAUX — le switch nécessite les LT (CD40/CD40L + cytokines) → impossible avec les Ag TI.</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>10. La réponse secondaire :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="correct"><span class="ql">A.</span>Est plus rapide que la réponse primaire ✓</li>
+      <li class="correct"><span class="ql">B.</span>L'isotype prédominant est IgG (et non IgM) ✓</li>
+      <li class="correct"><span class="ql">C.</span>Le titre d'anticorps est 10 fois plus élevé ✓</li>
+      <li class="wrong"><span class="ql">D.</span>Est de même amplitude que la réponse primaire ✗</li>
+      <li class="wrong"><span class="ql">E.</span>Est assurée par les LB naïfs ✗</li>
+    </ul><div class="qexp">✅ <b>Réponse ABC.</b> D = FAUX (10× plus élevée). E = FAUX (LB mémoires).</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>11. Les LB B1 :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="correct"><span class="ql">A.</span>Ont une origine fœtale et sont auto-renouvelants ✓</li>
+      <li class="wrong"><span class="ql">B.</span>Sont localisés dans les ganglions lymphatiques ✗</li>
+      <li class="correct"><span class="ql">C.</span>Produisent des anticorps naturels (IgM polyréactives) ✓</li>
+      <li class="wrong"><span class="ql">D.</span>Forment des centres germinatifs lors de leur activation ✗</li>
+      <li class="correct"><span class="ql">E.</span>Expriment IgM↑↑↑, IgD faible et CD11b ✓</li>
+    </ul><div class="qexp">✅ <b>Réponse ACE.</b> B = FAUX — LB B1 = cavités séreuses (pleurales et péritonéales). D = FAUX — pas de CG avec les LB B1 (réponse rapide, peu spécifique, IgM).</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>12. Le CD40 sur les LB : RF<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="neutral"><span class="ql">A.</span>Se lie à son ligand CD40L sur les LT helpers</li>
+      <li class="neutral"><span class="ql">B.</span>Est nécessaire pour la commutation isotypique</li>
+      <li class="neutral"><span class="ql">C.</span>Intervient dans la coopération LT-LB</li>
+      <li class="correct"><span class="ql">D.</span>Est exprimé uniquement après activation ✓ (FAUSSE)</li>
+      <li class="neutral"><span class="ql">E.</span>Son interaction avec CD40L aboutit à la synthèse d'IgG, IgA, IgE</li>
+    </ul><div class="qexp">✅ <b>Réponse D = FAUSSE.</b> CD40 est exprimé constitutionnellement sur les LB (même à l'état immature), pas uniquement après activation. A, B, C, E sont vraies.</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>13. Les plasmocytes :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="correct"><span class="ql">A.</span>Expriment CD138 (Syndecan-1) ✓</li>
+      <li class="wrong"><span class="ql">B.</span>Expriment CD19 ✗</li>
+      <li class="correct"><span class="ql">C.</span>Sécrètent des anticorps ✓</li>
+      <li class="wrong"><span class="ql">D.</span>Expriment IgM et IgD de surface ✗</li>
+      <li class="correct"><span class="ql">E.</span>Les plasmocytes longue durée de vie se localisent dans la moelle osseuse ✓</li>
+    </ul><div class="qexp">✅ <b>Réponse ACE.</b> B = FAUX (CD19 disparaît au stade plasmocyte). D = FAUX (les plasmocytes n'ont pas de BCR de surface — ils sécrètent uniquement des Ac sous forme soluble).</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>14. Concernant les réponses Ag thymo-dépendantes :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="correct"><span class="ql">A.</span>Concernent essentiellement les Ag de nature protéique ✓</li>
+      <li class="correct"><span class="ql">B.</span>Induisent la formation du centre germinatif ✓</li>
+      <li class="correct"><span class="ql">C.</span>La réponse secondaire produit principalement IgG, IgA, IgE ✓</li>
+      <li class="wrong"><span class="ql">D.</span>N'induisent pas la formation des LB mémoires ✗</li>
+      <li class="correct"><span class="ql">E.</span>La réponse primaire produit principalement IgM ✓</li>
+    </ul><div class="qexp">✅ <b>Réponse ABCE.</b> D = FAUX — les réponses TD induisent la formation des LB mémoires (contrairement aux TI).</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>15. La sélection positive du LB concerne :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="wrong"><span class="ql">A.</span>Les LB immatures contre les Ag du soi ✗</li>
+      <li class="correct"><span class="ql">B.</span>Le pré-BCR au stade Pré-B Large ✓</li>
+      <li class="wrong"><span class="ql">C.</span>Elle se déroule dans la Rate ✗</li>
+      <li class="correct"><span class="ql">D.</span>Elle sélectionne les cellules ayant un pré-BCR fonctionnel ✓</li>
+      <li class="wrong"><span class="ql">E.</span>Elle élimine les LB auto-réactifs ✗</li>
+    </ul><div class="qexp">✅ <b>Réponse BD.</b> A = FAUX (sélection négative = contre Ag du soi). C = FAUX (sélection positive du pré-BCR = MO, pas Rate). E = FAUX (élimination des auto-réactifs = sélection négative).</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>16. Dans la zone sombre du centre germinatif :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="correct"><span class="ql">A.</span>Les LB activés se transforment en centroblastes ✓</li>
+      <li class="correct"><span class="ql">B.</span>L'hypermutation somatique a lieu dans les régions variables ✓</li>
+      <li class="wrong"><span class="ql">C.</span>Les cellules expriment leur BCR en surface ✗</li>
+      <li class="wrong"><span class="ql">D.</span>Les centrocytes sont sélectionnés par les CDF ✗</li>
+      <li class="correct"><span class="ql">E.</span>La prolifération cellulaire est intense ✓</li>
+    </ul><div class="qexp">✅ <b>Réponse ABE.</b> C = FAUX — les centroblastes n'expriment <b>PAS</b> leur BCR en surface dans la zone sombre (ils hypermutent leurs gènes sans tester encore leur BCR). D = FAUX — la sélection par les CDF se passe dans la <b>zone claire</b> (centrocytes).</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>17. L'IgM et l'IgD sur un LB mature naïf :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="correct"><span class="ql">A.</span>Ont le même site anticorps (même idiotype) ✓</li>
+      <li class="wrong"><span class="ql">B.</span>Ont des spécificités différentes ✗</li>
+      <li class="correct"><span class="ql">C.</span>Proviennent du même gène par épissage alternatif ✓</li>
+      <li class="wrong"><span class="ql">D.</span>IgD disparaît lors de la sélection négative ✗</li>
+      <li class="correct"><span class="ql">E.</span>IgD est acquise dans la Rate lors de la maturation finale ✓</li>
+    </ul><div class="qexp">✅ <b>Réponse ACE.</b> B = FAUX (même idiotype = même spécificité). D = FAUX (IgD apparaît lors de la maturation finale dans la Rate, pas lors de la sélection négative).</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>18. Les réponses Ag thymo-indépendantes (TI) :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="wrong"><span class="ql">A.</span>Induisent la formation d'un centre germinatif ✗</li>
+      <li class="correct"><span class="ql">B.</span>Induisent une réponse faible principalement à IgM ✓</li>
+      <li class="wrong"><span class="ql">C.</span>Induisent la formation de LB mémoires ✗</li>
+      <li class="correct"><span class="ql">D.</span>Concernent les Ag polysaccharidiques à déterminants répétitifs ✓</li>
+      <li class="correct"><span class="ql">E.</span>La réponse secondaire est également à IgM ✓</li>
+    </ul><div class="qexp">✅ <b>Réponse BDE.</b> A = FAUX (pas de CG avec les TI). C = FAUX (pas de LB mémoires avec les TI). La réponse TI = faible, IgM en primaire ET secondaire, sans switch, sans maturation d'affinité.</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>19. Les LB B2 folliculaires :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="correct"><span class="ql">A.</span>Sont les précurseurs des LB mémoires et des plasmocytes ✓</li>
+      <li class="wrong"><span class="ql">B.</span>Répondent principalement aux Ag polysaccharidiques ✗</li>
+      <li class="correct"><span class="ql">C.</span>Forment des centres germinatifs lors de leur activation ✓</li>
+      <li class="correct"><span class="ql">D.</span>Répondent aux Ag thymo-dépendants (protéines) ✓</li>
+      <li class="wrong"><span class="ql">E.</span>Sont d'origine fœtale ✗</li>
+    </ul><div class="qexp">✅ <b>Réponse ACD.</b> B = FAUX (polysaccharides = LB de la zone marginale ou LB B1b). E = FAUX (LB B2 = origine adulte continue à partir de la MO; LB B1 = origine fœtale).</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>20. À propos du BCR :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="correct"><span class="ql">A.</span>C'est le marqueur le plus spécifique de la lignée B ✓</li>
+      <li class="correct"><span class="ql">B.</span>Le LB naïf exprime des IgM et des IgD de surface ayant le même site anticorps ✓</li>
+      <li class="wrong"><span class="ql">C.</span>L'IgM membranaire est identique à l'IgM sérique ✗</li>
+      <li class="correct"><span class="ql">D.</span>Les TLRs (TLR2, TLR4, TLR6) sont aussi exprimés par les LB ✓</li>
+      <li class="wrong"><span class="ql">E.</span>Dans les muqueuses, les LB expriment essentiellement IgG de surface ✗</li>
+    </ul><div class="qexp">✅ <b>Réponse ABD.</b> C = FAUX — l'IgM membranaire diffère de l'IgM sérique par son extrémité C-terminale des chaînes lourdes (région transmembranaire + queue cytoplasmique courte). E = FAUX — dans les muqueuses (intestin), les LB expriment essentiellement une <b>IgA</b> de surface (pas IgG).</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>21. Les cellules stromales de la moelle osseuse : RF<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="neutral"><span class="ql">A.</span>Constituent des cellules de soutien à la différenciation des CSH</li>
+      <li class="neutral"><span class="ql">B.</span>Jouent un rôle dans la sélection négative des LB</li>
+      <li class="neutral"><span class="ql">C.</span>Expriment les peptides du soi sur les molécules du CMH</li>
+      <li class="correct"><span class="ql">D.</span>Ont le même rôle que les AIRE dans le thymus ✓ (FAUSSE)</li>
+      <li class="neutral"><span class="ql">E.</span>Créent un milieu adéquat à la multiplication des CSH</li>
+    </ul><div class="qexp">✅ <b>Réponse D = FAUSSE.</b> Les cellules stromales de la MO présentent les Ag du soi via le CMH, ce qui est analogue au rôle des <b>mTEC + AIRE</b> dans le thymus — mais les cellules stromales elles-mêmes <b>n'expriment pas AIRE</b>. AIRE est spécifique des mTEC du thymus. A, B, C, E sont vraies.</div></div>
+  </div>
+
+  <div class="qblock">
+    <div class="qhead" onclick="tq(this)"><span>22. Lors de la différenciation terminale du LB activé :<span class="src">EMD</span></span><span class="qarr">▼</span></div>
+    <div class="qbody"><ul class="qch">
+      <li class="correct"><span class="ql">A.</span>Le plasmocyte secrète des anticorps ✓</li>
+      <li class="correct"><span class="ql">B.</span>Les LB mémoires possèdent en général une seule classe d'Ig (IgG, IgE ou IgA) ✓</li>
+      <li class="wrong"><span class="ql">C.</span>Le plasmocyte exprime encore le CD19 ✗</li>
+      <li class="correct"><span class="ql">D.</span>Les LB mémoires n'expriment ni IgM ni IgD ✓</li>
+      <li class="wrong"><span class="ql">E.</span>Les LB mémoires et les plasmocytes sont formés uniquement lors des réponses TI ✗</li>
+    </ul><div class="qexp">✅ <b>Réponse ABD.</b> C = FAUX (CD19 disparaît au stade plasmocyte). E = FAUX — LB mémoires et plasmocytes haute affinité = uniquement lors des réponses <b>thymo-dépendantes</b> (TD). Les réponses TI ne génèrent pas de LB mémoires classiques.</div></div>
+  </div>
+</div>
+
+<!-- ═══ RÉCAP ═══ -->
+<div class="section" id="recap">
+  <div class="sec-title">✅ Récap — Règles d'Or pour l'EMD</div>
+  <p class="sec-sub">Les 15 règles fondamentales + tableau TD vs TI.</p>
+
+  <div class="recap">
+    <h3>🎯 Les 15 Règles d'Or des Lymphocytes B</h3>
+    <div class="rg">
+      <div class="ri"><div class="ri-l">🩸 Règle 1 — Représentation</div><div class="ri-v"><b>10-15%</b> des lymphocytes circulants. Moins que les LT (70%). Support immunité humorale. Lutte contre pathogènes <b>extracellulaires</b>.</div></div>
+      <div class="ri"><div class="ri-l">🔑 Règle 2 — LB = Ag NATIF</div><div class="ri-v">LB reconnaît l'Ag sans processing (état natif). LT = seulement peptide+HLA (après processing). Différence fondamentale, piège récurrent.</div></div>
+      <div class="ri"><div class="ri-l">🧬 Règle 3 — CD19 = 1er marqueur</div><div class="ri-v"><b>CD19</b> = 1er marqueur B (Pro-B). Disparaît au plasmocyte. Présent à tous les stades intermédiaires.</div></div>
+      <div class="ri"><div class="ri-l">🔗 Règle 4 — Pré-BCR = μ+SLC</div><div class="ri-v">Pré-BCR = chaine <b>μ + SLC</b> (VpreB+λ5). Exclusion allélique. Réarrangement chaine légère. Stade Pré-B Large.</div></div>
+      <div class="ri"><div class="ri-l">💀 Règle 5 — 75% meurent</div><div class="ri-v"><b>75%</b> des LB meurent par apoptose en MO. 3 cas sélection négative : forte affinité → mort. Faible affinité → survie. Pas d'interaction → mort.</div></div>
+      <div class="ri"><div class="ri-l">🔵 Règle 6 — B Mature = IgM+IgD</div><div class="ri-v">LB mature naïf = <b>IgM+IgD</b> co-exprimées (même idiotype, épissage alternatif). CD21+CD23+. Follicules primaires.</div></div>
+      <div class="ri"><div class="ri-l">⚡ Règle 7 — Switch = CD40/CD40L</div><div class="ri-v">Commutation isotypique nécessite <b>CD40 (LB) + CD40L (LT)</b> + cytokines. Impossible avec Ag TI. Change classe, pas spécificité.</div></div>
+      <div class="ri"><div class="ri-l">🔴 Règle 8 — CG = Zone Sombre+Claire</div><div class="ri-v">Zone sombre = centroblastes (hypermutation, pas de BCR). Zone claire = centrocytes (testent BCR contre CDF). 3 événements : affinité + switch + mémoire.</div></div>
+      <div class="ri"><div class="ri-l">🧠 Règle 9 — LB Mémoire ≠ IgM/IgD</div><div class="ri-v">LB mémoires = <b>IgG, IgA, ou IgE</b> (JAMAIS IgM ni IgD). CD27+. BCR muté haute affinité. Réponse 10× plus forte et rapide.</div></div>
+      <div class="ri"><div class="ri-l">🏠 Règle 10 — Plasmocyte = CD138+</div><div class="ri-v">Plasmocyte = <b>CD138+</b>, perd CD19/CD20/BCR. MO guidé par CXCR4/CXCL12. Sécrète Ac sans avoir besoin de l'Ag.</div></div>
+      <div class="ri"><div class="ri-l">🟡 Règle 11 — TI = IgM seulement</div><div class="ri-v">Ag thymo-indépendants → PAS de CG, PAS de switch, PAS de mémoire → <b>IgM</b> en réponse primaire ET secondaire.</div></div>
+      <div class="ri"><div class="ri-l">🔵 Règle 12 — LB B1</div><div class="ri-v">LB B1 = origine fœtale, auto-renouvelants, <b>cavités séreuses</b>, IgM+++, IgD faible, CD11b+. Ac naturels (IgM polyréactives).</div></div>
+      <div class="ri"><div class="ri-l">📈 Règle 13 — Réponse 2aire = 10×</div><div class="ri-v">Réponse secondaire = <b>10× plus élevée</b>, latence courte, IgG/IgA/IgE, haute affinité. Assurée par LB mémoires.</div></div>
+      <div class="ri"><div class="ri-l">⚙️ Règle 14 — ITAM du BCR</div><div class="ri-v">CD79a/CD79b (Igα/Igβ) = motifs <b>ITAM</b> → tyrosine kinases → transduction signal. Lié à IgM par pont S-S.</div></div>
+      <div class="ri"><div class="ri-l">🏥 Règle 15 — LB muqueuses = IgA</div><div class="ri-v">Dans les muqueuses (intestin), LB expriment essentiellement <b>IgA</b> de surface (pas IgM+IgD). Piège classique EMD.</div></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:18px;">
+    <div class="card-title">📊 Tableau Final TD vs TI</div>
+    <table class="tbl" style="margin-top:10px;">
+      <thead><tr>
+        <th style="color:var(--muted);">Critère</th>
+        <th class="tb">Ag Thymo-DÉPENDANT (TD)</th>
+        <th class="ta">Ag Thymo-INDÉPENDANT (TI)</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="color:var(--muted);font-size:11px;">Nature</td><td>Protéines</td><td>Polysaccharides, LPS, motifs répétitifs</td></tr>
+        <tr><td style="color:var(--muted);font-size:11px;">LT helpers</td><td><b class="tb">OUI</b> (CD40/CD40L)</td><td><b class="ta">NON</b></td></tr>
+        <tr><td style="color:var(--muted);font-size:11px;">Centre germinatif</td><td><b class="tb">OUI</b></td><td><b class="ta">NON</b></td></tr>
+        <tr><td style="color:var(--muted);font-size:11px;">Switch isotypique</td><td><b class="tb">OUI (IgG, IgA, IgE)</b></td><td><b class="ta">NON (IgM seul)</b></td></tr>
+        <tr><td style="color:var(--muted);font-size:11px;">Hypermutation somatique</td><td><b class="tb">OUI</b></td><td><b class="ta">NON</b></td></tr>
+        <tr><td style="color:var(--muted);font-size:11px;">LB mémoires</td><td><b class="tb">OUI</b></td><td><b class="ta">NON</b></td></tr>
+        <tr><td style="color:var(--muted);font-size:11px;">Réponse secondaire</td><td><b class="tb">OUI (10× plus forte)</b></td><td><b class="ta">IgM (faible)</b></td></tr>
+        <tr><td style="color:var(--muted);font-size:11px;">Plasmocytes haute affinité</td><td><b class="tb">OUI</b></td><td><b class="ta">NON</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert a-e" style="margin-top:14px;">
+    <span class="ai">📖</span>
+    <span>Ce chapitre représente <b>~14% de l'examen</b> (22/163 QCM). Pièges les plus récurrents : LB reconnaît Ag natif (pas après processing), LB mémoires jamais IgM/IgD, plasmocyte perd CD19, switch impossible avec Ag TI, LB B1 = cavités séreuses (pas ganglions), 3 cas de sélection négative (forte affinité → mort, faible → survie, pas d'interaction → mort), zone sombre = centroblastes SANS BCR en surface.</span>
+  </div>
+</div>
+
+</main>
+<script>
+function show(id,btn){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo(0,0);
+}
+function tq(el){el.closest('.qblock').classList.toggle('open');}
+</script>
+</body>
+</html>
