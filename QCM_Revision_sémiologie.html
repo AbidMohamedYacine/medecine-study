@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3rd Year Medicine — QCM Revision</title>
+<style>
+:root{--bg:#eef4f7;--card:#fff;--tx:#14303d;--mu:#5d7886;--pr:#0e8a8a;--pr2:#0a6b7a;--ok:#1a9e5c;--okb:#e2f6ec;--ko:#d6403f;--kob:#fde8e8;--bd:#d5e2e8;--sh:0 6px 24px rgba(14,80,100,.10)}
+[data-theme=dark]{--bg:#0d1b22;--card:#15262f;--tx:#e6f1f5;--mu:#93aeba;--pr:#35c4c0;--pr2:#2a9db0;--ok:#43d38b;--okb:#12392b;--ko:#ff7a78;--kob:#3d1c1e;--bd:#264452;--sh:0 6px 24px rgba(0,0,0,.4)}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 "Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--tx);transition:background .3s,color .3s}
+header{background:linear-gradient(135deg,#0a6b7a,#0e8a8a);color:#fff;padding:18px 20px;box-shadow:var(--sh)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;max-width:1100px;margin:auto}
+h1{margin:0;font-size:21px}.sub{opacity:.85;font-size:13px}
+main{max-width:1100px;margin:auto;padding:16px}
+.card{background:var(--card);border-radius:16px;box-shadow:var(--sh);padding:18px;margin-bottom:16px;animation:in .35s ease}
+@keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+select,button{font:inherit;border-radius:10px;border:1px solid var(--bd);padding:8px 12px;background:var(--card);color:var(--tx);cursor:pointer;transition:.15s}
+button:hover{transform:translateY(-1px);border-color:var(--pr)}button:active{transform:scale(.97)}button:disabled{opacity:.4;cursor:default;transform:none}
+.pri{background:var(--pr);color:#fff;border:0;font-weight:600;padding:10px 20px}.dan{color:var(--ko)}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-bottom:10px}
+.stat{background:var(--bg);border-radius:12px;padding:8px 12px}.stat b{display:block;font-size:20px}.stat span{color:var(--mu);font-size:12px}
+.pb{height:10px;background:var(--bd);border-radius:9px;overflow:hidden}.pb i{display:block;height:100%;background:linear-gradient(90deg,var(--pr),var(--ok));transition:width .6s}
+.dash{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.cc{cursor:pointer;border:2px solid var(--bd);border-radius:14px;padding:12px;transition:.2s}.cc:hover,.cc.on{border-color:var(--pr);transform:translateY(-2px)}.cc small{color:var(--mu)}
+.nav{display:flex;flex-wrap:wrap;gap:5px;align-items:center}.nav b{font-size:12px;color:var(--mu);margin:0 4px 0 10px}
+.nv{width:34px;padding:5px 0;font-size:12px;text-align:center}.nv.correct{background:var(--ok);color:#fff}.nv.incorrect{background:var(--ko);color:#fff}.nv.cur{outline:3px solid var(--pr)}
+.badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:12px;font-weight:600;background:var(--bg);margin-right:6px}.hy{background:#ffe9a8;color:#6b4b00}
+.q{font-size:17px;font-weight:600;margin:12px 0}
+.opt{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:2px solid var(--bd);border-radius:12px;margin:8px 0;cursor:pointer;transition:.2s}.opt:hover{border-color:var(--pr)}
+.opt input{width:20px;height:20px;margin-top:2px;accent-color:var(--pr)}.opt.sel{border-color:var(--pr);background:var(--bg)}
+.opt.good{border-color:var(--ok);background:var(--okb)}.opt.bad{border-color:var(--ko);background:var(--kob)}.opt.miss{border:2px dashed var(--ok)}
+.ex{font-size:13px;color:var(--mu);margin-top:4px;animation:in .4s}.res{padding:10px 14px;border-radius:12px;margin:12px 0;font-weight:600;animation:in .4s}
+.tip{background:var(--bg);border-left:4px solid var(--pr);padding:10px 14px;border-radius:8px;margin-top:10px;animation:in .5s}
+.row{display:flex;justify-content:space-between;gap:8px;margin-top:14px;flex-wrap:wrap}
+@media(max-width:600px){h1{font-size:17px}.q{font-size:15px}}
+</style></head><body>
+<header><div class="top"><div><h1>🩺 QCM Revision Platform</h1><div class="sub">3rd Year Medicine — QCM Revision · <b id="ct">All Courses</b></div></div><button id="th" title="Dark mode">🌙</button></div></header>
+<main>
+<div class="card"><div class="bar">
+<select id="fc"></select><select id="fd"><option value="all">All difficulties</option><option value="easy">🟢 Easy</option><option value="medium">🟠 Medium</option><option value="hard">🔴 Hard</option></select>
+<select id="fs"><option value="all">All Questions</option><option value="incorrect">Incorrect Questions</option><option value="unanswered">Unanswered Questions</option><option value="correct">Correct Questions</option></select>
+<label><input type="checkbox" id="fh"> ⭐ High yield</label>
+<button id="sh">🔀 Shuffle Questions</button><label><input type="checkbox" id="sa"> Shuffle answer order</label><button id="rs" class="dan">Reset Progress</button></div></div>
+<div class="card"><div class="stats" id="stats"></div><div class="pb"><i id="pbar"></i></div></div>
+<div class="card"><div class="dash" id="dash"></div></div>
+<div class="card"><div class="nav" id="nav"></div></div>
+<div id="fin"></div><div id="qa"></div>
+</main>
+<script>
+// ===== COURSE TITLES =====
+const T={1:"Stress et maladies psychosomatiques",2:"Problèmes particuliers de l'entrevue médicale",3:"Annonce d'une maladie grave",4:"Aspects communicationnels avec le malade et examen mental"};
+// ===== QUESTION DATABASE (append more with the same q() helper; IDs 1-30 / 31-60 / 61-90 / 91-120) =====
+const q=(id,course,diff,hy,question,a,memoryTip,memorize)=>({id,course,courseTitle:T[course],diff,hy,question,answers:a.map(([text,correct,explanation],i)=>({text,correct,explanation})),memoryTip,memorize});
+const Q=[
+q(1,1,"easy",true,"Selon le schéma d'Alexander, quelles propositions sont exactes ?",[
+["Un stress aigu entraîne une réaction émotionnelle avec expression physique.",true,"Exact : c'est le premier niveau du schéma."],
+["Un stress répétitif entraîne un trouble fonctionnel sans lésion anatomique objective.",true,"Exact : ce sont les « troubles fonctionnels »."],
+["Un stress permanent entraîne un trouble lésionnel avec substratum anatomopathologique.",true,"Exact : c'est la véritable maladie psychosomatique."],
+["Un stress aigu entraîne un trouble somatique lésionnel.",false,"Faux : la lésion relève du stress permanent."],
+["Un stress répétitif réalise la véritable maladie psychosomatique.",false,"Faux : il ne donne que des troubles fonctionnels sans lésion."]],
+"Aigu = émotion · Répétitif = fonction · Permanent = lésion.",["Aigu → réaction émotionnelle","Répétitif → trouble fonctionnel","Permanent → lésion (vraie maladie psychosomatique)"]),
+q(2,1,"medium",false,"Quels sont les facteurs favorisants des troubles psychosomatiques cités dans le cours ?",[
+["Le facteur constitutionnel (fragilité ou prédisposition d'organes).",true,"Exact : fragilité de certains organes ou fonctions biologiques."],
+["Les facteurs de stress (événements de vie, conflits familiaux, professionnels).",true,"Exact : source de dysfonctionnement biologique."],
+["La personnalité, généralement anxieuse et réactive au stress.",true,"Exact : c'est l'élément principal selon le cours."],
+["Le facteur constitutionnel est l'élément principal.",false,"Faux : l'élément principal est la personnalité."],
+["Les personnalités concernées sont généralement calmes et peu réactives.",false,"Faux : elles sont anxieuses et réactives aux stress."]],
+"CSP : Constitution, Stress, Personnalité (la personnalité domine).",["3 facteurs : constitutionnel, stress, personnalité","Personnalité = élément principal"]),
+q(3,1,"easy",false,"La santé d'un individu est définie comme l'association de :",[
+["La santé physique.",true,"Exact."],["La santé psychique.",true,"Exact."],["La santé sociale.",true,"Exact."],
+["La santé économique.",false,"Non citée dans la définition."],["La santé spirituelle.",false,"Non citée dans la définition."]],
+"Physique + psychique + sociale.",["Santé = physique, psychique, sociale"]),
+q(4,1,"easy",true,"Concernant le stress selon le cours :",[
+["Il a été décrit par l'endocrinologue Hans Selye.",true,"Exact."],
+["C'est un processus physiologique non spécifique.",true,"Exact."],
+["C'est un processus d'adaptation de l'organisme à une agression.",true,"Exact."],
+["C'est un processus spécifique à chaque agent agresseur.",false,"Faux : non spécifique."],
+["Il a été décrit par Alexander.",false,"Faux : Alexander a élaboré le schéma psychosomatique."]],
+"Selye = stress ; Alexander = schéma.",["Selye : stress = adaptation non spécifique à une agression"]),
+q(5,1,"medium",false,"Quelles manifestations digestives sont citées ?",[
+["Vomissements.",true,"Exact."],["Gastralgies.",true,"Exact."],
+["Ulcère gastrique, maladie psychosomatique lésionnelle.",true,"Exact : facteur psychologique prépondérant."],
+["Palpitations.",false,"Manifestation cardio-vasculaire."],["Pollakiurie.",false,"Manifestation uro-génitale."]],
+"Ulcère gastrique = lésionnel.",["Digestif : vomissements, diarrhées, constipation, coliques, gastralgies","Ulcère gastrique = psychosomatique lésionnelle"]),
+q(6,1,"medium",true,"Quelles propositions cardio-vasculaires sont exactes ?",[
+["Des pics tensionnels, notamment systoliques, peuvent survenir.",true,"Exact."],
+["Des névralgies d'allure angineuse sont possibles.",true,"Exact."],
+["L'infarctus du myocarde est considéré comme la maladie de la civilisation.",true,"Exact : facteur psychologique important."],
+["Les myoclonies sont une manifestation cardio-vasculaire.",false,"Manifestation neurologique."],
+["Le prurit est une manifestation cardio-vasculaire.",false,"Manifestation dermatologique."]],
+"IDM = maladie de la civilisation.",["Cardio : palpitations, pics tensionnels systoliques, tachy/bradycardie","IDM : facteur psychologique important"]),
+q(7,1,"medium",false,"Quelles manifestations neurologiques sont citées ?",[
+["Paresthésies.",true,"Exact."],["Myoclonies.",true,"Exact."],["Pseudo-paralysies.",true,"Exact."],
+["Urticaire.",false,"Manifestation dermatologique."],["Dysurie.",false,"Manifestation uro-génitale."]],
+"Pseudo = sans lésion.",["Neuro : céphalées, vertiges, paresthésies, myoclonies, pseudo-paralysies"]),
+q(8,1,"medium",false,"Quelles manifestations dermatologiques sont citées ?",[
+["Prurit.",true,"Exact."],["Acné.",true,"Exact."],["Chutes de cheveux.",true,"Exact."],
+["Pollakiurie.",false,"Uro-génitale."],["Dyspareunie.",false,"Uro-génitale."]],
+"Peau : prurit, urticaire, cheveux, acné.",["Dermato : prurit, urticaires, chutes de cheveux, acné","Psoriasis, vitiligo, alopécies : facteur psychique évoqué"]),
+q(9,1,"medium",true,"Dans la prise en charge d'un trouble psychosomatique :",[
+["Il faut analyser le symptôme.",true,"Exact."],
+["Il faut demander les examens complémentaires les plus stricts pour éliminer ou confirmer une organicité.",true,"Exact."],
+["Un accompagnement psychologique et socio-familial est nécessaire.",true,"Exact."],
+["Il faut multiplier les bilans pour confirmer un diagnostic somatique.",false,"Faux : c'est l'acharnement diagnostique à éviter."],
+["Les psychotropes sont contre-indiqués.",false,"Faux : indiqués pour états anxieux, dépressifs ou tranquillisants."]],
+"Examens stricts, pas d'acharnement.",["Analyser, examens stricts, conclure sur l'origine psychogène","Prise en charge psychologique + psychotropes + socio-familial"]),
+q(10,1,"hard",false,"Concernant la médecine psychosomatique :",[
+["Elle étudie l'interaction entre troubles somatiques et psychiques.",true,"Exact."],
+["Elle s'est individualisée dans la première moitié du 20e siècle.",true,"Exact."],
+["Un trouble psychique entraîne rarement des troubles somatiques.",true,"Exact selon le cours."],
+["Elle s'est individualisée dans la seconde moitié du 19e siècle.",false,"Faux : 1re moitié du 20e."],
+["Une maladie somatique n'a pas de retentissement psychique.",false,"Faux : elle entraîne des troubles psychiques et une réduction de l'activité sociale."]],
+"Début du 20e siècle.",["Individualisée 1re moitié du 20e siècle","Somatique → psychique fréquent ; psychique → somatique rare"]),
+q(11,1,"medium",false,"Quelles manifestations uro-génitales sont citées ?",[
+["Dysuries.",true,"Exact."],["Pollakiuries.",true,"Exact."],["Dyspareunie.",true,"Exact."],
+["Vertiges.",false,"Manifestation neurologique."],["Tachycardie.",false,"Manifestation cardio-vasculaire."]],
+"Uro-génital : dysurie, pollakiurie, énurésie, impuissance, frigidité.",["Uro-génital : dysuries, brûlures mictionnelles, pollakiuries, énurésies, impuissance, frigidité, dyspareunie, troubles du cycle"]),
+q(12,1,"medium",false,"Pour quelles maladies l'étiopathogénie fait-elle référence à un facteur psychique ?",[
+["La rectocolite ulcéro-hémorragique (RCUH).",true,"Exact."],["Le psoriasis.",true,"Exact."],["Le vitiligo.",true,"Exact."],
+["La dysurie.",false,"Manifestation, non maladie citée."],["La pollakiurie.",false,"Manifestation, non maladie citée."]],
+"RCUH, psoriasis, vitiligo, alopécies.",["Facteur psychique évoqué : RCUH, psoriasis, vitiligo, alopécies"]),
+q(13,1,"hard",false,"Concernant le rôle du facteur psychologique :",[
+["Certains vitiligos surviennent après un choc émotionnel.",true,"Exact."],
+["Certains infarctus surviennent lors d'un stress sévère.",true,"Exact."],
+["Dans l'ulcère gastrique, le facteur psychologique est prépondérant.",true,"Exact."],
+["L'infarctus du myocarde est une maladie purement fonctionnelle.",false,"Faux : maladie de la civilisation avec facteur psychologique."],
+["Le vitiligo n'est jamais lié à un facteur psychique.",false,"Faux."]],
+"Choc émotionnel → vitiligo ; stress sévère → infarctus.",["Vitiligo après choc émotionnel","Infarctus parfois lors d'un stress sévère","Ulcère gastrique : facteur psychologique prépondérant"]),
+q(14,1,"medium",true,"Quelles difficultés de prise en charge sont citées ?",[
+["Le médecin pense tardivement à l'origine psychique.",true,"Exact."],
+["Les consultations sont répétées auprès de différents médecins.",true,"Exact."],
+["Des bilans onéreux et nocifs sont parfois demandés à tort.",true,"Exact : acharnement pour un diagnostic somatique."],
+["Le médecin pense précocement à l'origine psychique.",false,"Faux."],
+["L'acharnement vise un diagnostic psychique.",false,"Faux : diagnostic somatique."]],
+"Diagnostic tardif, errance, bilans inutiles.",["Pensée tardive du psychique → errance médicale → acharnement diagnostique somatique"]),
+q(15,1,"medium",false,"Selon la conclusion du cours :",[
+["Les patients n'acceptent pas toujours l'étiquette psychosomatique.",true,"Exact."],
+["Ils craignent qu'on n'ait pas fait l'examen ultime prouvant l'origine organique.",true,"Exact."],
+["Ces troubles sont difficiles à traiter car il faudrait agir sur le stress.",true,"Exact."],
+["La médecine conventionnelle les traite très efficacement.",false,"Faux : ils sont les plus difficiles à traiter."],
+["Les médecines non conventionnelles agissent surtout sur les organes.",false,"Faux : action plus globale que la médecine d'organes."]],
+"Patient sceptique, stress difficile à traiter.",["Étiquette non acceptée ; stress difficile à traiter par la médecine conventionnelle"]),
+q(16,1,"easy",false,"Concernant le stress :",[
+["Il est omniprésent dans notre vie.",true,"Exact."],
+["Il est à l'origine d'une réaction de défense contre les agressions.",true,"Exact."],
+["Il est devenu progressivement la cause de tous nos maux.",true,"Exact selon le cours."],
+["Il n'a jamais de rôle de défense.",false,"Faux."],
+["Il est limité aux troubles organiques.",false,"Faux : troubles fonctionnels et organiques."]],
+"Stress = défense, puis cause de tous les maux.",["Stress omniprésent ; réaction de défense"]),
+q(17,1,"medium",false,"Concernant les manifestations psychosomatiques :",[
+["Elles sont diverses et concernent différents organes.",true,"Exact."],
+["Certains syndromes sont spectaculaires et alarmants.",true,"Exact."],
+["Elles peuvent imposer des actes médicaux d'urgence.",true,"Exact."],
+["Elles ne concernent qu'un seul appareil.",false,"Faux."],
+["Elles n'imposent jamais d'urgence.",false,"Faux."]],
+"Diverses, parfois urgentes.",["Manifestations multi-organes, parfois spectaculaires et urgentes"]),
+q(18,1,"hard",false,"Distinguer troubles fonctionnels et lésionnels :",[
+["Un trouble fonctionnel est sans lésion anatomique objective.",true,"Exact."],
+["La véritable maladie psychosomatique a un substratum anatomopathologique.",true,"Exact."],
+["L'ulcère gastrique est une maladie psychosomatique lésionnelle.",true,"Exact."],
+["Vomissements et diarrhées sont des maladies lésionnelles.",false,"Faux : troubles fonctionnels."],
+["Un stress répétitif donne un substratum anatomopathologique.",false,"Faux : c'est le stress permanent."]],
+"Fonctionnel = sans lésion ; lésionnel = stress permanent.",["Fonctionnel (répétitif) vs lésionnel (permanent)"]),
+q(19,1,"medium",false,"Concernant les généralités du cours :",[
+["Un trouble psychique entraîne rarement des troubles somatiques.",true,"Exact."],
+["La santé se limite à la santé physique",false,"Faux : elle associe physique, psychique et sociale."],
+["La médecine psychosomatique étudie les troubles somatiques déterminés en tout ou en partie par le psychisme.",true,"Exact."],
+["La médecine psychosomatique est apparue dans la seconde moitié du 20e siècle",false,"Faux : c'est la première moitié."],
+["Une maladie somatique entraîne des troubles psychiques et une réduction de l'activité sociale.",true,"Exact."]],
+"Somatique → psychique fréquent.",["Psychosomatique : somatique déterminé en tout ou partie par le psychisme"]),
+q(20,1,"medium",false,"Le cours affirme à propos du stress :",[
+["Il a été décrit par un psychiatre",false,"Faux : c'est l'endocrinologue Hans Selye."],
+["Il serait responsable de la majorité des troubles fonctionnels.",true,"Exact."],
+["Il est étranger aux troubles organiques",false,"Faux : il serait à l'origine de quasiment tous."],
+["Il est à l'origine d'une réaction de défense contre les agressions.",true,"Exact."],
+["Il serait à l'origine de quasiment tous les troubles organiques, y compris le cancer.",true,"Exact."]],
+"Selye : stress = défense non spécifique.",["Stress : défense, mais incriminé dans la majorité des troubles"]),
+q(21,1,"medium",true,"Concernant le schéma d'Alexander :",[
+["Il décrit le mécanisme pathologique des troubles psychosomatiques.",true,"Exact."],
+["Un stress répétitif entraîne une lésion",false,"Faux : il entraîne un trouble fonctionnel sans lésion."],
+["Un stress permanent entraîne un trouble lésionnel avec substratum anatomopathologique.",true,"Exact."],
+["Il a été élaboré par Selye",false,"Faux : il a été élaboré par Alexander."],
+["Un stress aigu entraîne une réaction émotionnelle avec expression physique.",true,"Exact."]],
+"Aigu / répétitif / permanent.",["Alexander : aigu → émotion, répétitif → fonctionnel, permanent → lésionnel"]),
+q(22,1,"medium",false,"Concernant les manifestations digestives :",[
+["Dans la RCUH, le facteur psychologique est évoqué dans l'étiopathogénie.",true,"Exact."],
+["Diarrhées et constipation en font partie.",true,"Exact."],
+["Elles peuvent représenter une réaction émotionnelle ou un trouble fonctionnel.",true,"Exact."],
+["L'ulcère gastrique est un trouble sans substratum anatomopathologique",false,"Faux : c'est une maladie psychosomatique lésionnelle."],
+["Régurgitations et coliques en font partie.",true,"Exact."]],
+"Ulcère = lésionnel.",["Digestif : troubles fonctionnels + ulcère gastrique lésionnel + RCUH"]),
+q(23,1,"medium",false,"Concernant les manifestations cardio-vasculaires :",[
+["L'infarctus du myocarde exclut tout facteur psychologique",false,"Faux : le facteur psychologique est important, direct ou indirect."],
+["Hypotension.",true,"Exact."],
+["Palpitations.",true,"Exact."],
+["Rougeurs et pâleurs.",true,"Exact."],
+["Tachycardie et bradycardie.",true,"Exact."]],
+"IDM : facteur psychologique direct ou indirect.",["Cardio : rougeurs, pâleurs, palpitations, hypotension, tachy/bradycardie"]),
+q(24,1,"medium",false,"Concernant les manifestations neurologiques :",[
+["Aucune maladie neurologique n'évoque de facteur psychologique",false,"Faux : certaines maladies inflammatoires l'évoquent."],
+["Hyper ou hypoesthésies.",true,"Exact."],
+["Céphalées et vertiges.",true,"Exact."],
+["Fourmillements.",true,"Exact."],
+["Pseudo-déficits sensoriels.",true,"Exact."]],
+"Pseudo-déficits = sans lésion.",["Neuro : céphalées, vertiges, paresthésies, myoclonies, pseudo-paralysies"]),
+q(25,1,"medium",false,"Parmi ces manifestations, lesquelles sont dermatologiques ou uro-génitales ?",[
+["Les énurésies (uro-génitales).",true,"Exact."],
+["Les chutes de cheveux (dermatologiques).",true,"Exact."],
+["La pollakiurie est dermatologique",false,"Faux : elle est uro-génitale."],
+["Le prurit (dermatologique).",true,"Exact."],
+["Les troubles du cycle menstruel (uro-génitaux).",true,"Exact."]],
+"Peau vs uro-génital.",["Dermato : prurit, urticaire, cheveux, acné ; uro-génital : dysurie, énurésie, impuissance, frigidité"]),
+q(26,1,"medium",true,"Concernant les facteurs favorisants :",[
+["La personnalité est l'élément principal.",true,"Exact."],
+["Le facteur constitutionnel correspond à une fragilité ou prédisposition d'organes.",true,"Exact."],
+["La fragilité d'organes correspond aux facteurs de stress",false,"Faux : c'est le facteur constitutionnel."],
+["Les personnalités concernées sont calmes",false,"Faux : elles sont anxieuses et réactives."],
+["Les facteurs de stress incluent événements de vie et conflits familiaux, sociaux, professionnels.",true,"Exact."]],
+"Personnalité = élément principal.",["3 facteurs : constitutionnel, stress, personnalité (principal)"]),
+q(27,1,"medium",true,"Concernant la prise en charge :",[
+["L'accompagnement socio-familial est inutile",false,"Faux : il fait partie de la prise en charge."],
+["Un traitement du plan somatique si nécessaire.",true,"Exact."],
+["Un traitement psychotrope pour états anxieux, dépressifs ou simplement tranquillisant.",true,"Exact."],
+["Conclure à une origine psychogène ou cerner la part du psychique.",true,"Exact."],
+["Exclure l'organicité sans examens",false,"Faux : il faut des examens stricts pour éliminer ou confirmer l'organicité."]],
+"Somatique + psychologique + socio-familial.",["Prise en charge : analyser, examens stricts, conclure, traiter, accompagner"]),
+q(28,1,"easy",false,"Selon la conclusion du cours :",[
+["Les patients accueillent volontiers cette étiquette",false,"Faux : elle est non acceptée."],
+["La médecine conventionnelle les guérit aisément",false,"Faux : ils sont les plus difficiles à traiter."],
+["Il n'est pas agréable d'avoir l'impression que tout est « dans sa tête ».",true,"Exact."],
+["Le patient redoute qu'on n'ait pas fait l'examen ultime.",true,"Exact."],
+["Les troubles fonctionnels étiquetés psychosomatiques sont mal acceptés.",true,"Exact."]],
+"Patient : « dans ma tête ? » → mal accepté.",["Étiquette psychosomatique mal acceptée"]),
+q(29,1,"hard",false,"Concernant les médecines non conventionnelles :",[
+["Elles agissent d'abord sur l'organe",false,"Faux : elles se veulent plus globales que la médecine d'organes."],
+["La guérison supposerait d'agir sur le stress, quasi impossible.",true,"Exact."],
+["Leur succès s'explique par la difficulté de la médecine conventionnelle à traiter ces troubles.",true,"Exact."],
+["Elles ont la prétention d'agir de manière plus globale.",true,"Exact."],
+["Le stress se contrôle facilement",false,"Faux : c'est quasiment impossible."]],
+"Globale vs médecine d'organes.",["Non conventionnelles : action globale ; stress difficile à traiter"]),
+q(30,1,"hard",false,"Classer les manifestations par appareil :",[
+["Énurésie : uro-génitale.",true,"Exact."],
+["Prurit : dermatologique.",true,"Exact."],
+["Vertiges : neurologique.",true,"Exact."],
+["Palpitations : cardio-vasculaire.",true,"Exact."],
+["Gastralgies : cardio-vasculaire",false,"Faux : elles sont digestives."]],
+"Un symptôme = un appareil.",["Classer : digestif, cardio, neuro, dermato, uro-génital"]),
+q(31,2,"easy",true,"Concernant le motif de consultation, quelles propositions sont exactes ?",[
+["Il détermine ce qui gêne le patient.",true,"Exact."],
+["Il correspond à ce que le patient souhaite que le médecin solutionne.",true,"Exact."],
+["C'est une plainte ou un symptôme, jamais un diagnostic.",true,"Exact : ex. toux et fièvre."],
+["« Pneumopathie » est un exemple de motif de consultation.",false,"Faux : c'est le diagnostic conclu au terme de la démarche."],
+["Il est établi à la fin de la démarche médicale.",false,"Faux : c'est une étape cruciale de l'entrevue, au début."]],
+"Motif = symptôme ; diagnostic = fin de démarche.",["Motif = plainte/symptôme, jamais diagnostic","Étape cruciale de l'entrevue"]),
+q(32,2,"medium",false,"En cas de barrière linguistique, quelles attitudes sont recommandées ?",[
+["Faire appel à un interprète médical officiel.",true,"Exact (interrogatoire plus long et plus difficile)."],
+["Formuler les questions comme si elles s'adressaient directement au patient.",true,"Exact."],
+["Établir un contact visuel avec le patient plutôt qu'avec l'interprète.",true,"Exact : pour qu'il ne se sente pas exclu."],
+["Recourir préférentiellement à un proche comme interprète.",false,"Faux : à éviter, risque de biais."],
+["Regarder principalement l'interprète.",false,"Faux : le contact visuel se fait avec le patient."]],
+"Interprète officiel, regard sur le patient.",["Interprète officiel, pas un proche","Contact visuel avec le patient"]),
+q(33,2,"easy",false,"Les renseignements recueillis au cours de l'entrevue servent à :",[
+["Définir le motif de consultation.",true,"Exact."],["Définir l'hypothèse diagnostique.",true,"Exact."],["Guider l'examen physique.",true,"Exact."],
+["Établir le traitement définitif.",false,"Non cité parmi les rôles de l'entrevue."],["Établir le pronostic vital.",false,"Non cité parmi les rôles de l'entrevue."]],
+"Motif, hypothèse, examen physique, examens complémentaires.",["4 rôles : motif, hypothèse diagnostique, guide de l'examen physique, choix des examens complémentaires"]),
+q(34,2,"easy",false,"Concernant l'empathie :",[
+["L'empathie cognitive consiste à comprendre les idées du patient.",true,"Exact."],
+["L'empathie émotionnelle consiste à partager ses sentiments.",true,"Exact."],
+["Elle implique de se mettre à la place du patient.",true,"Exact."],
+["L'empathie cognitive consiste à partager les sentiments du patient.",false,"Faux : c'est l'empathie émotionnelle."],
+["L'empathie émotionnelle consiste à comprendre les idées du patient.",false,"Faux : c'est l'empathie cognitive."]],
+"Cognitive = idées ; émotionnelle = sentiments.",["Cognitive : comprendre les idées","Émotionnelle : partager les sentiments"]),
+q(35,2,"medium",true,"Selon les conseils de Sir William Osler lors de l'interrogatoire :",[
+["Écouter tout ce que le patient a à dire.",true,"Exact."],["Ne pas poser de question dirigée.",true,"Exact."],["Ne jamais faire de suggestions.",true,"Exact."],
+["Commencer par des questions fermées.",false,"Faux : on commence par une question ouverte."],
+["Remplacer les mots du patient par des termes médicaux.",false,"Faux : laisser le patient s'exprimer avec ses propres mots."]],
+"Osler : écoute, pas de question dirigée, pas de suggestion.",["Osler : écouter, pas de question dirigée, pas de suggestions, mots du patient"]),
+q(36,2,"medium",false,"Concernant le style de questionnement :",[
+["L'entrevue débute par une question ouverte.",true,"Exact."],
+["Les questions fermées appellent une réponse absolue.",true,"Exact."],
+["On termine par des questions spécifiques pour restreindre les diagnostics différentiels.",true,"Exact."],
+["L'entrevue débute par des questions fermées.",false,"Faux."],
+["« Vous avez quel âge ? » est une question ouverte.",false,"Faux : c'est une question fermée."]],
+"Ouvert → fermé → spécifique.",["Ouverte au début, fermées ensuite, spécifiques pour les différentiels"]),
+q(37,2,"medium",false,"Quelles attitudes du patient peuvent avoir une raison médicale ?",[
+["Sevrage d'alcool ou de drogues.",true,"Exact."],["Lésion intracrânienne (tumeur ou hématome).",true,"Exact."],["Maladie psychiatrique.",true,"Exact."],
+["Infection chez le sujet jeune.",false,"Faux : le cours cite l'infection chez le sujet âgé."],["Hypertension artérielle isolée.",false,"Non citée."]],
+"Sevrage, lésion cérébrale, psychiatrie, infection du sujet âgé.",["4 causes : sevrage, lésion intracrânienne, maladie psychiatrique, infection du sujet âgé"]),
+q(38,2,"medium",false,"Concernant l'attitude des proches du patient :",[
+["L'idéal est une entrevue directe avec le patient.",true,"Exact."],
+["Le patient doit se trouver entre le médecin et son proche.",true,"Exact."],
+["Les symptômes peuvent être « filtrés » ou interprétés par l'entourage.",true,"Exact."],
+["Le proche doit répondre à la place du patient.",false,"Faux : il doit laisser le patient répondre avec ses propres mots."],
+["Les proches sont invités systématiquement.",false,"Faux : seulement si le patient le souhaite."]],
+"Patient au centre, proche en retrait.",["Entrevue directe ; patient entre médecin et proche","Proche : risque de filtrage"]),
+q(39,2,"medium",false,"Concernant l'attitude du médecin :",[
+["Écouter activement et cerner la personnalité du patient.",true,"Exact."],["Prendre tous les problèmes du patient au sérieux.",true,"Exact."],
+["Respecter l'intimité, la culture et la religion du patient.",true,"Exact."],
+["Juger le comportement du patient.",false,"Faux : être poli et ne pas juger."],
+["Développer un intérêt personnel pour le patient.",false,"Faux : rencontre strictement professionnelle, avec détachement."]],
+"Professionnel, éthique, sans jugement.",["Écoute active, sérieux, éthique, sans jugement, détachement"]),
+q(40,2,"hard",false,"Concernant les situations particulières :",[
+["Les sujets sensibles incluent sexualité, alcool, toxicomanie, deuil, clandestinité.",true,"Exact."],
+["Le discours doit être explicite et sans jugement.",true,"Exact."],
+["L'entrevue psychiatrique demande du temps pour établir une relation de confiance.",true,"Exact."],
+["Un patient dément ou mineur n'a jamais besoin d'aide.",false,"Faux : il peut avoir besoin d'aide pour fournir des renseignements exacts."],
+["Les sujets sensibles doivent être évités.",false,"Faux : le médecin agit avec tact et respect."]],
+"Sujets sensibles : tact, clarté, pas de jugement.",["Sujets sensibles : tact, respect, discours explicite","Entrevue psychiatrique : temps + confiance"]),
+q(41,2,"medium",false,"Pour un interrogatoire de qualité :",[
+["Le médecin a une allure professionnelle, ordonnée, avec une tenue adaptée.",true,"Exact."],
+["Il maintient un contact visuel rassurant et une attitude ouverte.",true,"Exact."],
+["Il prend en compte le langage non verbal.",true,"Exact."],
+["Il oriente la réponse par un ton directif.",false,"Faux : sans influencer la réponse."],
+["Il encourage l'interprétation des faits.",false,"Faux : seulement des faits."]],
+"Tenue, regard, non verbal.",["Allure professionnelle, contact visuel, langage non verbal"]),
+q(42,2,"medium",true,"Un bon interrogatoire :",[
+["Ne laisse pas de place à l'interprétation.",true,"Exact."],
+["Ne recherche que des faits.",true,"Exact."],
+["Clarifie avec le patient la liste des plaintes principales.",true,"Exact."],
+["Évite de vérifier les faits.",false,"Faux : on pose davantage de questions pour vérifier."],
+["Laisse peu parler le patient.",false,"Faux : on le laisse parler et on l'encourage."]],
+"Faits, pas d'interprétation.",["Interrogatoire = faits, sans interprétation"]),
+q(43,2,"easy",false,"Parmi les scénarios de communication à maîtriser :",[
+["Parler au patient et à son entourage.",true,"Exact."],
+["Interroger un malade avec affection psychiatrique.",true,"Exact."],
+["Interagir avec un patient aveugle ou sourd.",true,"Exact."],
+["En urgence, le médecin doit être directif et pressé.",false,"Faux : calme et rassurant."],
+["Éviter les questions personnelles.",false,"Faux : savoir comment les poser."]],
+"Urgence : calme et rassurant.",["Urgence : médecin calme et rassurant"]),
+q(44,2,"medium",false,"Attitudes du patient rendant le contact difficile :",[
+["Réticent ou incapable de parler.",true,"Exact : mise en confiance."],
+["Brouiller les cartes consciemment ou inconsciemment.",true,"Exact."],
+["Peu ou trop coopératif : vérifier la validité des renseignements.",true,"Exact."],
+["Un patient trop coopératif est toujours fiable.",false,"Faux : vérifier."],
+["Un patient en colère doit être ignoré.",false,"Faux : en parler avec tact."]],
+"Trop ou peu coopératif : vérifier.",["Réticent, brouille les cartes, oublie, peu/trop coopératif"]),
+q(45,2,"medium",false,"Objectifs de la synthèse de l'entrevue :",[
+["Cerner les renseignements importants.",true,"Exact."],
+["Faire une analyse objective des faits.",true,"Exact."],
+["Déterminer le diagnostic le plus probable et les différentiels.",true,"Exact."],
+["Supprimer l'examen physique.",false,"Faux : on le dirige."],
+["Établir le traitement définitif.",false,"Faux : on dirige examens physique et complémentaires."]],
+"Résumé des faits → diagnostic probable.",["Synthèse : faits → raisonnement clinique → diagnostic le plus probable"]),
+q(46,2,"hard",false,"Selon la conclusion du cours :",[
+["C'est au médecin de s'adapter au patient.",true,"Exact."],
+["Il faut gagner la confiance et un terrain d'entente.",true,"Exact."],
+["La collecte doit être précise et complète pour définir le motif et la conduite à tenir.",true,"Exact."],
+["C'est au patient de s'adapter au médecin.",false,"Faux : l'inverse."],
+["Un proche est l'interprète idéal.",false,"Faux : à éviter."]],
+"Le médecin s'adapte.",["Médecin s'adapte au patient ; confiance ; collecte précise"]),
+q(47,2,"easy",false,"Concernant l'introduction du cours :",[
+["L'entrevue n'a aucun lien avec l'examen physique",false,"Faux : elle le guide."],
+["L'entrevue sert seulement à poser le diagnostic final",false,"Faux : elle définit motif, hypothèse, examen physique et examens complémentaires."],
+["L'interrogatoire doit être à la fois concis et complet.",true,"Exact."],
+["L'art de la médecine repose sur la capacité à mener une entrevue réussie.",true,"Exact."],
+["L'entrevue dirige le type d'examens complémentaires à demander.",true,"Exact."]],
+"Entrevue → motif, hypothèse, examens.",["Entrevue concise et complète ; guide examen physique et examens complémentaires"]),
+q(48,2,"medium",false,"Concernant la collecte des informations :",[
+["La famille est toujours exclue",false,"Faux : elle peut être une source si nécessaire."],
+["On recueille des renseignements additionnels en cas de morbidités multiples.",true,"Exact."],
+["Les renseignements doivent être valides et sans ambiguïté.",true,"Exact."],
+["On peut recourir à la famille, au personnel soignant ou à d'autres professionnels.",true,"Exact."],
+["Mettre le patient à l'aise est secondaire",false,"Faux : c'est une condition de l'entrevue."]],
+"Informations valides, sources multiples.",["Collecte : valide, additionnelle si complexe, autres sources"]),
+q(49,2,"medium",false,"Conditions à remplir par le médecin :",[
+["Former un récit cohérent de l'histoire de la maladie.",true,"Exact."],
+["Éviter de réagir à la situation",false,"Faux : il faut réagir de façon appropriée."],
+["Savoir écouter, être ouvert et flexible.",true,"Exact."],
+["Gagner la confiance du patient et un terrain d'entente.",true,"Exact."],
+["Offrir les conditions appropriées à l'entrevue.",true,"Exact."]],
+"Accueil, écoute, confiance, récit cohérent.",["Conditions : accueil, écoute, interprétation, confiance, réaction appropriée, récit cohérent"]),
+q(50,2,"medium",false,"Pour être empathique, le médecin doit :",[
+["Garder une distance froide",false,"Faux : il doit se mettre à la place du patient."],
+["Être sincère.",true,"Exact."],
+["Appréhender le problème du point de vue du patient.",true,"Exact."],
+["Traiter les problèmes avec respect.",true,"Exact."],
+["Avoir la volonté de coopérer (esprit de partenariat).",true,"Exact."]],
+"Sincérité, respect, partenariat.",["Empathie : sincérité, attention, point de vue du patient, respect, soutien, partenariat"]),
+q(51,2,"medium",false,"Concernant les problèmes de langue :",[
+["Les questions sont adressées à l'interprète à la troisième personne",false,"Faux : elles sont formulées comme si elles s'adressaient directement au patient."],
+["Recourir à un proche comme interprète augmente le risque de biais.",true,"Exact."],
+["La langue maternelle peut être différente (langue étrangère, kabyle).",true,"Exact."],
+["Le contact visuel se fait avec l'interprète",false,"Faux : il se fait avec le patient."],
+["L'interrogatoire avec interprète est plus long et plus difficile.",true,"Exact."]],
+"Interprète officiel, regard sur le patient.",["Langue : interprète officiel, questions directes, contact visuel avec le patient, pas de proche"]),
+q(52,2,"easy",true,"Concernant le motif de consultation (exemple du cours) :",[
+["La pneumopathie est le motif de consultation",false,"Faux : c'est le diagnostic."],
+["La pneumopathie est le diagnostic conclu au terme de la démarche médicale.",true,"Exact."],
+["Le motif correspond à ce que souhaite le médecin",false,"Faux : c'est ce que le patient souhaite voir solutionné."],
+["Un patient consulte pour toux et fièvre.",true,"Exact."],
+["Le motif de consultation est une étape cruciale.",true,"Exact."]],
+"Toux + fièvre = motif ; pneumopathie = diagnostic.",["Motif = plainte/symptôme (toux, fièvre) ; diagnostic = pneumopathie"]),
+q(53,2,"medium",false,"Concernant l'interrogatoire :",[
+["Questions posées d'un ton accueillant, sans influencer la réponse.",true,"Exact."],
+["Encourager le patient à s'exprimer.",true,"Exact."],
+["Utiliser un discours simple compris par le patient.",true,"Exact."],
+["Savoir écouter, laisser parler, relancer, revenir sur certains points.",true,"Exact."],
+["Utiliser un jargon technique",false,"Faux : le discours doit être simple."]],
+"Écoute, relance, simplicité.",["Interrogatoire : accueillant, non influençant, simple, flexible"]),
+q(54,2,"medium",false,"Scénarios de communication à maîtriser :",[
+["Gérer une entrevue en urgence, calme et rassurant.",true,"Exact."],
+["Le patient aveugle ou sourd est exclu",false,"Faux : il fait partie des scénarios."],
+["S'adresser à un patient ou proche mécontent des soins.",true,"Exact."],
+["Annoncer de mauvaises nouvelles.",true,"Exact."],
+["Savoir poser des questions personnelles.",true,"Exact."]],
+"Urgence, personnel, mécontent, mauvaises nouvelles.",["Scénarios : entourage, psychiatrie, handicap sensoriel, urgence, mécontentement, maladie grave"]),
+q(55,2,"medium",false,"Concernant les attitudes du patient :",[
+["S'il est déprimé, anxieux, effrayé, en colère ou agressif, on en parle avec tact.",true,"Exact."],
+["Une réaction émotionnelle demande gestion des émotions, compréhension et soutien.",true,"Exact."],
+["Ces attitudes n'ont jamais de cause médicale",false,"Faux : sevrage, lésion intracrânienne, maladie psychiatrique, infection du sujet âgé."],
+["Il peut interpréter les choses de manière erronée.",true,"Exact."],
+["Il peut oublier un épisode du passé.",true,"Exact."]],
+"Tact face aux émotions.",["Attitudes difficiles : réticence, oubli, erreurs d'interprétation, émotions"]),
+q(56,2,"medium",false,"Concernant l'attitude du médecin :",[
+["Garder un détachement pour éviter toute manipulation.",true,"Exact."],
+["Être poli et ne pas juger.",true,"Exact."],
+["Éviter trop de monde dans la pièce.",true,"Exact."],
+["Inviter les proches seulement si le patient le souhaite.",true,"Exact."],
+["La rencontre peut revêtir un intérêt personnel",false,"Faux : elle est strictement professionnelle."]],
+"Proches si patient d'accord ; détachement.",["Médecin : proches si le patient le souhaite, sans jugement, détaché"]),
+q(57,2,"medium",true,"Concernant les proches du patient :",[
+["Les symptômes peuvent être filtrés ou interprétés avant d'atteindre le clinicien.",true,"Exact."],
+["Le proche est placé entre le médecin et le patient",false,"Faux : le patient se trouve entre vous et son proche."],
+["Un patient dément ou mineur peut avoir besoin d'aide pour fournir des renseignements.",true,"Exact."],
+["On leur fait comprendre avec tact de laisser le patient répondre.",true,"Exact."],
+["Ils peuvent interrompre voire contredire la version du malade.",true,"Exact."]],
+"Patient entre médecin et proche.",["Proches : risque d'interruption/filtrage ; patient entre médecin et proche"]),
+q(58,2,"hard",false,"Concernant les situations particulières :",[
+["Le contexte culturel n'influence pas les choix",false,"Faux : il les influence."],
+["En entrevue psychiatrique, il faut distinguer symptômes physiques et psychologiques.",true,"Exact."],
+["Il faut déterminer l'influence du contexte personnel et culturel (poignée de main, examen par le sexe opposé).",true,"Exact."],
+["Chez le sujet âgé, dément, en urgence, déprimé ou très anxieux, une tierce personne peut être nécessaire.",true,"Exact."],
+["Sur les sujets sensibles, un discours évasif est préférable",false,"Faux : le discours est explicite et sans jugement."]],
+"Culture, tierce personne, sujets sensibles.",["Situations particulières : culture, tierce personne, sujets sensibles, entrevue psychiatrique"]),
+q(59,2,"medium",false,"Concernant la synthèse de l'entrevue :",[
+["Raisonnement clinique menant au diagnostic le plus probable.",true,"Exact."],
+["La synthèse est un résumé d'opinions",false,"Faux : c'est un résumé des faits."],
+["Diriger l'examen physique et les examens complémentaires.",true,"Exact."],
+["Clarification des données.",true,"Exact."],
+["Établissement de liens entre les évènements.",true,"Exact."]],
+"Résumé des faits → diagnostic probable.",["Synthèse : faits → liens → diagnostic probable et différentiels"]),
+q(60,2,"hard",false,"Concernant l'identification du cours :",[
+["Il est présenté par le Pr Ag. Bouzid, Médecine Interne.",true,"Exact."],
+["Il appartient à l'unité d'enseignement intégrée 01, Psychologie Médicale.",true,"Exact."],
+["Il cite Sir William Osler (1849–1919).",true,"Exact."],
+["Osler est cité comme ayant vécu de 1949 à 2019",false,"Faux : ses dates sont 1849–1919."],
+["Il est daté d'Oran, le 24/09/2025.",true,"Exact."]],
+"UEI 01 — Psychologie Médicale.",["UEI 01 Psychologie Médicale ; Pr Ag. Bouzid ; Osler 1849–1919"]),
+q(61,3,"medium",true,"Parmi les étapes du processus d'acceptation (modèle de Kübler-Ross), on retrouve :",[
+["Le déni.",true,"Exact : première étape (refus)."],
+["La colère.",true,"Exact : « pourquoi moi ? »."],
+["Le marchandage.",true,"Exact : négociation, recherche d'alternatives."],
+["L'identification.",false,"Faux : mécanisme de défense du soignant."],
+["La banalisation.",false,"Faux : mécanisme de défense du soignant."]],
+"Déni, Colère, Marchandage, Dépression, Acceptation.",["5 étapes : déni, colère, marchandage, dépression, acceptation","Acceptation = dernière étape"]),
+q(62,3,"medium",false,"Quelles erreurs sont à éviter lors de l'annonce ?",[
+["Annoncer par téléphone, mail ou courrier postal.",true,"Exact."],
+["Utiliser un jargon médical incompréhensible.",true,"Exact."],
+["Transmettre des messages incohérents entre membres de l'équipe.",true,"Exact."],
+["Réaliser l'annonce en semaine.",false,"Faux : c'est recommandé (pas la veille d'un week-end)."],
+["Laisser le patient choisir d'être accompagné.",false,"Faux : c'est une recommandation."]],
+"Pas de téléphone, pas de jargon, pas d'incohérence.",["Éviter téléphone/mail/courrier","Cohérence de l'équipe"]),
+q(63,3,"easy",true,"Une maladie grave se définit par :",[
+["Un risque élevé de mortalité.",true,"Exact."],
+["Un impact négatif sur le fonctionnement quotidien ou la qualité de vie.",true,"Exact."],
+["La mise en jeu du pronostic vital.",true,"Exact."],
+["Toute maladie chronique est une maladie grave.",false,"Faux : certaines modifient peu l'espérance de vie."],
+["Le pronostic y est une certitude.",false,"Faux : jamais une certitude."]],
+"Mortalité élevée ET impact sur la vie quotidienne.",["Maladie grave = risque élevé de mortalité + impact sur fonctionnement/qualité de vie"]),
+q(64,3,"easy",false,"Concernant le pronostic :",[
+["C'est la prédiction concernant l'évolution d'une maladie (guérison, aggravation, rechute, décès).",true,"Exact."],
+["Il est vital, fonctionnel et évolutif.",true,"Exact."],
+["Ce n'est jamais une certitude.",true,"Exact."],
+["C'est toujours une certitude.",false,"Faux."],
+["Il ne concerne que la survie.",false,"Faux : aussi fonctionnel et évolutif."]],
+"Pronostic = prévoir, jamais certain.",["Pronostic : vital, fonctionnel, évolutif ; jamais une certitude"]),
+q(65,3,"medium",true,"Quels sont des mécanismes de défense du patient ?",[
+["L'isolation.",true,"Exact."],["Le déplacement.",true,"Exact."],["La projection agressive.",true,"Exact."],
+["La fuite en avant.",false,"Mécanisme du soignant."],["La fausse réassurance.",false,"Mécanisme du soignant."]],
+"Patient : isolation, déplacement, projection, régression, déni.",["Patient : isolation, déplacement, projection agressive, régression, déni"]),
+q(66,3,"medium",false,"Quels sont des mécanismes de défense du soignant ?",[
+["La fausse réassurance.",true,"Exact : donner de faux espoirs."],["La banalisation.",true,"Exact."],["Le mensonge.",true,"Exact."],
+["Le déni.",false,"Mécanisme du patient."],["La régression.",false,"Mécanisme du patient."]],
+"Soignant : identification, fausse réassurance, fuite en avant, banalisation, mensonge.",["Soignant : identification, fausse réassurance, fuite en avant, banalisation, mensonge"]),
+q(67,3,"medium",false,"Concernant le lieu et le moment de l'annonce :",[
+["Le lieu doit être calme, confidentiel, sans interruption.",true,"Exact."],
+["Le médecin et le patient sont assis face à face.",true,"Exact."],
+["L'annonce a lieu en semaine.",true,"Exact."],
+["Elle se fait de préférence en fin de soirée.",false,"Faux : à éviter."],
+["La veille d'un évènement familial est un bon moment.",false,"Faux : à éviter."]],
+"Calme, face à face, en semaine.",["Lieu calme et confidentiel ; en semaine ; pas en fin de soirée"]),
+q(68,3,"medium",true,"Concernant le modèle SPIKES :",[
+["S correspond à Setting : installer le cadre.",true,"Exact."],
+["P correspond à Perception : évaluer ce que sait le patient.",true,"Exact."],
+["K correspond à Knowledge : annoncer clairement en langage simple.",true,"Exact."],
+["I correspond à l'information sur le traitement.",false,"Faux : I = Invitation (niveau de détail souhaité)."],
+["E correspond à l'évaluation du pronostic.",false,"Faux : E = Emotions."]],
+"SPIKES : Setting, Perception, Invitation, Knowledge, Emotions, Strategy.",["S-P-I-K-E-S : Setting, Perception, Invitation, Knowledge, Emotions, Strategy/Summary"]),
+q(69,3,"medium",false,"Concernant la façon d'annoncer :",[
+["La volonté d'être tenu dans l'ignorance doit être respectée.",true,"Exact."],
+["Il ne faut pas aborder trop d'informations à la fois.",true,"Exact."],
+["Le vocabulaire est clair, positif ou neutre, sans banaliser le diagnostic.",true,"Exact."],
+["Le jargon d'expert est recommandé.",false,"Faux : à éviter."],
+["Il faut tout dire en une seule fois.",false,"Faux : information simple et progressive."]],
+"Simple, progressive, sans jargon.",["Information simple, progressive, répétée ; pas de jargon"]),
+q(70,3,"hard",false,"Concernant l'intérêt d'annoncer et les maladies redoutées :",[
+["Les maladies cardiovasculaires, cancers, diabète, Alzheimer et Parkinson causent 80 % des décès prématurés.",true,"Exact selon le cours."],
+["Annoncer est une obligation morale et légale.",true,"Exact : droit à l'information."],
+["L'annonce facilite le travail de deuil de l'état de santé antérieure.",true,"Exact."],
+["Ces maladies causent 50 % des décès prématurés.",false,"Faux : 80 %."],
+["Annoncer n'est qu'une obligation morale, sans caractère légal.",false,"Faux : morale et légale."]],
+"80 % des décès prématurés.",["80 % des décès prématurés","Annonce = obligation morale et légale"]),
+q(71,3,"medium",false,"Concernant la maladie chronique (OMS) :",[
+["C'est une affection de longue durée.",true,"Exact."],
+["Elle évolue en règle générale lentement.",true,"Exact."],
+["Elle altère les dimensions psychologique, sociale et économique.",true,"Exact."],
+["Elle évolue en règle générale rapidement.",false,"Faux."],
+["Elle est toujours une maladie grave.",false,"Faux : certaines modifient peu l'espérance de vie."]],
+"Chronique = longue, lente.",["Chronique : longue durée, évolution lente, pas toujours grave"]),
+q(72,3,"medium",true,"Concernant l'annonce :",[
+["C'est un entretien pour informer le patient sur sa maladie.",true,"Exact."],
+["Elle informe aussi sur les alternatives thérapeutiques.",true,"Exact."],
+["Annoncer, c'est communiquer, faire savoir, faire comprendre.",true,"Exact."],
+["La consultation est généralement brève.",false,"Faux : souvent longue."],
+["L'étape de l'annonce est sans importance pour la suite.",false,"Faux : déterminante."]],
+"Communiquer, faire savoir, faire comprendre.",["Annonce : informer sur maladie et alternatives ; moment déterminant"]),
+q(73,3,"medium",false,"Les participants à l'annonce :",[
+["Le patient peut être accompagné d'un proche ou d'une personne de confiance.",true,"Exact."],
+["Le proche aide car la sidération limite la compréhension.",true,"Exact."],
+["Le patient choisit d'être seul ou accompagné.",true,"Exact."],
+["La présence d'un proche est imposée.",false,"Faux."],
+["La famille décide à la place du patient.",false,"Faux : le choix revient au patient."]],
+"Choix du patient.",["Proche/personne de confiance ; choix laissé au patient"]),
+q(74,3,"medium",false,"Qui annonce, et quand ?",[
+["Le médecin, au plus vite après les résultats anormaux.",true,"Exact."],
+["Cela peut être le spécialiste en imagerie.",true,"Exact."],
+["Cela peut être un spécialiste d'organe ou le médecin traitant.",true,"Exact."],
+["Un délai de plusieurs semaines est recommandé.",false,"Faux : au plus vite."],
+["Seul un psychologue peut annoncer.",false,"Faux : un médecin."]],
+"Médecin, au plus vite.",["Annonce par un médecin, au plus vite"]),
+q(75,3,"medium",false,"Erreurs à éviter lors de l'annonce :",[
+["La dilution des responsabilités.",true,"Exact."],
+["Le retard à l'information.",true,"Exact."],
+["L'oubli du patient au profit des proches.",true,"Exact."],
+["Une information progressive, assimilée à de la rétention.",false,"Faux : progressive ≠ rétention."],
+["Un vocabulaire clair.",false,"Faux : c'est recommandé."]],
+"Responsabilités, retard, patient oublié.",["Erreurs : dilution des responsabilités, retard, incohérence, patient oublié"]),
+q(76,3,"hard",false,"Après l'annonce et règles d'or :",[
+["Accompagner le malade.",true,"Exact."],
+["Proposer une aide psychologique ou sociale si besoin.",true,"Exact."],
+["Consigner la consultation dans le dossier accessible aux professionnels.",true,"Exact."],
+["Éviter que le patient exprime son ressenti.",false,"Faux : le laisser s'exprimer."],
+["Présenter les solutions thérapeutiques tardivement.",false,"Faux : dès que possible."]],
+"Accompagner, aider, tracer.",["Accompagnement, aide psychologique/sociale, dossier médical"]),
+q(77,3,"medium",true,"Concernant les mécanismes de défense du patient :",[
+["La régression : le patient demande à une autre personne de prendre en charge.",true,"Exact."],
+["L'isolation se manifeste par une agressivité envers l'équipe",false,"Faux : c'est une non-réaction."],
+["Le déni : le patient se comporte comme si rien ne lui avait été dit.",true,"Exact."],
+["Le déni est toujours définitif",false,"Faux : il peut être partiel et transitoire."],
+["La projection agressive : colère, « vous êtes tous inhumains ».",true,"Exact."]],
+"Déni, régression, projection.",["Déni (partiel/transitoire), régression, projection agressive"]),
+q(78,3,"hard",false,"Concernant l'isolation et le déplacement :",[
+["Le déplacement vise une représentation plus menaçante",false,"Faux : elle est moins menaçante."],
+["Le déplacement déplace la charge affective vers une représentation généralement moins menaçante.",true,"Exact."],
+["L'isolation correspond au déni de toute information",false,"Faux : c'est une non-réaction, avec évocation claire de la maladie."],
+["L'isolation est une non-réaction permettant d'évoquer sa situation sans s'effondrer.",true,"Exact."],
+["L'isolation est transitoire, le temps d'intégrer la gravité de l'annonce.",true,"Exact."]],
+"Isolation = calme apparent ; déplacement = autre cible.",["Isolation : non-réaction transitoire ; déplacement : charge affective vers moins menaçant"]),
+q(79,3,"medium",true,"Concernant les étapes de Kübler-Ross :",[
+["La dépression comprend tristesse, pleurs, perte de plaisir, refus de traitement.",true,"Exact."],
+["La colère s'exprime par « pourquoi moi ? ».",true,"Exact."],
+["Le déni est la dernière étape",false,"Faux : c'est la première."],
+["L'acceptation est la dernière étape, avec un état de calme.",true,"Exact."],
+["Le marchandage est une négociation et une recherche d'alternatives.",true,"Exact."]],
+"Déni → colère → marchandage → dépression → acceptation.",["Kübler-Ross : déni, colère, marchandage, dépression, acceptation (dernière)"]),
+q(80,3,"medium",false,"Concernant les mécanismes de défense du soignant :",[
+["L'identification : le soignant est mal à l'aise avec les patients.",true,"Exact."],
+["La fausse réassurance : donner de faux espoirs en réponse à l'angoisse du patient.",true,"Exact."],
+["Le mensonge protège uniquement le patient",false,"Faux : il préserve en réalité le médecin et parfois la famille."],
+["La banalisation : il met de côté la souffrance psychique du patient.",true,"Exact."],
+["La fuite en avant : le soignant dit tout, tout de suite.",true,"Exact."]],
+"Fuite en avant = tout dire d'un coup (sidération).",["Soignant : identification, fausse réassurance, fuite en avant, banalisation, mensonge"]),
+q(81,3,"medium",false,"Concernant le retentissement de l'annonce :",[
+["Elle constitue un traumatisme pouvant mener à un état de sidération.",true,"Exact."],
+["La qualité de la rencontre favorise la sortie du traumatisme.",true,"Exact."],
+["Pour l'interlocuteur, c'est un instant où toute sa vie bascule.",true,"Exact."],
+["L'adhésion au traitement est indépendante de l'annonce",false,"Faux : elle s'inscrit dans le processus de réorganisation de sa vie."],
+["Certaines façons d'annoncer sont sans effet dévastateur",false,"Faux : il n'existe pas de bonne façon, certaines sont moins dévastatrices."]],
+"Annonce = traumatisme → sidération.",["Annonce : traumatisme, sidération, qualité de la rencontre"]),
+q(82,3,"easy",false,"Avant l'annonce, la préparation comprend :",[
+["Un diagnostic confirmé.",true,"Exact."],
+["Préparer l'annonce sans l'équipe soignante",false,"Faux : coordination nécessaire."],
+["La coordination avec l'équipe soignante.",true,"Exact."],
+["Annoncer avant la confirmation du diagnostic",false,"Faux : le diagnostic doit être confirmé."],
+["Les options thérapeutiques.",true,"Exact."]],
+"Diagnostic, options, équipe.",["Préparation : diagnostic confirmé, options thérapeutiques, coordination"]),
+q(83,3,"medium",false,"Concernant le lieu de l'annonce :",[
+["Si possible chaleureux.",true,"Exact."],
+["Le patient est correctement installé, sans être dévêtu.",true,"Exact."],
+["Endroit calme garantissant confidentialité et non-interruption (portables éteints).",true,"Exact."],
+["Entretien debout et rapide",false,"Faux : il faut s'asseoir face à face et prendre le temps."],
+["L'entretien est spécifiquement consacré à la discussion.",true,"Exact."]],
+"Calme, confidentiel, assis, face à face.",["Lieu : calme, confidentiel, face à face, patient habillé"]),
+q(84,3,"medium",false,"Concernant le moment de l'annonce :",[
+["Elle est reportée loin dans le temps",false,"Faux : elle ne doit pas être trop loin dans le temps."],
+["Le rendez-vous est organisé sans mise en scène excessive.",true,"Exact."],
+["Elle n'a pas lieu en fin de soirée (sentiment d'abandon et de solitude).",true,"Exact."],
+["Elle a lieu en semaine.",true,"Exact."],
+["Elle n'a pas lieu la veille d'un évènement familial.",true,"Exact."]],
+"Semaine, pas de soirée, pas trop tard.",["Moment : semaine, pas fin de soirée, délai acceptable"]),
+q(85,3,"medium",false,"Concernant la façon d'annoncer :",[
+["On rappelle les informations déjà connues (raison de la rencontre, examens pratiqués).",true,"Exact."],
+["On commence par le pronostic détaillé",false,"Faux : on part de ce que le patient sait et exprime."],
+["On évite de nommer la maladie",false,"Faux : on la cite au temps opportun."],
+["Le choix des mots, du ton et de la posture compte.",true,"Exact."],
+["On amène le patient à exprimer son ressenti.",true,"Exact."]],
+"Mots, ton, posture ; partir du patient.",["Comment : mots/ton/posture, ressenti, rappel des informations, nom de la maladie au temps opportun"]),
+q(86,3,"medium",true,"Concernant l'information donnée :",[
+["Information simple et progressive.",true,"Exact."],
+["Dire ce qui rassure même si ce n'est pas exact",false,"Faux : ne rien dire qui ne soit vrai."],
+["Schémas, dessins ou images peuvent aider.",true,"Exact."],
+["Contrôle régulier de la compréhension et reformulation.",true,"Exact."],
+["Vocabulaire clair, si possible positif ou neutre.",true,"Exact."]],
+"Simple, progressive, vraie.",["Information claire, progressive, répétée, vraie ; vérifier la compréhension"]),
+q(87,3,"hard",false,"Concernant le recours à d'autres avis :",[
+["On propose si nécessaire d'autres entretiens.",true,"Exact."],
+["On évoque le recours à différents médecins.",true,"Exact."],
+["Le second avis est positivé par le médecin.",true,"Exact."],
+["Le second avis est découragé",false,"Faux : il est positivé."],
+["L'intérêt de la RCP peut être expliqué.",true,"Exact."]],
+"RCP et second avis : positifs.",["RCP, second avis positivé, autres entretiens"]),
+q(88,3,"medium",false,"Parmi les règles d'or de l'annonce :",[
+["Expliquer la suite du parcours de soins.",true,"Exact."],
+["Présenter dès que possible solutions et ressources thérapeutiques.",true,"Exact."],
+["Éviter que le patient exprime son ressenti",false,"Faux : il faut le laisser s'exprimer."],
+["Proposer un espoir réaliste.",true,"Exact."],
+["Soutenir la qualité de vie sur un parcours long et non linéaire.",true,"Exact."]],
+"Solutions, espoir réaliste, suite du parcours.",["Règles d'or : solutions, espoir réaliste, accompagnement, parcours expliqué"]),
+q(89,3,"medium",false,"Après l'annonce :",[
+["Une aide psychologique spécialisée peut être proposée.",true,"Exact."],
+["On propose l'aide nécessaire.",true,"Exact."],
+["On laisse le patient seul",false,"Faux : on l'accompagne."],
+["On encourage ses ressources personnelles de défense (famille).",true,"Exact."],
+["On accompagne le malade.",true,"Exact."]],
+"Accompagner, aider, famille.",["Après l'annonce : accompagnement, famille, aide psychologique"]),
+q(90,3,"hard",false,"Points forts du cours :",[
+["Droit à l'information et consentement éclairé.",true,"Exact."],
+["Il faut respecter dignité et intimité.",true,"Exact."],
+["Les mécanismes de défense n'existent que chez le médecin",false,"Faux : ils existent chez le malade et le médecin."],
+["L'annonce est un moment clé du parcours de soins.",true,"Exact."],
+["Elle a un impact psychologique majeur, traumatisme et sidération.",true,"Exact."]],
+"Moment clé, traumatisme, dignité, consentement.",["Annonce : moment clé, sidération, dignité, consentement éclairé, cohérence de l'équipe"]),
+q(91,4,"medium",true,"Concernant l'examen mental, quelles propositions sont exactes ?",[
+["Orientation, attention, mémoire et fonctions exécutives relèvent de l'évaluation cognitive.",true,"Exact."],
+["Hallucinations et illusions relèvent de la perception.",true,"Exact."],
+["Sommeil, alimentation et sexualité relèvent de la sphère instinctuelle.",true,"Exact."],
+["Les hallucinations relèvent du contenu de la pensée.",false,"Faux : rubrique perception."],
+["L'insight désigne l'évaluation des décisions prises par le patient.",false,"Faux : c'est le jugement ; l'insight est la reconnaissance de sa maladie."]],
+"Insight = « je suis malade » ; jugement = mes décisions.",["Rubriques : apparence, humeur, pensée, perception, cognition, insight/jugement, instincts"]),
+q(92,4,"hard",false,"Concernant classifications et outils en psychiatrie :",[
+["Le DSM 5 est publié par l'APA.",true,"Exact."],
+["La CIM-10 est la classification internationale de l'OMS, 10e édition.",true,"Exact."],
+["PANSS et MMSE figurent parmi les tests et échelles d'évaluation.",true,"Exact, avec les échelles de Hamilton."],
+["Le DSM 5 est publié par l'OMS.",false,"Faux : APA."],
+["La CIM-10 correspond à la 5e édition.",false,"Faux : 10e édition."]],
+"DSM = APA ; CIM = OMS.",["DSM 5 (APA) / CIM-10 (OMS)","Échelles : Hamilton dépression/anxiété, PANSS, MMSE"]),
+q(93,4,"easy",false,"Concernant la psychiatrie :",[
+["C'est une spécialité médicale traitant les troubles mentaux.",true,"Exact."],
+["Le mot vient du grec psyche (âme, esprit) et iatros (médecin).",true,"Exact : médecine de l'âme."],
+["Son rôle est le diagnostic, le traitement et la prévention des troubles mentaux.",true,"Exact."],
+["Le mot psychiatrie vient du latin.",false,"Faux : racines grecques."],
+["Son rôle se limite au traitement.",false,"Faux : aussi diagnostic et prévention."]],
+"Psyche = âme ; iatros = médecin.",["Psychiatrie = médecine de l'âme ; diagnostic, traitement, prévention"]),
+q(94,4,"easy",true,"Quelles sont les trois grandes catégories de troubles mentaux citées ?",[
+["Les psychoses.",true,"Exact."],["Les névroses (troubles anxieux et de l'humeur).",true,"Exact."],["Les troubles mentaux organiques.",true,"Exact."],
+["Les troubles de la personnalité.",false,"Non citée parmi les trois grandes catégories."],["Les troubles neurodéveloppementaux.",false,"Non cités parmi les trois grandes catégories."]],
+"Psychoses, névroses, organiques.",["3 catégories : psychoses, névroses, troubles organiques"]),
+q(95,4,"medium",true,"Concernant le délire et ses mécanismes :",[
+["Le délire est une croyance fausse avec conviction inébranlable.",true,"Exact, malgré le désaccord de l'entourage."],
+["L'hallucination est une perception sans objet.",true,"Exact."],
+["L'érotomanie est un thème répandu de délire.",true,"Exact."],
+["L'illusion est une perception sans objet.",false,"Faux : perception déformée."],
+["Le délire de filiation n'est pas cité parmi les thèmes.",false,"Faux : il est cité."]],
+"Hallucination = sans objet ; illusion = déformée.",["Délire : conviction inébranlable","Hallucination (sans objet) ≠ illusion (déformée)"]),
+q(96,4,"medium",false,"Concernant la santé mentale :",[
+["Selon l'OMS, c'est un état de bien-être où l'individu réalise ses capacités.",true,"Exact."],
+["Elle comprend la détresse psychologique réactionnelle.",true,"Exact : dimension induite par des situations éprouvantes."],
+["Elle comprend la santé mentale positive (épanouissement personnel).",true,"Exact."],
+["Elle se définit comme l'absence de trouble mental.",false,"Faux : définition en termes de bien-être."],
+["Les troubles psychiatriques sont toujours de courte durée.",false,"Faux : durée variable."]],
+"3 dimensions : positive, détresse, troubles.",["Santé mentale : bien-être, capacités, tensions ordinaires, communauté","3 dimensions"]),
+q(97,4,"medium",true,"Concernant l'ordre des étapes de l'examen psychiatrique :",[
+["L'histoire des troubles précède l'examen mental.",true,"Exact."],
+["L'examen somatique suit l'examen mental.",true,"Exact."],
+["Le regroupement syndromique précède la discussion diagnostique.",true,"Exact."],
+["La prise en charge est la cinquième étape.",false,"Faux : c'est la dixième."],
+["Les tests psychométriques précèdent les antécédents.",false,"Faux : ils viennent en septième position."]],
+"10 étapes, de l'accueil à la prise en charge.",["10 étapes : accueil → antécédents → biographie → histoire → examen mental → somatique → tests → syndromes → diagnostic → prise en charge"]),
+q(98,4,"medium",false,"Concernant les antécédents :",[
+["La consanguinité des parents fait partie des antécédents familiaux.",true,"Exact."],
+["Les antécédents psychiatriques dans la famille sont recherchés.",true,"Exact."],
+["La comitialité et le traumatisme crânien sont des antécédents personnels.",true,"Exact."],
+["Les antécédents judiciaires sont des antécédents familiaux.",false,"Faux : personnels."],
+["La prise de toxiques fait partie des antécédents familiaux.",false,"Faux : antécédents personnels."]],
+"Familiaux : consanguinité, psy ; personnels : médical, comitial, toxiques, judiciaires.",["Familiaux : consanguinité, parents vivants, psychiatrie, somatique","Personnels : médicaux, comitialité/TC, toxiques, judiciaires, psychiatriques"]),
+q(99,4,"medium",false,"Quels éléments appartiennent au syndrome psychotique ?",[
+["Hallucinations.",true,"Exact."],["Délire.",true,"Exact."],["Discours et comportement désorganisés.",true,"Exact."],
+["Anhédonie.",false,"Symptôme du syndrome dépressif."],["Tachycardie.",false,"Symptôme physique du syndrome anxieux."]],
+"Psychotique : délire, hallucinations, désorganisation, négatifs.",["Psychotique : hallucinations, délire, désorganisation, symptômes négatifs, affect inapproprié ou émoussé"]),
+q(100,4,"hard",false,"Concernant la communication avec le patient :",[
+["Un patient anxieux ou dépressif nécessite une approche plus douce et rassurante.",true,"Exact."],
+["Un patient en crise psychotique peut nécessiter une communication plus structurée.",true,"Exact."],
+["L'empathie consiste à comprendre ses émotions sans se laisser submerger.",true,"Exact."],
+["L'écoute active suppose de juger les croyances du patient.",false,"Faux : attention sincère et sans jugement."],
+["La confidentialité est secondaire.",false,"Faux : essentielle pour instaurer un climat de sécurité."]],
+"Adapter la communication à l'état du patient.",["Adapter selon l'état émotionnel","Écoute active sans jugement ; confidentialité essentielle"]),
+q(101,4,"easy",false,"Concernant le trouble mental :",[
+["C'est un trouble psychologique ou comportemental.",true,"Exact."],
+["Il entraîne toujours une détresse chez le patient",false,"Faux : elle peut n'exister que dans l'entourage."],
+["Il est lié à des altérations biologiques, psychologiques, génétiques ou sociales.",true,"Exact."],
+["Il est généralement associé à une détresse ou un handicap.",true,"Exact."],
+["Son origine est purement génétique",false,"Faux : l'origine est multifactorielle."]],
+"Détresse ou handicap ; origine multifactorielle.",["Trouble mental : détresse/handicap, causes multiples"]),
+q(102,4,"easy",true,"Concernant la psychose :",[
+["Elle désigne uniquement les troubles anxieux",false,"Faux : ceux-ci relèvent des névroses."],
+["Le contact avec la réalité est conservé",false,"Faux : c'est une perte de contact."],
+["Elle correspond à une perte de contact avec la réalité.",true,"Exact."],
+["Elle peut s'accompagner de comportements étranges et de difficultés d'intégration sociale.",true,"Exact."],
+["Délires, hallucinations ou illusions peuvent apparaître.",true,"Exact."]],
+"Psychose = perte de contact avec la réalité.",["Psychose : perte de contact avec la réalité"]),
+q(103,4,"medium",false,"Parmi les modèles biologiques cités :",[
+["Les modèles culturels et sociaux",false,"Faux : ils sont distincts des modèles biologiques."],
+["Les modèles pharmacologiques et neurobiochimiques.",true,"Exact."],
+["Le modèle systémique",false,"Faux : il est distinct des modèles biologiques."],
+["Le modèle génétique.",true,"Exact."],
+["Le modèle cognitivo-comportemental",false,"Faux : il est distinct des modèles biologiques."]],
+"Biologique = neurobiochimie + génétique.",["Modèles biologiques : pharmaco/neurobiochimiques, génétique"]),
+q(104,4,"medium",false,"Concernant les modèles systémiques et culturels :",[
+["Ils ne considèrent que le sujet isolé",false,"Faux : ils incluent environnement social et relations."],
+["Le rôle culturel et social est contesté",false,"Faux : il est incontestable."],
+["Le rôle des facteurs culturels et sociaux est incontestable et établi.",true,"Exact."],
+["L'environnement familial est considéré comme un système.",true,"Exact."],
+["Les symptômes sont vus comme le produit d'interférences multiples.",true,"Exact."]],
+"Systémique = sujet + environnement + famille.",["Systémique : interférences sujet-environnement-famille"]),
+q(105,4,"medium",false,"Le modèle cognitivo-comportemental fait intervenir :",[
+["Le comportement.",true,"Exact."],
+["Les pensées.",true,"Exact."],
+["Le transfert",false,"Faux : non cité dans le schéma."],
+["La sensation physique.",true,"Exact."],
+["La consanguinité",false,"Faux : non citée dans le schéma."]],
+"Situation, pensées, émotion, sensation physique, comportement.",["Schéma : situation, pensées, émotion, sensation physique, comportement"]),
+q(106,4,"medium",false,"Parmi les groupes du DSM 5 cités :",[
+["Troubles somatoformes",false,"Faux : le DSM 5 cité parle de troubles à symptomatologie somatique et apparentés."],
+["Troubles bipolaires et apparentés.",true,"Exact."],
+["Troubles dépressifs.",true,"Exact."],
+["Spectre de la schizophrénie et autres troubles.",true,"Exact."],
+["Troubles neurocognitifs.",true,"Exact."]],
+"DSM 5 : APA, nombreux groupes.",["DSM 5 : schizophrénie, bipolaire, dépressifs, anxieux, neurocognitifs…"]),
+q(107,4,"medium",false,"Parmi les groupes du DSM 5 cités :",[
+["Troubles obsessionnels compulsifs et apparentés.",true,"Exact."],
+["Troubles dissociatifs.",true,"Exact."],
+["Troubles paraphiliques",false,"Faux : ils figurent dans la dernière liste, avec les troubles de la personnalité."],
+["Troubles des conduites alimentaires et de l'ingestion d'aliments.",true,"Exact."],
+["Troubles liés à des traumatismes ou facteurs de stress.",true,"Exact."]],
+"TOC, traumatismes, dissociatifs, alimentaires.",["DSM 5 : TOC, stress/traumatismes, dissociatifs, alimentaires"]),
+q(108,4,"hard",false,"Parmi les groupes du DSM 5 cités :",[
+["Troubles paraphiliques.",true,"Exact."],
+["Troubles de l'alternance veille-sommeil",false,"Faux : ils figurent dans un groupe précédent."],
+["Troubles de la personnalité.",true,"Exact."],
+["Dysphorie de genre.",true,"Exact."],
+["Troubles liés à une substance, troubles addictifs.",true,"Exact."]],
+"Fin de liste : genre, addictions, personnalité, paraphilies.",["DSM 5 (fin) : dysphorie de genre, addictifs, personnalité, paraphiliques"]),
+q(109,4,"medium",true,"Concernant l'examen psychiatrique :",[
+["C'est une méthode clinique évaluant l'état mental du patient.",true,"Exact."],
+["Il exclut le contexte social",false,"Faux : il l'inclut."],
+["Il se limite aux symptômes présentés",false,"Faux : il évalue aussi le contexte personnel, social et médical."],
+["Il comprend une étude longitudinale de l'histoire du patient.",true,"Exact."],
+["Il comprend une analyse transversale de l'état mental actuel.",true,"Exact."]],
+"Longitudinal (histoire) + transversal (état actuel).",["Examen psychiatrique : longitudinal + transversal ; contexte personnel, social, médical"]),
+q(110,4,"easy",false,"Concernant l'accueil et le motif de consultation :",[
+["Un environnement rassurant est important.",true,"Exact."],
+["On recherche la durée et l'évolution des symptômes.",true,"Exact."],
+["L'accueil est la dernière étape",false,"Faux : c'est la première."],
+["Le déroulement de l'examen est présenté et expliqué.",true,"Exact."],
+["Les effets sur la vie quotidienne ne sont pas explorés",false,"Faux : ils le sont, avec relations et travail."]],
+"Accueil = 1re étape.",["Accueil rassurant ; motif : symptômes, durée, retentissement"]),
+q(111,4,"medium",false,"Dans l'histoire des troubles on recherche :",[
+["Les traitements ne sont pas recherchés",false,"Faux : ils le sont."],
+["Le début et les épisodes antérieurs.",true,"Exact."],
+["L'évolution n'est pas explorée",false,"Faux : elle l'est."],
+["Les facteurs déclenchants (stress, traumatisme psychique, maladie organique, aucun).",true,"Exact."],
+["La modalité d'apparition, progressive ou brutale.",true,"Exact."]],
+"Début, mode, déclenchants, traitements, évolution.",["Histoire des troubles : début, mode d'apparition, facteurs déclenchants, traitements, évolution"]),
+q(112,4,"medium",false,"La biographie comprend :",[
+["Enfance et scolarité.",true,"Exact."],
+["Vie socio-affective.",true,"Exact."],
+["Prise de toxiques",false,"Faux : elle relève des antécédents personnels."],
+["Vie socio-professionnelle.",true,"Exact."],
+["Événements de vie significatifs (mariage, décès, perte d'emploi).",true,"Exact."]],
+"Biographie : enfance, affectif, professionnel, événements.",["Biographie : enfance/scolarité, vie socio-affective, professionnelle, événements"]),
+q(113,4,"medium",false,"Concernant l'apparence, l'affect et la pensée :",[
+["L'orientation relève de l'apparence",false,"Faux : elle relève du cognitif."],
+["Déprimé, euphorique, anxieux relèvent de l'affect et de l'humeur.",true,"Exact."],
+["Les idées délirantes relèvent de la forme de la pensée",false,"Faux : elles relèvent du contenu."],
+["La forme de la pensée inclut cohérence, logique et organisation.",true,"Exact."],
+["Hygiène, mimique et posture relèvent de l'apparence.",true,"Exact."]],
+"Forme = organisation ; contenu = thèmes.",["Pensée : forme (cohérence/logique) et contenu (délires, obsessions)"]),
+q(114,4,"medium",true,"Concernant l'évaluation cognitive :",[
+["La mémoire est évaluée à court et long terme.",true,"Exact."],
+["Les fonctions exécutives évaluent planification, organisation et résolution de problèmes.",true,"Exact."],
+["Le jugement est évalué dans la rubrique cognitive",false,"Faux : il appartient à insight et jugement."],
+["L'orientation évalue temps, lieu et identité.",true,"Exact."],
+["L'attention est testée par la répétition de chiffres.",true,"Exact."]],
+"Orientation, attention, mémoire, exécutif.",["Cognitif : orientation, attention, mémoire, fonctions exécutives"]),
+q(115,4,"hard",false,"Concernant insight, jugement et sphère instinctuelle :",[
+["L'insight évalue la pertinence des décisions",false,"Faux : c'est le jugement."],
+["Le jugement est la reconnaissance de la maladie",false,"Faux : c'est l'insight."],
+["L'insight est la capacité à reconnaître sa maladie et son impact.",true,"Exact."],
+["Le jugement évalue la pertinence des décisions du patient.",true,"Exact."],
+["La sphère instinctuelle comprend sommeil, alimentation, sexualité.",true,"Exact."]],
+"Insight = conscience de la maladie.",["Insight ≠ jugement ; instincts : sommeil, alimentation, sexualité"]),
+q(116,4,"medium",false,"Concernant l'examen somatique et les échelles :",[
+["On recherche des signes somatiques associés aux troubles psychiatriques.",true,"Exact."],
+["Il constitue la deuxième étape",false,"Faux : c'est la sixième."],
+["L'examen physique général en fait partie.",true,"Exact."],
+["Tests sanguins et imagerie sont demandés si nécessaire.",true,"Exact."],
+["Les échelles de Hamilton dépression et anxiété sont un seul outil",false,"Faux : ce sont deux échelles distinctes."]],
+"Somatique = 6e étape.",["Examen somatique : physique, signes associés, bilans si nécessaire"]),
+q(117,4,"medium",true,"Concernant le syndrome dépressif :",[
+["Les hallucinations en sont un symptôme central",false,"Faux : elles relèvent du syndrome psychotique."],
+["Fatigue, algies, troubles du sommeil et de l'appétit sont des symptômes physiques.",true,"Exact."],
+["Humeur dépressive, anhédonie et irritabilité en sont des symptômes émotionnels.",true,"Exact."],
+["Le ralentissement psychomoteur n'est jamais observé",false,"Faux : ralentissement ou agitation psychomotrice sont cités."],
+["Dévalorisation, culpabilité et idées de mort sont des symptômes cognitifs.",true,"Exact."]],
+"Dépressif : émotionnel, cognitif, comportemental, physique.",["Dépressif : humeur, anhédonie, dévalorisation, culpabilité, idées de mort"]),
+q(118,4,"medium",false,"Concernant le syndrome anxieux :",[
+["L'anhédonie en est un symptôme émotionnel",false,"Faux : elle relève du syndrome dépressif."],
+["L'évitement est un symptôme cognitif",false,"Faux : c'est un symptôme comportemental."],
+["Inquiétude excessive et peurs irrationnelles sont émotionnelles.",true,"Exact."],
+["Tachycardie, transpiration et troubles digestifs sont des symptômes physiques.",true,"Exact."],
+["Ruminations, concentration et indécision sont cognitives.",true,"Exact."]],
+"Anxieux : évitement et agitation = comportement.",["Anxieux : inquiétude, ruminations, signes physiques, évitement"]),
+q(119,4,"hard",false,"Concernant le syndrome psychotique :",[
+["Hallucinations et délire en font partie.",true,"Exact."],
+["L'affect peut être inapproprié ou émoussé.",true,"Exact."],
+["L'anhédonie est son symptôme émotionnel clé",false,"Faux : elle relève du syndrome dépressif."],
+["Discours et comportement désorganisés en font partie.",true,"Exact."],
+["Les symptômes négatifs incluent retrait et isolement.",true,"Exact."]],
+"Psychotique : positifs + négatifs + cognitifs.",["Psychotique : hallucinations, délire, désorganisation, négatifs, affect inapproprié"]),
+q(120,4,"medium",false,"Concernant la communication avec le patient :",[
+["La réassurance rappelle que des solutions existent.",true,"Exact."],
+["Le soutien non verbal inclut contact visuel, posture ouverte, hochement de tête.",true,"Exact."],
+["L'écoute active est une attention sincère et sans jugement.",true,"Exact."],
+["La clarté suppose d'éviter le jargon médical complexe.",true,"Exact."],
+["L'authenticité autorise à dissimuler des informations",false,"Faux : elle exige d'être sincère et transparent."]],
+"Écoute, empathie, clarté, respect, authenticité, réassurance.",["Communication : écoute active, empathie, clarté, respect, authenticité, réassurance, confidentialité"])
+];
+// ===== STATE =====
+const K='qcm4courses_120_v1',$=s=>document.querySelector(s);
+let S={a:{},cur:Q[0].id,theme:'',sa:false,st:0,o:null,ord:{},f:{c:0,d:'all',s:'all',h:false}},keep=false;
+try{Object.assign(S,JSON.parse(localStorage.getItem(K)||'{}'))}catch(e){}
+if(!S.theme)S.theme=(window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light';
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}};
+const done=x=>S.a[x.id]&&S.a[x.id].done,okq=x=>done(x)&&S.a[x.id].ok,st=x=>!done(x)?'unanswered':okq(x)?'correct':'incorrect';
+const E={easy:'🟢 Easy',medium:'🟠 Medium',hard:'🔴 Hard'};
+function list(){const f=S.f;const ids=S.o&&S.o.length==Q.length?S.o:Q.map(x=>x.id);
+return ids.map(i=>Q.find(x=>x.id==i)).filter(x=>(!f.c||x.course==f.c)&&(f.d=='all'||x.diff==f.d)&&(f.s=='all'||st(x)==f.s)&&(!f.h||x.hy))}
+const acc=(a)=>a.length?Math.round(100*a.filter(okq).length/a.filter(done).length||0):0;
+const pct=(c,n)=>n?(100*c/n).toFixed(1)+'%':'0%';
+function go(id){S.cur=id;keep=false;save();render()}
+function render(){
+document.documentElement.dataset.theme=S.theme;$('#th').textContent=S.theme=='dark'?'☀️':'🌙';
+$('#sa').checked=S.sa;$('#fd').value=S.f.d;$('#fs').value=S.f.s;$('#fh').checked=S.f.h;$('#fc').value=S.f.c;
+$('#ct').textContent=S.f.c?'Course '+S.f.c+' — '+T[S.f.c]:'All Courses';
+const sc=Q.filter(x=>!S.f.c||x.course==S.f.c),an=sc.filter(done),co=sc.filter(okq).length;
+$('#stats').innerHTML=[['Answered',an.length+' / '+sc.length],['Correct',co],['Incorrect',an.length-co],['Accuracy',pct(co,an.length)],['Streak 🔥',S.st]].map(([a,b])=>`<div class="stat"><b>${b}</b><span>${a}</span></div>`).join('');
+$('#pbar').style.width=(100*an.length/(sc.length||1))+'%';
+$('#dash').innerHTML=[1,2,3,4].map(c=>{const a=Q.filter(x=>x.course==c),d=a.filter(done),k=a.filter(okq).length;
+return `<div class="cc ${S.f.c==c?'on':''}" data-c="${c}"><b>Course ${c} — ${T[c]}</b><br><small>${d.length} / ${a.length} answered · ${k} correct · ${d.length-k} incorrect · ${pct(k,d.length)} accuracy</small><div class="pb" style="margin-top:8px"><i style="width:${100*d.length/(a.length||1)}%"></i></div></div>`}).join('');
+const L=list();let cq=Q.find(x=>x.id==S.cur);if(!cq||(!L.includes(cq)&&!keep))cq=L[0];if(cq)S.cur=cq.id;
+$('#nav').innerHTML=[1,2,3,4].map(c=>`<b>C${c}</b>`+L.filter(x=>x.course==c).map(x=>`<button class="nv ${st(x)} ${cq&&x.id==cq.id?'cur':''}" data-id="${x.id}">${Q.indexOf(x)+1}</button>`).join('')).join('');
+// final results
+if(Q.every(done)){const t=Q.length,k=Q.filter(okq).length,p=100*k/t;
+const m=p>=90?'Excellent exam readiness':p>=80?'Very strong performance':p>=70?'Good foundation, revise weak areas':p>=60?'Moderate performance, targeted revision recommended':'More revision needed';
+const row=(l,a)=>{const c=a.filter(okq).length;return `<li>${l}: ${c}/${a.length} correct · ${a.length-c} incorrect · ${pct(c,a.length)}</li>`};
+$('#fin').innerHTML=`<div class="card"><h2>🎉 Final Results</h2><p>Total Questions: ${t} · Correct ${k} · Incorrect ${t-k} · Accuracy ${p.toFixed(1)}%</p><p><b>${m}</b></p><ul>${['easy','medium','hard'].map(d=>row(E[d],Q.filter(x=>x.diff==d))).join('')}${[1,2,3,4].map(c=>row('Course '+c,Q.filter(x=>x.course==c))).join('')}</ul></div>`}else $('#fin').innerHTML='';
+if(!cq){$('#qa').innerHTML='<div class="card">No questions match the current filters.</div>';return}
+const A=S.a[cq.id]||{sel:[],done:false},ix=L.indexOf(cq),dn=A.done;
+if(S.sa&&!S.ord[cq.id]){S.ord[cq.id]=[0,1,2,3,4].sort(()=>Math.random()-.5);save()}
+const ord=S.sa&&S.ord[cq.id]?S.ord[cq.id]:[0,1,2,3,4];
+const pos=Q.indexOf(cq)+1;
+let h=`<div class="card"><div class="sub" style="color:var(--mu)">Question ${pos} / ${Q.length}<br>Course ${cq.course} — ${cq.courseTitle}</div>
+<div style="margin-top:8px"><span class="badge">${E[cq.diff]}</span>${cq.hy?'<span class="badge hy">⭐ HIGH YIELD</span>':''}</div><div class="q">${cq.question}</div>`;
+ord.forEach((oi,p)=>{const a=cq.answers[oi],sel=A.sel.includes(oi);let c='opt'+(sel&&!dn?' sel':'');
+if(dn){c+=sel&&a.correct?' good':sel&&!a.correct?' bad':a.correct?' miss':''}
+h+=`<label class="${c}"><input type="checkbox" data-i="${oi}" ${sel?'checked':''} ${dn?'disabled':''}><div><b>${'ABCDE'[p]}.</b> ${a.text}${dn?`<div class="ex">${'ABCDE'[p]} ${a.correct?'✓ Correct':'✗ Incorrect'} — ${a.explanation}</div>`:''}</div></label>`});
+if(dn){const need=cq.answers.filter(a=>a.correct).length,gs=A.sel.filter(i=>cq.answers[i].correct).length,bs=A.sel.length-gs;
+const msg=A.ok?'Perfect — all correct propositions selected.':bs?`${gs} correct proposition(s) selected, but ${bs} incorrect proposition(s) also selected.`:`${gs} of ${need} correct propositions selected.`;
+h+=`<div class="res" style="background:${A.ok?'var(--okb)':'var(--kob)'}">${A.ok?'✅':'❌'} ${msg}</div><div class="tip">🧠 <b>Memory Tip</b><br>${cq.memoryTip}</div><div class="tip">🧠 <b>What to Memorize</b><ul>${cq.memorize.map(m=>`<li>${m}</li>`).join('')}</ul></div>`}
+h+=`<div class="row"><button id="pv" ${ix==0?'disabled':''}>← Previous</button>${dn?'<button id="ta">Try Again</button>':'<button class="pri" id="va">Validate Answer</button>'}<button id="nx" ${ix>=L.length-1?'disabled':''}>Next →</button></div></div>`;
+$('#qa').innerHTML=h}
+// ===== EVENTS =====
+$('#fc').innerHTML='<option value="0">All Courses</option>'+[1,2,3,4].map(c=>`<option value="${c}">Course ${c} — ${T[c]}</option>`).join('');
+const cur=()=>Q.find(x=>x.id==S.cur);
+document.addEventListener('change',e=>{const t=e.target;
+if(t.id=='fc')S.f.c=+t.value;else if(t.id=='fd')S.f.d=t.value;else if(t.id=='fs')S.f.s=t.value;else if(t.id=='fh')S.f.h=t.checked;
+else if(t.id=='sa'){S.sa=t.checked;S.ord={}}
+else if(t.dataset.i!==undefined){const A=S.a[S.cur]||(S.a[S.cur]={sel:[],done:false}),i=+t.dataset.i;A.sel=t.checked?[...A.sel,i]:A.sel.filter(x=>x!=i);t.closest('.opt').classList.toggle('sel',t.checked);save();return}
+else return;keep=false;save();render()});
+document.addEventListener('click',e=>{const t=e.target,b=t.closest('button'),c=t.closest('.cc');
+if(c){S.f.c=S.f.c==c.dataset.c?0:+c.dataset.c;keep=false;save();render();return}
+if(!b)return;const L=list(),i=L.indexOf(cur());
+if(b.dataset.id)go(+b.dataset.id);
+else if(b.id=='th'){S.theme=S.theme=='dark'?'light':'dark';save();render()}
+else if(b.id=='sh'){S.o=Q.map(x=>x.id).sort(()=>Math.random()-.5);keep=false;save();render()}
+else if(b.id=='pv'&&i>0)go(L[i-1].id);else if(b.id=='nx'&&i<L.length-1)go(L[i+1>0?i+1:0].id);
+else if(b.id=='va'){const A=S.a[S.cur]||(S.a[S.cur]={sel:[],done:false}),x=cur();
+if(!A.sel.length){alert('Select at least one proposition.');return}
+A.done=true;A.ok=x.answers.every((a,k)=>a.correct==A.sel.includes(k));S.st=A.ok?S.st+1:0;keep=true;save();render()}
+else if(b.id=='ta'){delete S.a[S.cur];keep=true;save();render()}
+else if(b.id=='rs'&&confirm('Reset ALL progress? Answers and scores for all '+Q.length+' questions across all 4 courses will be erased.')){S.a={};S.st=0;S.ord={};S.o=null;S.f={c:0,d:'all',s:'all',h:false};S.cur=Q[0].id;save();render()}});
+render();
+</script></body></html>
