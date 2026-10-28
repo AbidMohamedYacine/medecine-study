@@ -59,15 +59,15 @@ sûre est donc double :
    complète ou pas du tout (jamais de squelette déclaré « fini »).
    À J-7, gel des constructions : place aux recouches/flashcards.
 
-## Sources à fournir (bloquant — action utilisateur)
+## Sources — RÉSOLU le 28/10 (voir `04-PROTOCOLE-SOURCES-ET-VERSIONS.md`)
 
-PDF des professeurs (ou tout support officiel) pour, par ordre de
-priorité : **ra-05, bi-05, bi-06, pn-01, pn-04, sg-05**, puis le reste
-de la pneumo (pn-02→pn-12), sg-04, bi-04, ph-09, psy-06/08/09.
-`ELITE CARDIO 3EME.pdf` (annales + corrigés) est déjà dans le repo et
-servira au croisement tombable × source. Si certains cours n'ont pas
-encore été donnés en amphi, le signaler : ils seront construits dès
-réception, dans l'ordre ci-dessus.
+Dépôt N-1 MedHaven + dépôt N « UE 1: Cardio » cartographiés :
+**21/22 leçons ont une source** (dont ph-09 déjà en version 2026) ;
+seule ra-05 reste sans source (séances identifiées, en attente).
+Construction immédiate sur N-1, patch différentiel à l'arrivée des
+PDF N — sans attendre. Ordre effectif : ra-05 bloquée → **bi-05 en
+cours** (plan-source fait : `travail/bi-05-lipides/PLAN-SOURCE.md`)
+→ bi-06 → pn-01 → suite des tiers.
 
 ## Sauvegarde officielle (faite le 28/10)
 
