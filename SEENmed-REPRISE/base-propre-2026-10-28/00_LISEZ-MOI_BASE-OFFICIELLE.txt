@@ -1,0 +1,41 @@
+SEENmed — BASE OFFICIELLE (2026-10-28)
+======================================
+
+FICHIERS OFFICIELS (les seuls a utiliser) — 4 parties a extraire
+TOUTES dans le MEME dossier (elles se fusionnent en un seul
+dossier medstudy/) :
+  SEENmed-BASE-PROPRE-2026-10-28_part1-of4.zip  79289570 o  MD5 71e6fd5a4d203c8bc463211c73f16ed5
+  SEENmed-BASE-PROPRE-2026-10-28_part2-of4.zip  79631914 o  MD5 2ece4d51335b936c8d1dca7ebdd3108f
+  SEENmed-BASE-PROPRE-2026-10-28_part3-of4.zip  79432714 o  MD5 8b468a17bfe3b73755803e9fbddeaaa6
+  SEENmed-BASE-PROPRE-2026-10-28_part4-of4.zip  79695225 o  MD5 e46c6e94fc8b3b707876a191872e3d88
+  Total fusionne : 2104 fichiers, racine unique medstudy/
+  (Equivalent ZIP unique : 318049357 o, MD5 e4f0448d3f5b8ca4f06e99328dbe99cc)
+
+CONTENU / REPARATIONS VERIFIEES :
+  - AN-03, AN-06, AN-07, AN-08, AN-09, AN-10 reintegrées dans medstudy/
+    (pages + images + voix) et reconnectées au tableau de bord (data.js).
+  - RA-06 reconnectée (url ajoutée).
+  - AN-11 et suivantes retirées de cette base de travail (decision
+    utilisateur du 28/10/2026). Les archives d'origine restent intactes
+    ailleurs sur Drive (restauration possible, manifeste dans GitHub).
+  - Audit automatisé : 59 resumes ouvrables, 0 lien casse, test HTTP OK.
+  - Defaut connu unique : 11 images d'AN-06 jamais livrées
+    (ff-1..6, mindmap, n-atherome, n-goutte, n-protides, resume-total)
+    a regenerer en phase janvier. Le reste d'AN-06 fonctionne.
+
+REGLES STRICTES (anti-chaos, a partir du 28/10/2026) :
+  1. Une seule base officielle a la fois : ce dossier.
+  2. Toute nouvelle version = nouveau dossier date AAAA-MM-JJ +
+     ZIP(s) racine unique medstudy/ + MD5 ecrit dans son LISEZ-MOI.
+  3. Ne jamais ecraser/renommer une base officielle existante.
+  4. Les anciens ZIP (dossier parent, 27/10 et avant) = HISTORIQUE.
+     Ne pas utiliser, ne pas fusionner.
+  5. Code leger + documents + manifestes = GitHub (branche
+     arena/6cbc9050-medecine-study, dossier SEENmed-REPRISE/).
+  6. Rapports de reference (GitHub) :
+     00-AUDIT-NEUTRE-2026-10-28.md
+     01-DIAGNOSTIC-ET-REPARATION-2026-10-28.md
+     DECISIONS-UTILISATEUR-2026-10-28.md
+
+UTILISATION : telecharger les 4 ZIP, les extraire tous au meme endroit,
+ouvrir le dossier medstudy (DEMARRER-Windows.bat ou DEMARRER-Mac-Linux.command).

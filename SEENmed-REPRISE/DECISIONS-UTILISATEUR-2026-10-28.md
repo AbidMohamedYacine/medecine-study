@@ -30,13 +30,24 @@ les documents de l'ancien agent conservés dans `handoff-ancien-agent/`.
    d'origine a été **conservée et réparée** (pas de nouveau système),
    car l'audit a prouvé qu'elle était récupérable à 100 % à
    l'exception de 11 images d'AN-06 jamais livrées.
-6. **Aucun envoi Drive sans autorisation explicite** : toujours en
-   vigueur. Le ZIP propre du 28/10 est prêt et vérifié en `/tmp`,
-   **non téléversé** à la date de ce document.
+6. **Aucun envoi Drive sans autorisation explicite** : règle maintenue.
+   **Addendum (même jour)** : l'utilisateur a autorisé l'envoi de la
+   base propre (« do it »), organisé strictement. Fait le 28/10 :
+   dossier Drive `SEENmed — livraisons / 00_BASE-OFFICIELLE_2026-10-28/`
+   (LISEZ-MOI + 4 parties, tailles et MD5 relus côté Drive = locaux).
+   Tout futur envoi exigera une nouvelle autorisation.
+7. **Programme du 26/11 confirmé (28/10)** : la **pneumologie est
+   incluse** ; seuls Anapath + Immunologie sont reportés à janvier.
+   Voir `02-PLAN-26-NOVEMBRE-2026.md`.
+8. **« Details » clarifiés (28/10)** : il s'agit de **tous les détails
+   de méthode en général** (ex. le format audio arabe) qui ne doivent
+   ni se perdre ni dériver. Réponse mise en place :
+   `03-DETAILS-LOCK.md` (registre unique, statuts, contradictions
+   tranchées), à relire avec les chartes avant chaque leçon.
 
-## Points encore ouverts (à trancher par l'utilisateur, voir rapport 01)
-- Programme **exact** de l'examen du 26/11 (la pneumologie `pn-01→12`,
-  0/12 construite, est-elle incluse ?).
-- « Some charts need to be edited just a little » : s'agit-il des
-  **chartes** (`CHARTE-*.md`) ? Quels détails corriger ?
-- Autorisation (ou non) de téléverser le ZIP propre sur Drive.
+## Points encore ouverts
+- Fourniture des **PDF sources** des 22 leçons manquantes de novembre
+  (liste priorisée dans `02-PLAN-26-NOVEMBRE-2026.md`) — sans source,
+  aucune construction (règle de méthode).
+- Revalidation des **voix** au premier lot audio (anciens identifiants
+  liés à la session précédente).
