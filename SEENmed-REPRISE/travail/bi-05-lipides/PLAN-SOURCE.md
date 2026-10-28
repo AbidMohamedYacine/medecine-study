@@ -97,6 +97,15 @@ sections) + résumé FR + résumé AR. Arabe complet + mots-clés (~35).
       fiche flash 6 cases, 36 mots-clés FR/AR, 25 flashcards, mindmap,
       résumé total — `lecons/bi-05-lipides-lipoproteines.html` (292 Ko)
 - [x] Intégration `data.js` (url, qcm 15, entr 20, recu true)
-- [ ] Audio 8 FR + résumé FR + résumé AR (scripts prêts, voix à auditionner)
-- [ ] Audit final 0 après audio → livraison datée
+- [x] Audio : **8 chapitres FR + résumé FR + résumé AR** générés le 28/10
+      (scripts versionnés `audio-scripts.md` ; voix choisies par l'utilisateur
+      en audition — IDs de session voice-00 FR / voice-01 AR, à re-auditionner
+      dans une future session) → `assets/audio/bi-05/` (5,2 Mo)
+- [x] **Audit final : bi-05 = 0 référence cassée** (site 60 pages ouvrables ;
+      seuls manquants globaux = 11 images AN-06 connues, janvier)
+- [x] Livraison sauvegardée Drive : dossier `01_LIVRAISON-bi-05_2026-10-28`
+      (`17NO7hGnfkpPEvdWPMYMozVHqooqBZCfj`) = delta ZIP MD5
+      `9a9c50c8f018bb1026b500d7abcab7ee` (`1fQBk18KnKVHXvSqm4EZZ4TxmGXxuac6n`)
+      + LISEZ-MOI ; base officielle 28/10 non écrasée
+- [x] **bi-05 TERMINÉE (méthode unie complète) le 28/10/2026**
 - [ ] Patch différentiel à l'arrivée de la source N
