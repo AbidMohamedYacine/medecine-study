@@ -82,3 +82,14 @@ Arabe complet + mots-clés (~36).
 - [ ] Page complète (builder, peau Biochimie) → arabe → QCM → fiche → audio
 - [ ] Intégration `data.js` (qcm 10, entr 20) → audit 0 → livraison Drive datée
 - [ ] Patch différentiel à l'arrivée de la source N
+
+## État d'avancement (2026-10-28)
+- [x] Source N-1 lue en entier + annales ELITE §5 (10 QCM) croisées — voir ci-dessus.
+- [~] Images : lot 1 = 10/21 générées, relues (contact + zooms), WebP q83 (`img/`) + 3 reels q90. **Lot 2 restant (cap 10 images/tour) :** `cinetique, peptides, np-clinique, inflammation, ff-troponine, ff-cinetique, ff-algo, ff-causes, ff-bnp, ff-seuils` puis `total` (11ᵉ).
+- [x] Page construite : `build_bi06.py` (squelette gold ra-02 + peau `has-bio-field`/`bio-field.js?v=11`, footer gold → bi-07-gazometrie.html, `backToTop`/`scrollProgress` 1×). 12 sections FR+AR (76 clés), 10 annales verbatim, 20 entraînement (4×1·2×2·12×3·2×4), 36 mots-clés, 25 flashcards, JSON OK ×4. Copie : `page/bi-06-biomarqueurs-cardiaques.html`.
+- [x] Intégration `data.js` (qcm 10, entr 20, recu true, url) — copie `page/data-apres-bi06.js`.
+- [~] Audio : 9/10 MP3 générés (ch1–8 + résumé AR). **Restant : `resume.mp3` FR** (2 échecs > 1500 car. + cap 10/tour ; version courte prête dans `audio-scripts.md`).
+- [ ] Audit final : actuel = pages 61, bi-06 12 refs (11 images lot 2 + resume.mp3), AN-06 11 (connu). Objectif après lot 2 : bi-06 = 0.
+- [ ] Livraison Drive datée `02_LIVRAISON-bi-06_2026-10-28` (+ page bi-05 corrigée peau, absente du ZIP bi-05 pré-fix).
+
+> ⚠ Note intégrité (2026-10-28) : une première version du bloc annales du builder, reconstruite de mémoire, a été **écartée avant build** après re-vérification sur l'extraction ELITE (`/tmp/bi06-annales.txt`). Les 10 annales de la page sont bien verbatim pp. 30–32, réponses officielles BCD·ADE·C·ACD·ACD·ABD·ABCD·DE·ABD·A. Nuances signalées en corrections : Q4-D « pro-BNP molécule de choix » (officiel ; on dose BNP/NT-proBNP), Q6-D « myoglobine peu sensible » (officiel ; le cours dit « non spécifique »), Q5-A « sécrétion » verbatim (le cours dit libération).
