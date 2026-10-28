@@ -83,8 +83,11 @@ sections) + résumé FR + résumé AR. Arabe complet + mots-clés (~35).
       **relecture planche-contact + zooms faite le 28/10** (textes FR
       exacts relus sur chiffres/fredrickson, anatomie transport OK,
       aucun anglais/doublon repéré) — copies versionnées dans `img/`
-- [ ] Planches lot 2/2 : regulation, depistage, valeurs, bilan2,
-      secondaires, cas, ff-×6, total dédié
+- [x] Planches lot 2/2 (sections) : regulation, depistage, valeurs,
+      bilan2, secondaires, cas + ff-serum, ff-seuils, ff-secondaires,
+      ff-cas → WebP q83, **planche-contact relue le 28/10** (chiffres
+      des cas et seuils exacts, aucun anglais/doublon)
+- [ ] Planches restantes : ff-familles, ff-fredrickson, total dédié (3)
 - [ ] Page complète (boxes FR) → arabe → QCM → fiche flash → audio
 - [ ] Intégration `data.js` (url, qcm 15, entr à compter) → audit 0
 - [ ] Patch différentiel à l'arrivée de la source N
