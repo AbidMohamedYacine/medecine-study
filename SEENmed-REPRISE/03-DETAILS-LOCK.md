@@ -105,3 +105,15 @@
 | Référence structure | MEC vs ca-10 vs ph-* | **ca-10 structure + MEC/ph-10 profondeur** |
 | « Dashboard fixed » 27/10 | affirmé | **Faux sur pièces — réparé le 28/10** |
 | ph dégradées (26/10) | 16 lbox | **Métriques actuelles supérieures ; validation visuelle encore requise** |
+
+## Addendum 29/10/2026 — Habillage par module + fin de page (correction utilisateur)
+- **Fond animé propre à chaque module** (vérifié sur les pages gold, jamais hérité du clone) :
+  Biochimie `has-bio-field` + `bio-field.js?v=11` · Cardio `has-cardio-field` + `cardio-field.js?v=4` ·
+  Radiologie `has-orbital-sphere` + `three.min.js` + `orbital-sphere-bg.js?v=6` ·
+  Physio `has-hero-field` + `hero-field.js?v=10` · Anapath `has-hero-field` + `organ-field.js?v=16` ·
+  Immuno `has-fluid-field` + `fluid-field.js?v=10` · Séméiologie générale `cloud-field.js` (classe à reverifier).
+  Pneumo/Psy : aucun exemple construit — vérifier le dashboard avant de trancher, ne pas inventer.
+- **Fin de page gold obligatoire** dans l'ordre : JSON `cineData/kwData/arData` dans `<main>` → `</main>` →
+  **footer de leçon** (Retour au tableau de bord · Autre leçon : <leçon suivante du module> · Revoir la leçon #vue ·
+  © SEENmed — Leçon « titre » · Module · Professeur) → `<div id="scrollProgress">` → **`<button id="backToTop">`** (retour en haut, coin bas) → `fcData` → scripts.
+- Règle : cloner un squelette impose d'**adapter la peau du module** (fond, icône/chip, fil d'Ariane, footer) — checklist à la fin de chaque build : body class ? field JS ? backToTop ? footer ? liens dashboard/autre leçon valides ?

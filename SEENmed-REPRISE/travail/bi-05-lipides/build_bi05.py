@@ -118,6 +118,7 @@ top = SRC.split('<!-- ============ NAVIGATION DE LEÇON')[0]
 top = top.replace('<title>Les ultrasons — échographie thoracique — SEENmed</title>',
                   '<title>Exploration du métabolisme des lipides et lipoprotéines — SEENmed</title>')
 top = top.replace('data-lesson-id="ra-02"', 'data-lesson-id="bi-05"')
+top = top.replace('has-orbital-sphere', 'has-bio-field')  # peau du module Biochimie
 top = top.replace('>Radiologie</a>', '>Biochimie</a>').replace('<span>Leçon 2</span>', '<span>Leçon 5</span>')
 top = re.sub(r'<h1>.*?</h1>', '<h1>Exploration du métabolisme des <span class="highlight">lipides et lipoprotéines</span></h1>', top, flags=re.S)
 top = re.sub(r'(<div class="lesson-meta">).*?(</div>\s*<div class="lesson-actions">)',
@@ -1702,6 +1703,8 @@ for i, c in enumerate(FC, 1): c2 = {"id": f"l{i}"}; c2.update(c); FC[i-1] = c2
 main_close_m = re.search(r'</section>\s*(</div>\s*</main>)', SRC)
 main_close = main_close_m.group(1) if main_close_m else '</div>\n    </main>'
 footer_scripts = '<script src="../js/bg-mode.js' + SRC.split('<script src="../js/bg-mode.js', 1)[1]
+footer_scripts = re.sub(r'\s*<script src="\.\./js/lib/three\.min\.js"></script>', '', footer_scripts)
+footer_scripts = footer_scripts.replace('orbital-sphere-bg.js?v=6', 'bio-field.js?v=11')
 
 body = '\n\n'.join(OUT) + '\n\n' + annales_sec + '\n\n' + entr_sec + '\n\n' + fiche + '\n\n' + flashcards_sec + '\n\n' + resume_total
 jsons = (
@@ -1710,7 +1713,30 @@ jsons = (
     '            <script type="application/json" id="arData">' + json.dumps(AR, ensure_ascii=False) + '</script>\n'
     '    <script id="fcData" type="application/json">\n' + json.dumps(FC, ensure_ascii=False, indent=1) + '\n    </script>\n'
 )
-html = top + nav + main_open + body + '\n\n        ' + main_close + '\n\n' + jsons + '\n' + footer_scripts
+FOOTER_HTML = '''
+    <!-- ============ FOOTER DE LEÇON ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top:none; padding-top:0;">
+                <p style="margin-bottom:14px;">
+                    <a href="../index.html" class="btn btn-outline btn-sm"><i class="fa-solid fa-arrow-left"></i> Retour au tableau de bord</a>
+                    &nbsp;
+                    <a href="bi-06-biomarqueurs-cardiaques.html" class="btn btn-outline btn-sm"><i class="fa-solid fa-arrow-right"></i> Autre leçon : Les biomarqueurs cardiaques</a>
+                    &nbsp;
+                    <a href="#vue" class="btn btn-outline btn-sm"><i class="fa-solid fa-arrow-up"></i> Revoir la leçon</a>
+                </p>
+                <p>© <span id="footerYear">2026</span> SEENmed — Leçon « Exploration du métabolisme des lipides et lipoprotéines » · Biochimie · Dr Besbes. A</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="scrollProgress"></div>
+    <button id="backToTop" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- Données flashcards -->
+'''
+_jp = jsons.split('    <script id="fcData"')
+html = top + nav + main_open + body + '\n\n        </div>\n\n' + _jp[0] + '    </main>' + FOOTER_HTML + '    <script id="fcData"' + _jp[1] + '\n' + footer_scripts
 html = html.replace('<b tout monte</b>', '<b>Tout monte</b>')
 
 OUTFILE = os.path.join(MS, 'lecons/bi-05-lipides-lipoproteines.html')
