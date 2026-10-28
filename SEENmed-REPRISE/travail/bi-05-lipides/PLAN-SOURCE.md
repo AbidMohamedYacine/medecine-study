@@ -87,7 +87,16 @@ sections) + résumé FR + résumé AR. Arabe complet + mots-clés (~35).
       bilan2, secondaires, cas + ff-serum, ff-seuils, ff-secondaires,
       ff-cas → WebP q83, **planche-contact relue le 28/10** (chiffres
       des cas et seuils exacts, aucun anglais/doublon)
-- [ ] Planches restantes : ff-familles, ff-fredrickson, total dédié (3)
-- [ ] Page complète (boxes FR) → arabe → QCM → fiche flash → audio
-- [ ] Intégration `data.js` (url, qcm 15, entr à compter) → audit 0
+- [x] Planches lot 3 : ff-familles, ff-fredrickson, total dédié → WebP q83,
+      **planche-contact relue le 28/10** (chiffres exacts ; numérotation 1–6
+      décorative sur ff-fredrickson, types écrits en clair)
+- [x] Page complète construite par script (`build_bi05.py`, squelette cloné
+      de ra-02 gold) : 14 sections FR (boxes/mini-cartes/tableaux/reels),
+      **arabe contextuel complet (91 clés data-tr = 91 arData)**, 15 annales
+      verbatim + corrigés officiels, 20 QCM d'entraînement (7×1·3×2·10×3),
+      fiche flash 6 cases, 36 mots-clés FR/AR, 25 flashcards, mindmap,
+      résumé total — `lecons/bi-05-lipides-lipoproteines.html` (292 Ko)
+- [x] Intégration `data.js` (url, qcm 15, entr 20, recu true)
+- [ ] Audio 8 FR + résumé FR + résumé AR (scripts prêts, voix à auditionner)
+- [ ] Audit final 0 après audio → livraison datée
 - [ ] Patch différentiel à l'arrivée de la source N
