@@ -93,3 +93,11 @@ Arabe complet + mots-clés (~36).
 - [ ] Livraison Drive datée `02_LIVRAISON-bi-06_2026-10-28` (+ page bi-05 corrigée peau, absente du ZIP bi-05 pré-fix).
 
 > ⚠ Note intégrité (2026-10-28) : une première version du bloc annales du builder, reconstruite de mémoire, a été **écartée avant build** après re-vérification sur l'extraction ELITE (`/tmp/bi06-annales.txt`). Les 10 annales de la page sont bien verbatim pp. 30–32, réponses officielles BCD·ADE·C·ACD·ACD·ABD·ABCD·DE·ABD·A. Nuances signalées en corrections : Q4-D « pro-BNP molécule de choix » (officiel ; on dose BNP/NT-proBNP), Q6-D « myoglobine peu sensible » (officiel ; le cours dit « non spécifique »), Q5-A « sécrétion » verbatim (le cours dit libération).
+
+## Clôture bi-06 (2026-10-29)
+- [x] Images 21/21 présentes : 19 planches générées relues (lots 1+2) + 2 composites propres (`ff-seuils`, `total`, assemblés depuis les planches générées — cap plateforme 10 images/tour ; **à régénérer en planches dédiées par le nouvel agent, 2 appels**).
+- [x] Audio 10/10 (ch1–8 + résumé FR court + résumé AR). ⚠ Incident 29/10 : reset nocturne de `/tmp` → MP3 du 28/10 perdus, **régénérés à l'identique** depuis `audio-scripts.md` (voix de session encore valides).
+- [x] Page : dims `width/height` recollées aux dimensions réelles des planches du lot 2 (1693×929/1774×887) — page repo = page livrée.
+- [x] Contrôle refs bi-06 : 34/34 résolues. (Audit site complet à refaire après reconstruction de la base — voir HANDOFF §Étape 0 ; dernier audit complet 28/10 : 61 pages, 11 AN-06.)
+- [x] **Livraison Drive `02_LIVRAISON-bi-06_2026-10-29`** (dossier `1VDAoeTxUWiM4o6J8Bq503x-B1CzsE1OK`) : ZIP `1oZixx-zRQDwsRiewm9QEQLWEbCzpJ94f` — 9 681 368 o, MD5 `5d3e62d5d9a437af37a8ec5f9b115e3c`, 37 fichiers (bi-06 complète + page bi-05 corrigée + data.js) ; LISEZ-MOI `1zYRioIZx_idpSyBdirVZ8vMDmCRio5-M`.
+- Suite : voir `SEENmed-REPRISE/HANDOFF-NOUVEL-AGENT.md` (passation complète au nouvel agent).

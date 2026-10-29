@@ -1,0 +1,19 @@
+SEENmed — LIVRAISON 02 : bi-06 « Les biomarqueurs cardiaques » (+ bi-05 corrigée)
+Date : 2026-10-29
+
+INSTALLATION (30 secondes)
+1. Télécharge le ZIP de ce dossier.
+2. Dézippe-le PAR-DESSUS ton dossier « medstudy » actuel (celui qui contient déjà la base officielle 00 + la livraison 01 bi-05). Accepte le remplacement des fichiers quand on te le demande.
+3. Ouvre medstudy/index.html → Biochimie → « Les biomarqueurs cardiaques ».
+
+CONTENU (delta, 37 fichiers)
+- lecons/bi-06-biomarqueurs-cardiaques.html : leçon complète (12 sections FR + arabe, 10 annales ELITE verbatim, 20 QCM d'entraînement, fiche flash, 36 mots-clés, 25 flashcards, Ciné-révision 9 chapitres).
+- assets/img/bi-06/ : 21 planches + 3 documents originaux du cours (reel/).
+- assets/audio/bi-06/ : 10 MP3 (8 chapitres FR + résumé FR + résumé AR).
+- lecons/bi-05-lipides-lipoproteines.html : VERSION CORRIGÉE (fond Biochimie + vraie fin de page) — remplace celle du ZIP de la livraison 01.
+- js/data.js : bi-06 activée (reçu, 10 annales, 20 entraînement).
+
+NOTES HONNÊTES
+- Deux planches (ff-seuils, total) sont des composites propres assemblés à partir des planches générées, car la plateforme limite à 10 images/message ; le nouvel agent les régénérera en planches dédiées dès son premier tour (2 images). Tout le reste est final.
+- Les 9 MP3 ch1–8 + résumé AR ont été régénérés à l'identique le 2026-10-29 après un reset de l'espace temporaire (scripts sauvegardés dans le repo GitHub).
+- Source : cours Dr Besbes, A 2025/2026 (N-1), annales ELITE CARDIO 3e §5.
