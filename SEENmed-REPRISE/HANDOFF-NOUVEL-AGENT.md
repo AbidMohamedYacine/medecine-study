@@ -6,6 +6,18 @@
 
 ---
 
+## ⚠ ADDENDUM (2026-10-29) — MODE SANS GITHUB : LIS-MOI EN PREMIER
+
+Ton chat n'a **pas accès à GitHub** : le repo ne te sert à rien et tu ne peux ni le lire ni y écrire. **Tout se fait sur Google Drive** (connecté). Adaptations obligatoires du reste de ce document :
+
+1. **Point de départ** : le dossier Drive **`00_KIT-NOUVEL-AGENT_2026-10-29`** (ID `1bHMhdFd94LIgR_GD9vIkv2zMRK-KjFYI`) contient ce fichier + **`KIT-NOUVEL-AGENT_SEENmed_2026-10-29.zip`** = l'intégralité de `SEENmed-REPRISE/` (docs 00→05, DETAILS-LOCK, protocole des sources, chartes, `tools/audit_seenmed.py`, builders et artefacts complets de bi-05/bi-06). Télécharge le ZIP (`google_drive__download_file`), il atterrit dans `google_drive/` de ton workspace : dézippe-le et travaille dans le `SEENmed-REPRISE/` obtenu — tous les chemins « repo » de ce document désignent ce dossier dézippé.
+2. **Reconstruction de la base** : inchangée (§1.5, étapes 2→3e — elle était déjà 100 % Drive), **plus** l'application du delta **`03_DELTA-bi-06-final_2026-10-29`** (ID `1E_2B9t-Ezsntq1jFF-XSzxOFy7g8JE82`) après le 02. Ignore §1.1-2 (Git), §1.3 et §1.4 : pas de `.gitignore` chez toi, mais garde son esprit (ne stocke durablement dans ton workspace ni le site complet ni les archives — tout finit sur Drive).
+3. **En remplacement des commits** : pour chaque leçon terminée, dans le même dossier Drive de livraison que le ZIP utilisateur (§9), uploade en plus un **`ARTEFACTS-<id-leçon>.zip`** contenant `PLAN-SOURCE.md` + `build_<id>.py` + `audio-scripts.md` + la page HTML + le `data.js` final + les WebP finaux. **Aucun artefact ne doit exister uniquement dans ton workspace à la fin d'un tour** (les workspaces d'agents sont éphémères — même maladie que `/tmp`, §1.1).
+4. **Le §10.0 (micro-tâches bi-06) est DÉJÀ FAIT** le 29/10 par l'agent précédent : les 2 planches dédiées (`ff-seuils`, `total`) ont été régénérées et livrées par le delta 03. bi-06 est à 100 %. Ta première construction = **pn-01** (§10.1).
+5. Si GitHub redevient accessible un jour : le repo `AbidMohamedYacine/medecine-study` contient le même contenu que ce kit (branche `arena/6cbc9050-medecine-study`, PR #1) — archive froide, pas un prérequis.
+
+---
+
 ## 0. LA MISSION
 
 - **Utilisateur** : étudiant en 3ᵉ année de médecine (Algérie, Oran). **Examen le 26/11/2026** (pneumologie incluse ; immunologie + anatomo-pathologie = fin janvier 2027). **Gel des constructions à J-7 (≈ 19/11/2026)** : après, révision seulement.
