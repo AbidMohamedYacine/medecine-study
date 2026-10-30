@@ -45,3 +45,12 @@ Anciennes versions (lot 1) archivées au banc local agent-1
 - bi-06 : ff-algo, ff-bnp.
 - Planches de sections des 3 leçons (priorité : celles jugées pauvres ;
   bi-06 a encore 16 planches 1536×1024 signalées IMG-DIMS à refaire en 1376×768).
+
+## Lot 2-bis — 2026-10-30 : pn-01 ff-nyha refaite (delta 12)
+Retour utilisateur sur le lot 2 : fond clair trop vide, personnage du
+Stade I anormal, distribution inconfortable. Refaite : intérieur normal
+rempli (parquet, plantes, fenêtre), progression logique I→II→III→IV le
+long d'un seul escalier, postures naturelles, étiquettes séparées.
+Doctrine « Fond et composition » ajoutée au STANDARD §8.2 : fond normal
+rempli, organisation intelligente, aucun chevauchement illogique —
+à appliquer à TOUTE génération, rejet sinon.
