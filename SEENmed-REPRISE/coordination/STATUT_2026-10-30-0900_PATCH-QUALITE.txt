@@ -1,0 +1,11 @@
+LECON: bi-06 + pn-01 + pn-04 — patch qualité global
+AGENT: AGENT-1
+ETAPE: A_PATCHER
+DATE_HEURE: 2026-10-30 09:00
+SOURCE: audit utilisateur + pages livrées bi-06/pn-01/pn-04 comparées à ca-02, ca-09, ra-02 et aux moteurs réels lesson.js/cine.js/keywords.js
+FAIT: cause racine confirmée dans le builder bi-06 puis recopiée : contrats QCM/Ciné/mots-clés/flashcards incompatibles, double fcData, fiche flash non conforme ; pn sans section Ciné centrale et sans peau animée.
+RESTE: standard-or v3 mesuré sur ca-02/ca-09/bi-05/ra-02 ; audit automatique + test navigateur ; peau pneumologie dérivée du moteur biochimie avec 4 thèmes recolorés ; patch fonctionnel bi-06/pn-01/pn-04 ; refonte fiches/images par lots comptés ; mise à jour HANDOFF/kit/messages ; audit officiel et delta Drive.
+GENERATIONS CUMUL LECON: images OK 0 / échecs 0 ; audios OK 0 / échecs 0 (patch AGENT-1)
+GENERATIONS CE TOUR: images 0/10 ; audios 0/10 au moment de ce statut
+DATA: non touché à ce stade
+FICHIERS: événement gel dans JOURNAL + LOCK_PATCH_bi-06_AGENT-1 / LOCK_PATCH_pn-01_AGENT-1 / LOCK_PATCH_pn-04_AGENT-1 / LOCK_QUALITE-V3_AGENT-1

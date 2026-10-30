@@ -1,0 +1,23 @@
+LISEZ-MOI — PATCH-CONTRATS-v3 · PHASE 1 STRUCTURELLE (2026-10-30, AGENT-1)
+Installation (30 secondes) : dézipper SUR le dossier medstudy existant (remplacer les 7 fichiers).
+
+Ce que ce patch répare (validé : AUDIT-LECON-GOLD-v3 = 0 bloquant sur les 3 pages
++ test d'exécution DOM = 53/53 checks verts) :
+- QCM annales + entraînement : cochables, corrigés, verdicts, scores de série.
+- Ciné-révision : lecteur central présent sur pn-01/pn-04, mini-lecteurs sous
+  chaque planche recâblés sur le bon chapitre (bi-06/pn-01 : FR + résumé AR ;
+  pn-04 : FR — les pistes AR restantes arrivent en phase 2).
+- Dictionnaire mots-clés FR/AR fonctionnel, flashcards (retournement + SM-2),
+  mode arabe actif (les données JSON sont de nouveau AVANT les moteurs).
+- Fiche flash reconstruite : 4 macro-cellules (planche + faits/pièges).
+- NOUVELLE peau pneumologie « Air alvéolaire » : fond animé propre (canvas +
+  particules) et 4 thèmes dédiés (sombre, clair, aurora, ocean), modes
+  anime/eco/photo/planche. bi-06 retrouve aussi son canvas bio.
+- Flashcards remises AVANT le résumé total (ordre des références).
+
+CE QUI RESTE (phase 2 contenu — les 3 leçons restent A_PATCHER, PAS livrées) :
+- Explanations QCM à réécrire proposition par proposition (FR+AR).
+- Mots-clés à porter à ~50 vrais termes par leçon.
+- Audios arabes manquants : bi-06 8 chapitres, pn-01 8 + clip orientation, pn-04 10.
+- Images à refaire au standard planches denses 1376x768.
+Aucun autre fichier du site n'est touché. Aucune suppression.
