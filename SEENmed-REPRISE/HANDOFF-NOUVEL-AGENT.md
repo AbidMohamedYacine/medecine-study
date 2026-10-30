@@ -6,7 +6,7 @@
 
 ---
 
-> **MISE À JOUR 4 AGENTS (2026-10-29)** : coordination multi-agents, verrous anti-doublons, discipline de quotas et **qualité image v2** = lire **`coordination/PROTOCOLE-4-AGENTS-v1.md`** (aussi sur Drive, dossier `01_COORDINATION-4-AGENTS_2026-10-29` ID `1P_NzJcrBQIbUc9r0JjXzmb0Lk-C8XTsA`). Il prime sur ce HANDOFF pour ces sujets. pn-01/pn-04 sont livrées (AGENT-2), pn-07 lui est réservée.
+> **MISE À JOUR ÉQUIPE DYNAMIQUE (2026-10-30)** : coordination multi-agents **sans files fixes**, verrous anti-doublons, journal d'événements, leçons nouvelles/exclues, discipline de quotas et **qualité image v2** = lire **`coordination/PROTOCOLE-EQUIPE-DYNAMIQUE-v2.md`** (aussi sur Drive, dossier `01_COORDINATION-4-AGENTS_2026-10-29` ID `1P_NzJcrBQIbUc9r0JjXzmb0Lk-C8XTsA`). Il prime sur ce HANDOFF et annule les files du protocole v1 (ses règles techniques restent applicables). pn-01/pn-04 sont livrées (AGENT-2), pn-07 lui est réservée ; les autres leçons sont libres et se réservent par LOCK après synchronisation Drive.
 >
 
 ## ⚠ ADDENDUM (2026-10-29) — MODE SANS GITHUB : LIS-MOI EN PREMIER
