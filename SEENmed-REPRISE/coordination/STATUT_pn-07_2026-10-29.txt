@@ -1,0 +1,9 @@
+LECON: pn-07
+AGENT: AGENT-2
+ETAPE: EN_COURS (réservation déclarée)
+DATE_HEURE: 2026-10-29
+SOURCE: voir PLAN-SOURCE de l'AGENT-2 (workspace agent-2)
+FAIT: leçon commencée par l'AGENT-2 (déclaré par l'utilisateur le 29/10) ; aucun fichier sur Drive au moment de cette réservation
+RESTE: à compléter et livrer par l'AGENT-2 à sa reprise - NE PAS TOUCHER (autres agents)
+GENERATIONS (cumul leçon): inconnu (agent-2)
+FICHIERS: ce LOCK créé par AGENT-1 le 29/10 pour protéger le travail en cours de l'AGENT-2

@@ -6,6 +6,9 @@
 
 ---
 
+> **MISE À JOUR 4 AGENTS (2026-10-29)** : coordination multi-agents, verrous anti-doublons, discipline de quotas et **qualité image v2** = lire **`coordination/PROTOCOLE-4-AGENTS-v1.md`** (aussi sur Drive, dossier `01_COORDINATION-4-AGENTS_2026-10-29` ID `1P_NzJcrBQIbUc9r0JjXzmb0Lk-C8XTsA`). Il prime sur ce HANDOFF pour ces sujets. pn-01/pn-04 sont livrées (AGENT-2), pn-07 lui est réservée.
+>
+
 ## ⚠ ADDENDUM (2026-10-29) — MODE SANS GITHUB : LIS-MOI EN PREMIER
 
 Ton chat n'a **pas accès à GitHub** : le repo ne te sert à rien et tu ne peux ni le lire ni y écrire. **Tout se fait sur Google Drive** (connecté). Adaptations obligatoires du reste de ce document :
