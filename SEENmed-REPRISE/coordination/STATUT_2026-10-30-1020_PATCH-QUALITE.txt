@@ -1,0 +1,19 @@
+STATUT 2026-10-30 10:20 — AGENT-1 — CHANTIER QUALITÉ v3
+
+FAIT (validé)
+- Audit forensique + STANDARD-OR-v3 + audit bloquant + 2 tests d'exécution (KIT/qualite-2026-10-30).
+- HANDOFF corrigé (v3), registre v2 (bi-06/pn-01/pn-04 = A_PATCHER).
+- DELTA 06 phase 1 structurelle publié : audit v3 = 0 bloquant x3, runtime DOM 53/53.
+  QCM/scores, Ciné central+spots, dictionnaire, flashcards, fiche 4 cellules,
+  mode arabe, peau pneumo « Air alvéolaire » (4 thèmes) FONCTIONNENT sur les 3 pages.
+- DELTA 07 : pn-04 audios AR complets (10/10 chapitres FR+AR), revalidé 19/19.
+
+RESTE (phase 2, AGENT-1, par lots — caps : 10 images + 10 audios/message)
+1. Audios AR : bi-06 (8), pn-01 (8 + nouveau clip orientation FR/AR).
+2. Explanations QCM proposition par proposition FR+AR (84 questions).
+3. Mots-clés portés à ~50 vrais termes/leçon.
+4. Images refaites (planches denses 1376x768 + fiches dédiées), zoom-vérifiées.
+5. Revalidation complète + captures navigateur, puis seulement passage LIVRÉE.
+
+GEL toujours actif pour les autres leçons : aucun GO utilisateur = aucune construction.
+pn-07 (AGENT-2) en pause ; reprise éventuelle uniquement après SYNC v3 complet.
