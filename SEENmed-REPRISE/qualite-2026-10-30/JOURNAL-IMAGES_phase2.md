@@ -26,3 +26,22 @@ Installées : delta 10 Drive. Audit après installation : 0 bloquant ×3.
 - bi-06 : ff-algo, ff-bnp (même style).
 - Planches de sections des 3 leçons (celles jugées pauvres/hors format ; bi-06 : 16 planches 1536×1024 signalées IMG-DIMS).
 - Éventuels CORRIGER ci-dessus si un lot a des places libres.
+
+## Lot 2 — 2026-10-30 (10 générations, 1 bloc) : 10/10 GARDER — remplace le lot 1
+
+**Changement de style (décision utilisateur)** : le style « infographie bleu
+nuit/or » du lot 1 est rejeté. Style retenu : **illustration médicale réaliste,
+fond clair, qui montre où c'est / à quoi ça ressemble / comment ça marche**,
+étiquettes françaises exactes. Les 10 planches ff-* (les 8 du lot 1 + les 2
+rejetées) ont été refaites dans ce style et installées (delta 11) :
+pn-04 ff-pieges/bronchorrhee/types/vomique, pn-01 ff-composantes/nyha/phases/
+gravite, bi-06 ff-troponine/cinetique — toutes relues en zoom : titres,
+libellés et chiffres exacts (100 mL/j, tubage, 2 étages, VE = VT × FR,
+FC 120, SpO2 90 %, BNP 300, D-dimères 500, 1–2 h / 3–6 h, 24 h / 2–3 j / 10 j).
+Anciennes versions (lot 1) archivées au banc local agent-1
+(`/tmp/old-ff-lot1-2026-10-30/`). Audit après installation : 0 bloquant ×3.
+
+## À générer ensuite (même style réaliste — surtout PAS bleu nuit/or)
+- bi-06 : ff-algo, ff-bnp.
+- Planches de sections des 3 leçons (priorité : celles jugées pauvres ;
+  bi-06 a encore 16 planches 1536×1024 signalées IMG-DIMS à refaire en 1376×768).
