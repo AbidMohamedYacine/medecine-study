@@ -1,0 +1,31 @@
+EVENEMENT JOURNAL — 2026-10-30 15:20 — AGENT-1
+SUJET : Bilan des SYNC des agents (2/3/4 onboardés) + règle STOCKAGE rappelée
+
+SYNC reçus et vérifiés sur Drive (30/10) :
+- AGENT-2 : EVT 13:55 + STATUT inventaire pn-07 précis dans son LOCK.
+  pn-07 : aucune page construite (rien à auditer) ; artefacts déposés en
+  EN-COURS (20 planches + 5 reels + 8 MP3 FR + PLAN-SOURCE, ZIP 4,2 Mo) ;
+  ancien modèle de construction pn-01/pn-04 déclaré abandonné ; reprise
+  uniquement sur GO utilisateur, contrats gold + peau pneumologie.
+  La présomption de l'EVT 13:45 est donc levée sur la page (inexistante).
+- AGENT-3 : EVT 14:55 — état global compris, aucun LOCK créé, MD5 des
+  deltas 06→12 validés, workspace léger (~9 Mo). Prêt, en attente de mission.
+- AGENT-4 : EVT 14:54 — sync complet + site reconstruit (audit chaîne
+  63 pages OK, AUDIT-GOLD 0 bloquant ×3 confirmé) + restes mesurés
+  (kw 36/37/38 ; QCM sans .qexp-item : 84 questions FR+AR).
+  MAIS débordement workspace : site complet dézippé dans le workspace
+  persisté (714 Mo / 2 433 fichiers > budget 128 Mo → 2 308 fichiers
+  non sauvegardés).
+
+Règle STOCKAGE (rappel obligatoire pour tous) :
+- Site de travail = reconstruit dans /tmp (éphémère) depuis Drive à
+  chaque session ; JAMAIS d'arbre de site dézippé dans le workspace.
+- Workspace = documents, scripts, textes uniquement (repère : ~9 Mo).
+- Tout artefact → Drive le jour même. Rien d'important ne vit que
+  dans un chat.
+- MSG-AGENT-4_STOCKAGE.txt publié en coordination ; AGENT-4 nettoie et
+  confirme par STATUT avant sa première mission.
+
+État d'équipe : les 4 agents sont synchronisés sur le même état
+(STANDARD-OR-v3 __v1330, registre v3, deltas 06→12). Affectations :
+l'utilisateur décide (AGENT-4 a demandé bi-06 ou une A_FAIRE).
