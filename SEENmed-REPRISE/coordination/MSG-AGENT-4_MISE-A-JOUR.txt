@@ -1,0 +1,44 @@
+=== MESSAGE POUR AGENT-4 — MISE A JOUR (à coller dans son chat) ===
+
+Salut AGENT-4. Tu es déjà onboardé ; voici ce qui a changé depuis, à lire
+avant tout travail. AGENT-1 arrive en fin d'usage : l'équipe (toi, AGENT-2,
+AGENT-3) continue, coordination Drive uniquement.
+
+SYNC RAPIDE OBLIGATOIRE :
+1. JOURNAL (1Z-m3YbXzF8ErEQZUS3d6zdW0D5UCrg3E) : événements du 30/10 —
+   09:00 blocage global, 10:15 patch v3 phase 1, 11:00 décision audio,
+   11:30 images multiples + résumé long, 12:15 résumés refaits + état
+   fiches, 12:45 coordination + méthodes, 13:00 checkpoint + style
+   images, 13:30 composition des images + messages par agent.
+2. coordination/MESSAGE-AUX-AGENTS_REPRISE-PHASE2.txt + REGISTRE v3 :
+   bi-05 LIVREE ; bi-06/pn-01/pn-04 A_PATCHER ; pn-07 EN_COURS AGENT-2
+   (pause) ; ra-05 BLOQUEE_SOURCE ; 16 A_FAIRE.
+3. KIT > qualite-2026-10-30 : STANDARD-OR-v3.md__v1330 fait foi
+   (remplace __v1250/__v1245/__v1130 — le §8.2 « Fond et composition » et
+   le §10 traduction sont nouveaux), JOURNAL-IMAGES_phase2.md__v1330.
+4. Site = base officielle + deltas 06, 08, 09, 10, 11, 12 (07 CADUC).
+
+NOUVEAUTES A INTEGRER (décisions utilisateur du 30/10) :
+- IMAGES : style REALISTE qui montre la réalité ; fond = environnement
+  normal et rempli (⛔ ni blanc vide, ni bleu nuit/or décoratif) ;
+  organisation intelligente et logique des éléments, postures naturelles,
+  AUCUN chevauchement illogique — sinon REJET. Les 10 planches ff-* des
+  3 leçons sont faites dans ce style (deltas 11+12) : imite-les.
+- AUDIO : chapitres FR seuls, AR au résumé seul ; résumé long en parties
+  (nombre libre) + COLLER-MP3.py. Résumés des 3 leçons déjà refaits.
+- TRADUCTION : sens en contexte ; terme arabe + français à côté.
+- FICHE : 4 cases par défaut, 5-6 si la matière l'exige.
+- pn-01 a maintenant 9 chapitres (chapitre « orientation » ajouté).
+
+RESTE A FAIRE (phase 2, ordre A→E du message de reprise) : corrections
+QCM proposition par proposition FR/AR ; mots-clés 45-60/leçon ; bi-06
+ff-algo/ff-bnp + planches de sections (style réaliste) ; densité fiches
+(>= 2 400 car./4 cases) et versos flashcards (~200 car., 30 cartes).
+Prends UNE leçon à la fois : vérifie son LOCK ; pour reprendre un lock
+d'AGENT-1, événement TRANSFERT au JOURNAL d'abord (l'utilisateur valide),
+puis ton LOCK_<id>_AGENT-4 + STATUT. Ou pars sur une leçon A_FAIRE libre
+si l'utilisateur te l'assigne. Caps : 10 images + 10 audios par message,
+tentatives incluses. Publie delta + JOURNAL à chaque étape ; jamais
+« LIVREE » sans audit 0 bloquant + runtime + Contrôle visuel (§11).
+
+Commence par le SYNC et confirme ton compris en quelques lignes.

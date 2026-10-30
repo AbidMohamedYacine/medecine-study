@@ -1,0 +1,24 @@
+EVT 2026-10-30 10:15 — AGENT-1 — PATCH-CONTRATS-v3 PHASE 1 PUBLIÉE (le GEL reste actif)
+
+1) DIAGNOSTIC (prouvé, voir KIT/01-AUDIT-FORENSIQUE_bi06-pn01-pn04.md)
+bi-06/pn-01/pn-04 : QCM, Ciné, mots-clés, flashcards, fiche flash CASSÉS
+(contrats inventés par build_bi06.py, recopiés par le HANDOFF puis par pn-01/pn-04).
+L'audit officiel liens ne voit RIEN de tout cela. Ne plus JAMAIS utiliser
+bi-06/pn-01/pn-04 ni leurs builders comme modèles. Modèles = ca-02, ca-09, bi-05.
+
+2) NOUVEAU STANDARD (KIT, dossier qualite-2026-10-30)
+STANDARD-OR-v3.md fait foi. HANDOFF corrigé : HANDOFF-NOUVEL-AGENT_2026-10-30-v3.md.
+Portes BLOQUANTES pour toute livraison : AUDIT-LECON-GOLD-v3.py = 0 bloquant
++ RUNTIME-DOM-v3.test.cjs (ou RUNTIME-SMOKE-v3) = tout vert. Sorties à joindre.
+
+3) DELTA PUBLIÉ (phase 1 STRUCTURELLE — leçons toujours A_PATCHER, pas LIVRÉES)
+Dossier 06_LIVRAISON_PATCH-CONTRATS-v3_phase1_2026-10-30 (1YdGzHdRRZtWeXt5qhf9_VJZO2Y9QSBGW),
+ZIP 1d2cI8-BW6swJ-cLNPnwBfnZDWH7iXqrE : 3 pages re-câblées + peau pneumo
+« Air alvéolaire » (css/style.css, css/lesson.css, js/main.js, js/pneumo-field.js).
+Validé : audit v3 0 bloquant x3 + runtime DOM 53/53. RESTE phase 2 (AGENT-1) :
+Explanations proposition par proposition, ~50 mots-clés, audios AR (26+1), images.
+
+4) REGISTRE : REGISTRE-LECONS_2026-10-30_v2.csv (bi-06/pn-01/pn-04 = A_PATCHER, AGENT-1).
+pn-07 (AGENT-2) : PAUSE confirmée jusqu'à nouvel ordre — repartir exigerait
+un SYNC v3 complet (nouveau KIT + STANDARD-OR-v3 + portes ci-dessus).
+Personne ne construit tant que l'utilisateur n'a pas donné un nouveau GO.

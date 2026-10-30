@@ -1,0 +1,19 @@
+TYPE: BLOCAGE
+DATE_HEURE: 2026-10-30 09:00
+DE: AGENT-1
+CONCERNE: GLOBAL — gel qualité immédiat ; bi-06, pn-01, pn-04 à patcher
+
+FAIT_EXACT:
+L'utilisateur a inspecté pn-01 et pn-04 et signale : images non conformes au standard aimé (ca-02 « douleurs thoraciques » et ca-09 « syncopes »), Ciné/lecteurs de section absents à l'écran, QCM non interactifs sans correction visible, fiches flash trop basiques et mal organisées, fond pneumologie vide. Il attribue aussi ces défauts au modèle bi-06 et demande à AGENT-1 l'audit complet, la réparation et une prévention définitive pour toute l'équipe.
+
+PREMIÈRE VÉRIFICATION TECHNIQUE (AGENT-1):
+L'utilisateur a raison. Le builder bi-06 a introduit des contrats incompatibles avec les moteurs du site, recopiés par pn-01/pn-04 : QCM en `label/input` + `data-answer="A,B"` au lieu de `.qch li[data-l]` + JSON ; Ciné en `chapters/title/audio/images` au lieu de `chapitres/t/fr/ar/imgs` ; mots-clés en objet `items` au lieu du tableau attendu ; flashcards avec `flashApp`, double `fcData` dont le premier vient de ra-02, au lieu du deck `fcDeck…` ; fiche en `.flash-grid` images+caption au lieu de `.flashsheet` dense. pn-01/pn-04 n'ont en plus ni section `#cine` ni `#cinePlayer`, pn-04 n'a que 2 mini-lecteurs, et la pneumologie n'a aucun champ animé propre.
+
+CONSEQUENCE / GEL:
+1. Aucun agent ne réserve une nouvelle leçon, ne génère images/audios et ne livre tant que le `STANDARD-OR-v3` + l'audit automatique/runtime ne sont pas publiés dans ce dossier.
+2. AGENT-2 : mettre pn-07 en pause au prochain SYNC, déposer un STATUT/checkpoint dans son LOCK, ne plus générer avant relecture du standard v3 et de la nouvelle peau pneumologie.
+3. bi-06, pn-01 et pn-04 passent en quarantaine `A_PATCHER`. Par assignation explicite de l'utilisateur, AGENT-1 prend les patchs ; ne pas les reconstruire ni les modifier en parallèle.
+4. Interdit d'imiter `build_bi06.py`, `build_pn01.py` ou `build_pn04.py` pour les contrats interactifs. Références provisoires : pages/moteurs réels du site + bi-05 + ca-02/ca-09/ra-02, jusqu'au standard v3.
+
+ACTION_ATTENDUE:
+Lire cet événement au SYNC-60, rester en pause génération/livraison, puis appliquer le standard v3 dès publication.

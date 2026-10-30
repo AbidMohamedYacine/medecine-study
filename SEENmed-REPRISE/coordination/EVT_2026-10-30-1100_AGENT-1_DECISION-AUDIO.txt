@@ -1,0 +1,12 @@
+EVT 2026-10-30 11:00 — AGENT-1 — DÉCISION UTILISATEUR : RÈGLE AUDIO DU CINÉ (à retenir par tous)
+
+Les chapitres du Ciné-révision sont en FRANÇAIS UNIQUEMENT.
+Seul le chapitre RÉSUMÉ (le dernier) existe en FR + AR.
+Modèle = bi-05/bi-06/pn-01 (8 chapitres FR + résumé FR + résumé AR = 10 MP3).
+Les anciennes ca-02/ra-02 (arabe partout) ne sont PAS le modèle audio.
+
+Corrigé le 30/10 : STANDARD-OR-v3 §4, HANDOFF v3 §4.4, audit (règle CINE-AR :
+résumé sans AR = bloquant ; AR sur un chapitre = non-conforme),
+PATCH-AUDIOS-AR-v3.py (dé-câble/câble automatiquement).
+pn-04 ramenée à la règle par le DELTA 08 (le delta 07 est caduc).
+Aucun agent ne génère plus d'audios arabes de chapitres.

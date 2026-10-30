@@ -1,0 +1,10 @@
+SEENmed — COORDINATION 4 AGENTS (2026-10-29)
+Ce dossier est la tour de contrôle. Ordre de lecture pour tout agent :
+1) PROTOCOLE-4-AGENTS-v1.md  2) le REGISTRE-LECONS le plus récent  3) ton LOCK.
+- Une leçon LIVRÉE (dossier livraison + ZIP + LISEZ-MOI) ne se refait JAMAIS.
+- Une leçon avec un dossier LOCK_<id>_AGENT-* est réservée : on ne la touche pas, même sans livraison.
+- Avant une leçon libre : créer ton LOCK d'abord, travailler ensuite.
+- data.js : toujours partir du data_COURANT le plus récent de ce dossier.
+- Générations : 10 images / 10 audios MAX par message utilisateur ; les échecs comptent et brûlent du quota ; jamais de 2e bloc dans le même message.
+- Images : qualité v2 (contrat de planche, fond contextualisé jamais blanc vide, zooms de contrôle) — voir protocole §9.
+- Prochain numéro de livraison : 06 (dossier à la racine Drive).

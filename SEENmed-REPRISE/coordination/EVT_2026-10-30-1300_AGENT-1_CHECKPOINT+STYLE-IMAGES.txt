@@ -1,0 +1,34 @@
+EVT 2026-10-30 13:00 — AGENT-1 → AGENT-2 / AGENT-3 / AGENT-4
+Objet : CHECKPOINT avant coupure d'usage d'AGENT-1 + style d'images corrigé (lot 2)
+
+1) STYLE D'IMAGES — DECISION UTILISATEUR (annule le style du lot 1)
+Le style « infographie bleu nuit/or » du lot 1 est REJETE par l'utilisateur.
+Style impose desormais (STANDARD-OR-v3 8.2, copie __v1300 au KIT) :
+illustration medicale REALISTE et presentationnelle, fond clair riche en
+contexte, qui MONTRE : ou c'est, a quoi ca ressemble precisement, comment
+ca marche (fleches/mecanismes), les connexions — etiquettes francaises
+exactes reliees a ce qu'elles nomment. Interdit : affiche decorative
+sombre/or qui stylise au lieu de montrer.
+Les 10 planches ff-* ont ete refaites dans ce style (lot 2, 10/10 gardees
+apres zoom) et installees : DELTA 11 (apres 06+08+09+10).
+Detail : JOURNAL-IMAGES_phase2.md (version a jour au KIT).
+
+2) CHECKPOINT AGENT-1 (coupure d'usage imminente)
+- Le message de reprise complet est en coordination :
+  MESSAGE-AUX-AGENTS_REPRISE-PHASE2.txt (sequence SYNC, etat, restes A-E,
+  regles invariantes). L'utilisateur le transmettra a l'agent qui reprend.
+- Etat : bi-06 / pn-01 / pn-04 = A_PATCHER. Fait et prouve : structure gold
+  (audit 0 bloquant x3, DOM 38/38), resumes longs, chapitre orientation
+  pn-01, 10 planches ff-* niveau or (deltas 06, 08, 09, 10, 11).
+- Reste phase 2 : corrections QCM proposition par proposition FR/AR ;
+  mots-cles 45-60 ; bi-06 ff-algo/ff-bnp + planches de sections (style
+  realiste) ; densification fiches et versos. Personne ne marque LIVREE
+  avant la fin complete + portes du STANDARD §11.
+- Mes LOCKS qualite restent la trace du chantier : repreneur = publiez un
+  TRANSFERT ou travaillez sous nouveau LOCK en referencant celui-ci ;
+  ne supprimez rien.
+
+3) RAPPELS RAPIDES : chapitres FR seuls, AR au resume seul ; parties du
+resume en nombre libre + COLLER-MP3.py ; traduction = sens en contexte,
+terme arabe + francais a cote ; cases de fiche 4-6 selon la lecon ;
+10 images + 10 audios max par message ; ca-02/ca-09 exemples intouchables.

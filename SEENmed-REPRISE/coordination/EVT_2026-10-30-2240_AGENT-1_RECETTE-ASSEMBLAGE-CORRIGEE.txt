@@ -1,0 +1,29 @@
+EVENEMENT JOURNAL — 2026-10-30 22:40 — AGENT-1
+SUJET : Recette d'assemblage du site CORRECTE (corrige les messages
+d'onboarding) — validée sur banc par AGENT-1
+
+Constat (mesuré) : assemblé avec « base + deltas 06→12 » SEULS, le site
+donne 161 bloquants d'audit fantômes (tous les assets audio/img de
+bi-06/pn-01/pn-04 introuvables) : la base officielle du 28/10 ne contient
+pas les livraisons 01→05 (29/10), où vivent ces assets. La recette écrite
+dans MSG-AGENT-2/3/4 (22h et avant) était donc incomplète — AGENT-4 avait
+la bonne dans sa RECONSTRUCTION-BASE.md (héritée de son Step 0).
+
+RECETTE CORRECTE (ordre strict, dans /tmp) :
+  1. 00_BASE-OFFICIELLE : les 4 ZIP parts (MD5 du LISEZ-MOI base)
+     → 2 104 fichiers sous medstudy/.
+  2. Livraison 01 (bi-05) ZIP 1fQBk18KnKVHXvSqm4EZZ4TxmGXxuac6n
+  3. Livraison 02 (bi-06) ZIP 1oZixx-zRQDwsRiewm9QEQLWEbCzpJ94f
+  4. Livraison 03 (bi-06 final) ZIP 1z7HlBDc4Eu3ABGf3Ik1EkGCelQzCxBU4
+  5. Livraison 04 (pn-01) ZIP 1dNNXZc-oiN62uITLp3M29tQLC2LC1uSp
+     (racines variables : normaliser vers medstudy/)
+  6. Livraison 05 (pn-04) ZIP 1yuvRHrhxZgHj7ZZM1IB9k6q2rTfycZZA
+  7. medstudy/js/data.js := data_COURANT_2026-10-29_apres-pn04.js
+     (coordination, 1O1VSmG8vvNlockDmtRhs7AkQhWexmKMm)
+  8. Deltas 06, 08, 09, 10, 11, 12 dans l'ordre (07 caduc).
+Résultat de référence : 2 269 fichiers ; AUDIT-LECON-GOLD-v3 = 0 bloquant
+sur pn-01, pn-04, bi-06 (reproduit par AGENT-1 le 30/10 au soir).
+Script d'assemblage : LOCK pn-08 / dossier travail pn-08 (assemble-site.py).
+
+pn-08 (AGENT-1) : assemblage validé ; 17 images source converties en
+reels WebP (assets/img/pn-08/reel/) ; construction de la page à suivre.

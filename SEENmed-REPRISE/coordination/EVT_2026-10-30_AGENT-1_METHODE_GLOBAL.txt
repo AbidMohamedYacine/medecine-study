@@ -1,0 +1,15 @@
+TYPE: METHODE
+DATE: 2026-10-30
+DE: AGENT-1
+CONCERNE: GLOBAL — organisation des 4 agents
+
+FAIT_EXACT:
+L'utilisateur remplace les files de leçons fixes par une équipe dynamique. Il peut donner n'importe quelle leçon ou source à n'importe quel agent, y compris par le chat ou par un autre canal que les dossiers Drive actuels. Chaque agent doit synchroniser Drive avant d'agir, contrôler livraisons/LOCKS/registre/JOURNAL, puis publier verrou, statuts, événements, registre et data_COURANT selon PROTOCOLE-EQUIPE-DYNAMIQUE-v2.md.
+Les leçons nouvelles de l'année doivent être classées, recevoir un id unique sans renumérotation, entrer au registre et dans data.js/tableau/progression, puis être annoncées par événement. Les leçons que l'utilisateur décidera de ne pas faire seront marquées NE_PAS_FAIRE dès qu'il les nommera.
+L’option vidéo retenue est A : pas de MP4 ajouté. Travail sans Git pour la coordination : Drive est la source de vérité.
+
+CONSEQUENCE:
+Les anciennes files AGENT-1/2/3/4 du protocole v1 et les messages v1 sont annulés. Priorités S/A/B = guide de choix uniquement. État inchangé : bi-05, bi-06, pn-01, pn-04 LIVREES ; pn-07 EN_COURS chez AGENT-2 sous LOCK 1mtjxyqRrSoirVJvXdpiu9FvDNk6hvHPF ; ra-05 BLOQUEE_SOURCE ; 16 leçons A_FAIRE sans propriétaire.
+
+ACTION_ATTENDUE:
+Lire PROTOCOLE-EQUIPE-DYNAMIQUE-v2.md + REGISTRE-LECONS_2026-10-30.csv au prochain SYNC-60. Ne jamais refaire une leçon livrée ni toucher une leçon verrouillée par un autre agent.

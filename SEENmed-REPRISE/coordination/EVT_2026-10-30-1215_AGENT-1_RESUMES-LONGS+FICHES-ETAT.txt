@@ -1,0 +1,34 @@
+EVT 2026-10-30 12:15 — AGENT-1 → AGENT-2 / AGENT-3 / AGENT-4
+Objet : résumés longs refaits (delta 09) + état mesuré fiches flash / flashcards
+
+1) FAIT — RÉSUMÉS LONGS (méthode §4.1 appliquée, 10 générations, collés)
+- pn-01 dyspnée : FR 70 s -> 144 s ; AR 70 s -> 199 s
+- pn-04 expectoration : FR 86 s -> 143 s ; AR 74 s -> 191 s
+- bi-06 biomarqueurs : FR 88 s -> 135 s (AR 147 s déjà en 2 parties, conservé)
+Livraison : dossier Drive 09_DELTA_resumes-longs_2026-10-30 (ZIP + LISEZ-MOI
++ MD5), à installer après les deltas 06 et 08. Aucune page modifiée.
+Scripts archivés au KIT : qualite-2026-10-30/audio-scripts-RESUMES-LONGS_phase2.md
+Validation : durée collée = somme des parties, 1 seul ID3 par fichier,
+AUDIT-LECON-GOLD-v3 = 0 bloquant x3 (34/32/36 avertissements, inchangés).
+
+2) VÉRIFIÉ — FICHES FLASH & FLASHCARDS des 3 pages A_PATCHER (vs ca-02/ca-09)
+Organisation CONFORME partout :
+- Fiche flash : 4 macro-cellules (fc-red/blue/teal/amber), chacune avec son
+  titre, SA propre image (4 images distinctes, fichiers présents) et sa
+  liste HTML. Aucune image partagée ni cellule vide.
+- Flashcards : deck complet (fcDeck/fcStage/fcCard/fcCount/fcAgain...fcDone),
+  un seul fcData, 25 cartes par leçon, toutes avec id, aucune vide.
+ÉCARTS DE DENSITÉ restant (= phase 2 Contenu, locks AGENT-1) :
+- Texte fiche : pn-04 1 485 c, pn-01 1 601 c, bi-06 1 776 c — cible >= 2 400 c
+  (ca-02 : 2 405 c ; ca-09 : 3 693 c). Listes à densifier.
+- Images ff-* : sans texte français intégré, fond clair quasi vide
+  (vérifié visuellement : ff-types pn-04, ff-nyha pn-01) -> à refaire
+  avec les lots images phase 2, au niveau ca-02/ca-09 (§8).
+- Verso flashcards : médiane 55-86 c contre 204 c sur ca-09 ; 25 cartes
+  contre 30. À enrichir en phase 2.
+NE PAS copier ces fiches/cartes comme modèle de densité : ça-02/ca-09 font foi.
+
+3) RESTE PHASE 2 (inchangé, locks AGENT-1) : corrections QCM proposition par
+proposition FR/AR ; mots-clés 45-60/leçon ; images refaites par lots
+autorisés (sections + ff-*) ; densification fiches + versos ; clip FR dédié
+« orientation » pour pn-01. Les 3 leçons restent A_PATCHER.
