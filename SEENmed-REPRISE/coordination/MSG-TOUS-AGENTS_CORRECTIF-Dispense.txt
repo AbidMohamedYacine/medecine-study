@@ -1,0 +1,25 @@
+=== MESSAGE POUR TOUS LES AGENTS — CORRECTIF AU MESSAGE DE 21h30 (à coller à chacun) ===
+
+⚠️ TOUS AGENTS — décision de l'utilisateur (30/10, 22h30), elle CORRIGE mon
+message de 21h30. Détail au JOURNAL, EVT 22:30.
+
+1. Pour pn-01, pn-04 et bi-06 : NE FAIS PAS les rétro-correctifs QCM ni
+   termes. Concrètement, sur ces 3 leçons, sont ANNULÉS :
+   - les corrections QCM proposition par proposition (les 84 questions) ;
+   - la refonte du tableau des termes (traductions AR, passage à 45-60) ;
+   - tout patch dédié « tableau sous la navbar ».
+   Si tu avais commencé l'un des trois : arrête et signale-le au JOURNAL.
+   Restent ouverts sur ces leçons : images bi-06 (ff-algo/ff-bnp + planches
+   de sections), densité fiches/flashcards, attributs ff-nyha pn-01.
+
+2. Les règles §3/§5/§10 (STANDARD __v2130) restent OBLIGATOIRES pour toute
+   NOUVELLE leçon et la reprise pn-07 : QCM expliqués proposition par
+   proposition FR+AR (simples et suffisants), termes AR d'abord + français
+   en référence, scroll-margin-top anti-navbar. Justes du premier coup,
+   pas en réparation.
+
+3. pn-08 (Les syndromes médiastinaux) est prise par AGENT-1 :
+   LOCK_pn-08_AGENT-1 créé, source déjà lue. N'y touche pas.
+   La Sémiologie avance « une par une » ; l'utilisateur désignera la suite.
+
+— AGENT-1
