@@ -50,3 +50,15 @@ Racontons la leçon d'un bout à l'autre. Un biomarqueur cardiaque est une subst
 
 ### PARTIE 2
 Prudence pourtant : myocardite, insuffisance cardiaque, embolie, sepsis, rein, effort, âge et sexe masculin font aussi monter la troponine ; on ne l'interprète qu'avec anamnèse, clinique et ECG. STEMI : reperfusion immédiate, sans l'attendre. NSTEMI : H0 puis H1 à H3 en hypersensible, H6 à H9 en classique ; deux normales excluent l'infarctus. Le ventricule souffre-t-il ? Distendu, il clive le pro-BNP en BNP actif — vasodilatateur, diurétique, natriurétique, anti-SRAA — et en NT-proBNP inactif, stable, rénal : ensemble, ils diagnostiquent l'insuffisance cardiaque avec l'échographie, séparent dyspnée cardiaque et pulmonaire, pronostiquent et suivent, en se méfiant de l'âge, du rein et de l'obésité qui les abaisse. Le risque couve-t-il ? hs-CRP au-delà de trois milligrammes par litre et fibrinogène le prédisent. Lis toujours la courbe des cinétiques comme un emploi du temps : la flèche éclair de la myoglobine, le pic bref de la CK-MB, la longue traîne de la troponine. Trois questions, trois familles, une règle d'or : les marqueurs complètent la clinique — ils ne la remplacent jamais.
+
+---
+
+## pn-01 — Chapitre dédié « orientation » (FR, 1 partie, 2026-10-30)
+
+La section `orientation` n'avait aucun `cine-spot` et sa planche était rangée dans le
+chapitre Gravité. Clip FR dédié généré (`voice-00`), chapitre inséré à l'index 6 par
+`PATCH-PN01-ORIENTATION.py` (spots décalés, titres renumérotés, sous-titre « 9 chapitres »).
+Fichier : `assets/audio/pn-01/orientation.mp3` (~80 s). Règle audio respectée : `ar: null`.
+
+### SCRIPT
+Pendant que tu caractérises la dyspnée, cherche déjà sa cause : le cours enchaîne immédiatement avec les éléments d'orientation étiologique, en deux temps. D'abord les signes généraux : fièvre et frissons orientent vers l'infection respiratoire — pneumopathie, abcès, tuberculose ; l'amaigrissement fait penser à la néoplasie bronchique, à la tuberculose ou à une pathologie chronique. Ensuite, un examen physique complet, région par région, sans rien omettre. L'auscultation pulmonaire — normale, crépitants, sibilants, ronchi, asymétrie — dessine déjà l'axe cœur ou poumon. L'examen cardiovasculaire cherche les signes d'insuffisance cardiaque : œdèmes, turgescence, galop, reflux hépato-jugulaire — et aussi les signes de thrombose veineuse profonde, qui orientent vers l'embolie pulmonaire. N'oublie ni l'ORL — dysphonie, stridor, tumeur des voies aériennes supérieures, corps étranger, autant de causes de dyspnée inspiratoire — ni la thyroïde, goitre compressif ou hyperthyroïdie qui augmente la demande, ni le système neuromusculaire : déficit, amyotrophie, fasciculations, troubles de la déglutition signent la défaillance de la pompe ventilatoire. Et retiens les pièges : ne chercher que le poumon, oublier la thrombose veineuse, ou faire de l'amaigrissement un signe respiratoire alors que c'est un signe général.

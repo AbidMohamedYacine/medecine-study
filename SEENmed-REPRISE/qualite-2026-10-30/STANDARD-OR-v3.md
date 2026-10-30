@@ -133,7 +133,17 @@ Interdits : `chapters`, `title`, `audio`, `audioAr`, `images`.
 
 - **Chaque section de contenu** reçoit `<div class="cine-spot" data-ch="N"></div>` sous sa planche, où N est le chapitre qui raconte réellement cette section. Un chapitre peut couvrir 1–2 sections adjacentes ; l'indexation est vérifiée section par section (le titre affiché par le mini-lecteur doit correspondre à la section).
 - `resume-total` reçoit le spot du dernier chapitre (résumé).
-- **Langues des pistes (décision utilisateur, 30/10/2026 — à ne jamais « améliorer »)** : les **chapitres sont en FRANÇAIS uniquement** (`"ar": null`) ; **seul le chapitre résumé (le dernier) existe en FR + AR**. C'est le modèle bi-05/bi-06/pn-01 (8 chapitres FR + résumé FR + résumé AR = 10 MP3). Les anciennes ca-02/ra-02 (AR partout) ne sont **pas** le modèle à reproduire pour les audios. Scripts gelés avant génération, narration professeur fluide, ≤ ~1 400 caractères par piste, chiffres en toutes lettres quand la prononciation l'exige. Site silencieux : rien ne démarre sans clic (`preload=none` géré par le moteur).
+- **Langues des pistes (décision utilisateur, 30/10/2026 — à ne jamais « améliorer »)** : les **chapitres sont en FRANÇAIS uniquement** (`"ar": null`) ; **seul le chapitre résumé (le dernier) existe en FR + AR**. C'est le modèle bi-05/bi-06/pn-01 (8 chapitres FR + résumé FR + résumé AR = 10 MP3). Les anciennes ca-02/ra-02 (AR partout) ne sont **pas** le modèle à reproduire pour les audios. Scripts gelés avant génération, narration professeur fluide, ≤ ~1 400 caractères par génération, chiffres en toutes lettres quand la prononciation l'exige. Site silencieux : rien ne démarre sans clic (`preload=none` géré par le moteur).
+
+### 4.1 Résumé long — génération en parties + collage (méthode ca-02, outillée)
+
+Le résumé total contient l'essentiel de **toutes** les sections : il dépasse donc la limite d'**une** génération vocale (~1 500 caractères ≈ 70–90 s). Preuve mesurée dans les fichiers de ca-02 : chapitres 73–87 s, mais `resume-fr` = 172 s et `resume-ar` = 178 s, chacun portant **deux en-têtes de flux** — l'ancien agent générait le résumé en **plusieurs parties** puis les **collait en un seul MP3**. Méthode reprise, et sécurisée par `COLLER-MP3.py` (même dossier) :
+
+1. Écrire le script du résumé **en entier**, sans se limiter : chaque section y a son fait-clé, son chiffre et son piège. Un résumé qui tient en une génération est un résumé trop court — le densifier.
+2. Découper aux **frontières de phrases** en parties équilibrées de ≤ ~1 400 caractères (jamais de coupe en pleine phrase ; les parties suivantes enchaînent sans formule d'accueil, dans le fil du propos).
+3. Générer toutes les parties avec le **même `voice_id`**. Le nombre de parties n'est **pas figé à deux** (décision utilisateur, 30/10) : 2, 3 ou 4 selon la longueur réelle du résumé — c'est la couverture de toutes les sections qui décide, jamais un chiffre arbitraire ; mieux vaut 3 parties équilibrées qu'un script amputé pour tenir en 2. ⚠️ Chaque partie compte dans le cap 10 audios/message — plan type : message A = 8 chapitres FR ; message B = résumé FR (2–4 parties) + résumé AR (2–4 parties).
+4. Coller : `python3 COLLER-MP3.py resume-p1.mp3 resume-p2.mp3 [-p3...] -o resume.mp3` (idem AR). Le script enlève les en-têtes ID3 des parties suivantes, **refuse** des fréquences différentes, et vérifie que la durée collée ≈ somme des parties, avec un seul ID3. La page ne référence **que** le fichier final ; les parties restent dans `travail/` (traçabilité, regénération ciblée).
+5. Cible de longueur : résumé ≈ **2,5–3× un chapitre** (≈ 3–4 min par langue ; ca-02 ≈ 2,9 min). Écouter les jointures avant livraison.
 
 ## 5. Mots-clés — contrat exact du moteur
 
@@ -185,7 +195,7 @@ Interdits : `#flashApp`, cartes sans `id`, second `fcData` hérité du squelette
 
 ## 7. Fiche flash — le composant des références
 
-Format ca-02/ca-09 : **quatre macro-cellules** en 2×2.
+Format de départ = celui de ca-02/ca-09 (2×2), mais **le nombre de macro-cellules épouse la leçon** (décision utilisateur, 30/10) : 4 par défaut, **5–6 si la matière l'exige** — jamais de case vide ni de case fourre-tout pour « faire le nombre ». Chaque cellule garde **son image propre** et sa liste dense ; la grille `.flashsheet` s'adapte au nombre choisi.
 
 ```html
 <div class="flashsheet ff-2x2 reveal">
@@ -201,7 +211,7 @@ Format ca-02/ca-09 : **quatre macro-cellules** en 2×2.
 </div>
 ```
 
-Interdits : `.flash-grid`, `figure` + légende d'une ligne, image « sans texte suivi ». La fiche se relit la veille : l'image **et** la liste portent chacune l'essentiel. Cible texte ≥ 2 400 caractères sur la section (ca-02 : 2 499 ; ca-09 : 3 777). La boîte « à dire à voix haute en 20 secondes » peut suivre, elle ne remplace pas les listes.
+Interdits : `.flash-grid`, `figure` + légende d'une ligne, image « sans texte suivi ». La fiche se relit la veille : l'image **et** la liste portent chacune l'essentiel. Cible texte ≥ 2 400 caractères sur la section pour 4 cellules (≈ 600 par cellule ; ajouter ~600 par cellule supplémentaire). Références : ca-02 : 2 499 ; ca-09 : 3 777. La boîte « à dire à voix haute en 20 secondes » peut suivre, elle ne remplace pas les listes.
 
 ## 8. Images — qualité v3 (remplace et durcit v2)
 
@@ -253,7 +263,7 @@ Page pn conforme :
 ## 10. Arabe et accessibilité
 
 - Chaque bloc traduisible porte `data-tr="clé-unique"` ; `#arData` ↔ `data-tr` : égalité stricte des ensembles, zéro orphelin dans les deux sens.
-- Arabe du sens, neutre non-khaliji ; termes techniques gardés en français dans `<bdi class="fr-term">` / chiffres et sigles dans `<bdi class="fr-plain">`.
+- **Traduction intelligente du sens, en contexte** (doctrine utilisateur, 30/10 — s'applique à `arData`, aux mots-clés `a`, aux corrections QCM et aux scripts audio AR) : l'arabe doit faire **comprendre** la leçon, jamais traduire mot à mot. On traduit l'idée dans son contexte médical, dans un arabe neutre non-khaliji naturel. Pour chaque terme scientifique important : **le terme arabe d'abord, le français juste à côté en référence** — `<bdi class="fr-term">terme</bdi>` (chiffres et sigles : `<bdi class="fr-plain">`) — sans jamais casser l'ordre des informations ni la construction de la phrase : l'arabe se lit de droite à gauche, le `bdi` isole le segment français pour que rien ne se décale visuellement. Une traduction sèche, mot-à-mot ou décalée est un défaut de Contenu au même titre qu'une erreur de fait.
 - Images : `alt` français complet, `width/height` = dimensions réelles du fichier, `loading="lazy"` sauf hero (`eager`). Aucun `.png` de contenu, aucun `object-position` de recadrage sauvage.
 
 ## 11. Portes de livraison (toutes obligatoires)
