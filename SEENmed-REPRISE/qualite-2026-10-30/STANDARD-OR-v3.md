@@ -98,6 +98,7 @@ Qualité de contenu gold :
 
 - Annales : verbatim + corrigé officiel ; toute divergence cours/corrigé est signalée dans la correction, jamais « réparée » en silence.
 - Correction = **une raison par proposition** + mémo qui nomme le piège (caractère volé, absolu, côté/chiffre inversé, négation…). Cible mesurée sur ca-02/ca-09 : médiane ≥ 650 caractères par correction.
+- **Chaque `.qexp-item` doit APRENDRE quelque chose** (retour utilisateur après usage réel, 30/10) : dire LE fait qui décide — mécanisme, seuil/chiffre, définition ou piège de formulation — dans des mots simples, une à deux phrases. Est REJETÉ tout commentaire qui se contente de reformuler la proposition (« c'est vrai car… » suivi de la même phrase), un verdict sans raison, ou une explication globale unique pour toute la question. **Simple ET suffisant** : assez pour que l'étudiant comprenne pourquoi il coche ou non, jamais un pavé pour gonfler le compteur — la cible de caractères ne dispense pas du « pourquoi », et la traduction arabe reprend le même « pourquoi » (pas un résumé appauvri), selon le §10.
 - La traduction arabe de `qexp` (via `data-tr`) garde la même structure `.qexp-item t/f` + mémo.
 - Entraînement : calibration écrite avant génération (nombre de réponses justes, types de pièges) calquée sur les vraies annales du chapitre.
 
@@ -158,6 +159,7 @@ Le résumé total contient l'essentiel de **toutes** les sections : il dépasse 
 - `s` = ID réel de la section où le terme est enseigné ; `n` = son numéro de section de contenu.
 - Interdit : objet `{items:[…]}`, `a` en objet `{t,d}`.
 - Couverture gold : viser la densité ca-02 (≈ 45–60 termes pour une leçon de 10–14 sections) : tous les termes techniques, sigles, seuils nommés et pièges lexicaux du cours. Une entrée qui n'est pas un terme (« Conclusion du cours ») n'a pas sa place dans le dictionnaire.
+- **Qualité arabe du tableau des termes** (retour utilisateur, 30/10) : dans `a`, chaque terme scientifique mentionné est donné **en arabe d'abord, le français juste à côté en référence** via `<bdi class="fr-term">` — isolé pour ne jamais casser la lecture droite→gauche : l'étudiant lit l'arabe dans le bon ordre, voit le français sans désordre, et rattache les deux. Définition traduite par le **sens** (§10), jamais mot à mot ; chiffres/sigles en `fr-plain`. Un `a` qui ne contient que la traduction sèche du terme, sans le français de référence quand le terme est piège ou sigle, est non conforme.
 
 ## 6. Flashcards — contrat exact du moteur
 
@@ -266,6 +268,7 @@ Page pn conforme :
 - Chaque bloc traduisible porte `data-tr="clé-unique"` ; `#arData` ↔ `data-tr` : égalité stricte des ensembles, zéro orphelin dans les deux sens.
 - **Traduction intelligente du sens, en contexte** (doctrine utilisateur, 30/10 — s'applique à `arData`, aux mots-clés `a`, aux corrections QCM et aux scripts audio AR) : l'arabe doit faire **comprendre** la leçon, jamais traduire mot à mot. On traduit l'idée dans son contexte médical, dans un arabe neutre non-khaliji naturel. Pour chaque terme scientifique important : **le terme arabe d'abord, le français juste à côté en référence** — `<bdi class="fr-term">terme</bdi>` (chiffres et sigles : `<bdi class="fr-plain">`) — sans jamais casser l'ordre des informations ni la construction de la phrase : l'arabe se lit de droite à gauche, le `bdi` isole le segment français pour que rien ne se décale visuellement. Une traduction sèche, mot-à-mot ou décalée est un défaut de Contenu au même titre qu'une erreur de fait.
 - Images : `alt` français complet, `width/height` = dimensions réelles du fichier, `loading="lazy"` sauf hero (`eager`). Aucun `.png` de contenu, aucun `object-position` de recadrage sauvage.
+- **Jamais de contenu caché sous la barre de navigation fixe** (défaut vu par l'utilisateur sur le tableau des termes, 30/10) : toute cible d'ancre (`.lsection[id]`, en-tête du tableau des mots-clés, tout élément atteint par un lien de nav ou un `scrollIntoView`) porte un `scroll-margin-top` ≥ hauteur de la navbar + marge (référence : 96 px, à ajuster à la hauteur réelle mesurée de `.navbar`) — ou `html { scroll-padding-top: … }` équivalent. Contrôle obligatoire au runtime : cliquer CHAQUE entrée de la nav de leçon et vérifier qu'aucun titre ni première ligne de tableau ne passe sous la barre. Le correctif vit dans le CSS partagé (`lesson.css`/`keywords.css`) : il se livre donc versionné (`?v=` incrémenté) et profite à toutes les leçons, références comprises — jamais de rustine inline par page.
 
 ## 11. Portes de livraison (toutes obligatoires)
 

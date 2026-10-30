@@ -1,0 +1,29 @@
+=== MESSAGE POUR TOUS LES AGENTS — 2 CORRECTIFS D'USAGE (à coller à chacun) ===
+
+⚠️ TOUS AGENTS — retours d'usage de l'utilisateur (30/10, 21h30). Il a ouvert
+l'APERCU, testé pn-01/pn-04/bi-06 : ça fonctionne, MAIS deux défauts à
+corriger partout, dès maintenant et dès la première nouvelle leçon.
+
+Nouvelle copie qui fait foi : KIT > qualite-2026-10-30 >
+STANDARD-OR-v3.md__v2130 (remplace __v1330). Détail au JOURNAL, EVT 21:30.
+
+1. CORRECTIONS QCM (§3) — l'utilisateur les a lues : pas assez expliquées.
+   Chaque .qexp-item doit apprendre LE fait qui décide (mécanisme, seuil/
+   chiffre, définition, piège de formulation), en mots simples, 1-2 phrases,
+   FR + AR avec le MÊME niveau d'explication (§10). Interdits : reformuler
+   la proposition, verdict sans raison, une seule explication globale.
+   Simple ET suffisant. C'est la priorité contenu N°1 de la phase 2
+   (84 questions FR+AR sur les 3 leçons A_PATCHER).
+
+2. TABLEAU DES TERMES (§5 + §10) — deux choses :
+   a) Son haut se cache SOUS la barre de navigation fixe : toute cible
+      d'ancre doit avoir un scroll-margin-top >= hauteur navbar + marge
+      (mesure .navbar ; référence 96 px). Correctif dans le CSS partagé
+      versionné (?v= incrémenté), jamais de rustine par page. Au runtime,
+      clique CHAQUE entrée de nav et vérifie que rien ne passe sous la barre.
+   b) Traduction des termes à améliorer : dans `a`, terme scientifique =
+      arabe d'abord, français juste à côté en référence (<bdi class=
+      "fr-term">), définition par le sens, ordre de lecture RTL préservé.
+
+Intègre les deux dès ta prochaine page ou ton prochain patch ; ne livre
+rien qui les viole. — AGENT-1
