@@ -3,6 +3,10 @@
 Voix : `voice-01` (arabe neutre). Traduction du sens des 10 scripts FR
 d'AGENT-2 (source N-1), termes français conservés. Fichiers : `NN-…-ar.mp3`.
 
+⚠️ DÉCISION UTILISATEUR (30/10/2026) : seule la piste **10 (résumé)** est câblée
+dans le site — les chapitres restent FR uniquement. Les scripts 01–09 sont
+archivés ici au cas où, mais ne doivent PAS être recâblés.
+
 ## 01 — Place et définition
 تُعدّ الـ expectoration والـ vomique من العلامات الوظيفية التنفسية، إلى جانب ضيق النفس والألم الصدري والسعال والـ hémoptysie واضطرابات الصوت. والـ expectoration هي طرحٌ عبر الفم، أثناء جهد سعال، لمنتجات مرضية مصدرها الطرق القصبية الرئوية. احفظوا هذه الجملة: الـ expectoration هي تابع السعال، أي le satellite de la toux. لكنها لا تظهر عند النساء والأطفال دون الثانية عشرة، فهم يسعلون دون أن يبصقوا؛ عند هؤلاء تُبتلَع الإفرازات القصبية أو الرئوية، ولا يمكن جمعها إلا بـ tubage gastrique على الريق.
 

@@ -313,7 +313,7 @@ def audit_page(root: Path, path: Path, strict=False) -> Report:
             chapters = []
     if "cine" in pg.section_ids and 'id="cinePlayer"' not in pg.section_html.get("cine", ""):
         rep.block("CINE", "section #cine sans #cinePlayer : pas de lecteur central")
-    ar_missing = 0
+    ar_chapters = []
     for i, c in enumerate(chapters):
         if not isinstance(c, dict):
             rep.block("CINE", f"chapitre {i} non objet")
@@ -325,8 +325,8 @@ def audit_page(root: Path, path: Path, strict=False) -> Report:
             rep.block("CINE", f"chapitre {i} sans titre 't'")
         if not c.get("fr"):
             rep.block("CINE", f"chapitre {i} sans piste 'fr'")
-        if not c.get("ar"):
-            ar_missing += 1
+        if c.get("ar"):
+            ar_chapters.append(i)
         if not c.get("imgs"):
             rep.block("CINE", f"chapitre {i} sans 'imgs'")
         for key in ("fr", "ar"):
@@ -338,8 +338,15 @@ def audit_page(root: Path, path: Path, strict=False) -> Report:
             p = pg.resolve(im)
             if p is None or not p.exists():
                 rep.block("CINE", f"chapitre {i} image introuvable : {im}")
-    if chapters and ar_missing:
-        rep.quality("CINE-AR", f"{ar_missing}/{len(chapters)} chapitre(s) sans piste arabe (gold ca-02/ra-02 = FR+AR partout)")
+    if chapters:
+        # Décision utilisateur (30/10/2026) : chapitres FR uniquement,
+        # l'arabe est réservé au chapitre résumé (le dernier).
+        last = len(chapters) - 1
+        if last not in ar_chapters:
+            rep.block("CINE-AR", "chapitre résumé (dernier) sans piste arabe — le résumé doit exister en FR + AR")
+        extra = [i for i in ar_chapters if i != last]
+        if extra:
+            rep.quality("CINE-AR", f"piste(s) arabe(s) sur chapitre(s) non-résumé {extra} — chapitres en FR uniquement, AR réservé au résumé")
     # mini-lecteurs de section
     spot_total = 0
     for sid in content_ids + (["resume-total"] if "resume-total" in pg.section_ids else []):

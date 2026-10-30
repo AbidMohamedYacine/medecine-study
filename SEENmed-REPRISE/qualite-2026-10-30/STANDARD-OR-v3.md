@@ -123,7 +123,9 @@ JSON lu par `cine.js` — et rien d'autre :
 ```json
 { "chapitres": [
   { "t": "Titre du chapitre", "imgs": ["../assets/img/<id>/planche.webp"],
-    "fr": "../assets/audio/<id>/ch1-fr.mp3", "ar": "../assets/audio/<id>/ch1-ar.mp3" }
+    "fr": "../assets/audio/<id>/01-chapitre.mp3", "ar": null },
+  { "t": "Résumé total", "imgs": ["../assets/img/<id>/total.webp"],
+    "fr": "../assets/audio/<id>/resume.mp3", "ar": "../assets/audio/<id>/resume-ar.mp3" }
 ] }
 ```
 
@@ -131,7 +133,7 @@ Interdits : `chapters`, `title`, `audio`, `audioAr`, `images`.
 
 - **Chaque section de contenu** reçoit `<div class="cine-spot" data-ch="N"></div>` sous sa planche, où N est le chapitre qui raconte réellement cette section. Un chapitre peut couvrir 1–2 sections adjacentes ; l'indexation est vérifiée section par section (le titre affiché par le mini-lecteur doit correspondre à la section).
 - `resume-total` reçoit le spot du dernier chapitre (résumé).
-- Gold final (ca-02/ra-02) : **FR + AR sur chaque chapitre**, résumé compris. Scripts gelés avant génération, narration professeur fluide, ≤ ~1 400 caractères par piste, chiffres en toutes lettres quand la prononciation l'exige. Site silencieux : rien ne démarre sans clic (`preload=none` géré par le moteur).
+- **Langues des pistes (décision utilisateur, 30/10/2026 — à ne jamais « améliorer »)** : les **chapitres sont en FRANÇAIS uniquement** (`"ar": null`) ; **seul le chapitre résumé (le dernier) existe en FR + AR**. C'est le modèle bi-05/bi-06/pn-01 (8 chapitres FR + résumé FR + résumé AR = 10 MP3). Les anciennes ca-02/ra-02 (AR partout) ne sont **pas** le modèle à reproduire pour les audios. Scripts gelés avant génération, narration professeur fluide, ≤ ~1 400 caractères par piste, chiffres en toutes lettres quand la prononciation l'exige. Site silencieux : rien ne démarre sans clic (`preload=none` géré par le moteur).
 
 ## 5. Mots-clés — contrat exact du moteur
 

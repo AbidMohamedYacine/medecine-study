@@ -1,22 +1,23 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""PATCH-AUDIOS-AR-v3 — câble les pistes arabes du Ciné déjà générées.
+"""PATCH-AUDIOS-AR-v3 — applique la règle audio du site à #cineData.
 
-Pour chaque chapitre de #cineData sans `ar`, dérive le nom `<fr>-ar.mp3` ;
-si le fichier existe sur le disque (relativement à la page), il est câblé.
-Recalcule ensuite le sous-titre de la section #cine (FR seul / résumé AR /
-FR+AR partout). Usage : python3 PATCH-AUDIOS-AR-v3.py <page.html> [...]
+DÉCISION UTILISATEUR (30/10/2026, STANDARD-OR-v3 §4) : les chapitres du
+Ciné sont en FRANÇAIS uniquement ; l'arabe n'existe que sur le chapitre
+résumé (le dernier), en FR + AR. Ce script :
+  - retire `ar` de tous les chapitres sauf le dernier,
+  - câble le dernier sur `<fr>-ar.mp3` si le fichier existe (sinon garde
+    la piste déjà déclarée, ex. resume-ar.mp3),
+  - recalcule le sous-titre de la section #cine.
+Usage : python3 PATCH-AUDIOS-AR-v3.py <page.html> [...]
 Ensuite : AUDIT-LECON-GOLD-v3.py + RUNTIME-DOM-v3.test.cjs.
 """
 import json, re, sys
 from pathlib import Path
 
 def lsub(chs):
-    n = len(chs); n_ar = sum(1 for c in chs if c.get('ar'))
-    if n_ar == n:
-        return (f'Les planches défilent, la voix explique en reliant les idées : <b>{n-1} chapitres + le résumé</b>, '
-                'piste <b>française ou arabe (ع)</b>, vitesse réglable. Rien ne se lance sans ton clic.')
-    if n_ar:
+    n = len(chs)
+    if chs and chs[-1].get('ar'):
         return (f'Les planches défilent, la voix explique en reliant les idées : <b>{n-1} chapitres en français</b>, '
                 'plus le <b>résumé total en français et en arabe (ع)</b>, vitesse réglable. Rien ne se lance sans ton clic.')
     return (f'Les planches défilent, la voix explique en reliant les idées : <b>{n-1} chapitres + le résumé, en français</b>, '
@@ -28,18 +29,19 @@ for path in sys.argv[1:]:
     m = re.search(r'(<script type="application/json" id="cineData">)(.*?)(</script>)', s, re.S)
     assert m, f'cineData introuvable dans {path}'
     cine = json.loads(m.group(2))
-    wired = 0
-    for c in cine['chapitres']:
-        if c.get('ar') or not c.get('fr'):
-            continue
-        ar = re.sub(r'\.mp3(\?.*)?$', r'-ar.mp3\1', c['fr'])
+    chs = cine['chapitres']
+    unwired = 0
+    for c in chs[:-1]:
+        if c.get('ar'):
+            c['ar'] = None; unwired += 1
+    last = chs[-1]
+    if not last.get('ar') and last.get('fr'):
+        ar = re.sub(r'\.mp3(\?.*)?$', r'-ar.mp3\1', last['fr'])
         if (p.parent / ar.split('?')[0]).resolve().exists():
-            c['ar'] = ar; wired += 1
+            last['ar'] = ar
     s = s[:m.start(2)] + json.dumps(cine, ensure_ascii=False, separators=(',', ':')) + s[m.end(2):]
-    # sous-titre de la section #cine
     sec = re.search(r'(<section class="lsection" id="cine">.*?<div class="lsub">)(.*?)(</div>)', s, re.S)
     if sec:
-        s = s[:sec.start(2)] + lsub(cine['chapitres']) + s[sec.end(2):]
+        s = s[:sec.start(2)] + lsub(chs) + s[sec.end(2):]
     p.write_text(s, encoding='utf-8')
-    n_ar = sum(1 for c in cine['chapitres'] if c.get('ar'))
-    print(f'{p.name} : {wired} piste(s) AR câblée(s) — {n_ar}/{len(cine["chapitres"])} chapitres avec AR')
+    print(f'{p.name} : {unwired} piste(s) AR de chapitre retirée(s) — résumé AR = {last.get("ar")}')
