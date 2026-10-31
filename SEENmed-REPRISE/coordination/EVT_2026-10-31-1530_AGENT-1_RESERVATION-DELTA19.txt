@@ -1,0 +1,20 @@
+TYPE: RESERVATION DE NUMERO DE DELTA (§12.1 du STANDARD __v3110)
+DATE_HEURE: 2026-10-31 15:30 (Oran)
+DE: AGENT-1
+CONCERNE: delta 19 — pn-08 (Les syndromes médiastinaux) + correctif moteur js/cine.js
+
+AGENT-1 réserve le delta 19 pour :
+ 1) les 2 générations restées en attente sur pn-08 (planche S5 « Topographie moyen &
+    postérieur » + nouvelle image de vue d'ensemble, page pn-08) ;
+ 2) UN correctif du moteur partagé js/cine.js : la bascule ع/FR du résumé vocal ne
+    fonctionne pas (retour utilisateur du 31/10). Cause prouvée : dans charger(),
+    « if (!c.ar && lang === 'ar') { setLang('fr'); return; } » — le lecteur central,
+    resté sur un chapitre sans piste arabe, réinitialise la langue partagée en français
+    dès qu'on bascule en arabe depuis le mini-lecteur du résumé. Correctif : suppression
+    de ce reset (le repli FR + note « ع en préparation » de piste() prend le relais),
+    bouton langue du lecteur central toujours visible quand lang='ar'. Livré en delta
+    moteur séparé annoncé (§12.4), avec test runtime ciblé. Les propriétaires sont invités
+    à bumper leur référence cine.js (?v=4) à leur prochain delta ; le contenu du fichier
+    se remplace tel quel pour les autres pages.
+
+Aucune page d'une leçon validée n'est modifiée. Détail complet dans l'EVT de livraison.

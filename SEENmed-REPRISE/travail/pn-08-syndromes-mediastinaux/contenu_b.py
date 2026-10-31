@@ -465,7 +465,7 @@ FICHE = {
 
 CINE_CHAPITRES = [
  {"t":"Chapitre 1 — Définir et quadriller","imgs":["../assets/img/pn-08/mecanismes.webp","../assets/img/pn-08/rappel.webp","../assets/img/pn-08/loges.webp","../assets/img/pn-08/reel/tdm-sagittale-compartiments.webp","../assets/img/pn-08/reel/tdm-coronale-etages.webp"],"fr":"../assets/audio/pn-08/ch1.mp3","ar":None},
- {"t":"Chapitre 2 — Le contenu des loges et les bords","imgs":["../assets/img/pn-08/anterieur.webp","../assets/img/pn-08/loges.webp","../assets/img/pn-08/reel/rx-bords-mediastinaux.webp"],"fr":"../assets/audio/pn-08/ch2.mp3","ar":None},
+ {"t":"Chapitre 2 — Le contenu des loges et les bords","imgs":["../assets/img/pn-08/anterieur.webp","../assets/img/pn-08/moyen-posterieur.webp","../assets/img/pn-08/loges.webp","../assets/img/pn-08/reel/rx-bords-mediastinaux.webp"],"fr":"../assets/audio/pn-08/ch2.mp3","ar":None},
  {"t":"Chapitre 3 — Découverte, voies aériennes, cave supérieur","imgs":["../assets/img/pn-08/decouverte.webp","../assets/img/pn-08/cave-superieur.webp","../assets/img/pn-08/hero.webp"],"fr":"../assets/audio/pn-08/ch3.mp3","ar":None},
  {"t":"Chapitre 4 — Cave inférieur, tamponnade, œsophage et nerfs","imgs":["../assets/img/pn-08/cave-inferieur.webp","../assets/img/pn-08/nerfs.webp","../assets/img/pn-08/reel/megaoesophage-face.webp"],"fr":"../assets/audio/pn-08/ch4.mp3","ar":None},
  {"t":"Chapitre 5 — Imagerie et examens complémentaires","imgs":["../assets/img/pn-08/examens.webp","../assets/img/pn-08/ff-radio.webp","../assets/img/pn-08/reel/rx-thorax-normale.webp","../assets/img/pn-08/reel/elargissement-2.webp"],"fr":"../assets/audio/pn-08/ch5.mp3","ar":None},

@@ -1,0 +1,27 @@
+MESSAGE À TOUS LES AGENTS — MOTEUR CINÉ : BASCULE ARABE RÉPARÉE (31/10) — de AGENT-1
+
+L'utilisateur a signalé (à l'un d'entre nous, confirmé à AGENT-1) : en bas de page,
+le bouton ع/FR du résumé vocal ne basculait pas en arabe. C'est réparé : js/cine.js
+v3 livré au delta 19 (correctif moteur annoncé, STANDARD §12.4).
+
+POURQUOI ÇA CASSAIT (à retenir) : dans charger(), une ligne réinitialisait la langue
+partagée en français quand le chapitre courant du lecteur central n'avait pas de
+piste arabe. Avec notre format actuel (chapitres en français, arabe uniquement sur
+le résumé total), basculer en arabe depuis le mini-lecteur du bas déclenchait ce
+reset via le lecteur central resté sur le chapitre 1. Le bon comportement existait
+déjà dans piste() (repli FR + note « ع en préparation ») : le reset le court-circuitait.
+
+CE QUE ÇA CHANGE POUR TOI :
+ 1. Rien à refaire sur tes pages : le fichier js/cine.js est remplacé par le delta 19,
+    tes leçons en profitent automatiquement (y compris les validées, sans qu'on y touche).
+ 2. À TON prochain delta sur ta leçon : bump la référence ../js/cine.js?v=3 en ?v=4
+    (purge des caches navigateur).
+ 3. Avant de déclarer une leçon LIVREE avec résumé arabe : lance le test
+    RUNTIME-CINE-AR.test.cjs (dossier Qualité Drive) — il prouve que la piste
+    resume-ar.mp3 se charge vraiment depuis le bouton du bas (10 contrôles).
+ 4. Règle moteur rappelée : ne jamais modifier l'état global partagé (langue, thème…)
+    en effet de bord d'un chargement local. Un repli s'affiche, il ne réécrit pas
+    le choix de l'utilisateur.
+
+Détail et preuves : EVT_2026-10-31-1540_AGENT-1_DELTA19-LIVRE au JOURNAL.
+pn-08 (Les syndromes médiastinaux) est au passage terminée et verrouillée.

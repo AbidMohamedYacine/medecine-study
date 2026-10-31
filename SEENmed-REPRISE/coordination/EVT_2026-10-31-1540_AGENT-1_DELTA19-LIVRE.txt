@@ -1,0 +1,37 @@
+TYPE: LIVRAISON (delta réservé par EVT 1530)
+DATE_HEURE: 2026-10-31 15:40 (Oran)
+DE: AGENT-1
+CONCERNE: delta 19 — pn-08 (Les syndromes médiastinaux) terminée + moteur js/cine.js v3
+
+DELTA 19 LIVRÉ : SEENmed_DELTA19_pn-08-images-fin+cine-v3_2026-10-31.zip
+ MD5 ec724d8c24948eadd396bf9df3d841e5 · dossier Livraisons. Installation après delta 18.
+ Contenu : page pn-08 + moyen-posterieur.webp + vue.webp (nouvelle) + js/cine.js v3.
+ Preuves : assemblage frais complet (base -> 17 -> 18 -> 19) -> audit pn-08 0/0,
+ MD5 page identique au banc (46f290c9d7dbd9ed66a6506feb22563d), test RUNTIME-CINE-AR 10/10.
+ pn-08 est COMPLÈTE (14/14 sections illustrées) et verrouillée (validation utilisateur).
+ STATUT final au LOCK pn-08 (libéré). Registre v10 publié (ligne pn-08 fermée).
+
+MOTEUR js/cine.js v3 — LE BUG (retour utilisateur, à connaître par tous) :
+ Symptôme : sur les leçons au format actuel (chapitres FR + arabe sur le résumé seul),
+ le bouton ع/FR du mini-lecteur du résumé (bas de page) ne changeait RIEN.
+ Cause (ligne unique dans charger()) :
+   if (!c.ar && lang === 'ar') { setLang('fr'); return; }
+ Quand l'utilisateur bascule en arabe, TOUTES les callbacks LANGSUBS s'exécutent,
+ y compris celle du lecteur central qui recharge son chapitre courant ; si ce chapitre
+ n'a pas de piste arabe (cas normal chapitres 1..n-1), la langue partagée est
+ réinitialisée en français dans la même milliseconde. Invisible sur les anciennes
+ leçons où chaque chapitre avait FR+AR.
+ Correctif v3 (2 lignes) : reset supprimé — piste() replie en FR avec la note
+ « ع en préparation — piste française » (déjà prévue) ; bouton langue du lecteur
+ central visible tant que lang='ar' (sinon impossible de revenir en FR depuis un
+ chapitre sans piste AR). Test fourni : RUNTIME-CINE-AR.test.cjs (dossier Qualité) —
+ à lancer sur toute leçon avant « LIVREE » dès qu'elle a un résumé AR.
+ ACTION pour chaque propriétaire de leçon (à son prochain delta, sans urgence) :
+ bumper la référence ../js/cine.js?v=3 -> ?v=4 pour purger les caches. Le fichier
+ lui-même est déjà remplacé par le delta 19 pour toutes les pages.
+
+Précision utilisateur (31/10) : les dimensions « étirées » des documents du cours
+ venaient du fichier source lui-même ; le cadrage contain du delta 18 est conservé
+ comme confort d'affichage (aucune déformation introduite).
+
+Prochain numéro de delta libre : 20.

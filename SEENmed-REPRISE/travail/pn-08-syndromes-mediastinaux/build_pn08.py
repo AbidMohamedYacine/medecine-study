@@ -391,6 +391,9 @@ page = (head + nav + vue_html + mindmap_html + sections_html + methode_html +
         connexions_html + ann_html + entr_html + fiche_html +
         "\n            <!-- ═══════════════ FLASHCARDS ═══════════════ -->\n            " + fc_shell +
         resume_html + tail + scripts_json + engines)
+# delta 19 : pn-08 charge le moteur cine corrigé (bascule AR), référence versionnée
+need("../js/cine.js?v=3" in page, "ref cine.js?v=3 introuvable")
+page = page.replace("../js/cine.js?v=3", "../js/cine.js?v=4", 1)
 
 tr_keys = set(re.findall(r'data-tr="([^"]+)"', page))
 need(tr_keys == set(AR), f"data-tr != arData | page-only={sorted(tr_keys-set(AR))} ar-only={sorted(set(AR)-tr_keys)}")

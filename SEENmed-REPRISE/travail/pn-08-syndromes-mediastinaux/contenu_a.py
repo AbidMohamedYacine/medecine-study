@@ -171,7 +171,9 @@ SECTIONS_A = [
 {
  "sid":"topographie-moyen-posterieur","icon":"fa-grip-lines-vertical","nav":"Moyen & postérieur",
  "titre":"Anatomie topographique — moyen et postérieur",
- "ch":1,"board":None,"reel":None,
+ "ch":1,"board":("moyen-posterieur.webp",1376,768,
+   "Schéma du médiastin moyen — trachée, carène, bronches souches, crosses de l’aorte et de la veine azygos, ganglions latéro-trachéaux, nerf vague — et du médiastin postérieur — rachis, chaîne sympathique, vaisseaux intercostaux, grande veine azygos, œsophage",
+   "🔀 <b>Moyen &amp; postérieur</b> — l’axe trachéo-bronchique, puis les gouttières costovertébrales"),"reel":None,
  "sub_fr":"Le médiastin moyen contient <b>la plupart des organes</b> et des lymphatiques ; le postérieur n’est qu’une <b>gouttière nerveuse</b> le long du rachis — d’où ses tumeurs neurogènes.",
  "sub_ar":"يحتوي المنصّف الأوسط على <b>معظم الأعضاء</b> والعناصر اللمفية؛ أما الخلفي فهو <b>ميزاب عصبي</b> بمحاذاة العمود الفقري — ومن هنا أورامه العصبية المنشأ.",
  "blocs":[
