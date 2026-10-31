@@ -8,7 +8,9 @@ SECTIONS_A = [
 {
  "sid":"definition","icon":"fa-circle-question","nav":"Définition",
  "titre":"Définition — un syndrome, trois mécanismes",
- "ch":0,"board":None,"reel":None,
+ "ch":0,"board":("mecanismes.webp",1376,768,
+   "Planche des trois mécanismes du syndrome médiastinal : irritation de la trachée, envahissement d’un organe par une masse, compression de la veine cave supérieure ; en bas, les trois contenus anormaux possibles : tissus, liquide, air",
+   "🧩 <b>Un syndrome, trois mécanismes</b> — irritation, envahissement, compression · trois coupables : tissus, liquide, air"),"reel":None,
  "sub_fr":"Le syndrome médiastinal n’est <b>pas une maladie</b> : c’est l’ensemble des signes — <b>cliniques ou radiologiques</b> — qui traduisent l’<b>irritation</b>, l’<b>envahissement</b> ou la <b>compression</b> d’un ou plusieurs organes du médiastin.",
  "sub_ar":"متلازمة المنصّف <b>ليست مرضاً</b>: هي مجموع العلامات — <b>سريرية أو شعاعية</b> — الناتجة عن <b>تهيّج</b> أو <b>غزو</b> أو <b>ضغط</b> عضو أو أكثر من أعضاء المنصّف (<bdi class=\"fr-term\">médiastin</bdi>).",
  "blocs":[
@@ -44,7 +46,9 @@ SECTIONS_A = [
 {
  "sid":"rappel-anatomique","icon":"fa-box-open","nav":"Rappel anatomique",
  "titre":"Rappel anatomique — la boîte et ses frontières",
- "ch":0,"board":None,"reel":None,
+ "ch":0,"board":("rappel.webp",1376,768,
+   "Modèle 3D du thorax montrant les limites du médiastin — sternum, rachis, diaphragme, défilé cervico-thoracique, plèvres médiastinales — et son contenu étiqueté : voies aériennes, gros vaisseaux, cœur, œsophage, thymus, nerfs phréniques, ganglions",
+   "🧰 <b>La boîte et ses frontières</b> — cinq frontières, cinq familles de structures"),"reel":None,
  "sub_fr":"Le médiastin est l’<b>espace qui sépare les deux hémithorax</b>. Avant de le quadriller, il faut connaître ses <b>six frontières</b> et les <b>cinq familles</b> de structures qu’il contient.",
  "sub_ar":"المنصّف هو <b>الفراغ الفاصل بين نصفي الصدر</b>. قبل تقسيمه إلى حجرات، يجب معرفة <b>حدوده الستة</b> و<b>عائلات البنى الخمس</b> التي يحتويها.",
  "blocs":[
@@ -84,8 +88,8 @@ SECTIONS_A = [
    "Coupe sagittale du thorax, sternum à gauche et rachis à droite, avec une grille pédagogique de neuf cases : trois compartiments antérieur, moyen, postérieur et trois étages supérieur, moyen, inférieur ; repères étiquetés aorte horizontale et carène",
    "🗺️ <b>La grille des 9 loges</b> — le plan de travail de toute la leçon"),
  "reel":("Dr BELMILOUD H — coupes TDM du cours",
-   [("tdm-sagittale-compartiments.webp",736,511,"TDM thoracique en coupe sagittale du cours, montrant les trois compartiments du médiastin","TDM sagittale — les 3 compartiments (document du cours)"),
-    ("tdm-coronale-etages.webp",740,520,"TDM thoracique en coupe coronale du cours, montrant les trois étages du médiastin","TDM coronale — les 3 étages (document du cours)")]),
+   [("tdm-sagittale-compartiments.webp",1376,768,"TDM thoracique en coupe sagittale du cours, montrant les trois compartiments du médiastin","TDM sagittale — les 3 compartiments (document du cours)"),
+    ("tdm-coronale-etages.webp",1376,768,"TDM thoracique en coupe coronale du cours, montrant les trois étages du médiastin","TDM coronale — les 3 étages (document du cours)")]),
  "sub_fr":"Le médiastin est <b>artificiellement</b> séparé en <b>9 loges</b> : trois compartiments par rapport à l’<b>axe trachéo-bronchique</b>, trois étages entre l’<b>aorte horizontale</b> et la <b>carène</b>. C’est un quadrillage de travail, pas une réalité anatomique fermée.",
  "sub_ar":"ينقسم المنصّف <b>اصطناعياً</b> إلى <b>تسع حجرات</b>: ثلاث مقصورات بالنسبة إلى <b>المحور الرغامي القصبي</b>، وثلاث طبقات بين <b>الأبهر الأفقي</b> و<b>شعبة الرغامى</b> (<bdi class=\"fr-term\">carène</bdi>). إنه تقسيم عمل، لا حدود تشريحية مغلقة.",
  "blocs":[
@@ -128,7 +132,9 @@ SECTIONS_A = [
 {
  "sid":"topographie-anterieur","icon":"fa-heart","nav":"Médiastin antérieur",
  "titre":"Anatomie topographique — le médiastin antérieur",
- "ch":1,"board":None,"reel":None,
+ "ch":1,"board":("anterieur.webp",1376,768,
+   "Coupe sagittale du médiastin antérieur : zone prépéricardique avec le thymus, les ganglions médiastinaux antérieurs et les vaisseaux mammaires internes ; zone rétropéricardique avec le cœur dans son péricarde, l’aorte ascendante, la veine cave supérieure et le nerf phrénique",
+   "🫀 <b>L’antérieur en coupe</b> — prépéricardique devant le péricarde, rétropéricardique derrière"),"reel":None,
  "sub_fr":"Le médiastin antérieur se divise en trois étages : en haut la <b>loge thymique</b> et les <b>gros troncs vasculaires</b>, au milieu la <b>naissance des gros vaisseaux</b>, en bas la <b>masse cardiaque</b> et le péricarde.",
  "sub_ar":"ينقسم المنصّف الأمامي إلى ثلاث طبقات: في الأعلى <b>حجرة الغدة الزعترية</b> و<b>الجذوع الوعائية الكبرى</b>، وفي الوسط <b>منشأ الأوعية الكبرى</b>، وفي الأسفل <b>الكتلة القلبية</b> والتامور.",
  "blocs":[
@@ -199,7 +205,7 @@ SECTIONS_A = [
  "titre":"Les bords du médiastin — la lecture commence",
  "ch":1,"board":None,
  "reel":("Dr BELMILOUD H — radio annotée du cours",
-   [("rx-bords-mediastinaux.webp",395,329,"Radiographie thoracique annotée du cours avec les sigles des structures qui dessinent les bords droit et gauche du médiastin","Les contours siglés du cours (document original)")]),
+   [("rx-bords-mediastinaux.webp",1376,768,"Radiographie thoracique annotée du cours avec les sigles des structures qui dessinent les bords droit et gauche du médiastin","Les contours siglés du cours (document original)")]),
  "sub_fr":"Sur la radio de face, le médiastin est limité par <b>deux bords</b> dessinés par des structures cardiovasculaires. Le cours est formel : « toute <b>déformation</b> de ces limites doit attirer l’attention sur la possible présence d’une <b>masse médiastinale</b> ».",
  "sub_ar":"في صورة الصدر الأمامية، يحده <b>حدان</b> ترسمهما بنى قلبية وعائية. والدرس صريح: «كل <b>تشوّه</b> لهذه الحدود يجب أن يوجّه الانتباه إلى احتمال وجود <b>كتلة منصفية</b>».",
  "blocs":[
@@ -228,7 +234,9 @@ SECTIONS_A = [
 {
  "sid":"decouverte-respiratoire","icon":"fa-stethoscope","nav":"Découverte",
  "titre":"Diagnostic positif — découverte et symptômes respiratoires",
- "ch":2,"board":None,"reel":None,
+ "ch":2,"board":("decouverte.webp",1376,768,
+   "Médecin devant un négatoscope montrant un élargissement médiastinal de découverte fortuite, à côté des signes respiratoires : dyspnée avec tirage, cornage, wheezing, toux sèche rebelle, hémoptysie, douleurs postérieures rebelles aux antalgiques",
+   "🔎 <b>La découverte</b> — très souvent fortuite sur une image, sinon par les signes respiratoires"),"reel":None,
  "sub_fr":"Première circonstance, et de loin : la <b>découverte fortuite +++</b>, sur une radiographie de face chez un sujet <b>asymptomatique</b>. Quand il y a des symptômes, les <b>respiratoires</b> ouvrent la liste du cours.",
  "sub_ar":"الظرف الأول، وبفارق كبير: <b>الاكتشاف العرضي +++</b>، في صورة صدر أمامية عند شخص <b>بلا أعراض</b>. وعند وجود أعراض، تأتي <b>التنفسية</b> في مقدمة قائمة الدرس.",
  "blocs":[

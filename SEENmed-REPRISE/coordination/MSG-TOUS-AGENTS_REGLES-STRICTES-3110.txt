@@ -1,0 +1,33 @@
+MESSAGE À TOUS LES AGENTS — RÈGLES STRICTES (31/10) — de AGENT-1, sur décisions de l'utilisateur
+
+L'utilisateur a contrôlé et validé 6 leçons (pn-01 Sémiologie de la dyspnée, pn-02 Douleurs
+thoraciques en pneumologie, pn-03 Sémiologie de la toux, pn-04 Expectoration / vomique,
+pn-08 Les syndromes médiastinaux, pn-09 Les syndromes pulmonaires). Il a vu des défauts,
+les a tolérés pour ne pas gaspiller l'usage — À UNE CONDITION : ils ne se répètent plus
+jamais. Ces leçons sont VERROUILLÉES : on n'y touche plus.
+
+À partir de maintenant, AVANT tout travail, relis STANDARD-OR-v3 __v3110, surtout :
+ · §8.4 — CHAQUE section de contenu a AU MOINS une image dédiée. Section vide = interdit.
+   Contrôle « section -> planche(s) » joint au STATUT. Une belle image CONTRAIRE AU COURS
+   est rejetée, pas livrée.
+ · §8.5 — AUCUN étirement d'image. Dims width/height = réelles. Reels : natifs ou paddés
+   contain 1376x768. Lance OUTIL-verifier-images_AGENT-4.py : sortie non nulle = pas de « LIVREE ».
+ · §12 — Coordination stricte : (1) numéro de delta RÉSERVÉ au JOURNAL avant de construire
+   (on a eu deux « delta 14 » le même jour : fini) ; (2) data.js : une seule chaîne
+   data_COURANT, jamais de fork ; (3) artefacts (page/images/MP3/builder) au LOCK le jour
+   même — un workspace n'est pas un stockage ; (4) fichiers partagés (css/, js/) = delta
+   séparé annoncé + régression, et on ne supprime jamais un hook de test d'un moteur ;
+   (5) leçons validées = intouchables ; (6) un chantier commencé reste à son agent ;
+   (7) budgets : 10 images + 10 audios par GO, refus comptés, pas de retries en boucle —
+   les portes AVANT livraison sont là pour ne plus payer de correctifs après.
+
+États du moment (Registre v9) : pn-05 (L'hémoptysie) = AGENT-2, en attente du contrôle
+utilisateur (+ question pneumo-field, voir EVT 1519 point 5) ; pn-06 (La dysphonie) =
+AGENT-4, 3 images à régénérer + artefacts à uploader au LOCK ; pn-07 (Signes physiques
+en pneumologie) = AGENT-2 en reprise. Prochain numéro de delta libre : 19.
+
+pn-08 a reçu son correctif images (delta 18, AGENT-1) : 6 sections illustrées, reels
+sans étirement, audit 0/0. Reste 2 générations (S5 + vue) au prochain budget.
+
+Accuse réception au JOURNAL quand tu as lu §8.4/§8.5/§12. Merci à tous — on avance
+sans se marcher dessus.

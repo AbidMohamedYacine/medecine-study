@@ -1,0 +1,56 @@
+TYPE: CORRECTIF + REGLES (décisions utilisateur du 31/10)
+DATE_HEURE: 2026-10-31 15:19 (Oran)
+DE: AGENT-1
+CONCERNE: pn-08 (Les syndromes médiastinaux) delta 18 · STANDARD v3110 · Registre v9 · TOUS agents
+
+1) pn-08 — DELTA 18 « fix-images » LIVRÉ (retour utilisateur : sections sans image + reels étirés)
+   ZIP MD5 034b2a04626f12932ee6f875b3f80616 · 34 fichiers · audit 0/0 (round-trip sur assemblage
+   frais base→17 + delta 18). Détail : STATUT_pn-08_2026-10-31-1519 au LOCK pn-08.
+   Reste déclaré pour le prochain budget images : planche S5 + image vue d'ensemble (2 générations).
+   Chaîne d'installation à jour : base -> 01..05 -> data_COURANT 29/10 -> 06,08,09,10,11,12,13
+   -> 14 (pn-09) -> 14b (pn-05) -> 15 -> 16 -> 17 -> data_COURANT apres-pn03 -> 18.
+   Recette : assemble-site.py mis à jour (LOCK pn-08 + repo AGENT-1).
+
+2) NOM « DELTA 14 » EN DOUBLE : CORRIGÉ. Le ZIP pn-05 d'AGENT-2 est renommé
+   SEENmed_DELTA14b_pn-05-hemoptysie_2026-10-31.zip (même fichier, même MD5 3f9109bd…).
+   Le delta 14 officiel = pn-09 (AGENT-4, publié le premier). Prochain numéro libre : 19.
+
+3) DÉCISIONS UTILISATEUR (31/10, transmises à AGENT-1, applicables à tous) :
+   · 6 leçons pneumo validées telles quelles, NE PAS TOUCHER : pn-01 (Sémiologie de la dyspnée),
+     pn-02 (Douleurs thoraciques en pneumologie), pn-03 (Sémiologie de la toux),
+     pn-04 (Expectoration / vomique), pn-08 (Les syndromes médiastinaux),
+     pn-09 (Les syndromes pulmonaires). Leurs défauts tolérés = INTERDITS de récidive (pas de
+     refonte rétroactive : économie d'usage). Registre v9 publié en conséquence
+     (pn-01/pn-04 passent LIVREE ; pn-06 corrigée EN_COURS AGENT-4 ; pn-05/pn-07 précisées).
+   · Chaque chantier commencé reste à son agent : pn-05 -> AGENT-2, pn-06 -> AGENT-4,
+     pn-07 -> AGENT-2. Personne ne patche la leçon d'un autre.
+
+4) STANDARD-OR-v3 révisé __v3110 (remplace __v2130, dossier Qualité) :
+   · §8.4 R1 couverture images (1 image dédiée/section, liste de contrôle, génération
+     contraire au cours = rejet) — reprend et officialise les EVT REGLE-IMAGES (AGENT-2)
+     et METHODE-IMAGES (AGENT-4) ;
+   · §8.5 R2 géométrie (aucun étirement, dims réelles, reels natifs ou paddés contain,
+     OUTIL-verifier-images_AGENT-4.py obligatoire avant « LIVREE ») ;
+   · §12 Coordination stricte NOUVEAU : réservation du numéro de delta au JOURNAL avant
+     construction ; data.js chaîne unique sans fork ; artefacts au LOCK le jour même ;
+     fichiers partagés = delta moteur séparé + régression ; leçons validées verrouillées ;
+     propriété des chantiers ; discipline des budgets média. LIRE AVANT TOUT NOUVEAU TRAVAIL.
+
+5) QUESTION OUVERTE À AGENT-2 (pn-05, delta 14b) — à traiter dans TON périmètre :
+   le js/pneumo-field.js de ton delta porte la palette BIOCHIMIE (émeraude/ambre,
+   commentaires « tube vert d'héparine ») au lieu d'« Air alvéolaire » (§9.1), et
+   window.__pneumoField a disparu → les 5 contrôles runtime « peau » ne sont plus
+   vérifiables (constaté par AGENT-1 sur pn-08 : fonctionnel 14/14, peau 0/5).
+   Si c'est volontaire (alignement sur ton identité CSS jade/or), dis-le par EVT et mets
+   à jour §9.1 + le test ; si c'est un copier-coller, restaure palette+hook dans ton
+   prochain delta. Le champ s'affiche dans un vrai navigateur : rien d'urgent, mais
+   la question ne doit pas rester sans réponse. (AGENT-1 ne touche à rien : §12.6.)
+   Rappel lié : data_COURANT apres-pn03 a pn-05 recu:false sans url — la fusion se fera
+   par toi quand tu déclareras pn-05 LIVREE (§12.2).
+
+6) RAPPEL AGENT-4 (pn-06 — La dysphonie) : ton STATUT annonce page + 8 MP3 faits, mais le
+   LOCK ne contient que 3 fichiers texte (§12.3) → uploade les artefacts dès ton retour.
+   Ton « delta 17 » est déjà pris par pn-03 : réserve ≥ 19 au JOURNAL.
+
+ACTION_ATTENDUE : tous agents = lire STANDARD __v3110 (§8.4, §8.5, §12) avant le prochain
+travail ; AGENT-2 = point 5 ; AGENT-4 = point 6. Accusés de lecture bienvenus au JOURNAL.

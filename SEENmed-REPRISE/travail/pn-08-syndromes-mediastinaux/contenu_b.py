@@ -53,7 +53,9 @@ SECTIONS_B = [
 {
  "sid":"cave-inferieur-tamponnade","icon":"fa-arrow-down-wide-narrow","nav":"Cave inférieur",
  "titre":"Cave inférieur, Budd-Chiari et tamponnade",
- "ch":3,"board":None,"reel":None,
+ "ch":3,"board":("cave-inferieur.webp",1376,768,
+   "Compression de la veine cave inférieure avec hépatomégalie, et tamponnade : épanchement péricardique comprimant les cavités cardiaques",
+   "💧 <b>Cave inférieur & tamponnade</b> — le foie qui souffre, puis le cœur comprimé dans son sac"),"reel":None,
  "sub_fr":"Le pendant rare du cave supérieur : la veine cave inférieure comprimée parle par <b>l’abdomen et les jambes</b>. Et dans le même chapitre cardiovasculaire, la <b>tamponnade</b> par compression directe du cœur.",
  "sub_ar":"النظير النادر للأجوف العلوي: الوريد الأجوف السفلي المضغوط يتكلم عبر <b>البطن والساقين</b>. وفي نفس الفصل القلبي الوعائي: <b>الانضغاط التاموري</b> بالضغط المباشر على القلب.",
  "blocs":[
@@ -94,8 +96,8 @@ SECTIONS_B = [
  "titre":"Symptômes digestifs — la dysphagie",
  "ch":3,"board":None,
  "reel":("Dr BELMILOUD H — diapo 35 du cours, « Méga œsophage »",
-   [("megaoesophage-face.webp",443,591,"Transit baryté de face du cours montrant un œsophage dilaté, diapo intitulée Méga œsophage","Méga-œsophage, incidence de face (document du cours)"),
-    ("megaoesophage-profil.webp",579,886,"Transit baryté de profil du cours montrant un œsophage dilaté, diapo intitulée Méga œsophage","Méga-œsophage, incidence de profil (document du cours)")]),
+   [("megaoesophage-face.webp",1376,768,"Transit baryté de face du cours montrant un œsophage dilaté, diapo intitulée Méga œsophage","Méga-œsophage, incidence de face (document du cours)"),
+    ("megaoesophage-profil.webp",1376,768,"Transit baryté de profil du cours montrant un œsophage dilaté, diapo intitulée Méga œsophage","Méga-œsophage, incidence de profil (document du cours)")]),
  "sub_fr":"Un seul symptôme digestif au programme, mais décrit avec soin : la <b>dysphagie</b>, qui « traduit une <b>compression de l’œsophage</b> ». Son ordre d’installation est le fait à retenir.",
  "sub_ar":"عرض هضمي واحد في البرنامج، لكنه موصوف بعناية: <b>عسر البلع</b>، الذي «يترجم <b>ضغط المريء</b>». وترتيب تطوّره هو المعلومة الواجب حفظها.",
  "blocs":[
@@ -165,11 +167,11 @@ SECTIONS_B = [
  "titre":"Examens complémentaires — Rx, TDM, IRM",
  "ch":4,"board":None,
  "reel":("Dr BELMILOUD H — cliché normal (d41) et élargissements (d40, non légendés)",
-   [("rx-thorax-normale.webp",991,1084,"Radiographie thoracique normale du cours, diapo intitulée cliché thoracique normal","Le cliché normal de référence (diapo 41)"),
-    ("elargissement-1.webp",752,350,"Radiographie thoracique du cours montrant un élargissement médiastinal, diapositive non légendée","Élargissement médiastinal (diapo 40, non légendée)"),
-    ("elargissement-2.webp",1043,512,"Radiographie thoracique du cours montrant un élargissement médiastinal, diapositive non légendée","Élargissement médiastinal (diapo 40, non légendée)"),
-    ("elargissement-3.webp",1043,511,"Radiographie thoracique du cours montrant un élargissement médiastinal, diapositive non légendée","Élargissement médiastinal (diapo 40, non légendée)"),
-    ("elargissement-4.webp",749,350,"Radiographie thoracique du cours montrant un élargissement médiastinal, diapositive non légendée","Élargissement médiastinal (diapo 40, non légendée)")]),
+   [("rx-thorax-normale.webp",1376,768,"Radiographie thoracique normale du cours, diapo intitulée cliché thoracique normal","Le cliché normal de référence (diapo 41)"),
+    ("elargissement-1.webp",1376,768,"Radiographie thoracique du cours montrant un élargissement médiastinal, diapositive non légendée","Élargissement médiastinal (diapo 40, non légendée)"),
+    ("elargissement-2.webp",1376,768,"Radiographie thoracique du cours montrant un élargissement médiastinal, diapositive non légendée","Élargissement médiastinal (diapo 40, non légendée)"),
+    ("elargissement-3.webp",1376,768,"Radiographie thoracique du cours montrant un élargissement médiastinal, diapositive non légendée","Élargissement médiastinal (diapo 40, non légendée)"),
+    ("elargissement-4.webp",1376,768,"Radiographie thoracique du cours montrant un élargissement médiastinal, diapositive non légendée","Élargissement médiastinal (diapo 40, non légendée)")]),
  "sub_fr":"Le cliché de face <b>affirme</b> la lésion médiastinale devant une opacité aux <b>cinq caractères</b> ; la TDM « ++++ » la caractérise ; l’IRM prend le relais dans trois situations précises. C’est la section des annales de <b>radiologie</b>.",
  "sub_ar":"صورة الأمام <b>تؤكد</b> آفة المنصّف أمام عتامة بـ<b>خصال خمس</b>؛ والتصوير المقطعي «++++» يميّزها؛ والرنين يأخذ العصا في ثلاث حالات دقيقة. إنها قسم أسئلة <b>الأشعة</b> في الامتحانات.",
  "blocs":[
@@ -215,7 +217,9 @@ SECTIONS_B = [
 {
  "sid":"autres-examens","icon":"fa-microscope","nav":"Autres examens",
  "titre":"Les autres examens — selon le contexte",
- "ch":4,"board":None,"reel":None,
+ "ch":4,"board":("examens.webp",1376,768,
+   "Fibroscopie bronchique avec vue endoscopique de la carène, médiastinoscopie sus-sternale, et examens sur prescription : transit œsophagien, échographie cardiaque, angiographie cave",
+   "🔭 <b>Les autres examens</b> — fibroscopie et médiastinoscopie d’emblée ; le reste sur prescription"),"reel":None,
  "sub_fr":"Après l’imagerie, la diapo 30 déploie le reste de l’arsenal : deux examens nommés d’emblée, puis une liste « <b>en fonction du contexte</b> clinique, radiologique et biologique ».",
  "sub_ar":"بعد التصوير، تعرض الشريحة 30 بقية الترسانة: فحصان مسمّيان مباشرة، ثم قائمة «<b>بحسب السياق</b> السريري والشعاعي والبيولوجي».",
  "blocs":[
@@ -255,13 +259,13 @@ SECTIONS_B = [
  "titre":"Étiologies — la liste suit la loge",
  "ch":5,"board":None,
  "reel":("Dr BELMILOUD H — galerie du cours (diapos 36 à 39)",
-   [("goitre-plongeant-rx.webp",952,680,"Radiographie du cours montrant un goitre plongeant endothoracique, diapo intitulée Goitre plongeant","Goitre plongeant (diapo 36)"),
-    ("thymome-rx.webp",896,717,"Radiographie du cours d’un thymome, diapo intitulée Thymome","Thymome, radio (diapo 37)"),
-    ("thymome-tdm.webp",554,422,"TDM du cours d’un thymome, diapo intitulée Thymome","Thymome, TDM (diapo 37)"),
-    ("tumeur-germinale-rx.webp",886,865,"Radiographie du cours d’une tumeur germinale, diapo intitulée Tumeur germinale (tumeur embryonnaire)","Tumeur germinale, radio (diapo 38)"),
-    ("tumeur-germinale-tdm.webp",682,584,"TDM du cours d’une tumeur germinale, diapo intitulée Tumeur germinale (tumeur embryonnaire)","Tumeur germinale, TDM (diapo 38)"),
-    ("lymphome-rx.webp",451,591,"Radiographie du cours d’un lymphome médiastinal, diapo intitulée Lymphome","Lymphome, radio (diapo 39)"),
-    ("lymphome-tdm.webp",591,512,"TDM du cours d’un lymphome médiastinal, diapo intitulée Lymphome","Lymphome, TDM (diapo 39)")]),
+   [("goitre-plongeant-rx.webp",1376,768,"Radiographie du cours montrant un goitre plongeant endothoracique, diapo intitulée Goitre plongeant","Goitre plongeant (diapo 36)"),
+    ("thymome-rx.webp",1376,768,"Radiographie du cours d’un thymome, diapo intitulée Thymome","Thymome, radio (diapo 37)"),
+    ("thymome-tdm.webp",1376,768,"TDM du cours d’un thymome, diapo intitulée Thymome","Thymome, TDM (diapo 37)"),
+    ("tumeur-germinale-rx.webp",1376,768,"Radiographie du cours d’une tumeur germinale, diapo intitulée Tumeur germinale (tumeur embryonnaire)","Tumeur germinale, radio (diapo 38)"),
+    ("tumeur-germinale-tdm.webp",1376,768,"TDM du cours d’une tumeur germinale, diapo intitulée Tumeur germinale (tumeur embryonnaire)","Tumeur germinale, TDM (diapo 38)"),
+    ("lymphome-rx.webp",1376,768,"Radiographie du cours d’un lymphome médiastinal, diapo intitulée Lymphome","Lymphome, radio (diapo 39)"),
+    ("lymphome-tdm.webp",1376,768,"TDM du cours d’un lymphome médiastinal, diapo intitulée Lymphome","Lymphome, TDM (diapo 39)")]),
  "sub_fr":"La phrase de la section 12 devient la méthode : <b>topographie = valeur étiologique +++</b>. Quatre listes à connaître — antérieur supérieur/moyen, antérieur inférieur, moyen, postérieur — et un joker qui siège <b>partout</b>.",
  "sub_ar":"تصبح جملة القسم 12 هي المنهج: <b>التوضع = قيمة سببية +++</b>. أربع قوائم يجب حفظها — الأمامي العلوي/الأوسط، الأمامي السفلي، الأوسط، الخلفي — وجوكر يتوضع في <b>كل مكان</b>.",
  "blocs":[
@@ -460,11 +464,11 @@ FICHE = {
 }
 
 CINE_CHAPITRES = [
- {"t":"Chapitre 1 — Définir et quadriller","imgs":["../assets/img/pn-08/loges.webp","../assets/img/pn-08/reel/tdm-sagittale-compartiments.webp","../assets/img/pn-08/reel/tdm-coronale-etages.webp"],"fr":"../assets/audio/pn-08/ch1.mp3","ar":None},
- {"t":"Chapitre 2 — Le contenu des loges et les bords","imgs":["../assets/img/pn-08/loges.webp","../assets/img/pn-08/reel/rx-bords-mediastinaux.webp"],"fr":"../assets/audio/pn-08/ch2.mp3","ar":None},
- {"t":"Chapitre 3 — Découverte, voies aériennes, cave supérieur","imgs":["../assets/img/pn-08/cave-superieur.webp","../assets/img/pn-08/hero.webp"],"fr":"../assets/audio/pn-08/ch3.mp3","ar":None},
- {"t":"Chapitre 4 — Cave inférieur, tamponnade, œsophage et nerfs","imgs":["../assets/img/pn-08/nerfs.webp","../assets/img/pn-08/reel/megaoesophage-face.webp"],"fr":"../assets/audio/pn-08/ch4.mp3","ar":None},
- {"t":"Chapitre 5 — Imagerie et examens complémentaires","imgs":["../assets/img/pn-08/ff-radio.webp","../assets/img/pn-08/reel/rx-thorax-normale.webp","../assets/img/pn-08/reel/elargissement-2.webp"],"fr":"../assets/audio/pn-08/ch5.mp3","ar":None},
+ {"t":"Chapitre 1 — Définir et quadriller","imgs":["../assets/img/pn-08/mecanismes.webp","../assets/img/pn-08/rappel.webp","../assets/img/pn-08/loges.webp","../assets/img/pn-08/reel/tdm-sagittale-compartiments.webp","../assets/img/pn-08/reel/tdm-coronale-etages.webp"],"fr":"../assets/audio/pn-08/ch1.mp3","ar":None},
+ {"t":"Chapitre 2 — Le contenu des loges et les bords","imgs":["../assets/img/pn-08/anterieur.webp","../assets/img/pn-08/loges.webp","../assets/img/pn-08/reel/rx-bords-mediastinaux.webp"],"fr":"../assets/audio/pn-08/ch2.mp3","ar":None},
+ {"t":"Chapitre 3 — Découverte, voies aériennes, cave supérieur","imgs":["../assets/img/pn-08/decouverte.webp","../assets/img/pn-08/cave-superieur.webp","../assets/img/pn-08/hero.webp"],"fr":"../assets/audio/pn-08/ch3.mp3","ar":None},
+ {"t":"Chapitre 4 — Cave inférieur, tamponnade, œsophage et nerfs","imgs":["../assets/img/pn-08/cave-inferieur.webp","../assets/img/pn-08/nerfs.webp","../assets/img/pn-08/reel/megaoesophage-face.webp"],"fr":"../assets/audio/pn-08/ch4.mp3","ar":None},
+ {"t":"Chapitre 5 — Imagerie et examens complémentaires","imgs":["../assets/img/pn-08/examens.webp","../assets/img/pn-08/ff-radio.webp","../assets/img/pn-08/reel/rx-thorax-normale.webp","../assets/img/pn-08/reel/elargissement-2.webp"],"fr":"../assets/audio/pn-08/ch5.mp3","ar":None},
  {"t":"Chapitre 6 — Les étiologies par loge","imgs":["../assets/img/pn-08/reel/goitre-plongeant-rx.webp","../assets/img/pn-08/reel/thymome-tdm.webp","../assets/img/pn-08/reel/tumeur-germinale-tdm.webp"],"fr":"../assets/audio/pn-08/ch6.mp3","ar":None},
  {"t":"Résumé total","imgs":["../assets/img/pn-08/total.webp","../assets/img/pn-08/mindmap.webp"],"fr":"../assets/audio/pn-08/resume.mp3","ar":"../assets/audio/pn-08/resume-ar.mp3"}
 ]
