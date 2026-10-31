@@ -1,0 +1,12 @@
+TYPE: RESERVATION (leçon + numéro de delta, §12.1)
+DATE_HEURE: 2026-10-31 15:52 (Oran)
+DE: AGENT-1
+CONCERNE: pn-12 (La ponction pleurale) — désignation utilisateur du 31/10 · delta 20 réservé
+
+AGENT-1 prend pn-12 (La ponction pleurale), désignée par l'utilisateur.
+LOCK_pn-12_AGENT-1 = 1GzFJsV-saVTAmLgSc0Sz3EWkk017oC3K (PLAN-SOURCE + source-texte + annales dedans).
+Source : pptx Dr F. KHALOUF (EHUO) 1sxHPXnX-X9M4KEo3sPqnzj2eY5InhFCz, MD5 55f6a82da088c9b6a9ac3a805b027ab7,
+15 diapos lues en entier. Annales : ELITE Sémiologie §12 p.21 — 3 QCM (2021 ACD · 2020 BC · 2019 BD).
+Plan : 12 sections, Ciné 4 chapitres FR + résumé FR/AR, 15 QCM (3 + 12), page peau pneumo.
+Delta 20 réservé pour la livraison de ce chantier (images : lot 1 ce tour, lot 2 = 6 générations
+au prochain budget, déclaré au PLAN-SOURCE). Registre mis à jour à la livraison du delta.

@@ -1,0 +1,34 @@
+EVT — 2026-10-31 16:30 · AGENT-1
+TYPE : LIVRAISON PARTIELLE DÉCLARÉE (EN_COURS) — pn-12 « La ponction pleurale », delta 20
+
+FAITS
+1. pn-12 (Dr F. KHALOUF, 15 diapos, MD5 source 55f6a82da088c9b6a9ac3a805b027ab7)
+   construite en gold : page 22 sections, 12 sections de contenu FR+AR,
+   3 annales ELITE p.21 verbatim (2021 ACD, 2020 BC, 2019 BD) + 12 QCM
+   d'entraînement calibrés (3×1, 5×2, 4×3), 47 mots-clés, 30 flashcards,
+   Ciné 4 chapitres FR + résumé long FR/AR collé (règle audio permanente).
+2. Delta 20 publié (réservé EVT 1552) : ZIP Drive
+   11-pPMrxAGsRri82369tR1sqWVUr3n3Xh, MD5 e27dbd06b69b55074c175bbdaddc7012
+   (21 fichiers : page + 14 images + 6 audios ; + LISEZ-MOI/MD5).
+   S'installe APRÈS le delta 19.
+3. data_COURANT_2026-10-31_apres-pn12.js publié (Drive
+   18pQZ2N5LEnZJAZbbTRYNCZz0SGUzU_yR, base apres-pn03) : pn-12 recu:true +
+   entr:12 + url — l'utilisateur peut ouvrir la leçon. LE STATUT RESTE
+   EN_COURS (Registre v11) : ce n'est PAS une déclaration LIVREE.
+4. Portes AVANT livraison : audit v3 0/0 ; verifier-images 0 étirée /
+   0 hors-format ; runtime DOM 14/14 fonctionnel ; TEST BASCULE AR 10/10 ;
+   round-trip du ZIP sur assemblage sans pn-12 → audit 0/0 reproduit.
+   (5 échecs peau pneumo inchangés = pneumo-field.js, question AGENT-2.)
+
+CE QUI RESTE (lot 2, prochain GO utilisateur — 8 générations)
+- Planches R1 : S1 définition, S4 analyses, S6 étiologies, S7 thérapeutique,
+  S8 contre-indications, S9 matériel + vue d'ensemble + ff-technique refaite.
+- Puis re-portes complètes et delta de complétion : seulement alors « LIVREE ».
+
+NOTES ÉQUIPE
+- RUNTIME-CINE-AR.test.cjs (dossier Qualité) est calibré en dur pour pn-08
+  (data-ch=6, 15 spots) : pour une autre leçon, adapter data-ch = index du
+  chapitre résumé et le nombre d'audios (1 + spots). Version paramétrée
+  bienvenue (qui veut la faire signe son EVT).
+- Sources du builder pn-12 déposées au LOCK (build/contenus/qcm/kw_fc) le
+  jour même (§12.3).

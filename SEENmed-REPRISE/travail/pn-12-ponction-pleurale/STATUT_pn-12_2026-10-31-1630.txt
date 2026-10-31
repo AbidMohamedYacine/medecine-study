@@ -1,0 +1,56 @@
+STATUT — pn-12 « La ponction pleurale » · AGENT-1 · 2026-10-31 16:30
+Statut : EN_COURS (lot 1/2 livré en delta 20 ; lot 2 images au prochain GO)
+
+LIVRÉ (delta 20)
+- ZIP : SEENmed_DELTA20_pn-12-ponction-pleurale_2026-10-31.zip
+  Drive 11-pPMrxAGsRri82369tR1sqWVUr3n3Xh · 7 445 874 o ·
+  MD5 e27dbd06b69b55074c175bbdaddc7012
+- data_COURANT_2026-10-31_apres-pn12.js : Drive 18pQZ2N5LEnZJAZbbTRYNCZz0SGUzU_yR
+  (base apres-pn03 ; pn-12 recu:true + entr:12 + url — visible au dashboard,
+  statut EN_COURS maintenu au Registre v11)
+- Page : lecons/pn-12-ponction-pleurale.html · 22 sections · MD5 7d205379a690d7b7970308e76880df65
+  12 sections de contenu (S1…S12 = d2,d3,d5,d6,d8,d9,d7,d10,d11,d12,d14,d15),
+  vue, mindmap, Ciné, méthode, connexions, 3 annales verbatim (ACD/BC/BD),
+  12 entraînement calibrés (3×1, 5×2, 4×3), fiche 4 cases, 30 flashcards,
+  47 mots-clés (arabe d'abord), 69 blocs data-tr = 69 clés arData,
+  15 qblock / 75 qexp-item FR+AR, 5 chapitres Ciné (4 FR + résumé FR/AR long
+  collé ~174 s / ~245 s), 13 mini-lecteurs.
+- Images : 9 générées 1376×768 (hero, mindmap, total, criteres, complications,
+  ff-criteres, ff-technique, ff-liquides, ff-complications) + 5 documents du
+  cours en reels contain (S2 feuillets, S3 macroscopie, S10 position+écho,
+  S11 technique). total.webp : deux micro-correctifs de fidélité patchés
+  (« 2 à 3 espaces », « Critères biochimiques » — preuves zoomées OK).
+- Audios : ch0…ch3 FR + resume-fr.mp3 (2 parties) + resume-ar.mp3
+  (3 parties), collés COLLER-MP3.py (somme = total, 44,1 kHz, 1 × ID3).
+  MD5 des 9 parties tous distincts (contrôle doublon fait).
+
+PORTES (toutes passées AVANT livraison — règle 31/10)
+- AUDIT-LECON-GOLD-v3 : 0 bloquant / 0 avertissement (banc + assemblage frais).
+- OUTIL-verifier-images (AGENT-4, récupéré Drive) : 0 étirée, 0 hors-format ;
+  6 sections sans image = lot 2 R1 déclaré (definition, analyses,
+  etiologies, therapeutique, contre-indications, materiel).
+- RUNTIME-DOM-v3 : 14/14 fonctionnel (verdict « Juste ! A C D », Ciné 5/5,
+  13 spots, dictionnaire 47/47, RTL, flashcards) ; 5 échecs peau pneumo =
+  pneumo-field.js (delta 14b, question AGENT-2 ouverte — hors chantier).
+- RUNTIME-CINE-AR recalibré pn-12 : 10/10 (bascule ع, resume-ar.mp3,
+  pas de rechute FR) sur moteur cine.js?v=4 du delta 19.
+- Round-trip : ZIP appliqué sur copie sans pn-12 → audit 0/0 reproduit,
+  MD5.txt interne sans mismatch, objet data pn-12 correct.
+
+RESTANT (lot 2, prochain GO de l'utilisateur — puis LIVREE)
+- 8 générations images : planches S1, S4, S6, S7, S8, S9 + vue d'ensemble
+  + ff-technique refaite (petite vignette, le titre actuel est perfectible).
+- Rebuild inchangé ailleurs (seuls board/vue_board passent de None aux
+  fichiers), re-portes complètes, delta de complétion, Registre → LIVREE.
+
+NOTES HONNÊTES
+- Budget du GO : images 10/10 (1 refus modération = scène photo hero ;
+  hero actuel = planche thoracentèse, S1 aura la sienne au lot 2) ;
+  audios 9/10.
+- Audio : 2 enrichissements oraux hors diapos (éosinophiles ; « dialyse
+  péritonéale ») et 1 approximation (« dix à vingt » pour 5-20 cc).
+  La page suit le cours strictement. Régénérable si l'utilisateur l'exige.
+- Fidélité verbatim préservée : « ligne médiane, deux à trois espaces
+  intercostaux sous la pointe de l'omoplate », Rivalta 30 g/L, « un seul
+  critère suffit », patient non à jeun, EP deux colonnes, radio post
+  « toujours indiquée », coquilles des annales conservées dans les QCM.
