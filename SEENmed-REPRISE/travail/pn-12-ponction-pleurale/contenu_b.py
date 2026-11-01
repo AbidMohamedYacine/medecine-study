@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """pn-12 — Contenu sections 7 à 12 + blocs transversaux (FR + AR).
 Source: source-texte.txt (15 diapos) + 3 corrigés officiels ELITE.
-Lot 1 (delta 20): board S12 installé ; boards S7, S8, S9 au lot 2 (None ici)."""
+Lot 1 (delta 20) + lot 2 (delta 26) : boards S7, S8, S9, S12 + vue_board tous installés."""
 
 SECTIONS_B = [
 
@@ -9,7 +9,11 @@ SECTIONS_B = [
 {
  "sid":"therapeutique","icon":"fa-heart-pulse","nav":"Visée thérapeutique",
  "titre":"L’intérêt thérapeutique — la ponction évacuatrice",
- "ch":3,"board":None,"reel":None,
+ "ch":3,
+"board":("evacuatrice.webp",1376,768,
+   "Planche de la ponction évacuatrice menée en lenteur : avant, un poumon comprimé par l’épanchement avec dyspnée, après, un poumon réexpandu et soulagé ; au centre une grande seringue reliée par un robinet à trois voies à un robinet-compte-gouttes qui impose un débit lent et fractionné ; à droite une jauge qui commande de s’arrêter à 1 000 à 1 500 millilitres au maximum et un panneau qui interdit 2 000 centimètres cubes en une seule fois",
+   "🐢 <b>La ponction évacuatrice — lente, toujours</b> — stop 1 000 à 1 500 mL · jamais 2 000 cc en une fois"),
+ "reel":None,
  "sub_fr":"Deuxième intention du geste : la <b>ponction évacuatrice</b>, réservée aux pleurésies de <b>très grande abondance</b> ayant une <b>forte répercussion sur la qualité de la respiration</b> — on retire davantage de liquide pour <b>soulager la dyspnée</b>.",
  "sub_ar":"القصد الثاني من العمل: <b>البزل المفرِّغ</b>، المخصص لحالات ذات الجنب <b>كبيرة الوفرة جداً</b> ذات <b>التأثير الكبير على جودة التنفس</b> — نسحب كمية أكبر من السائل من أجل <b>تخفيف ضيق النفس</b>.",
  "blocs":[
@@ -32,7 +36,11 @@ SECTIONS_B = [
 {
  "sid":"contre-indications","icon":"fa-ban","nav":"Contre-indications",
  "titre":"Contre-indications — aucune absolue, cinq relatives",
- "ch":3,"board":None,"reel":None,
+ "ch":3,
+"board":("contre-indications.webp",1376,768,
+   "Planche des contre-indications de la ponction pleurale : un grand bandeau affirme qu’il n’y a aucune contre-indication absolue, puis cinq badges d’alerte nomment les cinq situations relatives — les troubles de l’hémostase, l’anticoagulation médicamenteuse, l’infection au point de ponction, le très faible volume qui risque le pneumothorax, et la ventilation mécanique",
+   "🛑 <b>Aucune contre-indication absolue</b> — cinq situations relatives : peser, corriger, adapter"),
+ "reel":None,
  "sub_fr":"Le cours ouvre par le point qui piège : il n’y a <b>pas de contre-indications absolues</b> à la ponction pleurale. Il existe en revanche des situations qui exigent prudence ou report.",
  "sub_ar":"يفتح الدرس بالنقطة الفخ: <b>لا توجد موانع استعمال مطلقة</b> لبزل الجنب. لكن توجد حالات تتطلب الحيطة أو التأجيل.",
  "blocs":[
@@ -58,7 +66,11 @@ SECTIONS_B = [
 {
  "sid":"materiel","icon":"fa-suitcase-medical","nav":"Matériel",
  "titre":"Matériel — le plateau de ponction",
- "ch":3,"board":None,"reel":None,
+ "ch":3,
+"board":("materiel.webp",1376,768,
+   "Photographie du plateau de ponction pleurale préparé sur un champ stérile : le cathéter court 14 ou 18 gauges de type Venflon, les seringues de 2, 10 et 20 millilitres, le robinet à trois voies, l’antiseptique iodé, l’ampoule de lidocaïne à 1 pour cent, les gants stériles et les compresses, et les trois tubes de cytologie, de microbiologie et de chimie préparés avant le geste",
+   "🧰 <b>Le plateau de ponction</b> — cathéter 14G/18G · seringues 2, 10, 20 mL · trois tubes préparés avant le geste"),
+ "reel":None,
  "sub_fr":"Le plateau est simple et standardisé. La pièce maîtresse : un <b>cathéter intraveineux 14G ou 18G (Venflon)</b>, « qui est le plus utilisé », monté sur un <b>robinet à trois voies</b>. Et avant toute ponction, les <b>tubes d’analyses sont déjà préparés</b>.",
  "sub_ar":"الصينية بسيطة وموحدة. قطعتها الأساسية: <b>قثطرة وريدية <bdi class=\"fr-plain\">14G</bdi> أو <bdi class=\"fr-plain\">18G</bdi> (<bdi class=\"fr-term\">Venflon</bdi>)</b> «وهي الأكثر استعمالاً»، مركّبة على <b>صنبور ثلاثي الاتجاهات</b>. وقبل أي بزل، تكون <b>أنابيب التحاليل مجهزة سلفاً</b>.",
  "blocs":[
@@ -266,7 +278,9 @@ VUE = {
   "الامتحانات: <b>الأسئلة الثلاثة</b> من مرجع <bdi class=\"fr-plain\">ELITE</bdi> (السيميولوجيا §<bdi class=\"fr-plain\">12</bdi>، ص <bdi class=\"fr-plain\">21</bdi>)، نصوصها وتصحيحاتها الرسمية منقولة كما هي — دفعات <bdi class=\"fr-plain\">2019</bdi> و<bdi class=\"fr-plain\">2020</bdi> و<bdi class=\"fr-plain\">2021</bdi>.",
   "توضيحان يأتيان من <b>التصحيحات الرسمية</b> (مشار إليهما في موضعهما): متعددات النوى <b>المتغيرة</b> في التهاب الجنب القيحي، وزرع عصية السل على <bdi class=\"fr-term\">Lowenstein-Jensen</bdi>.",
   "الوثائق الموسومة «وثيقة الدرس» هي <b>صور العرض الأصلية</b> مؤطرة دون تشويه؛ وبقية اللوحات رسوم تعليمية مولّدة لهذه الصفحة، رُوجعت رقماً برقماً."],
- "vue_board":None,
+ "vue_board":("vue.webp",1376,768,
+   "Planche de la méthode en quatre temps de la ponction pleurale : le geste, patient non à jeun assis penché en avant, pointé deux à trois espaces sous l’omoplate au bord supérieur de la côte inférieure ; le tri, rivalta 30 grammes par litre et quotients 0,5, 0,6 et 200, un seul critère suffit ; les analyses, trois tubes de biochimie, cytologie et bactériologie ; la surveillance, radiographie toujours indiquée, pneumothorax 4 à 19 pour cent, volume retiré au plus 1 000 à 1 500 millilitres",
+   "🧭 <b>La méthode en 4 temps</b> — le geste · le tri · les analyses · la surveillance"),
 }
 
 MM_SUB_FR = "Cinq branches à réciter dans l’ordre : le geste, le liquide, les analyses, la technique, les complications — chaque chiffre d’examen y est accroché."

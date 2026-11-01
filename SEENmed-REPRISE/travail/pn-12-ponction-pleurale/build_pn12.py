@@ -9,8 +9,8 @@ data-tr de la page == l'ensemble des clés arData (vérifié en fin de build).
 Patron QCM = ca-02/STANDARD §3 (5 .qexp-item). Pas de data-tr sur
 .qcm-focus ni .reel-strip (patron ca-02 ; ar-mode.js casse les valeurs
 liste/figure de pn-01 en mode AR).
-Delta 20 (EN_COURS) : planches S1, S4, S6, S7, S8, S9 + vue d'ensemble au
-lot 2 du prochain GO — vue_board rendu optionnel (None = pas de figure).
+Delta 20 (lot 1) + delta 26 (lot 2, 01/11) : planches S1, S4, S6, S7, S8, S9
++ vue d'ensemble installées, ff-technique refaite — couverture R1 12/12.
 """
 import re, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """pn-12 — Contenu sections 1 à 6 (FR + AR). Source: source-texte.txt (15 diapos).
 Schéma consommé par build_pn12.py. Apostrophes typographiques ’ partout.
-Lot 1 (delta 20): boards S5 installé ; boards S1, S4, S6 au lot 2 (None ici)."""
+Lot 1 (delta 20) + lot 2 (delta 26) : boards S1, S4, S5, S6 tous installés."""
 
 SECTIONS_A = [
 
@@ -9,7 +9,11 @@ SECTIONS_A = [
 {
  "sid":"definition","icon":"fa-circle-question","nav":"Définition",
  "titre":"Définition — une aiguille, deux intentions",
- "ch":0,"board":None,"reel":None,
+ "ch":0,
+"board":("definition.webp",1376,768,
+   "Planche des deux intentions de la ponction pleurale : à gauche la ponction diagnostique qui retire 50 à 100 millilitres de liquide pleural, répartis en tubes de biochimie, de cytologie et de bactériologie pour rechercher la cause de l’épanchement ; à droite la ponction thérapeutique qui retire un plus grand volume, le poumon comprimé par l’épanchement se réexpand et la dyspnée est soulagée ; en bas, une coupe schématique montre l’aiguille atteignant l’espace pleural entre le feuillet pariétal et le feuillet viscéral",
+   "🎯 <b>Une aiguille, deux intentions</b> — diagnostique 50-100 mL · thérapeutique : soulager la dyspnée"),
+ "reel":None,
  "sub_fr":"La <b>ponction pleurale</b>, ou <b>thoracentèse</b>, est l’<b>insertion d’une aiguille dans l’espace pleural</b> afin de <b>recueillir et analyser</b> du liquide pleural. Geste fréquent de la pratique quotidienne hospitalière, son but est <b>diagnostique ou thérapeutique</b>.",
  "sub_ar":"<b>بزل الجنب</b> (<bdi class=\"fr-term\">thoracentèse</bdi>) هو <b>إدخال إبرة في فراغ الجنب</b> من أجل <b>جمع السائل الجنبي وتحليله</b>. وهو عمل شائع في الممارسة الاستشفائية اليومية، هدفه <b>تشخيصي أو علاجي</b>.",
  "blocs":[
@@ -134,7 +138,11 @@ SECTIONS_A = [
 {
  "sid":"analyses","icon":"fa-flask","nav":"Les trois analyses",
  "titre":"Les trois analyses du liquide — biochimie, cytologie, bactériologie",
- "ch":2,"board":None,"reel":None,
+ "ch":2,
+"board":("analyses.webp",1376,768,
+   "Planche des trois analyses du liquide pleural : la biochimie dose les protides par le rivalta, seuil 30 grammes par litre, au-dessous transsudat et au-dessus liquide inflammatoire ; la cytologie compte les cellules au microscope, surtout des lymphocytes qui évoquent la tuberculose, des polynucléaires qui signent la pleurésie purulente, des cellules malignes qui révèlent le cancer ; la bactériologie identifie le germe par l’examen direct ou la culture, sur milieu de Lowenstein-Jensen pour le bacille tuberculeux",
+   "🔬 <b>Trois analyses, trois questions</b> — le rivalta 30 g/L · les cellules qui dominent · le germe"),
+ "reel":None,
  "sub_fr":"Tout liquide ponctionné est analysé en trois directions : la <b>biochimie</b> (le <b>rivalta</b>, seuil <b>30 g/L</b> de protides), la <b>cytologie</b> (qui sont les cellules ?), et la <b>bactériologie</b> (isoler le germe, établir l’<b>antibiogramme</b>).",
  "sub_ar":"يُحلَّل كل سائل مسحوب في ثلاثة اتجاهات: <b>الكيمياء الحيوية</b> (<bdi class=\"fr-term\">rivalta</bdi>، بحدّ <bdi class=\"fr-plain\">30 g/L</bdi> من البروتينات)، و<b>علم الخلايا</b> (ما هي الخلايا الموجودة؟)، و<b>علم الجراثيم</b> (عزل الجرثوم ووضع <b>اختبار الحساسية للمضادات</b>).",
  "blocs":[
@@ -209,7 +217,11 @@ SECTIONS_A = [
 {
  "sid":"etiologies","icon":"fa-list","nav":"Étiologies",
  "titre":"Étiologies — deux colonnes, et une cause qui joue dans les deux camps",
- "ch":1,"board":None,"reel":None,
+ "ch":1,
+"board":("etiologies.webp",1376,768,
+   "Planche des étiologies en deux colonnes : les transsudats mécaniques avec l’insuffisance cardiaque dans 80 à 90 pour cent des cas, la cirrhose hépatique, le syndrome néphrotique, l’hypothyroïdie et la péricardite constrictive ; les exsudats par plèvre atteinte avec les épanchements parapneumoniques, néoplasiques, la tuberculose, l’hémothorax et les maladies inflammatoires ; en bas, l’embolie pulmonaire à cheval sur les deux colonnes, transsudat ou exsudat",
+   "🗂️ <b>Deux colonnes d’étiologies</b> — insuffisance cardiaque 80-90 % des transsudats · l’embolie pulmonaire des deux côtés"),
+ "reel":None,
  "sub_fr":"Le tableau du cours range les causes en deux colonnes. À gauche, les <b>transsudats</b>, dominés par l’<b>insuffisance cardiaque (80-90 %)</b> ; à droite, les <b>exsudats</b>. Et tout en bas, des <b>deux côtés</b> : l’<b>embolie pulmonaire</b> — le piège que les annales ont déjà sanctionné.",
  "sub_ar":"يرتب جدول الدرس الأسباب في عمودين: على اليمين <b>الارتشاحات</b> ويتصدرها <b>قصور القلب (<bdi class=\"fr-plain\">80-90 %</bdi>)</b>، وعلى اليسار <b>الانصبابات النضحية</b>. وفي الأسفل، في <b>الجهتين معاً</b>: <b>الانصمام الرئوي</b> — وهو الفخ الذي جاء في الامتحانات.",
  "blocs":[

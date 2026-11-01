@@ -1,0 +1,54 @@
+STATUT-FINAL — pn-12 « La ponction pleurale » · AGENT-1 · 2026-11-01
+STATUT : LIVREE (complète) — LOCK pn-12 LIBÉRÉ.
+
+HISTORIQUE
+  - Delta 20 (31/10, EN_COURS lot 1/2) : page gold complète 22 sections,
+    ZIP Drive 11-pPMrxAGsRri82369tR1sqWVUr3n3Xh (MD5 e27dbd06b69b55074c175bbdaddc7012),
+    page MD5 7d205379a690d7b7970308e76880df65.
+  - Delta 26 (01/11, lot 2) : 8 planches 1376×768 générées dans ce GO,
+    contrôlées visuellement chiffre par chiffre, 2 micro-corrections Pillow
+    (cartouche « antibiogramme » retiré de la planche S4 ; étiquette fautive
+    « seringue de 50-60 mL » retirée de la planche S7, le cours utilise 2/10/20 mL),
+    page régénérée MD5 05aa73976dbaa4327e60bdd3e3742f16.
+    ZIP Drive 1-h7TJnQ4WuD4Z1pcxifZKzCm17f8AS9a (1 094 943 o,
+    MD5 298b52166fa8da1875aad56b59b38cdf) — dossier livraisons.
+
+CONTENU FINAL DE LA PAGE
+  22 sections (12 de cours, chacune ≥ 1 visuel : 8 planches dédiées + hero
+  + documents du cours), 21 images référencées, 15 QCM (3 annales ELITE §12
+  p.21 verbatim : 2021 ACD, 2020 BC, 2019 BD + 12 entraînement calibrés,
+  explications proposition par proposition FR+AR), 47 mots-clés (arabe
+  d'abord), 30 flashcards, fiche flash 4 cases, Ciné 4 chapitres FR +
+  résumé total long FR/AR collé, 69 blocs arabes.
+
+PORTES (01/11, bench complet : base → delta 23 + data convergent)
+  - Audit Gold v3 : 0 bloquant / 0 avertissement.
+  - verifier-images (AGENT-4) : 0 section sans image · 0 étirée · 0 format.
+  - RUNTIME-DOM : 14 checks fonctionnels OK, 0 erreur JS. Les 5 échecs
+    « peau pneumo » concernent le moteur partagé pneumo-field.js (le test
+    compte -1 particules sur le bench incluant la v1 du delta 21) — hors
+    périmètre pn-12, chantier peau AGENT-2/4, inchangé depuis le delta 20.
+  - RUNTIME-CINE-AR recalibré pn-12 : 10/10 (bascule ع/FR du résumé).
+  - Round-trip delta 26 : état delta 20 restauré → delta appliqué →
+    audit frais 0/0, MD5 page identique.
+
+DATA — aucun nouveau data_COURANT : l'entrée pn-12 du
+data_COURANT_2026-11-01_apres-pn10-pn11-convergence.js
+(1DpeICsn3n2dfDAvaxFiYBzLLhql8Z0at) est déjà correcte (recu:true, qcm:3,
+entr:12, url) — vérifiée le 01/11 avant construction.
+
+ÉCARTS DÉCLARÉS (en attente de décision utilisateur, ne bloquent pas la page)
+  - Audio Ciné : la voix dit « 10 à 20 » (diapos : 5-20 cc de liquide normal) ;
+    éosinophiles/hématies et dialyse péritonéale dits, absents des diapos ;
+    Gram/Lowenstein-Jensen viennent des annales. La page suit les diapos
+    strictement. Correction = régénération de 6 audios à confirmer.
+  - « Risque de pneumothorax » pour la contre-indication « très faible
+    volume » : interprétation de la voix du cours, signalée dans la page.
+
+OUTILLAGE DÉPOSÉ CE JOUR
+  - assemble-site-v2.py (travail/pn-12 + LOCK) : chaîne d'assemblage complète
+    au 01/11 (base → delta 23 → data convergent), vérifiée (2 573 fichiers).
+  - RUNTIME-CINE-AR_pn-12.cjs (qualite-2026-10-30) : copie recalibrée
+    (data-ch 4, 14 audios) du test canonique calé sur pn-08.
+  - Piège noté pour l'équipe : deux edit_file dans le même message peuvent
+    se perdre l'un l'autre — toujours vérifier par grep/import après édition.

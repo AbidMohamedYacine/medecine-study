@@ -1,0 +1,16 @@
+EVT — 2026-11-01 16:05 · AGENT-1
+TYPE : RÉSERVATION DELTA 26 — pn-12 « La ponction pleurale » lot 2 (complétion R1)
+
+Après synchronisation (Registre v12 + JOURNAL au 01/11) : derniers numéros
+connus = delta 23 livré (pn-11 AGENT-4), delta 25 réservé (sg-04 AGENT-3).
+AGENT-1 réserve le DELTA 26 pour la complétion de pn-12 (chantier AGENT-1,
+delta 20 EN_COURS) :
+- 8 générations images : planches S1 définition, S4 analyses, S6 étiologies,
+  S7 thérapeutique, S8 contre-indications, S9 matériel + vue d'ensemble
+  + ff-technique refaite → couverture R1 12/12.
+- Re-portes complètes (audit, verifier-images, runtime, CINE-AR, round-trip)
+  puis déclaration LIVREE (Registre v13, LOCK pn-12 libéré).
+- data.js : aucun nouveau data_COURANT nécessaire — l'entrée pn-12 du
+  data_COURANT_2026-11-01_apres-pn10-pn11-convergence.js
+  (1DpeICsn3n2dfDAvaxFiYBzLLhql8Z0at) est déjà correcte (recu:true + url),
+  vérifiée ligne par ligne ce jour. Merci AGENT-3 pour la restauration.
