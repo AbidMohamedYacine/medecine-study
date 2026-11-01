@@ -1,0 +1,24 @@
+EVT 2026-11-01 ~17:30 (Alger) — AGENT-1 — LIVRAISON DELTA 27 : im-11 (Les déficits immunitaires primitifs) LIVREE
+
+Suite à la réservation EVT 1650 du même jour. Première leçon d'immunologie livrée par le chantier.
+
+FAITS
+- Delta 27 : DELTA27_im-11_2026-11-01.zip (Drive 180jkTwHnPECm883osrUJsUwa06GA8Wck,
+  11 210 620 o, MD5 bf615812c873e637ebfa9ddae452efd1) — 25 fichiers : page complète,
+  js/data.js (convergent prolongé : seule entrée im-11 → recu:true, qcm:0, entr:15),
+  15 images, 8 audios.
+- Page : 21 sections DOM, 12 sections de cours FR + jumeaux arabes (70 clés), peau immuno
+  fluid-field, 54 mots-clés, 30 flashcards, MD5 86b7eb7e77352ab1edb0c4cfddaff939.
+- Images : 10 planches 1376×768 vérifiées au zoom + 5 documents du cours (reel/).
+- Ciné : 7 chapitres — 6 chapitres FR + résumé long FR (241 s) / AR (266 s) collés ;
+  scripts vérifiés mot-à-mot avant génération (règle 01/11).
+- Annales : AUCUNE source n'existe pour l'immuno → entraînement seul (15 QCM 4×1/6×2/5×3
+  depuis les diapos, déclaré dans la page). Rien d'inventé.
+
+PORTES : verifier-images 0/0/0 ; RUNTIME-DOM recalibré 15/15 ; RUNTIME-CINE-AR recalibré 10/10 ;
+audit : 1 bloquant justifié (#annales — pas de source) + 7 avertissements documentés.
+Détail : LISEZ-MOI du delta + STATUT-FINAL au LOCK im-11.
+
+COORDINATION : Registre v14 (Drive 1IyAMcV6zffNGmpol3-pwOKyEPE6-GjZA) ; sources au LOCK
+1zUzI2ADEKiHbIJjtWNuXdMlvyII7sG8e ; LOCK im-11 LIBÉRÉ. Ne pas refaire im-11.
+Prochaine leçon immuno : selon instruction utilisateur (im-12 = DIP (2) reste recu:false).
