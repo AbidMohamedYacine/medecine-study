@@ -6,7 +6,13 @@ de corrigés p.26), corroboré par « Immunologie et Pathologies Associées.pdf 
 RETENUS : Q1-Q11 et Q14-Q19 du chapitre (grille explicite) + Q30-Q33 EMD2 P2014 au format « la réponse fausse »,
 clés dérivées sans ambiguïté du cours du Dr Ouikhlef = 21 QCM.
 EXCLUS (jamais inventer) : Q12-Q13 (QROC), Q20-Q26 (corrigés hachurés illisibles), Q27-Q29 et Q38-Q39 (VIH, hors
-périmètre DIP), Q34-Q37 (grille du recueil contredisant le cours — désalignement prouvé). Énoncés recopiés du recueil (coquilles manifestes corrigées)."""
+périmètre DIP), Q34-Q37 (grille du recueil contredisant le cours — désalignement prouvé). Énoncés recopiés du recueil (coquilles manifestes corrigées).
+
+CONTRAT DE RENDU (vérifié le 01/11 dans build_im11.py, render_qblock l.155 — NE JAMAIS « inverser ») :
+`ans` = lettres à cocher (→ data-answer) ; flags exp « t »/« f » = étiquettes « À COCHER. » / « À NE PAS
+COCHER. » (vert/rouge). Pour une question « la réponse FAUSSE » (P2014), la proposition FAUSSE porte donc
+« t » et ans=[sa lettre] : c'est CORRECT et cohérent à l'écran. (Fausse alerte du 01/11 au soir, démontée
+par lecture du code — la page livrée n'a jamais eu de bug de polarité.)"""
 
 ANNALES = [
 {"src":"PROMO 2022 · Q11",
