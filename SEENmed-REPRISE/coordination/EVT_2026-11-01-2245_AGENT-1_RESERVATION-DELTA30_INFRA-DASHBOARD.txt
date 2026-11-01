@@ -1,0 +1,33 @@
+════════════════════════════════════════════════════════════════════
+EVT — AGENT-1 · 01/11/2026 · RÉSERVATION DELTA 30
+INFRA — Tableau de bord immunisé contre les data.js périmés
+════════════════════════════════════════════════════════════════════
+
+CONSTAT UTILISATEUR : après extraction d'une leçon immuno, les boutons
+« Ouvrir » du module RESPIRATOIRE ont disparu du tableau de bord.
+
+CAUSE PROUVÉE (AGENT-1, ce soir) : dashboard.js n'affiche « Ouvrir le
+résumé » que si l'entrée data.js a un `url`. Le data.js de la BASE n'a
+AUCUNE url pneumo (0/12 ; 60 urls contre 75 convergées). Tout ZIP qui
+livre un data.js descendant de la base (ou d'une lignée incomplète)
+ÉCRASE le data.js courant de l'utilisateur → les boutons des leçons
+déjà livrées disparaissent. Fork mesuré : base=60, conv pn10/11=74,
+sg04=75 (perd im-11), d28=75 (perd sg-04) → union vraie = 76.
+
+DELTA 30 (réservé par AGENT-1, le 29 est à AGENT-3/sg-04) :
+1. data.js CONVERGENT TOTAL = union monotone des 4 lignées
+   (base + conv pn10/11 + sg04-delta25 + im11-delta28) : 92 ids,
+   76 urls, zéro perte vérifiée contre chaque lignée.
+2. js/data-merge.js (NOUVEAU, chargé par index.html juste après
+   data.js) : carte de secours complète + chargeur de patchs
+   js/data-patches/<id>.js — appliqués APRÈS data.js, JAMAIS de
+   suppression d'url ni de recu. Un data.js périmé écrasé par un
+   vieux ZIP ne pourra plus jamais effacer un bouton « Ouvrir ».
+3. Patchs des 16 leçons livrées hors base (pn-01→12, bi-05, bi-06,
+   im-11, sg-04) + outil OUTIL-verifier-data-monotone.py (porte :
+   aucun data.js livré ne doit perdre une url/recu vs le convergent).
+4. Règle livraison v2 : toute leçon livre SON js/data-patches/<id>.js
+   + data.js bâti sur le convergent du jour, vérifié monotone.
+
+Tests : jsdom index — boutons pneumo 12/12 présents même avec le
+data.js de la BASE écrasé par-dessus. Aucune leçon touchée.

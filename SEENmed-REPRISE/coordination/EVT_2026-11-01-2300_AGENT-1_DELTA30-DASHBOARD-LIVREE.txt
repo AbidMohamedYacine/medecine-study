@@ -1,0 +1,26 @@
+════════════════════════════════════════════════════════════════════
+EVT — AGENT-1 · 01/11/2026 · DELTA 30 LIVRÉE (INFRA DASHBOARD)
+════════════════════════════════════════════════════════════════════
+
+FAIT : DELTA30_dashboard-data_2026-11-01.zip — Drive
+1BqBL5uYYpbIhR07ZFg1dJgPtKD0UV4k7 (24 550 o,
+MD5 feb2bd0a2e99b81dbe1e2fec0830acbf), dossier livraisons.
+
+CONTENU : js/data.js convergent TOTAL (union monotone des 4 lignées,
+92 ids, 76 urls, pneumo 12/12 — zéro perte prouvée), js/data-merge.js
+(secours synchrone + chargeur de patchs), 16 js/data-patches/<id>.js
+(pn-01→12, bi-05, bi-06, im-11, sg-04), index.html (+1 ligne).
+→ Même un data.js de la base écrasé par un vieux ZIP ne peut plus
+  faire disparaître un bouton « Ouvrir ». Cause et preuve : EVT 2245.
+
+PORTES : TEST-DASHBOARD_delta30.cjs 5/5 (scénario tueur inclus,
+contrôle sans data-merge = bug reproduit 0/12) ;
+OUTIL-verifier-data-monotone.py bloque convergent→base (32 pertes).
+
+RÈGLE NOUVELLE (tous agents) : REGLE-FORMAT-LIVRAISON-ZIP section
+DATA — (1) partir du data_COURANT le plus récent, (2) vérificateur
+monotone bloquant, (3) livrer js/data-patches/<id>.js avec la leçon.
+
+Registre v18 publié : ligne im-11 RÉPARÉE (décalée dans la v17 —
+restaurée depuis la v16, seule ligne touchée) + mention delta 30.
+Aucune leçon modifiée. Prochain delta libre : 31.

@@ -31,3 +31,24 @@ AVANT D'UPLoader : vérifier `unzip -l` + extraction test +
 `md5sum -c MD5SUMS.txt` vert. Jamais d'écrasement ni de suppression
 sur Drive : un paquet erroné est RENOMMÉ « …_v1-REMPLACE.zip » et
 le ZIP corrigé est uploadé sous le nom propre (Registre + EVT).
+
+════════════════════════════════════════════════════════════════════
+SECTION DATA — RÈGLE PERMANENTE (delta 30, 01/11/2026, AGENT-1)
+(constat utilisateur : un data.js périmé a effacé les boutons
+« Ouvrir » de tout le module respiratoire — NE JAMAIS REFAIRE)
+════════════════════════════════════════════════════════════════════
+
+dashboard.js n'affiche « Ouvrir » que si l'entrée data.js a un url.
+TOUTE LEÇON LIVRÉE AVEC UN data.js DOIT, sans exception :
+  1. partir du data_COURANT LE PLUS RÉCENT (Drive, vérifier JOURNAL
+     + Registre — les lignées forcent en silence) ;
+  2. passer OUTIL-verifier-data-monotone.py <ancien> <nouveau>
+     (dossier Qualité) — BLOQUANT si une url/recu disparaît ;
+  3. inclure dans le ZIP son propre js/data-patches/<id>.js :
+       window.MED_DATA_PATCHES = window.MED_DATA_PATCHES || [];
+       window.MED_DATA_PATCHES.push({"id":"xx-00","url":"lecons/…",
+         "recu":true,"qcm":N,"entr":M});
+     (nom unique = aucun autre ZIP ne peut l'écraser ; appliqué par
+     js/data-merge.js du delta 30, après data.js, de façon monotone).
+Le data convergent total de référence après delta 30 :
+  data_COURANT_2026-11-01_convergent-total-delta30.js (92 ids, 76 urls).
