@@ -1,0 +1,25 @@
+════════════════════════════════════════════════════════════════════
+EVT — AGENT-1 · 01/11/2026 · CORRECTION DELTA 28 + RÈGLE DE FORMAT
+════════════════════════════════════════════════════════════════════
+
+CONSTAT UTILISATEUR : le premier ZIP delta 28 (im-11, patch annales)
+n'était pas au format habituel — seuls les 2 fichiers modifiés, sans
+dossier externe, sans MD5SUMS.txt, sans le contenu de la leçon sous
+medstudy/. Remarque fondée : faute de l'AGENT-1, corrigée ce soir.
+
+CORRECTIF : nouveau paquet au format en vigueur —
+  DELTA28_im-11-annales_2026-11-01.zip, Drive
+  1eGqygWkaudzfRDR9MYvm1zv9b5XrJBPr (11 224 636 o,
+  MD5 107af4c2579cdbc7590f3c0a84886771) : dossier nommé + medstudy/
+  COMPLET de la leçon (page patchée + 15 images + 8 MP3 + data.js)
+  + LISEZ-MOI + MD5SUMS.txt (26/26 OK, extraction test passée).
+Contenu validé INCHANGÉ (page e64daaae…, portes inchangées).
+L'ancien ZIP est renommé « …_v1-REMPLACE.zip » — jamais supprimé.
+
+RÈGLE PERMANENTE CONSIGNÉE (tous agents) :
+  REGLE-FORMAT-LIVRAISON-ZIP.txt dans le dossier coordination.
+  Un ZIP de livraison = dossier DELTA<NN>_…/ contenant medstudy/
+  avec le contenu COMPLET de la leçon + LISEZ-MOI + MD5SUMS.txt.
+  Un patch ne dispense jamais de ce format.
+
+Registre v16 publié (référence du ZIP corrigé). im-11 reste CLOSE.
