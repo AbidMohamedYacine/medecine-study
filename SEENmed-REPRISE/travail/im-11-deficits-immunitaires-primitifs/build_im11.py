@@ -20,6 +20,7 @@ from contenu_a import SECTIONS_A
 from contenu_b import (SECTIONS_B, VUE, MM_SUB_FR, MM_SUB_AR, METHODE,
                        CONNEXIONS, FICHE, CINE_CHAPITRES, RT_SUB_FR, RT_SUB_AR)
 from qcm_im11 import ENTRAINEMENT
+from annales_im11 import ANNALES
 from kw_fc_im11 import KW, FC
 
 SITE = "/tmp/site/medstudy"
@@ -58,7 +59,7 @@ repl = [
  ('<i class="fa-solid fa-lungs"></i> Pneumologie', '<i class="fa-solid fa-shield-virus"></i> Immunologie'),
  ('<h1>Sémiologie de la <span class="highlight">dyspnée</span></h1>',
   '<h1>Les déficits immunitaires <span class="highlight">primitifs</span></h1>'),
- ("6 QCM d'annales + 20 d'entraînement", "15 QCM d'entraînement"),
+ ("6 QCM d'annales + 20 d'entraînement", "21 QCM d'annales + 15 d'entraînement"),
  ("Dr Seddini, A — Médecine interne, EHU Oran", "Dr Ouikhlef"),
  ("Les 20 QCM", "Les 15 QCM"),
 ]
@@ -70,7 +71,7 @@ head = re.sub(r'<img src="\.\./assets/img/pn-01/hero\.webp"[^>]*>',
 need('im-11/hero.webp' in head, "hero img non remplacée")
 ANN_BTN = '<a href="#annales" class="btn btn-outline"><i class="fa-solid fa-award"></i> Les 6 annales</a>'
 need(ANN_BTN in head, "bouton annales hero introuvable")
-head = head.replace(ANN_BTN, "", 1)
+head = head.replace(ANN_BTN, ANN_BTN.replace("Les 6 annales", "Les 21 annales"), 1)
 
 # ---------- helpers de rendu ----------
 def ic(name): return f'fa-solid {name}'
@@ -194,6 +195,7 @@ tabs = [("vue","fa-compass","Vue d'ensemble",True),("mindmap","fa-sitemap","Mind
 for i, s in enumerate(SECTIONS, 1):
     tabs.append((s["sid"], s["icon"].replace("fa-","",1) if s["icon"].startswith("fa-") else s["icon"], f"{i}. {s['nav']}", False))
 tabs += [("methode","fa-user-secret","Méthode EMD",False),("connexions","fa-link","Connexions",False),
+         ("annales","fa-landmark","QCM d'annales",False),
          ("entrainement","fa-bullseye","QCM entraînement",False),
          ("fiche","fa-bolt","Fiche flash",False),("flashcards","fa-clone","Flashcards",False),
          ("resume-total","fa-image","Résumé total",False)]
@@ -313,10 +315,14 @@ connexions_html = f'''
 # ---------- 8. QCM ----------
 ANN_FMT = ("qsrc src-annale", "fa-solid fa-landmark")
 TR_FMT = TRAIN_SRC_FMT or ("qsrc", "fa-solid fa-dumbbell")
-ann_html = ""
+ann_html = f'''
+            <!-- ═══════════════ ANNALES ═══════════════ -->
+            {qcm_section_head("annales","fa-landmark","QCM d’annales — 21 questions d’examens (Oran, P2014–P2022)","Questions réelles des promotions 2014, 2018 à 2022 (recueil « CURE – IMMUNO 3<sup>ème</sup> (Oran) », chapitre <i>Déficits Immunitaires</i>), corrigés revérifiés proposition par proposition contre le cours. Distribution : <b>8 questions à 1 bonne réponse</b> (dont 4 au format « la réponse fausse »), <b>4 à 2</b>, <b>8 à 3</b>, <b>1 à 4</b>.")}
+
+''' + "\n\n".join(render_qblock(q, i, "ann", ANN_FMT) for i, q in enumerate(ANNALES, 1)) + "\n            </section>\n"
 entr_html = f'''
             <!-- ═══════════════ ENTRAÎNEMENT ═══════════════ -->
-            {qcm_section_head("entrainement","fa-bullseye","QCM d’entraînement — 15 questions sur le cours","Aucun recueil d’annales d’immunologie n’est disponible pour ce module : ces 15 QCM sont construits <b>uniquement depuis les diapos du cours</b> du Dr Ouikhlef — rien d’inventé. Distribution : <b>4 questions à 1 bonne réponse</b>, <b>6 à 2</b>, <b>5 à 3</b>.")}
+            {qcm_section_head("entrainement","fa-bullseye","QCM d’entraînement — 15 questions sur le cours","Après les annales, l’entraînement maison : ces 15 QCM sont construits <b>uniquement depuis les diapos du cours</b> du Dr Ouikhlef — mêmes leurres (âge échangé, germe déplacé, étage confondu), rien d’inventé. Distribution : <b>4 questions à 1 bonne réponse</b>, <b>6 à 2</b>, <b>5 à 3</b>.")}
 
 ''' + "\n\n".join(render_qblock(q, i, "entr", TR_FMT) for i, q in enumerate(ENTRAINEMENT, 1)) + "\n            </section>\n"
 

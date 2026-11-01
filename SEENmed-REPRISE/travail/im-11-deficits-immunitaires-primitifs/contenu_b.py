@@ -280,12 +280,12 @@ VUE = {
  "transp_titre":"Transparence — d’où vient chaque fait de cette page",
  "transp":[
   "Le cours : les <b>33 diapos</b> du Dr Ouikhlef (« 10_ DIP »), lues en entier ; chaque section renvoie à ses diapos.",
-  "Les annales : <b>aucun recueil d’annales d’immunologie n’est disponible</b> pour ce module (recherche Drive négative) — cette leçon <b>n’a donc pas de QCM d’annales</b> ; les 15 QCM sont un entraînement construit uniquement depuis les diapos, sans fait inventé.",
+  "Les annales : recueil « CURE – IMMUNO 3<sup>ème</sup> (Oran) », chapitre Déficits Immunitaires — <b>21 QCM officiels retenus (P2014, P2018–P2022)</b>, corrigés revérifiés contre le cours et le second recueil « Immunologie et Pathologies Associées ». Exclus et signalés : 2 questions rédactionnelles (QROC), 5 questions VIH hors périmètre de ce cours, 4 corrigés contredisant le cours et les corrigés illisibles du recueil — jamais reconstruits. Les 15 QCM d’entraînement restent construits uniquement depuis les diapos, sans fait inventé.",
   "Les documents étiquetés « (document du cours) » sont les <b>figures d’origine du PDF du cours</b> ; les autres planches sont des illustrations pédagogiques générées pour cette page, relues mot à mot contre les diapos."],
  "transp_titre_ar":"الشفافية — من أين تأتي كل معلومة في هذه الصفحة",
  "transp_ar":[
   "الدرس: <b>33 شريحة</b> للدكتور أوخلف («10_ DIP»)، قُرئت كاملة؛ وكل قسم يحيل إلى شرائحه.",
-  "الامتحانات: <b>لا يتوفر أي مرجع لامتحانات علم المناعة</b> لهذه الوحدة (بحث Drive سلبي) — فليس في هذا الدرس <b>أسئلة امتحانات رسمية</b>؛ والأسئلة الخمسة عشر تدريب مبني فقط من الشرائح، دون اختراع.",
+  "الامتحانات: مرجع «CURE – IMMUNO 3ème (Oran)»، فصل العجوزات المناعية — <b>21 سؤالاً رسمياً معتمداً (P2014 وP2018–P2022)</b>، تصحيحات أعيد التحقق منها مقابل الدرس والمرجع الثاني «Immunologie et Pathologies Associées». ومستبعدة ومعلنة: سؤالا تحرير (QROC) و5 أسئلة VIH خارج نطاق الدرس و4 تصحيحات تناقض الدرس وتصحيحات غير قابلة للقراءة — لم يُعد بناؤها أبداً. وتبقى أسئلة التدريب الخمسة عشر مبنية فقط من الشرائح، دون اختراع.",
   "الوثائق الموسومة «وثيقة الدرس» هي <b>أشكال ملف الدرس الأصلية</b>؛ وبقية اللوحات رسوم تعليمية مولّدة لهذه الصفحة، روجعت كلمة بكلمة مقابل الشرائح."],
  "vue_board":("reel/vue-cours.webp",1440,1080,
    "Diapo du cours présentant la classification des déficits immunitaires primitifs en neuf catégories selon l’IUIS 2017",
@@ -298,8 +298,8 @@ MM_SUB_AR = "أربع حجرات تُتلى بترتيب التصنيف: الم�
 # ───────────────── MÉTHODE ─────────────────
 METHODE = {
  "titre":"Méthode — raisonner comme le cours : âge, germe, compartiment",
- "sub_fr":"Sans annales pour ce module, la méthode se construit sur les <b>inversions logiques du cours</b> : chaque fait a son faux jumeau (un âge échangé, un germe déplacé, un étage confondu). Voici les leurres que le cours lui-même rend possibles — et le réflexe qui les démonte.",
- "sub_ar":"دون امتحانات رسمية لهذه الوحدة، تُبنى الطريقة على <b>قلبات الدرس المنطقية</b>: لكل حقيقة توأم خاطئ (عمر مبادل، جرثوم منقول، طابق مخلوط). إليك الشِّراك التي يجعلها الدرس نفسه ممكنة — والمنعكس الذي يفككها.",
+ "sub_fr":"Les annales le confirment : l’examinateur joue sur les <b>inversions logiques du cours</b> : chaque fait a son faux jumeau (un âge échangé, un germe déplacé, un étage confondu). Voici les leurres que le cours lui-même rend possibles — et le réflexe qui les démonte.",
+ "sub_ar":"تؤكدها الامتحانات الرسمية: يلعب المصحح على <b>قلبات الدرس المنطقية</b>: لكل حقيقة توأم خاطئ (عمر مبادل، جرثوم منقول، طابق مخلوط). إليك الشِّراك التي يجعلها الدرس نفسه ممكنة — والمنعكس الذي يفككها.",
  "th":["Le leurre plausible","Le réflexe qui le démonte"],
  "rows":[
   ["« Infections à pyogènes <b>dès les premiers mois</b> = déficit humoral »","Faux jumeau d’âge : l’humoral, c’est <b>après 6 mois</b> ; les premiers mois + intracellulaires = <b>cellulaire/combiné</b>."],
@@ -323,7 +323,7 @@ METHODE = {
  "box_ar":["«حسب <b>نوع العدوى</b> و<b>سن الحدوث</b> نشتبه أقرب بعجز في المناعة <b>الخلطية</b> أو <b>الخلوية</b> أو <b>البلعمة</b>.» (الشريحة 8)",
            "المسار كله في هذه الجملة: <b>أي جرثوم؟ في أي سنّ؟ أين؟</b> — ثم الفحوصات فقط، بترتيب الخطوات الأربع."],
  "focus":[
-  "Chaque proposition d’entraînement se vérifie <b>contre une diapo précise</b> — c’est écrit dans chaque correction : entraîne-toi à citer la diapo.",
+  "Chaque proposition — annales comme entraînement — se vérifie <b>contre une diapo précise</b> — c’est écrit dans chaque correction : entraîne-toi à citer la diapo.",
   "Les mots absolus (« toujours », « jamais de lymphocytes T dans l’HLA-II ») restent l’arme favorite des leurres : cherche d’abord l’exception du cours."],
 }
 
