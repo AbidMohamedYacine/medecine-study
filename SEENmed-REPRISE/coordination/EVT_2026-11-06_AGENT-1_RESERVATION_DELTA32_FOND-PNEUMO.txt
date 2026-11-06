@@ -1,0 +1,5 @@
+SEENmed — RÉSERVATION DELTA32 · 2026-11-06
+AGENT-1 · Infrastructure du fond pneumologie (demande et captures utilisateur)
+
+Constat sur pn-03 (Sémiologie de la toux) : le canvas du fond occupe un écran dans le flux, puis la leçon commence au-dessous sans fond visible. Hypothèse à tester : les règles CSS de positionnement du canvas pneumologie ont été perdues lors d'un écrasement de style.css. Étude et correctif limités au moteur partagé du fond, sans modifier les contenus des leçons ni data.js, ni réattribuer les chantiers.
+Delta 32 réservé après vérification des fichiers Drive. Tests navigateur avant livraison ; conservation des originaux.

@@ -1,0 +1,12 @@
+SEENmed — DELTA32 · FOND PNEUMOLOGIE · 06/11/2026
+AGENT-1 · Infrastructure uniquement · Réservation JOURNAL 1A6iUMauPXpIJgdCnWb2ncNgj7FBGBlfg
+
+CONTEXTE : captures utilisateur pn-03 « Sémiologie de la toux » : un écran de particules précède le héros, puis le fond disparaît en descendant. Symptôme reproduit avec style.css de la base, qui ne contient pas les règles pneumo : canvas position static, 820 px dans le flux, hero top 827 px, canvas à -1800 px après défilement. La raison de la disparition de la règle CSS dans l'installation utilisateur n'a pas été vérifiée.
+
+CORRECTION : garde-fou dans le moteur partagé js/pneumo-field.js : canvas fixed, inset 0, z-index -1, pointer-events none, à appliquer même sans règle CSS et avant le retour en mode planche. Conserve le masquage du canvas en modes planche/photo. Aucun changement du data.js, des pages, des leçons, des images, des audios ou des feuilles de style installées. Les propriétaires des leçons sont inchangés.
+
+VALIDATION : Chromium avec les 12 pages publiées, mode économe, scroll 12/55/95 %, deux configurations : CSS de base sans règle pneumo et CSS delta21 avec règle pneumo ; canvas fixe et rendu dans les deux. Comparaison de captures avec/sans canvas sur pn-03 après défilement sous les quatre thèmes : différences visibles de pixels. Bouton de menu de fond cliquable. Sur pn-03, contrôle animé/économe/photo/planche : position fixe, photo et planche cachent le canvas. Le test ne ré-audite pas le contenu médical des autres agents. Installeur Windows : interface non exécutée sur Windows sur ce banc Linux.
+
+PAQUET : DELTA32_fond-pneumologie_2026-11-06.zip, Drive 1RjNr05f2BKZJiPjmgAvbE6j0rI7kJ7DG ; taille 100657611 octets ; MD5 058187b524b855e178e1a2aa8c0def84 (Drive et local identiques). Dossier externe DELTA32, medstudy/ avec 12 pages + 430 fichiers de médias des leçons, moteur corrigé, notices + MD5SUMS ; 446/446 empreintes validées après extraction. Les pages/médias sont une copie de référence : NE PAS FUSIONNER medstudy/ ; lancer INSTALLER-WINDOWS.bat qui copie exclusivement le moteur dans le site utilisateur, sauvegarde l'ancien et bloque les versions inconnues. Ctrl+F5 ensuite. Aucun registre ni data à modifier (infra seulement).
+
+Garde-fou futur : ne pas réécraser le moteur pneumo partagé par une ancienne version ; le correctif est autonome vis-à-vis de la feuille de style, mais pas vis-à-vis d'une réinstallation d'un ancien moteur JS.
