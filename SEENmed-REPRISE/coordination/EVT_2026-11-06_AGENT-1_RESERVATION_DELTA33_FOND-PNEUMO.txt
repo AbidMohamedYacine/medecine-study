@@ -1,0 +1,3 @@
+SEENmed — RÉSERVATION DELTA33 · 06/11/2026 · AGENT-1
+
+La capture utilisateur montre que l'installeur delta32 a refusé un moteur différent, sans modification. MD5 affiché E5EE1245C8C12C5199D24B9FB314112C : retrouvé à l'octet près dans SEENmed_DELTA14b_pn-05-hemoptysie_2026-10-31.zip, delta14/medstudy/js/pneumo-field.js. Ce fichier n'est pas le moteur 2b521224… du delta21 pris comme hypothèse lors de delta32 ; il a notamment une autre palette. Delta33 réservé pour appliquer le même correctif strictement sur la version effectivement installée, sans changer sa palette, et installer uniquement si le hash correspond. Pas de modification de leçon ni data.
