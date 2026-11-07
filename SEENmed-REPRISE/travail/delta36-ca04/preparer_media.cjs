@@ -14,11 +14,17 @@ const files = {
  'deux-bras.webp':'v3/08-mesure-deux-bras.png',
  'comparaison.webp':'v2/07-deux-bras.png',
  'automesure.webp':'v3/06-automesure.png',
- 'mapa.webp':'v2/09-mapa.png',
+ 'mapa.webp':'v7/05-mapa-corrigee.png',
 };
 async function main(){
  for (const [out, input] of Object.entries(files)) {
    const file=path.join(src,input);
+   // La planche MAPA est en 1408 × 768 : coupe centrée de 16 px par bord,
+   // sans étirement ni fond flouté. Les textes ont été inspectés après coupe.
+   if (out === 'mapa.webp') {
+     await sharp(file).extract({left:16,top:0,width:1376,height:768}).webp({quality:94}).toFile(path.join(dest,out));
+     continue;
+   }
    const bg=await sharp(file).resize(1376,768,{fit:'cover'}).blur(35).modulate({brightness:.65}).toBuffer();
    const fg=await sharp(file).resize(1376,768,{fit:'contain',background:{r:0,g:0,b:0,alpha:0}}).png().toBuffer();
    await sharp(bg).composite([{input:fg}]).webp({quality:90}).toFile(path.join(dest,out));

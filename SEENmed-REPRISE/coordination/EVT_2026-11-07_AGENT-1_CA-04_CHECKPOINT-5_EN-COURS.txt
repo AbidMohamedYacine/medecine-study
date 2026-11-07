@@ -1,0 +1,5 @@
+AGENT-1 — 2026-11-07 — ca-04 La pression artérielle — DELTA36 EN COURS, NON LIVRÉ
+
+Suite au retour utilisateur, prompts demandant directement des planches complètes avec informations, détails et flèches, produites et vérifiées une par une. Une planche MAPA dont les trois pointes ont été vérifiées au zoom est intégrée à titre provisoire au site /tmp ; recadrage sans étirement ni fond flouté. Le reste des illustrations, le contenu médical, les audios à écouter et les audits Gold demeurent en cours. Pas de livraison ni feu vert.
+
+Sauvegarde complémentaire d'essais non livrable : https://drive.google.com/file/d/10SrMi5P5xqqgKZXGELOELHBiCcA8lWGW/view — MD5 860b4f89238fe1705902da092f642689. Complète les checkpoints 3 et 4 ; ne pas la déployer. Réservation maintenue.
