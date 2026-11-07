@@ -1,0 +1,19 @@
+DELTA36 — ca-04 La pression artérielle — 2026-11-07
+
+CONTENU
+Reconstruction de la leçon à partir du support « 24-La pression art riel.pptx.pdf » du Dr Seddini A. (48 diapositives, MD5 2dc888a4a6d9c6eb48fa5adaefeab3be). Le paquet contient la page de la leçon et tous ses 18 fichiers d'illustration et 12 MP3 référencés. Les autres pages, les moteurs et les styles communs ne sont pas fournis ni modifiés. Il requiert le site déjà assemblé avec la peau cardio DELTA35.
+
+INSTALLATION
+1. Conserver une sauvegarde du site actuel.
+2. Extraire le ZIP. Dans le dossier DELTA36_ca-04-pression-arterielle_2026-11-07, vérifier MD5SUMS.txt (Linux : md5sum -c MD5SUMS.txt).
+3. Fusionner le contenu du dossier medstudy du paquet dans le dossier medstudy du site existant, en acceptant le remplacement de la page ca-04 si demandé ; ne pas remplacer le site entier par le seul contenu de ce dossier.
+4. Ne pas recopier un ancien data.js. Aucun data.js n'est fourni : le data courant de référence delta31 contient déjà ca-04 avec qcm 9, entr 16, recu true et la bonne URL. La leçon conserve les moteurs et la peau existants de DELTA35.
+
+CONTRÔLES ET LIMITES
+Audit Gold strict : 0 blocage et 0 avertissement. Vérification des images : aucune section sans image, aucune image étirée ou hors format. Runtime adapté au moteur cardio et à Chromium multiprocess : 21/21 ; QCM 9/9 recueil et 16/16 entraînement en FR et AR sur le banc, bouton dictionnaire mobile/bureau testé. Le runtime officiel inchangé n'a PAS été validé : il échoue dans cet environnement et ne prévoit pas la peau cardio. Le runtime adapté n'est pas le runtime officiel.
+
+Les 12 fichiers audio se décodent et les résumés FR/AR démarrent et progressent en navigateur. Les scripts ont été relus par rapport au support, mais aucune piste générée n'a été écoutée : la prononciation et la fidélité sonore ne sont pas certifiées. À la demande de l'utilisateur, ne pas lui imposer une écoute pour poursuivre.
+
+Les neuf QCM proviennent du recueil ELITE CARDIO 3EME, pages PDF 13–14 ; les clés sont celles imprimées au recueil, pas un corrigé officiel indépendant. Les seize autres questions sont des entraînements recomposés et identifiés comme tels. Les ambiguïtés sont détaillées dans les corrections.
+
+Le support présente des divergences sur les dimensions du brassard, la numérotation des phases auscultatoires et le seuil nocturne ; la page distingue explicitement les formulations du cours et les références externes AHA / ESH 2023 / ESC 2024. Pour l'examen, faire confirmer la réponse attendue par l'enseignante.
