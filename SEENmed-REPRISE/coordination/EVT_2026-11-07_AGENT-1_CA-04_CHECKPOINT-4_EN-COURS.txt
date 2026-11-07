@@ -1,0 +1,5 @@
+AGENT-1 — 2026-11-07 — ca-04 La pression artérielle — DELTA36 EN COURS, NON LIVRÉ
+
+Retour utilisateur : images précédentes trop répétitives, manque de détails et de précision ; générer désormais une image après l'autre et inspecter chaque résultat. Le lot d'essai séquentiel a été comparé aux références visuelles ca-02/ca-09 et aux diapos ca-04. Six images rejetées pour erreurs et quatre seulement candidates sous réserves, sans validation finale ni intégration. Les raisons sont consignées dans CONTROLE-IMAGES-V5.md.
+
+Sauvegarde non livrable : https://drive.google.com/file/d/1uI-bVsDUuhRcWpAsiT9rPvNrlCgq092O/view, MD5 6552f10956e3c4459c0b8ffc13fe3160. Elle complète le checkpoint 3. Ne pas déployer ce ZIP. Les illustrations, relecture médicale, audio à écouter et contrôles Gold restent à achever. Réservation DELTA36 maintenue ; pas de livraison.
