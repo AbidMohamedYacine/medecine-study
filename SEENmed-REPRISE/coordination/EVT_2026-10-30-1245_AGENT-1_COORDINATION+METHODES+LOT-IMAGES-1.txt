@@ -1,0 +1,49 @@
+EVT 2026-10-30 12:45 — AGENT-1 → AGENT-2 / AGENT-3 / AGENT-4
+Objet : coordination (verrou en cas de limite) + 3 méthodes précisées + avancement phase 2
+
+1) COORDINATION — réponse à garder en tête (scénario « limite en plein travail »)
+Exemple de l'utilisateur : AGENT-3 travaille sur an-14, la limite le coupe au milieu.
+=> Les autres NE PRENNENT PAS an-14, à ces conditions du PROTOCOLE v2 (déjà en vigueur) :
+- Le LOCK se pose AVANT la première ligne de travail (LOCK_<id>_AGENT-<n> +
+  STATUT RESERVATION). C'est le verrou posé au départ qui protège le chantier,
+  pas un fichier écrit après la coupure.
+- Aucun verrou n'expire automatiquement. EN_COURS / EN_PAUSE_LIMITE =
+  propriétaire unique ; les autres sautent la leçon à leur SYNC Drive.
+- Checkpoints EN-COURS_<id>_<étape>.zip dans le LOCK à chaque étape :
+  même coupé net, le travail existant est visible et repris par le propriétaire.
+- Seul l'utilisateur peut réassigner (événement TRANSFERT). En cas de doute :
+  A_VERIFIER, on ne construit pas.
+
+2) MÉTHODES PRÉCISÉES PAR L'UTILISATEUR (STANDARD-OR-v3 mis à jour, copie __v1245)
+- RÉSUMÉ VOCAL : nombre de parties LIBRE (2, 3, 4...) — la couverture de toutes
+  les sections décide ; ne jamais amputer un script pour tenir en 2 (§4.1).
+- FICHE FLASH : nombre de cases ADAPTÉ à la leçon — 4 par défaut, 5-6 si la
+  matière l'exige ; chaque case garde SA image propre + sa liste dense (§7).
+- TRADUCTION AR (doctrine, §10) : traduction INTELLIGENTE DU SENS, en contexte,
+  jamais mot à mot. Terme scientifique = arabe d'abord + français juste à côté
+  en référence (<bdi class="fr-term">), sans casser l'ordre des informations
+  ni la phrase (RTL/LTR géré par bdi). Une traduction sèche ou décalée = défaut
+  de Contenu. Vaut pour arData, mots-clés, corrections QCM, scripts audio AR.
+- ca-02 et ca-09 = EXEMPLES de référence : on ne touche PAS à leurs images ni
+  à leurs pages ; seules les leçons A_PATCHER sont refaites à leur niveau.
+
+3) FAIT — PHASE 2 (delta 10 Drive, après 06+08+09)
+- Lot images 1 : 10 planches fiche-flash générées au niveau or (bleu nuit/or,
+  français exact) ; 8 installées (pn-04 x4, pn-01 nyha+gravite,
+  bi-06 troponine+cinetique) ; 2 REJETÉES et non installées
+  (pn-01 ff-composantes et ff-phases : libellés absents -> lot suivant).
+  Détail : KIT qualite-2026-10-30/JOURNAL-IMAGES_phase2.md.
+- pn-01 : chapitre Ciné dédié « Les signes d'orientation » (clip FR ~80 s,
+  chapitre 7/9) — la section n'avait aucun spot. Patch reproductible :
+  PATCH-PN01-ORIENTATION.py. Spots resume-total ajoutés (pn-01, pn-04).
+- Validation : AUDIT 0 bloquant x3 ; runtime DOM pn-01+pn-04 = 38/38.
+
+4) CORRECTIF DOCUMENTAIRE
+La copie STANDARD __v1130 (KIT + repo) avait perdu le §4.1 (le HANDOFF y
+faisait référence). Restauré, revérifié et republié en __v1245 (même dossier
+KIT) avec les 3 précisions du point 2. __v1245 fait foi.
+
+RESTE PHASE 2 (locks AGENT-1) : corrections QCM par proposition FR/AR ;
+mots-clés 45-60 ; lot images 2 (2 ff refaites, bi-06 ff-algo/ff-bnp, planches
+de sections) ; densification fiches + versos flashcards. Statut inchangé :
+bi-06 / pn-01 / pn-04 = A_PATCHER.

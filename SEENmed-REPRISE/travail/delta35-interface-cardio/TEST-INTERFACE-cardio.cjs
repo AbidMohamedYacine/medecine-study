@@ -1,0 +1,15 @@
+'use strict';
+// Site de test complet déjà servi (SITE/URL) ; node_modules = playwright-core, @sparticuz/chromium.
+const { chromium }=require('playwright-core');const chrome=require('@sparticuz/chromium');const fs=require('fs');const path=require('path');
+const root=process.env.SITE||'/tmp/cardio-site/medstudy',url=process.env.URL||'http://127.0.0.1:8094';
+const pages=fs.readdirSync(path.join(root,'lecons')).filter(x=>/^ca-\d\d-.*\.html$/.test(x)).sort();
+const themes=['dark','light','aurora','ocean'];
+const ex={dark:{bg:'rgb(27, 11, 19)',box:'rgb(49, 20, 31)',main:'255,119,137',button:'rgb(168, 37, 64)'},light:{bg:'rgb(232, 242, 252)',box:'rgb(248, 251, 255)',main:'21,91,176',button:'rgb(18, 80, 157)'},aurora:{bg:'rgb(7, 29, 24)',box:'rgb(18, 55, 45)',main:'124,226,179',button:'rgb(23, 105, 71)'},ocean:{bg:'rgb(29, 17, 10)',box:'rgb(53, 32, 23)',main:'255,194,124',button:'rgb(153, 80, 32)'}};
+(async()=>{if(pages.length!==11)throw Error(`11 pages attendues, ${pages.length} présentes`);
+const b=await chromium.launch({executablePath:await chrome.executablePath(),args:chrome.args,headless:true});const context=await b.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'});const p=await context.newPage();let errors=[];p.on('pageerror',e=>errors.push(e.message));let checks=0;
+for(const name of pages){await p.goto(`${url}/lecons/${name}`,{waitUntil:'load'});await p.evaluate(()=>window.SEENmedSetTheme('dark'));
+for(let i=0;i<themes.length;i++){const t=themes[i],expected=ex[t];if(i)await p.locator('.theme-toggle').first().click();await p.waitForFunction(e=>getComputedStyle(document.body).backgroundColor===e,expected.bg,{timeout:6000});await p.waitForTimeout(250);
+const data=await p.evaluate(()=>{const get=(s,k)=>{const el=document.querySelector(s);return el?getComputedStyle(el)[k]:null};return {theme:document.documentElement.getAttribute('data-theme')||'dark',bg:get('body','backgroundColor'),bodyText:get('body','color'),box:get('.lbox','backgroundColor'),button:get('.btn-primary','backgroundColor'),nav:get('.navbar','backgroundColor'),tab:get('.ltab.active','backgroundColor'),text:get('.lbox p','color'),border:get('.lbox','borderColor'),particles:window.__cardioField?.colors?.main?.join(','),skin:!!document.getElementById('seenmed-cardio-themes-delta35'),title:document.querySelector('h1')?.innerText}});
+if(data.theme!==t||data.bg!==expected.bg||data.box!==expected.box||data.button!==expected.button||data.particles!==expected.main||!data.skin||!data.title||!data.nav||!data.tab||!data.text||!data.border)throw Error(`${name} ${t}: ${JSON.stringify(data)}`);checks++;
+}await p.evaluate(()=>window.scrollTo(0,document.documentElement.scrollHeight*.7));await p.waitForTimeout(80);if(!await p.evaluate(()=>scrollY>0))throw Error(name+' défilement');console.log('OK '+name+' : 4 thèmes (fond, texte, carte, barre, bouton, bordure, particules)');}
+if(errors.length)throw Error('pageerror '+JSON.stringify(errors));console.log(`OK ${checks}/44 thèmes, 11 défilements, 0 pageerror`);await b.close();})().catch(e=>{console.error(e);process.exit(1)});

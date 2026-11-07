@@ -1,0 +1,18 @@
+SEENmed — DELTA35 · THÈMES COMPLETS CARDIO · 07/11/2026
+
+DELTA35 corrige DELTA34 selon la précision de l'utilisateur : les quatre palettes s'appliquent non seulement au fond et aux particules, mais aussi à la navigation, aux titres, textes, boutons, cartes, boîtes, bordures, lignes et autres composants de thème des 11 leçons de Sémiologie Cardiaque. Rouge profond (Sombre), bleu (Clair), vert émeraude (Aurore), ambre-cuivre (Océan). Les noms globaux des thèmes restent inchangés. Les couleurs juste/faux et les avertissements conservent leur signification. Les images et la planche fixe noir et blanc restent inchangées.
+
+INSTALLATION WINDOWS — qu'on ait installé DELTA34 ou non
+1. Extraire complètement ce ZIP puis ouvrir DELTA35_interface-cardio_2026-11-07.
+2. Double-cliquer sur INSTALLER-WINDOWS.bat.
+3. Choisir VOTRE dossier medstudy EXISTANT ou son dossier parent. Ne pas sélectionner le dossier medstudy contenu dans ce ZIP.
+4. Après le message « Done! », ouvrir une leçon cardiaque et appuyer sur Ctrl+F5.
+
+Ne pas fusionner le dossier medstudy de ce ZIP sur le site : ses leçons et médias sont des copies de référence et ne contiennent pas tout le site. L'installeur adapte uniquement js/cardio-field.js de votre installation, sans écraser les autres fichiers. Il reconnaît l'ancienne palette DELTA34 exacte ou une structure d'origine compatible ; il sauvegarde l'ancien moteur sous js/cardio-field.before-delta35-...js et refuse toute structure inconnue. Si un message d'erreur apparaît, envoyer une capture à l'agent sans changer les paramètres de sécurité. Le correctif de pneumologie DELTA33 n'est pas touché. En mode Photo, recharger la page après un changement de thème pour reprendre la photo du fond ; en mode Planche le dessin reste noir et blanc comme auparavant.
+
+CONTRÔLES ET LIMITES
+Base officielle 28/10 : onze pages × quatre thèmes = 44 essais Chromium pour fond, texte, carte, barre, bouton, bordure et particules ; 11 défilements, aucune erreur JS dans ces essais. Les 4 modes de fond et 4 thèmes ont été contrôlés sur ca-02 ; un QCM y a été coché et corrigé ; une page de biochimie n'applique pas la peau cardio. Contrastes calculés sur le texte principal/secondaire, cartes, texte discret et boutons de chaque thème : minimum 4,94:1 parmi ces éléments. Les autres contenus et médias des pages de référence sont conservés.
+
+Audit des anciennes leçons et vérificateur d'images signalent des cas préexistants ; le runtime standard n'est pas entièrement vert et recherche notamment la peau bio au lieu de cardio. L'utilisateur a demandé une livraison limitée aux couleurs malgré les limites anciennes, sans transformation des contenus. Ce constat n'est pas une validation complète des anciennes leçons et ne modifie pas les règles des nouvelles. L'interface Windows de l'installeur n'a pas été exécutée directement sur notre banc Linux ; sa logique de transformation a été vérifiée avec les moteurs de base et DELTA34 et refuse les structures incompatibles.
+
+Le ZIP contient le dossier DELTA35/ avec medstudy/ de référence, pages et médias cardio, installeur, LISEZ-MOI et MD5SUMS.txt. Ce n'est pas une nouvelle base complète. MD5SUMS.txt permet de vérifier les fichiers après extraction.

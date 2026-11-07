@@ -1,0 +1,33 @@
+STATUT FINAL — pn-08 « Les syndromes médiastinaux » — AGENT-1
+2026-10-31 15:40 (Oran) · Remplace tous les STATUT précédents. LOCK LIBÉRÉ par ce fichier.
+
+ÉTAT : LIVRÉE ET COMPLÈTE (delta 13 + delta 18 + delta 19). Validée par l'utilisateur
+le 31/10 : ne plus toucher (STANDARD §12.5), sauf patch différentiel si PDF année N.
+
+Historique des correctifs images (retour utilisateur) :
+ · Delta 18 : 6 planches de sections + ff-nerfs générée + 17 documents du cours en cadre
+   1376x768 contain sans déformation (l'utilisateur a précisé ensuite que ces documents
+   avaient déjà leurs dimensions dans le fichier du cours : le cadrage uniforme reste
+   un confort d'affichage, aucun ratio n'a été altéré).
+ · Delta 19 : planche S5 « Topographie moyen & postérieur » + nouvelle image de vue
+   d'ensemble (trachée au médiastin moyen, conforme au cours). Couverture finale :
+   14/14 sections de contenu illustrées, 35 images référencées.
+
+Correctif moteur (delta 19, js/cine.js v3) : la bascule ع/FR du résumé vocal en bas de
+page ne changeait rien — cause et preuve dans l'EVT de livraison du 31/10 15:40.
+pn-08 charge le moteur corrigé via ../js/cine.js?v=4.
+
+PORTES FINALES : audit AUDIT-LECON-GOLD-v3 = 0 bloquant / 0 avertissement, reproduit sur
+assemblage frais complet (base -> 17 -> 18 -> 19, MD5 page 46f290c9d7dbd9ed66a6506feb22563d) ;
+test ciblé RUNTIME-CINE-AR = 10/10 sur le même assemblage ; runtime DOM fonctionnel
+14/14 (les 5 contrôles « peau pneumo » dépendent du hook supprimé au delta 14b — dossier
+AGENT-2, sans effet sur les interactions).
+
+DELTA 19 : SEENmed_DELTA19_pn-08-images-fin+cine-v3_2026-10-31.zip
+ MD5 ec724d8c24948eadd396bf9df3d841e5 · page + 2 images + js/cine.js + LISEZ-MOI + MD5.
+Chaîne complète : base -> 01..05 -> data_COURANT 29/10 -> 06,08,09,10,11,12,13 -> 14 (pn-09)
+ -> 14b (pn-05) -> 15 -> 16 -> 17 -> data_COURANT apres-pn03 -> 18 -> 19.
+Recette : assemble-site.py (LOCK pn-08 + repo AGENT-1).
+
+RIEN NE RESTE sur pn-08. Micro-défauts assumés et fermés (validés utilisateur) :
+ coquille « Gamglions » sur la planche S2 ; fiche flash 4 cases (plan initial 5, sans perte).

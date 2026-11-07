@@ -1,0 +1,54 @@
+════════════════════════════════════════════════════════════════════
+RÈGLE PERMANENTE — FORMAT D'UNE LIVRAISON ZIP SEENmed
+(constat utilisateur 01/11/2026 sur delta 28 v1 — NE JAMAIS OUBLIER,
+s'applique à TOUT agent et à TOUTE livraison, patch compris)
+════════════════════════════════════════════════════════════════════
+
+UN ZIP DE LIVRAISON CONTIENT, TOUJOURS :
+  DELTA<NN>_<lecon>_<AAAA-MM-JJ>/          ← dossier externe nommé
+  ├── medstudy/                            ← préfixe medstudy OBLIGATOIRE
+  │   ├── lecons/<page de la leçon>.html
+  │   ├── js/data.js                       (si l'entrée data change)
+  │   ├── assets/img/<lecon>/…             TOUTES les images de la leçon
+  │   └── assets/audio/<lecon>/…           TOUS les MP3 de la leçon
+  ├── LISEZ-MOI_<DELTA….txt
+  └── MD5SUMS.txt                          (un MD5 par fichier, chemins ./)
+
+INTERDIT (delta 28 v1, à ne jamais refaire) :
+  ✗ un ZIP avec seulement les fichiers modifiés ;
+  ✗ sans dossier externe nommé (zipper LE dossier, pas son contenu) ;
+  ✗ sans MD5SUMS.txt ;
+  ✗ un medstudy/ vide du contenu de la leçon (images/audios manquants).
+
+POURQUOI : l'utilisateur ouvre le ZIP et doit y trouver la leçon
+COMPLÈTE sous medstudy/, comme dans chaque livraison précédente
+(référence : DELTA27_im-11_2026-11-01.zip — 27 fichiers, à dézipper
+par-dessus la racine du site). Un patch ne dispense pas du format :
+on repart du paquet de la leçon livrée, on remplace les fichiers
+modifiés, on régénère MD5SUMS.txt, on zippe le dossier nommé.
+
+AVANT D'UPLoader : vérifier `unzip -l` + extraction test +
+`md5sum -c MD5SUMS.txt` vert. Jamais d'écrasement ni de suppression
+sur Drive : un paquet erroné est RENOMMÉ « …_v1-REMPLACE.zip » et
+le ZIP corrigé est uploadé sous le nom propre (Registre + EVT).
+
+════════════════════════════════════════════════════════════════════
+SECTION DATA — RÈGLE PERMANENTE (delta 30, 01/11/2026, AGENT-1)
+(constat utilisateur : un data.js périmé a effacé les boutons
+« Ouvrir » de tout le module respiratoire — NE JAMAIS REFAIRE)
+════════════════════════════════════════════════════════════════════
+
+dashboard.js n'affiche « Ouvrir » que si l'entrée data.js a un url.
+TOUTE LEÇON LIVRÉE AVEC UN data.js DOIT, sans exception :
+  1. partir du data_COURANT LE PLUS RÉCENT (Drive, vérifier JOURNAL
+     + Registre — les lignées forcent en silence) ;
+  2. passer OUTIL-verifier-data-monotone.py <ancien> <nouveau>
+     (dossier Qualité) — BLOQUANT si une url/recu disparaît ;
+  3. inclure dans le ZIP son propre js/data-patches/<id>.js :
+       window.MED_DATA_PATCHES = window.MED_DATA_PATCHES || [];
+       window.MED_DATA_PATCHES.push({"id":"xx-00","url":"lecons/…",
+         "recu":true,"qcm":N,"entr":M});
+     (nom unique = aucun autre ZIP ne peut l'écraser ; appliqué par
+     js/data-merge.js du delta 30, après data.js, de façon monotone).
+Le data convergent total de référence après delta 30 :
+  data_COURANT_2026-11-01_convergent-total-delta30.js (92 ids, 76 urls).

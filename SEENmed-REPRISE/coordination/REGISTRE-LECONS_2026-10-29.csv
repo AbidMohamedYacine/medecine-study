@@ -1,0 +1,23 @@
+lecon_id;statut;agent;file;priorite;dossier_livraison_id;zip_id;notes
+bi-05;LIVREE;AGENT-1;-;S;17NO7hGnfkpPEvdWPMYMozVHqooqBZCfj;1fQBk18KnKVHXvSqm4EZZ4TxmGXxuac6n;page corrigée dans livraison 02
+bi-06;LIVREE;AGENT-1;-;S;1VDAoeTxUWiM4o6J8Bq503x-B1CzsE1OK;1oZixx-zRQDwsRiewm9QEQLWEbCzpJ94f;delta 03 dossier 1E_2B9t-Ezsntq1jFF-XSzxOFy7g8JE82 zip 1z7HlBDc4Eu3ABGf3Ik1EkGCelQzCxBU4
+pn-01;LIVREE;AGENT-2;-;S;1bgZ_b4dAIc5nvf6lTFYMk5HM4A0vew-q;1dNNXZc-oiN62uITLp3M29tQLC2LC1uSp;zip sans préfixe medstudy
+pn-04;LIVREE;AGENT-2;-;S;1W5tDAu8SOfVJV9hySN8aUYXM9uJ9ycey;1yuvRHrhxZgHj7ZZM1IB9k6q2rTfycZZA;dossier imbriqué dans 04 à la création - ne pas déplacer
+pn-07;EN_COURS_RESERVEE;AGENT-2;AGENT-2;A;;;LOCK 1mtjxyqRrSoirVJvXdpiu9FvDNk6hvHPF - déclaré en cours par l'utilisateur 29/10
+ra-05;BLOQUEE;-;-;S;;;aucune source - KLOUCHA 09.10 / BELMESSABIH 13.10 - en attente utilisateur
+sg-05;LIBRE;;AGENT-1;S;;;
+pn-05;LIBRE;;AGENT-2;A;;;source 157 Ko à vérifier
+pn-03;LIBRE;;AGENT-2;A;;;
+pn-08;LIBRE;;AGENT-2;A;;;
+pn-11;LIBRE;;AGENT-2;A;;;source docx
+sg-04;LIBRE;;AGENT-1;A;;;
+bi-04;LIBRE;;AGENT-1;A;;;
+pn-02;LIBRE;;AGENT-3;B;;;
+pn-06;LIBRE;;AGENT-3;B;;;
+pn-09;LIBRE;;AGENT-3;B;;;
+pn-12;LIBRE;;AGENT-3;B;;;
+pn-10;LIBRE;;AGENT-3;B;;;
+ph-09;LIBRE;;AGENT-1;B;;;
+psy-09;LIBRE;;AGENT-4;B;;;
+psy-08;LIBRE;;AGENT-4;B;;;
+psy-06;LIBRE;;AGENT-4;B;;;PDF 6.6 Mo uniquement - jamais le pptx 1.23 Go

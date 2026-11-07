@@ -1,0 +1,38 @@
+EVT 2026-10-30 11:30 — AGENT-1 → AGENT-2 / AGENT-3 / AGENT-4
+Objet : 2 règles à appliquer par tous (rappel images + méthode résumé vocal long)
+
+1) IMAGES — PLUSIEURS PAR SECTION = AUTORISÉ ET ATTENDU (décision utilisateur)
+- Aucun plafond d'une image par section. Si le contenu l'exige (mécanisme,
+  anatomie, comparaison, piège...), ajoutez une planche par sous-bloc.
+- Conditions : même contrat qualité (STANDARD-OR-v3 §8.1), image placée SOUS
+  le sous-bloc qu'elle illustre, correspondance EXACTE avec le texte voisin
+  (faits, chiffres, vocabulaire). Image décorative/approximative = rejet.
+- Le cap plateforme (10 images/message) règle le rythme, pas le total.
+  => STANDARD-OR-v3 §8.2 renforcé (copie __v1130 au KIT, fait foi).
+
+2) AUDIO — RÉSUMÉ LONG EN PARTIES COLLÉES (méthode ca-02, nouveau §4.1)
+- Constat mesuré sur ca-02 : chapitres 73-87 s ; resume-fr 172 s et
+  resume-ar 178 s, avec 2 en-têtes de flux dans chaque fichier = l'ancien
+  agent générait le résumé en 2 parties puis les collait en 1 seul MP3.
+- À faire partout : script du résumé écrit EN ENTIER (toutes les sections :
+  fait-clé + chiffre + piège chacune), découpé aux frontières de phrases en
+  parties ≤ ~1 400 caractères, générées avec le MÊME voice_id, puis collées
+  avec COLLER-MP3.py (KIT qualite-2026-10-30) → UN seul resume.mp3 /
+  resume-ar.mp3. Cible : 2,5 à 3× la durée d'un chapitre (~3-4 min/langue).
+- Chaque partie compte dans le cap 10 audios/message. Plan type :
+  message A = 8 chapitres FR ; message B = résumé FR (2-3 parties) +
+  résumé AR (2-3 parties). La page ne référence que le fichier collé ;
+  les parties restent dans travail/ (jamais dans la page).
+- Rappel règle du 30/10 11:00 : chapitres FR uniquement, AR au résumé seul.
+
+3) CONSÉQUENCE SUR L'EXISTANT (phase 2 Contenu, locks AGENT-1 en cours)
+- pn-01 : résumés FR/AR en 1 partie (~70 s) = sous le standard → à refaire.
+- pn-04 : résumé FR ~86 s, AR ~74 s (1 partie) → à refaire.
+- bi-06 : résumé AR déjà en 2 parties (~147 s) OK ; FR 1 partie (~88 s) → à refaire.
+Aucune action immédiate demandée : c'est dans le patch qualité phase 2
+d'AGENT-1. Pour toute NOUVELLE leçon, appliquer §4.1 dès la construction.
+
+Fichiers (KIT qualite-2026-10-30, suffixe __v1130 = font foi) :
+STANDARD-OR-v3.md (§4.1 nouveau, §8.2 renforcé), HANDOFF-NOUVEL-AGENT.md
+(§6 images, §7 audio), COLLER-MP3.py (collage vérifié : retire les ID3 des
+parties 2+, refuse les fréquences différentes, contrôle la durée totale).

@@ -1,0 +1,7 @@
+À TOUS LES AGENTS — DELTA35 remplace DELTA34 · 07/11/2026
+
+Rectification utilisateur : ce sont les quatre thèmes COMPLETS de Sémiologie Cardiaque qui doivent être recolorés (navigation, mots, boutons, cartes, bordures, fond, etc.), pas seulement le fond. DELTA35 livré : https://drive.google.com/file/d/1ur3NvS9Y2RPZWtC6m1_4uvdvB0_cbDV8/view · MD5 7c020e3f1806e4253953eb1fd2f18f27. DELTA34 conservé mais renommé _v1-REMPLACE.
+
+Ne pas fusionner le dossier medstudy de référence du ZIP avec le site courant. L'installeur adapte uniquement js/cardio-field.js existant, reconnaît DELTA34 exact ou une structure d'origine compatible, crée une sauvegarde et refuse les inconnues. L'interface Windows n'a pas été testée sur notre banc ; installation sur le PC utilisateur à confirmer. DELTA33 pneumologie et tous les autres modules sont préservés.
+
+Vérifications ciblées : 44 thèmes/11 pages, 4 modes sur ca-02, QCM interactif ca-02, contraste des composants principaux, extraction et 503 empreintes ; limites et exception utilisateur relatives aux audits de leçons anciennes dans JOURNAL/EVT_2026-11-07_AGENT-1_DELTA35_INTERFACE-CARDIO_LIVRE.txt. Ce n'est ni une dispense générale pour les nouvelles leçons ni une réaffectation des chantiers des autres agents.

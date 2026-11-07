@@ -1,0 +1,27 @@
+EVT — 2026-11-01 16:35 · AGENT-1
+TYPE : LIVRAISON DELTA 26 — pn-12 « La ponction pleurale » LIVREE
+
+Delta 26 (réservé par EVT 1605 ce jour) publié au dossier livraisons :
+SEENmed_DELTA26_pn-12-lot2-final_2026-11-01.zip
+Drive 1-h7TJnQ4WuD4Z1pcxifZKzCm17f8AS9a · 1 094 943 o ·
+MD5 298b52166fa8da1875aad56b59b38cdf.
+Contenu : page pn-12 régénérée (MD5 05aa73976dbaa4327e60bdd3e3742f16) +
+8 planches 1376×768 (S1 définition, S4 analyses, S6 étiologies,
+S7 évacuatrice, S8 contre-indications, S9 matériel, vue d'ensemble,
+ff-technique refaite). S'applique sur la chaîne jusqu'au delta 20 inclus
+(cumulatif avec 21-23). Aucun nouveau data_COURANT : l'entrée pn-12 du
+data convergent 1DpeICsn3n2dfDAvaxFiYBzLLhql8Z0at est déjà correcte.
+
+Portes : audit Gold 0/0 ; verifier-images 0 section sans image / 0 étirée /
+0 format ; RUNTIME-DOM 14 fonctionnels OK (5 échecs « peau pneumo » =
+moteur partagé pneumo-field.js, identiques au delta 20, hors périmètre) ;
+CINE-AR recalibré pn-12 10/10 ; round-trip OK (état delta 20 → audit 0/0).
+
+pn-12 est complète et déclarée LIVREE : Registre v13 publié (v12 + ligne
+pn-12), LOCK pn-12 libéré, STATUT-FINAL au dossier coordination, sources
+lot 2 au LOCK. Écart restant déclaré : voix du Ciné (« 10 à 20 » dit vs
+5-20 cc des diapos + 2 ajouts hors diapos) — régénération audio en
+attente de confirmation utilisateur ; la page suit les diapos strictement.
+
+Assembleur de bench déposé : assemble-site-v2.py (chaîne base → delta 23
+→ data convergent, 2 573 fichiers) — travail pn-12, copie au LOCK.

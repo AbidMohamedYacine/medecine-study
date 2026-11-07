@@ -1,0 +1,51 @@
+STATUT FINAL — pn-08 « Les syndromes médiastinaux » — LIVREE
+AGENT-1 · 2026-10-30 23:40 (Oran) · LOCK 1WWNtgBhBWdwf1ZVMoxq0hRcg-4nvmd2d → verrou libéré.
+
+LIVRAISON
+- Delta 13 : SEENmed_DELTA13_pn-08-syndromes-mediastinaux_2026-10-30.zip
+  Drive : 1swiJkqqnbDulLzKaMBmNlUTBuBZEuTpU · 7 706 805 o
+  MD5 ZIP : e954f714faa55e6b979e2194072af3d0 · MD5 page : 02ea83cef6e3c51161a8ccf4d2ec4c97
+- Installation : après delta 12 (base → 01→05 → data_COURANT → 06,08,09,10,11,12 → 13).
+- Contenu : page pn-08 complète (24 sections, 213 Ko), 11 planches + 17 reels,
+  8 audios (6 chapitres FR + résumé FR 144 s + résumé AR 200 s, collés),
+  keywords.css corrigé (§10), data.js (pn-08 recu:true).
+
+PORTES (30/10, banc assemblé recette EVT 2240)
+- AUDIT-LECON-GOLD-v3 : 0 bloquant, 0 avertissement. Régression vérifiée :
+  pn-01 / pn-04 / bi-06 toujours 0 bloquant après keywords.css + data.js.
+- RUNTIME-DOM-v3 (jsdom) : 19/19 (QCM, Ciné ×15 mini-lecteurs, dictionnaire
+  56 termes, AR/RTL, flashcards 30, peau pneumo ×4 thèmes, 0 erreur JS).
+- Round-trip : assemblage FRAIS (/tmp/site2) + delta 13 seul → pn-08 0/0,
+  MD5 de la page identique. Le delta est auto-suffisant.
+
+STANDARDS APPLIQUÉS DÈS LA PREMIÈRE LIGNE
+- §3 : 5 × .qexp-item proposition par proposition FR + AR (7 annales verbatim
+  ELITE p.22/p.43 + 12 entraînement calibrés 1×3, 2×5, 3×4).
+- §5 : 56 mots-clés, arabe d'abord + français <bdi class="fr-term"> en référence.
+- §10 : défaut « sous navbar » localisé au panneau mots-clés (.kw-panel top:0
+  sous .navbar z-999) → keywords.css top: var(--nav-h), versionné ?v=4 sur
+  pn-08, bénéfice passif toutes pages (sections déjà à 135px, lesson.css intact).
+- Audio : règle permanente (chapitres FR seuls, résumé total FR+AR long).
+
+POINTS HONNÊTES (détail dans le LISEZ-MOI du delta)
+- ff-nerfs (fiche) : recomposé des vignettes de nerfs.webp (1 génération
+  rejetée par la modération, budget 10/10 respecté sans retry).
+- Fiche flash 4 cases (défaut STANDARD) au lieu de 5 (PLAN-SOURCE) :
+  étiologies fusionnées dans « Radio & étiologies ».
+- Patron ca-02 (pas pn-01) pour .qcm-focus et .reel-strip : aucun data-tr
+  (ar-mode.js casse les valeurs liste/figure en mode AR). 81 data-tr, 100 %
+  de valeurs chaînes HTML, égalité stricte avec arData.
+- jsdom ≠ écoute réelle : relecture utilisateur via aperçu local conseillée.
+
+ARTEFACTS (repo Git, branche arena/6cbc9050-medecine-study)
+- travail/pn-08-syndromes-mediastinaux/ : build_pn08.py (page générée depuis
+  le châssis pn-01, auto-contrôles), contenu_a/b, qcm_pn08, kw_fc_pn08,
+  audio-scripts.md, PLAN-SOURCE, annales-texte.txt, source-texte.txt,
+  assemble-site.py, dump-chassis.py, reels-manifest.txt, ce STATUT.
+- coordination/ : EVT_2026-10-30-2340_AGENT-1_PN08-LIVREE.txt,
+  REGISTRE-LECONS_2026-10-30_v4.csv (pn-08 → LIVREE).
+
+RESTE À FAIRE / SUR DEMANDE
+- Patch différentiel à l'arrivée du PDF année N.
+- Régénération d'une vraie planche « nerfs » dédiée à la fiche (sur budget
+  futur) — optionnel, la composée actuelle est propre et étiquetée.

@@ -1,0 +1,22 @@
+EVT — 2026-11-01 16:50 · AGENT-1
+TYPE : RÉSERVATION DELTA 27 + LOCK — im-11 « Les déficits immunitaires primitifs » (DIP)
+
+Sur demande utilisateur, AGENT-1 ouvre le module Immunologie avec la leçon
+DIP et réserve le DELTA 27 (dernier numéro connu : 26 livré ce jour, pn-12).
+
+- ID catalogue : im-11 (data.js « Les déficits immunitaires primitifs (1) »,
+  recu:false). im-12 « (2) » NON touché : le deck source couvre l'arc complet
+  (généralités → traitement) ; si une 2ᵉ source arrive, elle ira à im-12.
+- Source : « 10_ DIP.pptx.pdf » (dépôt git racine), Dr Ouikhlef N., 33 diapos,
+  MD5 fdefbbaa469a6ef547386e30002e95a8 — lue en entier, PLAN-SOURCE au LOCK.
+- Annales : AUCUN recueil immuno sur Drive (recherches ELITE/mmuno/annale
+  négatives) → leçon sans annales (qcm:0, entraînement uniquement), déclaré.
+  Si un agent connaît un recueil EMD immuno, le signaler : patch ciblé ensuite.
+- Peau : module Immunologie (châssis im-01 : has-fluid-field + fluid-field.js),
+  aucun élément de peau pneumo repris.
+- LOCK : dossier LOCK_im-11_2026-11-01_AGENT-1 (1zUzI2ADEKiHbIJjtWNuXdMlvyII7sG8e).
+  im-11 = chantier AGENT-1, ne pas toucher.
+- Livraison visée ce GO : page gold complète (12 sections), Ciné 6 chapitres
+  FR + résumé long FR/AR, 10 planches générées détaillées + documents du
+  cours (camembert fréquence, 10 signes d'alarme, tableau d'orientation),
+  portes complètes, data_COURANT nouveau (im-11 recu:true), delta 27.

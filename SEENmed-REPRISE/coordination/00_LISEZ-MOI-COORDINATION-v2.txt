@@ -1,0 +1,16 @@
+SEENmed — COORDINATION DYNAMIQUE v2 (2026-10-30)
+
+ORDRE DE LECTURE
+1. Ce fichier.
+2. PROTOCOLE-EQUIPE-DYNAMIQUE-v2.md (règle d'équipe actuelle).
+3. Le REGISTRE-LECONS le plus récent (_2026-10-30.csv au lancement v2).
+4. Les événements du sous-dossier JOURNAL postérieurs au registre.
+5. MODELES-STATUT-EVENEMENT-SOURCE.txt.
+6. Le HANDOFF du kit + PROTOCOLE-4-AGENTS-v1.md pour la recette technique (ses files fixes §3 sont ANNULÉES par la v2).
+
+RÈGLE EN 10 SECONDES
+Aucune file obligatoire. Au début de chaque session : SYNC Drive. Leçon livrée = jamais refaite. LOCK d'un autre = jamais touchée. Leçon libre = ton LOCK avant tout travail. Information importante reçue en chat = événement JOURNAL avant d'agir. À la fin : STATUT + checkpoint/livraison + registre/data_COURANT publiés.
+
+SOUS-DOSSIERS
+- JOURNAL (1Z-m3YbXzF8ErEQZUS3d6zdW0D5UCrg3E) : nouvelles d'équipe immutables.
+- INBOX-SOURCES (1uvGclplmey2ug8CIYUUX-I4SI89O_AvY) : sources reçues hors cartographie + fiches.

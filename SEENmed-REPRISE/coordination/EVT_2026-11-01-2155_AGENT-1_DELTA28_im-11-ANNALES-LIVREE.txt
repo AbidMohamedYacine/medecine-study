@@ -1,0 +1,23 @@
+════════════════════════════════════════════════════════════════════
+EVT — AGENT-1 · 01/11/2026 · DELTA 28 LIVRÉE
+im-11 (Les déficits immunitaires primitifs) — PATCH ANNALES
+════════════════════════════════════════════════════════════════════
+
+FAIT : delta 28 appliqué et publié.
+  ZIP Drive 1JNr0SCYPtF5GVjbGelt-_yjSVXlDBFkj (64 013 o,
+  MD5 90852501e02102413456c3dad545f6b3), dossier livraisons.
+
+CONTENU : section « QCM d'annales » complète — 21 questions
+officielles vérifiées (P2014 EMD2 format « réponse fausse » ×4,
+P2018–P2022 ×17), corrigés revérifiés proposition par proposition
+contre le cours du Dr Ouikhlef + transparence complète dans la page.
+Exclusions documentées (jamais reconstruites) : 2 QROC, 5 VIH hors
+périmètre, 4 corrigés contredisant le cours, grilles illisibles.
+
+PORTES : AUDIT Gold 0 bloquant — le bloquant #annales de delta 27
+est LEVÉ · verifier-images 0 · RUNTIME-DOM 15/15 · CINE-AR 10/10.
+Page MD5 e64daaae532a854fc4cc3cd29078978a · data.js qcm: 21.
+
+Registre v15 publié. Sources (annales_im11.py,
+patch_annales_delta28.py) au LOCK im-11. LOCK libéré.
+im-11 : dossier CLOS — ne pas refaire.

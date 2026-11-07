@@ -1,0 +1,73 @@
+=== MESSAGE POUR AGENT-2 — ONBOARDING COMPLET (à coller dans son chat) ===
+
+Salut. Information importante que tu n'as pas encore : tu fais partie d'une
+EQUIPE DE 4 AGENTS (4 chats Arena : AGENT-1, toi = AGENT-2, AGENT-3, AGENT-4)
+qui construisent ensemble le site SEENmed de l'utilisateur (étudiant en
+médecine à Oran, examen le 26/11/2026). Vous êtes coordonnés UNIQUEMENT par
+Google Drive (pas de mémoire partagée entre chats) : tout passe par le
+dossier coordination 1P_NzJcrBQIbUc9r0JjXzmb0Lk-C8XTsA et son JOURNAL
+(1Z-m3YbXzF8ErEQZUS3d6zdW0D5UCrg3E). AGENT-1 arrive en fin d'usage : l'équipe
+continue sans lui, en suivant exactement ce qui suit.
+
+TON HISTORIQUE DANS L'EQUIPE : tu as construit pn-01 (dyspnée) et pn-04
+(expectoration). AGENT-1 les a auditées le 30/10 : leurs builders avaient
+inventé des contrats incompatibles avec les moteurs JS (QCM/Ciné/mots-clés/
+flashcards inopérants). Les pages ont été REPAREES structurellement
+(deltas 06 à 12 : contrats gold, peau pneumologie, audios règles à jour,
+résumés longs, chapitre orientation, planches fiche niveau or).
+=> NE RECONSTRUIS PAS pn-01/pn-04. Elles sont A_PATCHER : il reste le
+Contenu phase 2 (ci-dessous). Ne recopie jamais build_pn01/build_pn04
+(build_bi06 non plus) : le standard fait foi, puis le MOTEUR JS.
+
+SEQUENCE OBLIGATOIRE AVANT TOUT TRAVAIL (SYNC) :
+1. Lis le JOURNAL Drive jusqu'à l'événement 2026-10-30-1330.
+2. Lis REGISTRE-LECONS v3 (coordination) : bi-05 LIVREE ; bi-06/pn-01/pn-04
+   A_PATCHER ; pn-07 EN_COURS = LA TIENNE, en pause (ne la reprends que si
+   l'utilisateur te le dit) ; ra-05 BLOQUEE_SOURCE ; 16 A_FAIRE.
+3. KIT (1bHMhdFd94LIgR_GD9vIkv2zMRK-KjFYI) > qualite-2026-10-30 :
+   STANDARD-OR-v3.md__v1330 (= la loi), HANDOFF-NOUVEL-AGENT.md__v1245,
+   COLLER-MP3.py, JOURNAL-IMAGES_phase2.md__v1330, scripts audio archivés.
+4. Site de travail = 00_BASE-OFFICIELLE_2026-10-28
+   (1O5QMhvttWd402VUjfyQwAaDeJRfRIvnK) + deltas 06, 08, 09, 10, 11, 12
+   dans l'ordre (delta 07 CADUC). Vérifie les MD5.
+5. LOCKS : avant de travailler sur une leçon, cherche son LOCK sur Drive.
+   Verrouillée = tu ne touches pas. Libre = tu crées LOCK_<id>_AGENT-2 +
+   STATUT RESERVATION AVANT la première ligne. Les locks d'AGENT-1 sur
+   bi-06/pn-01/pn-04 : si l'utilisateur te confie une de ces leçons, publie
+   un événement TRANSFERT au JOURNAL puis ton propre LOCK. Aucun verrou
+   n'expire tout seul ; checkpoints EN-COURS à chaque étape (si la limite
+   te coupe, les autres voient ton lock et sautent la leçon).
+
+REGLES PERMANENTES (décisions utilisateur — ne jamais les « améliorer ») :
+- AUDIO : chapitres Ciné en FRANÇAIS uniquement ; l'arabe existe SEULEMENT
+  sur le dernier chapitre (le résumé total, FR + AR). Résumé long : écris
+  le script entier, découpe aux phrases en parties <= ~1 400 caractères
+  (nombre LIBRE : 2, 3, 4...), même voix, colle avec COLLER-MP3.py.
+- IMAGES : illustration médicale REALISTE qui MONTRE la réalité (où c'est,
+  à quoi ça ressemble, comment ça marche, connexions), fond = environnement
+  NORMAL et rempli (ni blanc vide, ni décoratif), étiquettes françaises
+  exactes. Organisation intelligente : ordre de lecture logique, postures
+  naturelles, AUCUN chevauchement illogique. ⛔ Style infographie bleu
+  nuit/or INTERDIT (rejeté). Plusieurs images par section si le Contenu
+  l'exige, chacune sous son sous-bloc, fidèle au texte. Zoom 100 % de
+  contrôle ; planche fausse/confuse/sans libellés = REJETEE.
+- TRADUCTION AR : sens en contexte, jamais mot à mot ; terme scientifique
+  = arabe d'abord + français juste à côté (<bdi class="fr-term">), ordre
+  des informations préservé.
+- FICHE FLASH : nombre de cases adapté à la leçon (4 par défaut, 5-6 si
+  besoin), chaque case avec SA image propre et sa liste dense.
+- CAPS par message utilisateur : 10 images + 10 audios, tentatives
+  incluses, un seul bloc compté/listé/vérifié, aucun retry dans le tour.
+- Jamais inventer un fait/chiffre/corrigé ; source lue en entier ; N-1 avec
+  empreinte, PDF de l'année = patch différentiel. ca-02/ca-09 = exemples,
+  intouchables. Jamais « fini/LIVREE » pour du partiel.
+
+TA MISSION PROBABLE (l'utilisateur confirmera) : terminer la phase 2
+Contenu (voir MESSAGE-AUX-AGENTS_REPRISE-PHASE2.txt, points A→E :
+corrections QCM proposition par proposition FR/AR, mots-clés 45-60,
+bi-06 ff-algo/ff-bnp + planches de sections au style réaliste, densité
+fiches/flashcards), puis pn-07 quand il te le dira. Publie chaque étape :
+delta Drive daté + LISEZ-MOI + MD5 + événement JOURNAL. Réponses brèves.
+
+Commence par le SYNC complet et dis à l'utilisateur ce que tu as compris
+de l'état, en 10 lignes max, avant de générer quoi que ce soit.

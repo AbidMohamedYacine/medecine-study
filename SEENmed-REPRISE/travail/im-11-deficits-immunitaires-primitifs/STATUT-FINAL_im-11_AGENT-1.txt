@@ -1,0 +1,29 @@
+STATUT-FINAL — im-11 (Les déficits immunitaires primitifs) — AGENT-1 — 2026-11-01
+STATUT : LIVREE (complète, lot unique) — LOCK LIBÉRÉ
+
+LIVRAISON
+- Delta 27 : DELTA27_im-11_2026-11-01.zip, Drive 180jkTwHnPECm883osrUJsUwa06GA8Wck
+  (11 210 620 o, MD5 bf615812c873e637ebfa9ddae452efd1) dans le dossier livraisons.
+- Page : lecons/im-11-deficits-immunitaires-primitifs.html (MD5 86b7eb7e77352ab1edb0c4cfddaff939), 21 sections DOM.
+- data_COURANT prolongé DANS le delta (js/data.js) : seule l'entrée im-11 changée
+  (recu:true, qcm:0, entr:15) depuis le convergent apres-pn10-pn11 (1DpeICsn…).
+- Registre : REGISTRE-LECONS_2026-11-01_v14.csv (ligne im-11 LIVREE ajoutée).
+
+SOURCE : « 10_ DIP.pptx.pdf » (Dr Ouikhlef, 33 diapos lues en entier ; MD5 fdefbbaa469a6ef547386e30002e95a8).
+ANNALES : aucune n'existe pour l'immunologie (recherche Drive négative) → entraînement
+seul, déclaré dans la page ; 15 QCM 4×1/6×2/5×3 construits depuis les diapos seuls.
+
+CONTENU : 12 sections (Définition · Fréquence · Signes cliniques · Classification IUIS 2017 ·
+DIC · SCID · HLA-II · Humoraux · Complément · Phagocytes/TLR · Syndromiques · Exploration+traitement),
+FR + jumeaux arabes complets (70 clés data-tr/arData), 54 mots-clés, 30 flashcards.
+Peau immuno fluid-field. 10 planches générées 1376×768 vérifiées au zoom (étiquettes exactes)
++ 5 documents du cours en reel/. Ciné 7 chapitres : 6 FR + résumé long FR 241 s / AR 266 s,
+scripts vérifiés mot-à-mot avant génération (camembert recopié sur l'image : 55/13/11/10/4/3/2/1/1).
+
+PORTES : verifier-images 0/0/0 · RUNTIME-DOM_im-11 15/15 · RUNTIME-CINE-AR_im-11 10/10 ·
+AUDIT Gold : 1 bloquant justifié (#annales — aucune source ; inventer interdit) + 7 avertissements
+assumés (PEAU im inconnu de l'audit ; 6 IMG-DUP volontaires Fiche/Mindmap).
+
+SOURCES DE TRAVAIL : déposées dans ce LOCK (build_im11.py, contenu_a/b.py, qcm_im11.py,
+kw_fc_im11.py, scripts-audio.txt, RUNTIME-*_im-11, source-texte.txt, PLAN-SOURCE.md).
+Prochaine leçon immuno selon instruction utilisateur. Ne pas refaire im-11.

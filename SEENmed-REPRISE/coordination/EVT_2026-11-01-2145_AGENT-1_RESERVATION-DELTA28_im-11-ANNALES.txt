@@ -1,0 +1,17 @@
+EVT 2026-11-01 ~21:45 (Alger) — AGENT-1 — RÉSERVATION DELTA 28 : annales pour im-11 (Les déficits immunitaires primitifs)
+
+NOUVELLE SOURCE TROUVÉE (racine du repo, pas sur Drive) : le recueil d'annales
+« CURE - IMMUNO 3ème par COURS (ORAN).pdf » (MD5 47fff39ee1f3e064af31be2750cb34dc)
+contient un chapitre « 10. Deficits Immunitaires » de questions d'examens réels
+(P2018-P2022 + rattrapages) avec grille de corrigés, corroboré par le second
+recueil « Immunologie et Pathologies Associées.pdf ».
+
+PÉRIMÈTRE STRICT (méthode ELITE ; jamais inventer un corrigé) :
+- Retenus : 17 QCM (Q1-Q11, Q14-Q19 du chapitre) — corrigés ☒ explicites, chaque clé
+  revérifiée proposition par proposition contre le cours du Dr Ouikhlef ET le 2e recueil.
+- Exclus et documentés : Q12-Q13 (QROC rédactionnelles, pas de grille), Q20-Q33
+  (corrigés hachurés non tranchables), Q34-Q39 (désalignement grille/questions prouvé).
+
+TRAVAUX : delta 28 = patch im-11 (section #annales restaurée, chip et transparence mis
+à jour, data qcm:17) ; aucun autre chantier touché. LOCK im-11 rouvert pour ce patch
+(même propriétaire). Portes complètes avant livraison.

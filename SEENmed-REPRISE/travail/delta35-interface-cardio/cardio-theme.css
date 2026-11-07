@@ -1,0 +1,120 @@
+/* DELTA35 — identité couleur réservée aux leçons ca-*. Les images et les
+   couleurs de correction juste/faux et d'alerte gardent leur signification. */
+@media screen {
+body.has-cardio-field[data-lesson-id^="ca-"] {
+  --bg:#1b0b13; --bg-card:#31141f; --bg-hover:#492130; --bg-input:#3b1a28;
+  --text:#fff4f5; --text-dim:#e9c3c9; --text-muted:#c9a4ac;
+  --border:#603344; --border-soft:rgba(255,160,177,.20); --card-border:#603344;
+  --blue:#ff7789; --blue-dark:#cc4b60; --blue-bright:#ff99a4; --blue-soft:#ffadb8; --blue-glow:rgba(255,119,137,.25);
+  --teal:#ffc082; --teal-dark:#da8958; --teal-soft:#ffd0a1;
+  --blue-rgb:255,119,137; --teal-rgb:255,192,130; --accent-rgb:255,160,167;
+  --grad-brand:linear-gradient(135deg,#ff7789,#ffc082); --grad-deep:linear-gradient(160deg,#361321,#1b0b13);
+  --ca-nav:rgba(37,10,22,.97); --ca-nav-text:#ffe5e7; --ca-button:#a82540; --ca-tab-bg:rgba(255,119,137,.22);
+}
+html[data-theme="light"] body.has-cardio-field[data-lesson-id^="ca-"] {
+  --bg:#e8f2fc; --bg-card:#f8fbff; --bg-hover:#d7e9fb; --bg-input:#e1effc;
+  --text:#122b49; --text-dim:#294e73; --text-muted:#496b8a;
+  --border:#a8c7e7; --border-soft:rgba(18,91,175,.20); --card-border:#a8c7e7;
+  --blue:#155bb0; --blue-dark:#10438a; --blue-bright:#155bb0; --blue-soft:#164f98; --blue-glow:rgba(21,91,176,.22);
+  --teal:#006f88; --teal-dark:#005668; --teal-soft:#006678;
+  --blue-rgb:21,91,176; --teal-rgb:0,111,136; --accent-rgb:35,105,175;
+  --grad-brand:linear-gradient(135deg,#155bb0,#006f88); --grad-deep:linear-gradient(160deg,#d9eafb,#e8f2fc);
+  --ca-nav:rgba(219,235,250,.97); --ca-nav-text:#163a63; --ca-button:#12509d; --ca-tab-bg:rgba(21,91,176,.16);
+}
+html[data-theme="aurora"] body.has-cardio-field[data-lesson-id^="ca-"] {
+  --bg:#071d18; --bg-card:#12372d; --bg-hover:#1d4a3b; --bg-input:#194337;
+  --text:#f0fff7; --text-dim:#bce8d3; --text-muted:#8dc6ad;
+  --border:#346f58; --border-soft:rgba(115,226,175,.20); --card-border:#346f58;
+  --blue:#7ce2b3; --blue-dark:#38ad7c; --blue-bright:#a4f1ca; --blue-soft:#b1f1d0; --blue-glow:rgba(124,226,179,.24);
+  --teal:#e3df8a; --teal-dark:#b8b359; --teal-soft:#f1eba9;
+  --blue-rgb:124,226,179; --teal-rgb:227,223,138; --accent-rgb:155,219,175;
+  --grad-brand:linear-gradient(135deg,#7ce2b3,#e3df8a); --grad-deep:linear-gradient(160deg,#10382c,#071d18);
+  --ca-nav:rgba(6,37,27,.97); --ca-nav-text:#e0ffec; --ca-button:#176947; --ca-tab-bg:rgba(124,226,179,.22);
+}
+html[data-theme="ocean"] body.has-cardio-field[data-lesson-id^="ca-"] {
+  --bg:#1d110a; --bg-card:#352017; --bg-hover:#4b3021; --bg-input:#42291c;
+  --text:#fff7eb; --text-dim:#ebd0b2; --text-muted:#cdaa89;
+  --border:#704b34; --border-soft:rgba(255,190,119,.2); --card-border:#704b34;
+  --blue:#ffc27c; --blue-dark:#d78b48; --blue-bright:#ffdaa7; --blue-soft:#ffdfb5; --blue-glow:rgba(255,194,124,.24);
+  --teal:#f59b78; --teal-dark:#ce6a4d; --teal-soft:#ffc0a4;
+  --blue-rgb:255,194,124; --teal-rgb:245,155,120; --accent-rgb:252,175,122;
+  --grad-brand:linear-gradient(135deg,#ffc27c,#f59b78); --grad-deep:linear-gradient(160deg,#3c2618,#1d110a);
+  --ca-nav:rgba(36,20,11,.97); --ca-nav-text:#fff1de; --ca-button:#995020; --ca-tab-bg:rgba(255,194,124,.23);
+}
+html body.has-cardio-field[data-lesson-id^="ca-"] {background:var(--bg);}
+html body.has-cardio-field[data-lesson-id^="ca-"]::after {
+  background:radial-gradient(ellipse 55% 40% at 12% -5%,rgba(var(--blue-rgb),.11),transparent 65%),radial-gradient(ellipse 45% 35% at 95% 8%,rgba(var(--teal-rgb),.08),transparent 60%);
+}
+html body.has-cardio-field[data-lesson-id^="ca-"] .navbar,
+html body.has-cardio-field[data-lesson-id^="ca-"] .navbar.scrolled,
+html body.has-cardio-field[data-lesson-id^="ca-"] .nav-menu,
+html body.has-cardio-field[data-lesson-id^="ca-"] .lesson-nav,
+html body.has-cardio-field[data-lesson-id^="ca-"] .footer {background:var(--ca-nav);border-color:var(--border);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .nav-link,
+html body.has-cardio-field[data-lesson-id^="ca-"] .ltab {color:var(--ca-nav-text);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .nav-link:hover,
+html body.has-cardio-field[data-lesson-id^="ca-"] .nav-link.active,
+html body.has-cardio-field[data-lesson-id^="ca-"] .ltab:hover,
+html body.has-cardio-field[data-lesson-id^="ca-"] .ltab.active {color:var(--ca-nav-text);background:var(--ca-tab-bg);border-color:rgba(var(--blue-rgb),.45);box-shadow:0 0 0 1px rgba(var(--blue-rgb),.22);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .ltab.visited {color:var(--teal-soft);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .lesson-progress-bar {background:rgba(var(--blue-rgb),.16);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .lesson-progress-fill {background:var(--grad-brand);box-shadow:0 0 8px rgba(var(--blue-rgb),.4);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .btn-primary,
+html body.has-cardio-field[data-lesson-id^="ca-"] .btn-teal,
+html body.has-cardio-field[data-lesson-id^="ca-"] .lsection-num[class*="n"] {background:var(--ca-button);color:#fff;}
+html body.has-cardio-field[data-lesson-id^="ca-"] .btn-primary:hover,
+html body.has-cardio-field[data-lesson-id^="ca-"] .btn-teal:hover {background:var(--ca-button);color:#fff;box-shadow:0 8px 25px rgba(var(--blue-rgb),.26);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .logo-seen,
+html body.has-cardio-field[data-lesson-id^="ca-"] .logo-med {background:var(--grad-brand);background-clip:text;-webkit-background-clip:text;}
+html body.has-cardio-field[data-lesson-id^="ca-"] .kw-handle {background:linear-gradient(160deg,rgba(var(--blue-rgb),.16),rgba(var(--teal-rgb),.14));border-color:var(--border);color:var(--text);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .kw-btn.on,
+html body.has-cardio-field[data-lesson-id^="ca-"] .kw-sec,
+html body.has-cardio-field[data-lesson-id^="ca-"] .cine-chap.active,
+html body.has-cardio-field[data-lesson-id^="ca-"] .cine-chap .n,
+html body.has-cardio-field[data-lesson-id^="ca-"] .cine-chap-num {background:rgba(var(--blue-rgb),.14);border-color:rgba(var(--blue-rgb),.4);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .kw-sec {color:var(--blue-soft);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .kw-item {border-color:var(--border-soft);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .cine-bigplay:hover {background:rgba(var(--blue-rgb),.4);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .mm-t1,
+html body.has-cardio-field[data-lesson-id^="ca-"] .mm-t2,
+html body.has-cardio-field[data-lesson-id^="ca-"] .ob-title {fill:var(--text);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .mm-t3,
+html body.has-cardio-field[data-lesson-id^="ca-"] .mm-lbl,
+html body.has-cardio-field[data-lesson-id^="ca-"] .ob-txt {fill:var(--text-dim);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .mm-link,
+html body.has-cardio-field[data-lesson-id^="ca-"] .body-line {stroke:rgba(var(--blue-rgb),.4);}
+html[data-theme="light"] body.has-cardio-field[data-lesson-id^="ca-"] .chip-star {color:#8b5100;}
+html[data-theme="light"] body.has-cardio-field[data-lesson-id^="ca-"] .chip-done {color:#176d35;}
+html[data-theme="light"] body.has-cardio-field[data-lesson-id^="ca-"] .lbox.warn .lbox-title i {color:#a51e30;}
+html[data-theme="light"] body.has-cardio-field[data-lesson-id^="ca-"] .lbox.ok .lbox-title i {color:#176d35;}
+
+html body.has-cardio-field[data-lesson-id^="ca-"] .crumbs a {color:var(--text-dim);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .body-fill {fill:rgba(var(--blue-rgb),.05);}
+html body.has-cardio-field[data-lesson-id^="ca-"] {--accent1:var(--blue);--accent2:var(--teal);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .fc-front .fc-q {color:var(--text);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .flash-cell.fc-amber,
+html body.has-cardio-field[data-lesson-id^="ca-"] .flash-cell.fc-red,
+html body.has-cardio-field[data-lesson-id^="ca-"] .flash-cell.fc-blue,
+html body.has-cardio-field[data-lesson-id^="ca-"] .flash-cell.fc-purple {border-top-color:var(--blue);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .flash-cell h4 i {color:var(--teal-soft);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .kw-close,
+html body.has-cardio-field[data-lesson-id^="ca-"] .kw-panel-tab {background:rgba(var(--blue-rgb),.14);border-color:rgba(var(--blue-rgb),.45);color:var(--blue-soft);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .kw-close:hover,
+html body.has-cardio-field[data-lesson-id^="ca-"] .kw-panel-tab:hover {background:var(--ca-button);border-color:var(--ca-button);color:#fff;}
+html body.has-cardio-field[data-lesson-id^="ca-"] .src-new {background:rgba(var(--blue-rgb),.12);border-color:rgba(var(--blue-rgb),.3);color:var(--blue-soft);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .cine-spot {background:linear-gradient(135deg,rgba(var(--blue-rgb),.10),rgba(var(--teal-rgb),.06));border-color:rgba(var(--blue-rgb),.28);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .cine-spot.on {border-color:rgba(var(--blue-rgb),.55);box-shadow:0 0 18px rgba(var(--blue-rgb),.15);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .cspot-play {background:var(--ca-button);color:#fff;}
+html body.has-cardio-field[data-lesson-id^="ca-"] .cspot-clock {color:var(--text-dim);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .cspot-lang {background:var(--bg-card);border-color:var(--border);color:var(--text);}
+html body.has-cardio-field[data-lesson-id^="ca-"] .cspot-lang.on,
+html body.has-cardio-field[data-lesson-id^="ca-"] .cspot-lang:hover {background:var(--ca-button);border-color:var(--ca-button);color:#fff;}
+@supports selector(html:has(body)) {
+  html:has(body.has-cardio-field[data-lesson-id^="ca-"]) {--ca-track:#1b0b13;--ca-thumb:#a82540;scrollbar-color:var(--ca-thumb) var(--ca-track);}
+  html[data-theme="light"]:has(body.has-cardio-field[data-lesson-id^="ca-"]) {--ca-track:#e8f2fc;--ca-thumb:#155bb0;}
+  html[data-theme="aurora"]:has(body.has-cardio-field[data-lesson-id^="ca-"]) {--ca-track:#071d18;--ca-thumb:#2b9269;}
+  html[data-theme="ocean"]:has(body.has-cardio-field[data-lesson-id^="ca-"]) {--ca-track:#1d110a;--ca-thumb:#b26c35;}
+  html:has(body.has-cardio-field[data-lesson-id^="ca-"]) ::-webkit-scrollbar-track {background:var(--ca-track);}
+  html:has(body.has-cardio-field[data-lesson-id^="ca-"]) ::-webkit-scrollbar-thumb {background:var(--ca-thumb);border-color:var(--ca-track);}
+}
+}

@@ -1,0 +1,20 @@
+SEENmed — COMPLÉMENT KIT NOUVEL AGENT (2026-10-30)
+À lire avec le HANDOFF, avant l'Étape 0.
+
+1. ANNALES — fichier ajouté au kit Drive
+- `ELITE CARDIO 3EME.pdf` est maintenant dans ce même dossier KIT.
+- ID Drive : `1u0G78keQ4H_m8dsRp9KTo4TmPAUCeAc8`
+- Taille : 1 911 534 octets — MD5 : `1d3463c8254c8bb172da4931e25952d5`
+- Télécharge-le avec le ZIP du kit. En mode sans GitHub, toutes les mentions « ELITE à la racine du repo » du HANDOFF désignent ce fichier Drive.
+
+2. État actuel — la coordination v2 prime sur les passages datés du HANDOFF
+Le HANDOFF reste la recette technique complète, mais son état « 61 pages / première leçon pn-01 » est historique. Lis ensuite le protocole dynamique v2, le dernier registre et le JOURNAL : aucune file fixe ; base reconstruite attendue au 2026-10-30 = 63 pages, seules les 11 références an-06 cassées.
+
+3. Exemples à étudier avant ta première leçon
+- Dans le kit : builders/plans/scripts/pages complets de bi-05 et bi-06.
+- Dans la base reconstruite : pages finales pn-01 et pn-04 faites par AGENT-2.
+- Artefacts AGENT-2 sur Drive si un précédent de module est utile : pn-01 `1A2CZidCvccsneRsCFtjsifMeyDZxo1LF`, pn-04 `1rl5HKbUxrMCgOqPonw3VYY2cbbXl6Md0`.
+Imite la méthode et les contrôles, pas les écarts de conditionnement déjà signalés : les futures livraisons suivent le protocole v2 (dossier numéroté à la racine Drive, ZIP avec racine `medstudy/`).
+
+4. Qualification avant de réserver ta première leçon
+Ton rapport d'Étape 0 doit prouver, chiffres à l'appui : base reconstruite + audit officiel conforme, ELITE téléchargé (MD5 ci-dessus), dernier registre/JOURNAL/LOCKS lus, squelette gold et builders modèles localisés. Si un élément manque : STOP, signale-le en une ligne, n'improvise pas.

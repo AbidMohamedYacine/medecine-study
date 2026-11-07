@@ -1,0 +1,59 @@
+ESSAIS INTERFACE DELTA35
+OK ca-01-pericardites.html : 4 thèmes (fond, texte, carte, barre, bouton, bordure, particules)
+OK ca-02-douleurs-thoraciques.html : 4 thèmes (fond, texte, carte, barre, bouton, bordure, particules)
+OK ca-03-bruits-cardiaques.html : 4 thèmes (fond, texte, carte, barre, bouton, bordure, particules)
+OK ca-04-pression-arterielle.html : 4 thèmes (fond, texte, carte, barre, bouton, bordure, particules)
+OK ca-05-bases-trace-ecg.html : 4 thèmes (fond, texte, carte, barre, bouton, bordure, particules)
+OK ca-06-examen-cardiaque.html : 4 thèmes (fond, texte, carte, barre, bouton, bordure, particules)
+OK ca-07-souffles-cardiaques.html : 4 thèmes (fond, texte, carte, barre, bouton, bordure, particules)
+OK ca-08-insuffisance-cardiaque.html : 4 thèmes (fond, texte, carte, barre, bouton, bordure, particules)
+OK ca-09-syncopes.html : 4 thèmes (fond, texte, carte, barre, bouton, bordure, particules)
+OK ca-10-semiologie-veineuse.html : 4 thèmes (fond, texte, carte, barre, bouton, bordure, particules)
+OK ca-11-semiologie-arterielle.html : 4 thèmes (fond, texte, carte, barre, bouton, bordure, particules)
+OK 44/44 thèmes, 11 défilements, 0 pageerror
+
+MODES, QCM ET MODULE NON-CARDIO
+OK 4 thèmes en mode anime
+OK 4 thèmes en mode eco
+OK 4 thèmes en mode photo
+OK 4 thèmes en mode planche
+QCM interaction { answered: true, correct: 2, wrong: 1 }
+Autre module { skin: false, body: 'bi-01', blue: '#13bd8a' }
+
+CONTRASTE D ELEMENTS PRINCIPAUX
+dark {
+  body: 17.67,
+  secondary: 11.88,
+  card: 10.49,
+  muted: 8.51,
+  button: 6.99
+}
+light { body: 12.63, secondary: 7.62, card: 8.32, muted: 4.94, button: 7.89 }
+aurora { body: 16.99, secondary: 13.04, card: 9.7, muted: 9.03, button: 6.67 }
+ocean {
+  body: 17.38,
+  secondary: 12.49,
+  card: 10.36,
+  muted: 8.54,
+  button: 5.96
+}
+
+RUNTIME STANDARD NON VERT (limites preexistantes et test bio non adapte a cardio)
+
+=== ca-02-douleurs-thoraciques.html ===
+  ✗ FAIL QCM — TypeError: Cannot read properties of null (reading 'textContent')
+  ✓ Ciné central monté (chapitres = JSON) — 18 boutons / 9
+  ✓ mini-lecteurs de section montés — 10 spots
+  ✗ FAIL mini-lecteur : lecture audio réelle
+  ✓ Ciné central : lecture audio réelle
+  ✓ dictionnaire ouvert, tous les termes rendus — 57/57
+  ✓ définitions arabes du dictionnaire
+  ✓ mode arabe : blocs traduits + RTL
+  ✓ flashcards : première carte affichée — Carte 1 / 28 — à réviser aujourd'hui
+  ✗ FAIL flashcards : flip au clic
+  ✓ flashcards : notation → carte suivante — Carte 1 / 28 — à réviser aujourd'hui
+  ✗ FAIL peau bio : canvas présent et champ vivant — -1 particules
+  ✓ aucune erreur JS
+  ✓ aucun asset 404 (hors banc incomplet toléré si listé)
+
+================ 10/14 checks OK — ÉCHECS : ca-02-douleurs-thoraciques.html:QCM ; ca-02-douleurs-thoraciques.html:mini-lecteur : lecture audio réelle ; ca-02-douleurs-thoraciques.html:flashcards : flip au clic ; ca-02-douleurs-thoraciques.html:peau bio : canvas présent et champ vivant

@@ -1,0 +1,34 @@
+⚠️ AGENT-2 — ADDENDUM pn-07 (30/10, complète MSG-AGENT-2_ONBOARDING-COMPLET)
+
+Point que le premier message n'explicitait pas assez, dit clairement ici :
+
+1. Ton travail pn-07 commencé le 29/10 est ANTÉRIEUR au STANDARD-OR-v3 et
+   suit le même modèle que tes pn-01 / pn-04 — modèle PROUVÉ défectueux par
+   l'audit forensique (contrats QCM / Ciné / mots-clés / flashcards
+   incompatibles avec les moteurs réels, hérités de build_bi06.py via
+   l'ancien HANDOFF). Il est donc PRÉSUMÉ NON CONFORME.
+   ⛔ Ne continue PAS dessus tel quel.
+
+2. Rien de pn-07 n'existe sur Drive : ton LOCK_pn-07_AGENT-2 ne contient que
+   la réservation du 29/10 (écrite par AGENT-1). Avant toute reprise :
+   a) publie un STATUT dans ton LOCK disant exactement ce qui existe déjà
+      chez toi (page ? sections ? images ? audios ? combien, quels fichiers) ;
+   b) dépose-y tes fichiers pn-07 existants en EN-COURS ;
+   c) passe AUDIT-LECON-GOLD-v3.py (KIT > qualite-2026-10-30) sur la page et
+      publie le résultat complet dans le LOCK.
+
+3. Reprise seulement après cet audit, et alignée sur le STANDARD-OR-v3
+   (__v1330) : contrats copiés de ca-02 ; audio = chapitres FR, seul le
+   résumé total FR + AR, résumé LONG toutes sections (§4.1, COLLER-MP3.py) ;
+   images §8.2 (réaliste/présentationnel, fond normal rempli, organisation
+   logique, aucun chevauchement illogique) ; peau pneumologie
+   « Air alvéolaire ». Si l'audit est mauvais, reconstruire depuis le
+   squelette gold vaut mieux que patcher un brouillon fautif — tranche avec
+   l'utilisateur, sur pièces (résultat d'audit à l'appui).
+
+4. pn-07 reste LA TIENNE (ton verrou est valide) et reste EN PAUSE jusqu'au
+   GO explicite de l'utilisateur. Rien ne se livre sans audit 0 bloquant +
+   test DOM, comme toutes les leçons.
+
+Copies : ce fichier est aussi déposé dans ton LOCK_pn-07_AGENT-2 et tracé au
+JOURNAL (EVT 2026-10-30-1345). — AGENT-1

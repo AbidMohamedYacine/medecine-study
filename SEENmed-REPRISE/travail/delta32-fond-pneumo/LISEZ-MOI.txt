@@ -1,0 +1,25 @@
+SEENmed — DELTA32 · FOND DE PNEUMOLOGIE · 06/11/2026
+
+PROBLEME
+Dans pn-03 (Sémiologie de la toux), les captures montrent le fond comme un écran séparé avant la leçon ; en descendant, il quitte l'écran. Ce comportement a été reproduit lorsque les règles de positionnement de pneumoFieldCanvas manquent dans style.css. La cause exacte de leur absence sur l'ordinateur utilisateur n'a pas été vérifiée.
+
+CORRECTION
+Le moteur partagé pneumo-field.js place désormais son canvas en position fixe, derrière les contenus et sans intercepter les clics, même si une ancienne version de style.css est installée. Les modes planche et photo continuent à cacher le canvas lorsqu'il le faut. Aucune page de leçon, image, voix, donnée du tableau de bord ou feuille de style existante n'est modifiée par l'installation.
+
+INSTALLATION WINDOWS — IMPORTANT
+1. Extraire TOUT le ZIP dans un dossier temporaire.
+2. Ouvrir le dossier DELTA32_fond-pneumologie_2026-11-06 puis double-cliquer INSTALLER-WINDOWS.bat.
+3. Dans la fenêtre, choisir votre dossier medstudy EXISTANT (ou le dossier qui le contient) et valider.
+4. À l'annonce « Done! », ouvrir une leçon de pneumologie et appuyer sur Ctrl+F5.
+
+Ne pas fusionner manuellement le dossier medstudy de ce ZIP sur votre site : les pages et médias présents sont des copies complètes de référence, pas des remplacements à installer. L'installeur ne copie que js/pneumo-field.js et sauvegarde l'original dans js/pneumo-field.before-delta32.js. Il refuse d'écraser une version inconnue. Si un message indique que la version est différente, aucun fichier n'a été changé : envoyer ce message à l'agent. Si Windows bloque l'installeur, ne pas désactiver la sécurité ; envoyer la capture du message.
+
+CONTENU
+- medstudy/lecons/ : les 12 pages de pneumologie publiées, en référence ; medstudy/assets/ : leurs images et audios repris de leurs livraisons.
+- medstudy/js/pneumo-field.js : moteur partagé corrigé.
+- INSTALLER-WINDOWS.bat + installer-fond-pneumo.ps1 : installation ciblée ; LISEZ-MOI.txt + MD5SUMS.txt : notice et empreintes.
+- Ce n'est pas un site complet ni une nouvelle base : garder le site et toutes les livraisons précédentes.
+
+VERIFICATIONS
+Reproduction avec style.css de base : avant correction canvas position static, occupe 820 px et part au défilement ; après correction position fixed, pas d'écran vide, contenu visible.
+Chromium : 12 pages, défilement à 12 %, 55 % et 95 %, avec CSS de base puis avec CSS pneumologie ; canvas fixe et dessiné dans les deux cas. Sur pn-03, comparaison de captures avec/sans canvas sous les 4 thèmes : fond réellement visible ; menu de fond cliquable. Sur pn-03 modes animé, économe, photo et planche : position, affichage et masquage contrôlés. Ce test porte sur le fond et non sur le contenu médical des autres agents. L'interface de l'installeur Windows n'a pas été exécutée sur Windows dans ce banc Linux.

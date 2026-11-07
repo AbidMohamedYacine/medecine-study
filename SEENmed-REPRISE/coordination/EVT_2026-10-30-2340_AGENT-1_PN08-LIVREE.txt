@@ -1,0 +1,42 @@
+EVT 2026-10-30 23:40 (Oran) — AGENT-1 — pn-08 « Les syndromes médiastinaux » LIVRÉE
+
+FAIT
+- pn-08 construite gold et livrée en DELTA 13 (numérotation 13 désormais prise).
+  ZIP : SEENmed_DELTA13_pn-08-syndromes-mediastinaux_2026-10-30.zip
+  Drive : 1swiJkqqnbDulLzKaMBmNlUTBuBZEuTpU · MD5 : e954f714faa55e6b979e2194072af3d0
+  À installer après le delta 12. LISEZ-MOI + MD5 inclus dans le ZIP.
+- Portes : audit v3 0 bloquant / 0 avertissement ; runtime jsdom 19/19 ;
+  installation prouvée sur assemblage frais (delta seul) → 0/0 reproduit.
+  Régression pn-01/pn-04/bi-06 : toujours 0 bloquant.
+- data_COURANT remplacé dans le delta : js/data.js avec pn-08 recu:true
+  (qcm 7 = 4 sémiologie + 3 radiologie, entr 12, url). Toute autre retouche
+  de data.js doit partir de CETTE version (celle du delta 13).
+- Registre : REGISTRE-LECONS_2026-10-30_v4.csv (pn-08 → LIVREE, AGENT-1).
+  LOCK pn-08 (1WWNtgBhBWdwf1ZVMoxq0hRcg-4nvmd2d) libéré : ne pas reconstruire.
+
+POUR TOUS LES AGENTS — 3 FAITS À INTÉGRER
+1) Correctif §10 appliqué (partagé) : le haut de tableau caché n'était PAS
+   les ancres (.lsection avait déjà scroll-margin-top:135px) mais le panneau
+   mots-clés .kw-panel{top:0; z-index:950} sous la .navbar (z-index:999).
+   Corrigé dans keywords.css (top: var(--nav-h, 68px)), livré au delta 13 et
+   référencé ?v=4 sur pn-08. Le fichier étant partagé, toutes les pages en
+   bénéficient — aucune page n'a été modifiée (Dispense 30/10 respectée).
+   Pour vos nouvelles pages : référencez keywords.css?v=4.
+2) Patron AR à suivre = ca-02, PAS pn-01 : ne mettez AUCUN data-tr sur
+   .qcm-focus ni sur .reel-strip. ar-mode.js fait el.innerHTML = valeur :
+   la « liste » AR du focus de pn-01 se concatène avec des virgules, et la
+   « phrase unique » de son reel-strip EFFACE les figures en mode AR.
+   Valeurs arData = chaînes HTML uniquement, égalité stricte data-tr==arData.
+3) Recette d'assemblage : celle de l'EVT 2240 + ce delta 13 en dernier.
+   (Base 4 parties → livraisons 01→05 → data_COURANT apres-pn04 → deltas
+   06, 08, 09, 10, 11, 12 → 13.) Le js/data.js de référence devient celui
+   du delta 13 — pensez à publier un nouveau data_COURANT daté à votre
+   prochaine retouche.
+
+DÉTAILS / ARTEFACTS
+- STATUT final complet : au LOCK pn-08 + repo (travail/pn-08-.../STATUT-FINAL).
+- Contenu : 24 sections, 7 annales verbatim (ELITE p.22/p.43), 12 entraînement,
+  56 mots-clés, 30 flashcards, Ciné 6 chapitres FR + résumé total FR/AR long,
+  fiche 4 cases. Source : Dr BELMILOUD H, 42 diapos, 2025-2026.
+- Budgets du GO consommés et respectés : images 10/10 tentatives (1 rejet
+  modération → image de fiche recomposée), audios 10/10.

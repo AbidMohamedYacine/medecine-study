@@ -1,0 +1,79 @@
+ANNALES VERBATIM — pn-08 Syndromes médiastinaux
+Source : ELITE CARDIO 3EME.pdf (Drive 1u0G78keQ4H_m8dsRp9KTo4TmPAUCeAc8, KIT)
+Extraction AGENT-1 le 30/10/2026 (texte PDF, pages 22 et 43 du fichier).
+Orthographe d'origine conservée (ex. « médiatisnal » Q1). La lettre « А » de
+la Q3 Sémiologie est un artefact de police du PDF (cyrillique) → rendre « A ».
+
+===== SÉMIOLOGIE UI1 — « 8. SYNDROMES MEDIASTINAUX (4 QCM) » (p. 22) =====
+
+1. Parmi les pathologies suivantes, laquelle ne donne pas un syndrome
+médiatisnal ?
+A. Goitre endothoracique.
+B. Anévrisme de l'aorte ascendante.
+C. Cancer de l'œsophage.
+D. Syndrome cave inférieur.
+E. Laryngite aigue.
+Source : PROMO 2022 — Réponse : E
+
+2. Le syndrome cave supérieur est caractérisé par
+A. Une cyanose localisée aux mains et au visage
+B. Un œdème des membres inferieurs
+C. Une turgescence des veines jugulaires
+D. Une circulation veineuse collatérale thoracique
+E. Un reflux hépato-jugulaire.
+Source : PROMO 2021 — Réponse : ACD
+
+3. Le syndrome cave supérieure comprend :
+A. Un visage pale avec paralysie des cordes vocales
+B. Une cyanose du visage avec œdème et une turgescence des veines du cou.
+C. Dysphonie avec paralysie du récurrent gauche.
+D. Des œdèmes des membres inférieurs.
+E. Une abolition d'un pouls radial.
+Source : PROMO 2020 — Réponse : B
+
+4. Dans le syndrome cave supérieur, quels sont les éléments parmi les
+suivants qui sont vrais ?
+A. Erythrose palmaire.
+B. Œdème en pélerine.
+C. Turgescence des veines jugulaires.
+D. Insomnie.
+E. Cyanose des mains
+Source : PROMO 2019 — Réponse : BCE
+
+===== RADIOLOGIE UI1 — « 11. SYNDROME MEDIASTINAL (3 QCM) » (p. 43) =====
+
+1. Les caractères d'une opacité médiastinale :
+A. Densité hydrique, le plus souvent homogène
+B. Limite externe floue et continue, concave vers le poumon.
+C. Le raccordement de cette opacité se fait en pente douce avec les bords
+du médiastin.
+D. Sa limite interne est bien visible dans le médiastin.
+E. Le raccordement de cette opacité se fait en pente abrupte avec les bords
+du médiastin.
+Source : PROMO 2022 — Réponse : AC
+
+2. Le signe de la silhouette :
+A. Deux opacités situées dans le même plan, elles effacent leurs contours.
+B. Deux opacités situées dans le même plan, elles conservent leurs contours.
+C. Le plan de référence étant le cœur, une opacité qui en efface le contour
+est située dans un plan différent.
+D. Le bord externe de l'opacité n'est pas visible au-dessus de la clavicule.
+E. Les vaisseaux restent visibles à travers une opacité hilaire.
+Source : P 21 / P 20 / P 19 — Réponse : A
+
+3. Dans le syndrome médiastinal, une opacité :
+A. qui efface le plan du Cœur est situé dans le même plan que celui ci
+B. qui n'efface pas le bord du Cœur est située dans un plan diffèrent de
+celui-ci
+C. Dont le bord externe est visible au-dessus de la clavicule est antérieure
+D. Dont le bord externe n'est pas visible au-dessus de la clavicule est
+postérieure
+E. Dont le contour externe traverse le diaphragme est médiastinale supérieure
+Source : PROMO 2018 — Réponse : AB
+
+Calibration (pour l'entraînement) : Sémiologie — 3/4 sur le syndrome cave
+supérieur ; nb de réponses justes : 1, 3, 1, 3. radio : 2, 1, 2. Pièges
+récurrents : membres inférieurs glissés dans le cave supérieur ; reflux
+hépato-jugulaire (Budd-Chiari) en leurre ; insomnie vs somnolence de fin de
+nuit ; pente douce vs abrupte ; limite interne invisible vs visible ;
+silhouette = même plan ⇒ contours effacés.

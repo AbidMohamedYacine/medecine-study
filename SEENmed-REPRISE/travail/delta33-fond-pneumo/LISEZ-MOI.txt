@@ -1,0 +1,17 @@
+SEENmed — DELTA33 · FOND DE PNEUMOLOGIE · 06/11/2026
+
+Cette livraison remplace DELTA32 pour l'installation montrée dans la capture utilisateur. DELTA32 a refusé avant toute modification, parce que le moteur installé avait le MD5 E5EE1245C8C12C5199D24B9FB314112C, et non celui attendu. Ce fichier exact a été retrouvé dans SEENmed_DELTA14b_pn-05-hemoptysie_2026-10-31.zip. DELTA33 applique le correctif à CETTE version, sans modifier sa palette ni la logique du moteur.
+
+INSTALLATION WINDOWS
+1. Extraire TOUT le ZIP.
+2. Dans DELTA33_fond-pneumologie_2026-11-06, double-cliquer INSTALLER-WINDOWS.bat.
+3. Choisir votre dossier medstudy EXISTANT (ou son dossier parent) et valider.
+4. Une fois le message « Done! » affiché, ouvrir une leçon pneumologie et faire Ctrl+F5.
+
+Ne pas fusionner le dossier medstudy de ce ZIP sur le site : les 12 pages et leurs médias sont inclus comme copies complètes de référence ; l'installeur ne copie que js/pneumo-field.js. Il sauvegarde d'abord l'original dans js/pneumo-field.before-delta33.js et vérifie avant toute modification le MD5 exact. Il s'arrête pour toute autre version. Si un message d'erreur apparaît ou si Windows bloque le lancement, envoyer la capture à l'agent sans changer les paramètres de sécurité.
+
+VALIDATIONS
+Moteur d'origine récupéré : MD5 e5ee1245c8c12c5199d24b9fb314112c ; moteur corrigé : 96b428ee8eb0c44a0ea463c50eb29458. Le seul changement est le positionnement fixe du canvas et la garde de masquage photo/planche ; le reste du fichier original, y compris ses couleurs, est inchangé à l'octet près.
+Reproduction Chromium pn-03 « Sémiologie de la toux » avec la version utilisateur et CSS de base : avant, canvas statique occupant un écran et défilant ; après, fixé et affiché derrière la leçon. Test des 12 pages à 12 %, 55 %, 95 % de défilement, avec CSS de base et CSS pneumo : canvas fixe et dessiné. Sur pn-03, comparaison de captures avec/sans canvas sous les quatre thèmes et contrôle des quatre modes. Test limité au fond, sans re-vérification du contenu médical. L'interface du premier installeur a affiché le bon refus sur Windows ; la nouvelle version n'a pas été exécutée directement sous Windows sur notre banc Linux.
+
+Le ZIP contient le dossier DELTA33 avec medstudy/ (12 pages et leurs images/audios de référence, moteur corrigé), ces instructions, l'installeur et MD5SUMS.txt. Ce n'est pas un site complet et il ne remplace ni la base ni les livraisons précédentes.

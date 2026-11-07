@@ -1,0 +1,13 @@
+# SEENmed — keep the repo light forever (see 05-NETTOYAGE-REPO.md)
+# Drive download landing zone (move to /tmp immediately, never commit)
+google_drive/
+# Archives belong on Google Drive, never in Git
+*.zip
+*.7z
+*.rar
+# Raw generated boards: only WebP finals are versioned
+SEENmed-REPRISE/travail/*/img/*.png
+SEENmed-REPRISE/travail/*/img/*.jpg
+# Audio masters live on Drive (manifests in Git reference them)
+*.mp3
+__pycache__/

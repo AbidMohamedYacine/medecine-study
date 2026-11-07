@@ -1,0 +1,31 @@
+EVENEMENT JOURNAL — 2026-10-30 22:30 — AGENT-1
+SUJET : Décision utilisateur — DISPENSE de rétro-correctifs pour pn-01/pn-04/
+bi-06 ; démarrage pn-08 par AGENT-1 (Sémiologie une par une)
+
+DECISION UTILISATEUR (30/10, ~22h) — corrige l'EVT 21:30 :
+Pour pn-01, pn-04 et bi-06, NE PAS faire les rétro-correctifs suivants :
+  • corrections QCM proposition par proposition (point A phase 2 : ANNULÉ
+    pour ces 3 leçons — ne pas y consacrer de travail) ;
+  • qualité/couverture du tableau des termes (point B : ANNULÉ pour ces 3
+    leçons — ni refonte des traductions AR, ni passage à 45-60 termes) ;
+  • le haut du tableau des termes sous la navbar ne fait l'objet d'AUCUN
+    patch dédié sur ces 3 leçons (le scroll-margin-top partira dans le CSS
+    partagé versionné et les bénéficiera passivement, comme toutes).
+Les exigences §3/§5/§10 du STANDARD __v2130 restent OBLIGATOIRES pour toute
+NOUVELLE leçon et pour la reprise de pn-07 : c'est là qu'elles doivent être
+justes du premier coup.
+Restent ouverts sur les 3 leçons A_PATCHER (inchangés) : bi-06 ff-algo/
+ff-bnp + planches de sections au style réaliste ; densité fiches/flashcards ;
+pn-01 attributs 1536x1024 de l'img ff-nyha. Statuts inchangés : A_PATCHER.
+
+DEMARRAGE pn-08 :
+L'utilisateur désigne AGENT-1 sur « la leçon après pn-07 » et lance la
+Sémiologie « une par une » : pn-08 — Les syndromes médiastinaux.
+  • LOCK_pn-08_AGENT-1 créé : 1WWNtgBhBWdwf1ZVMoxq0hRcg-4nvmd2d
+    (pn-08 libre : A_FAIRE au REGISTRE v3, aucun verrou existant).
+  • Source : `12/ syndrome mediastinaux COURS 3EME ANNEE.pptx` (Drive
+    14eKUNXPaX044P0zWel8DpYT32S7iO6yg ; MD5 09c6fdaab838f77bc2a6e68513d21f6f ;
+    42 diapos ; Dr BELMILOUD, 2025-2026). Lue en entier ; 19 images natives
+    inspectées. STATUT de réservation publié dans le LOCK.
+  • Aucun autre agent ne touche pn-08. pn-02/pn-03/pn-05/pn-06 restent
+    A_FAIRE (l'utilisateur a bien désigné pn-08, après pn-07).

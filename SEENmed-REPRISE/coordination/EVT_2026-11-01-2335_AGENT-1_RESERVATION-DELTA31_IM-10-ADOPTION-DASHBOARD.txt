@@ -1,0 +1,56 @@
+SEENmed — ÉVÉNEMENT COORDINATION
+RESERVATION DELTA 31 — im-10 « Hypersensibilité retardée (type IV) » : ADOPTION + TABLEAU DE BORD
+Émetteur : AGENT-1 · 2026-11-01 (suite immédiate du delta 30)
+
+CONSTAT UTILISATEUR (après delta 30) : toutes les leçons s'affichent au tableau de
+bord, SAUF im-10 (Hypersensibilité retardée, type IV) qui n'a pas de bouton
+« Ouvrir » alors que sa page est installée.
+
+CAUSE PROUVÉE (fichiers lus, pas d'hypothèse)
+- im-10 a été construite par AGENT-2 (STATUT_2026-11-01_im-10_EN-COURS.txt ;
+  PV-AUDIT_im-10_2026-11-01.txt : audit 0 bloquant, 25 QCM = 5 annales +
+  20 entraînement, 17 images, 12 audios) et livrée HORS chaîne numérotée :
+  « medstudy-im-10_2026-11-01_v2.zip » (pas de numéro de delta, pas d'EVT, pas
+  de ligne au registre).
+- Son data.js descend de la BASE : 61 url (60 base + im-10), pneumo 0/12.
+  Son extraction chez l'utilisateur a écrasé les url des leçons des deltas
+  (incident initial). Le delta 30 a restauré tout SAUF im-10 : aucune des
+  4 lignées fusionnées ne portait son url (notre limite, annoncée « tout »
+  à tort — d'où l'audit ci-dessous).
+
+AUDIT EXHAUSTIF FAIT PAR AGENT-1 (pages existantes vs entrées data)
+- 59 pages lecons/*.html dans la base officielle (4 parties relues) + 1 page
+  dans le paquet im-10 = 60 pages.
+- Pages sans url dans le data convergent delta 30 : EXACTEMENT 1 = im-10.
+- Url data sans page dans la base : 16 = exactement les leçons livrées par
+  deltas numérotés (sg-04, pn-01..pn-12, bi-05, bi-06, im-11) — attendu.
+- Recherche Drive « medstudy-* » : aucun autre paquet hors chaîne.
+Conclusion : im-10 est la SEULE leçon existante invisible. Après delta 31 :
+77 entrées avec url ; 15 sans page (non construites : psy-06/08/09, sg-05,
+ph-09, bi-04, ra-05 bloquée source, im-06/09/12/13/14/15/16/17).
+
+PÉRIMÈTRE DU DELTA 31 (AGENT-1, intégration — leçon d'AGENT-2 inchangée)
+1. Adoption dans la chaîne officielle : page + 17 images + 12 audios d'im-10
+   repris À L'OCTET PRÈS depuis « medstudy-im-10_2026-11-01_v2.zip »
+   (autrice : AGENT-2 ; contenu NON re-vérifié par AGENT-1, règle 31/10).
+2. js/data.js : convergent delta 30 + entrée im-10 complétée avec les valeurs
+   d'AGENT-2 (qcm 5, entr 20, recu true, url lecons/im-10-hypersensibilite-retardee.html) — rien d'autre.
+3. js/data-merge.js v2 : im-10 ajoutée à la carte FALLBACK.
+4. NOUVEAU js/data-patches/im-10.js (même forme que les 16 patchs du delta 30).
+5. index.html : data.js?v=14, data-merge.js?v=2 (cache).
+6. Test runtime (jsdom) : état utilisateur actuel → 77 boutons dont im-10 ;
+   scénario tueur (data.js AGENT-2 réécrasé) → toujours 77 ; contrôle négatif
+   (état delta 30) → im-10 absente (reproduit le constat). Vérificateur
+   monotone delta30→delta31 : aucune perte.
+7. Registre v19 : AJOUT de la ligne im-10 (agent AGENT-2, statut LIVREE),
+   aucune autre ligne modifiée.
+
+NON-OBJECTIFS / COORDINATION
+- im-10 reste le chantier d'AGENT-2 : aucune modification de son contenu.
+  Si AGENT-2 publie une v2, ce sera un delta numéroté ; le patch
+  js/data-patches/im-10.js fourni ici suffit (ne plus livrer de data.js
+  complet — section DATA de REGLE-FORMAT-LIVRAISON-ZIP).
+- AVERTISSEMENT : ne plus ré-extraire « medstudy-im-10_2026-11-01_v2.zip »
+  (il embarque un vieil index.html sans data-merge). Il est remplacé par le
+  DELTA31. Les originaux restent sur Drive, rien n'est supprimé.
+- Aucun autre chantier touché (sg-04 delta 29 AGENT-3 intouché, etc.).

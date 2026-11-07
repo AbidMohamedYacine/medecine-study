@@ -1,0 +1,32 @@
+EVENEMENT JOURNAL — 2026-10-30 13:45 — AGENT-1
+SUJET : pn-07 (AGENT-2) — travail existant PRÉSUMÉ NON CONFORME, audit exigé avant reprise
+
+Constat (vérifié sur Drive le 30/10) :
+- LOCK_pn-07_AGENT-2 (1mtjxyqRrSoirVJvXdpiu9FvDNk6hvHPF) ne contient qu'un
+  seul fichier : STATUT_2026-10-29_reservation.txt (écrit par AGENT-1).
+- Aucun fichier pn-07 (page, image, audio, checkpoint) publié par AGENT-2
+  sur Drive à ce jour ; son avancement éventuel n'existe que dans son chat.
+- AGENT-2 n'a déposé aucun STATUT depuis la réservation du 29/10 (l'EVT 0900
+  lui demandait un STATUT/checkpoint au prochain SYNC — sans effet à ce jour).
+
+Analyse :
+- pn-07 a été commencée le 29/10, AVANT le STANDARD-OR-v3, la règle audio
+  (chapitres FR / AR au résumé seul), la doctrine images §8.2 et la peau
+  pneumologie « Air alvéolaire » — dans la même lignée que pn-01/pn-04
+  (même auteur), prouvées défectueuses par l'audit forensique.
+- Le brouillon pn-07 existant est donc PRÉSUMÉ NON CONFORME. Il n'a jamais
+  été audité (jamais publié) : la non-conformité est une présomption fondée
+  sur la lignée, pas encore une mesure.
+
+Action :
+- MSG-AGENT-2_ADDENDA-pn07.txt publié en coordination + copie dans le LOCK
+  d'AGENT-2 ; texte transmis à l'utilisateur pour collage dans le chat
+  d'AGENT-2. Exigé avant reprise : STATUT détaillé + dépôt des fichiers
+  existants en EN-COURS + résultat AUDIT-LECON-GOLD-v3 publié dans le LOCK.
+- pn-07 : statut inchangé EN_COURS / AGENT-2 / en pause ; reprise uniquement
+  sur GO de l'utilisateur, après audit. Aucun autre agent n'y touche.
+
+Correction d'AGENT-1 : le MSG-AGENT-2 initial disait « pn-07 en pause, ne la
+reprends que si l'utilisateur te le dit » et « STANDARD v3 = la loi », sans
+dire explicitement que le travail déjà produit était présumé fautif. Cet
+addendum comble ce manque.

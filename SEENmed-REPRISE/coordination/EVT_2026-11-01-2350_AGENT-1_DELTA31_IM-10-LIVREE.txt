@@ -1,0 +1,51 @@
+SEENmed — ÉVÉNEMENT COORDINATION
+DELTA 31 LIVRÉ — im-10 « Hypersensibilité retardée (type IV) » adoptée + visible au tableau de bord
+Émetteur : AGENT-1 · 2026-11-01 · Réservation : EVT_2026-11-01-2335 (delta 31)
+
+FAIT (suite au constat utilisateur : im-10 installée mais sans bouton « Ouvrir »)
+- Cause prouvée : im-10 (leçon AGENT-2) livrée hors chaîne le 01/11 dans
+  « medstudy-im-10_2026-11-01_v2.zip » avec un data.js lignée base (61 url,
+  pneumo 0/12) → incident tableau de bord ; le delta 30 a tout restauré sauf
+  im-10, absente des 4 lignées fusionnées.
+- AUDIT EXHAUSTIF pages-vs-data (avant de corriger) : 59 pages de la base
+  officielle (4 parties relues) + 1 page im-10 = 60 pages croisées avec les
+  entrées du data convergent → EXACTEMENT 1 page orpheline : im-10. Url data
+  sans page en base : 16 = les leçons des deltas numérotés (attendu). Aucun
+  autre paquet hors chaîne sur Drive. Après delta 31 : 77 entrées avec url,
+  15 sans page (non construites).
+
+LIVRÉ
+- DELTA31_im-10-adoption_2026-11-01.zip (livraisons, id 1LZS7Ii7Z9Kk2vDHXtoLGi7WuQ4mjkDp0,
+  MD5 1fbfc6fb8620f7ebe9ae4631b19686ae, 36 fichiers, extraction + md5sum -c 35/35) :
+  page im-10 + 17 images + 12 MP3 d'AGENT-2 repris À L'OCTET PRÈS (auteur
+  AGENT-2, contenu non re-vérifié par AGENT-1 — règle 31/10) ; js/data.js
+  convergent + entrée im-10 (valeurs AGENT-2 : qcm 5, entr 20, recu true,
+  url lecons/im-10-hypersensibilite-retardee.html) ; js/data-merge.js v2
+  (im-10 au secours) ; js/data-patches/im-10.js ; index.html (data.js?v=14,
+  data-merge.js?v=2) ; LISEZ-MOI + MD5SUMS.txt.
+- data_COURANT_2026-11-01_convergent-total-delta31.js (coordination) = nouveau
+  convergent officiel (92 leçons, 77 entrées avec url).
+- Registre v19 (coordination) : SEUL changement = ligne im-10 AJOUTÉE
+  (agent AGENT-2, LIVREE, dans_data oui ; réserves du PV-AUDIT d'AGENT-2
+  consignées : ff-tests ICAM-1/VCAM-1 non individualisées, pas d'ouverture
+  navigateur réel). 24 leçons suivies, 13 champs partout.
+
+PREUVES
+- TEST-DASHBOARD_delta31.cjs (jsdom) 6/6 : A1 état utilisateur → 76 boutons,
+  im-10 absente (constat reproduit) ; A2 delta appliqué → 77, im-10 présente,
+  pneumo 12/12 ; B data AGENT-2 réécrasé → 77 ; C data base écrasé → 77 ;
+  D contrôle sans data-merge → 60/0 (le test détecte).
+- Vérificateur monotone : delta30→delta31 ✅ aucune perte ; sens inverse
+  BLOQUÉ (im-10 url+recu perdus, exit 1) ; data AGENT-2→delta31 ✅.
+
+COORDINATION / SUITE
+- im-10 reste le chantier d'AGENT-2 (AGENT-1 n'a fait que l'intégration).
+  Toute v2 d'im-10 = delta numéroté + patch js/data-patches/im-10.js (fourni,
+  à mettre à jour si les compteurs changent), jamais un data.js complet.
+- ⚠ Ne plus ré-extraire « medstudy-im-10_2026-11-01_v2.zip » (vieil index.html
+  sans data-merge, data.js ancien) — remplacé par le DELTA31. Rien n'est
+  supprimé sur Drive (traçabilité conservée).
+- Leçon retenue (appliquée ici) : toute affirmation « tout est là » se vérifie
+  fichiers-existants vs data, pas seulement data vs data.
+- Prochain numéro de delta libre : 32. Aucun autre chantier touché
+  (sg-04 delta 29 AGENT-3 intouché).

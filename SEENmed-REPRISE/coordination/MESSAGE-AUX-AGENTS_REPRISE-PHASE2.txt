@@ -1,0 +1,54 @@
+MESSAGE DE REPRISE — À DONNER À AGENT-2 / AGENT-3 / AGENT-4
+(écrit par AGENT-1 le 2026-10-30 avant sa coupure d'usage ; tout est sur Drive,
+ce message ne remplace pas le SYNC)
+
+Tu reprends la phase 2 du patch qualité. SEQUENCE OBLIGATOIRE :
+1. SYNC Drive : dossier coordination 1P_NzJcrBQIbUc9r0JjXzmb0Lk-C8XTsA —
+   lis le JOURNAL (1Z-m3YbXzF8ErEQZUS3d6zdW0D5UCrg3E) jusqu'à l'événement
+   2026-10-30-1300, le REGISTRE v3, et vérifie les LOCKS existants.
+2. KIT (1bHMhdFd94LIgR_GD9vIkv2zMRK-KjFYI) > qualite-2026-10-30 :
+   STANDARD-OR-v3.md__v1300 (fait foi), HANDOFF-NOUVEL-AGENT.md__v1245,
+   COLLER-MP3.py, PATCH-PN01-ORIENTATION.py, JOURNAL-IMAGES_phase2.md,
+   audio-scripts-RESUMES-LONGS_phase2.md. En cas de doute : le STANDARD,
+   puis le MOTEUR JS — jamais une page bi-06/pn-01/pn-04 comme modèle.
+3. Site de travail = base officielle 00_BASE-OFFICIELLE_2026-10-28
+   (1O5QMhvttWd402VUjfyQwAaDeJRfRIvnK) + deltas 06, 08, 09, 10, 11 dans
+   l'ordre (dossiers à la racine Drive). Le delta 07 est CADUC, ignore-le.
+
+ETAT EXACT (registre v3) : bi-05 LIVREE. bi-06 / pn-01 / pn-04 = A_PATCHER
+(structure réparée et prouvée : audit 0 bloquant x3, DOM 38/38 ;
+résumés vocaux longs faits ; planches fiche-flash niveau or faites —
+delta 11). pn-07 EN_COURS (AGENT-2, en pause). ra-05 BLOQUEE_SOURCE.
+
+RESTE A FAIRE (phase 2 Contenu, dans cet ordre) :
+A. Corrections QCM proposition par proposition (FR + AR) pour les 3 leçons :
+   une raison courte PAR proposition (.qexp-item t/f x5 + .qexp-memo),
+   médiane visée >= 650 caractères ; arabe = traduction du sens en contexte,
+   terme arabe d'abord + français à côté (<bdi class="fr-term">), jamais
+   mot à mot (STANDARD §10).
+B. Mots-clés : porter chaque leçon à 45-60 termes réels (tableau t/s/n/d/a).
+C. Images lot suivant (STYLE REALISTE fond clair qui montre la réalité —
+   ⛔ pas d'infographie bleu nuit/or, rejetée par l'utilisateur) :
+   bi-06 ff-algo + ff-bnp, puis planches de sections pauvres/hors 1376x768.
+   Plusieurs images par section si le Contenu l'exige, chacune sous son
+   sous-bloc et fidèle au texte. Zoom de contrôle obligatoire ; une planche
+   fausse ou sans libellés est REJETEE (verdicts dans JOURNAL-IMAGES).
+D. Densifier les listes des fiches flash (>= 2 400 caractères / 4 cases,
+   nombre de cases adaptable 4-6) et les versos des flashcards
+   (cible ca-09 : ~200 caractères, 30 cartes).
+E. Seulement alors : audit 0 bloquant + runtime + delta Drive daté +
+   événement JOURNAL + registre. Ne jamais dire LIVREE avant A-E complets.
+
+REGLES QUI NE CHANGENT PAS :
+- Audio : chapitres FR uniquement ; AR au seul résumé (dernier chapitre).
+  Résumé long = script entier découpé en parties <= ~1 400 car. (nombre
+  LIBRE), même voix, collé par COLLER-MP3.py (§4.1). Ne jamais générer
+  d'arabe sur un chapitre ordinaire.
+- Caps par MESSAGE utilisateur : 10 images + 10 audios, tentatives incluses,
+  un seul bloc compté/listé/vérifié ; aucun retry dans le même tour.
+- Verrouille AVANT de travailler (LOCK + STATUT), checkpoints EN-COURS ;
+  aucun verrou n'expire ; une leçon verrouillée ne se touche pas.
+- Jamais inventer fait/chiffre/corrigé ; source lue en entier ; N-1 avec
+  empreinte, PDF N = patch différentiel. ca-02/ca-09 = exemples intouchables.
+- Publie tout sur Drive (delta daté + LISEZ-MOI + MD5, événement JOURNAL) ;
+  GitHub du chat AGENT-1 = archive froide, Drive fait foi.

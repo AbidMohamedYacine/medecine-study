@@ -1,0 +1,502 @@
+{
+ "decision": "Utilisateur 2026-10-28: supprimer AN-11+ de la base de travail (archives Drive originales intactes)",
+ "fichiers_exclus_de_la_base_propre": {
+  "assets/img/an-11/autres-tissus.webp": {
+   "part": "part1.zip",
+   "size": 95092,
+   "crc": 3488898477
+  },
+  "assets/img/an-11/biomol.webp": {
+   "part": "part1.zip",
+   "size": 106000,
+   "crc": 65168554
+  },
+  "assets/img/an-11/cytologie.webp": {
+   "part": "part1.zip",
+   "size": 101802,
+   "crc": 17257687
+  },
+  "assets/img/an-11/definition.webp": {
+   "part": "part1.zip",
+   "size": 81264,
+   "crc": 3487906243
+  },
+  "assets/img/an-11/extemporane.webp": {
+   "part": "part1.zip",
+   "size": 151520,
+   "crc": 3712732245
+  },
+  "assets/img/an-11/ff-grade-tnm.webp": {
+   "part": "part1.zip",
+   "size": 124116,
+   "crc": 2052611686
+  },
+  "assets/img/an-11/ff-ihc-biomol.webp": {
+   "part": "part1.zip",
+   "size": 157848,
+   "crc": 1912087497
+  },
+  "assets/img/an-11/ff-nomenclature.webp": {
+   "part": "part1.zip",
+   "size": 101310,
+   "crc": 4070684669
+  },
+  "assets/img/an-11/ff-prelevements.webp": {
+   "part": "part1.zip",
+   "size": 104854,
+   "crc": 985826569
+  },
+  "assets/img/an-11/ff-tableaux-tissus.webp": {
+   "part": "part1.zip",
+   "size": 111112,
+   "crc": 1205148639
+  },
+  "assets/img/an-11/grade.webp": {
+   "part": "part1.zip",
+   "size": 183942,
+   "crc": 2847038623
+  },
+  "assets/img/an-11/hero.webp": {
+   "part": "part1.zip",
+   "size": 96390,
+   "crc": 585395703
+  },
+  "assets/img/an-11/histologie.webp": {
+   "part": "part1.zip",
+   "size": 85656,
+   "crc": 339313112
+  },
+  "assets/img/an-11/histologique.webp": {
+   "part": "part1.zip",
+   "size": 81366,
+   "crc": 2367271156
+  },
+  "assets/img/an-11/ihc.webp": {
+   "part": "part1.zip",
+   "size": 115014,
+   "crc": 640451784
+  },
+  "assets/img/an-11/mindmap.webp": {
+   "part": "part1.zip",
+   "size": 114064,
+   "crc": 2019597089
+  },
+  "assets/img/an-11/moleculaire.webp": {
+   "part": "part1.zip",
+   "size": 103438,
+   "crc": 3261849664
+  },
+  "assets/img/an-11/nomenclature.webp": {
+   "part": "part1.zip",
+   "size": 250990,
+   "crc": 1089317139
+  },
+  "assets/img/an-11/reel/p08-x75.webp": {
+   "part": "part1.zip",
+   "size": 156168,
+   "crc": 1840626017
+  },
+  "assets/img/an-11/reel/p08-x76.webp": {
+   "part": "part1.zip",
+   "size": 117718,
+   "crc": 90763451
+  },
+  "assets/img/an-11/reel/p19-x139.webp": {
+   "part": "part1.zip",
+   "size": 48890,
+   "crc": 2541966710
+  },
+  "assets/img/an-11/reel/p19-x140.webp": {
+   "part": "part1.zip",
+   "size": 49792,
+   "crc": 859860100
+  },
+  "assets/img/an-11/reel/p19-x141.webp": {
+   "part": "part1.zip",
+   "size": 47054,
+   "crc": 2590667923
+  },
+  "assets/img/an-11/reel/p21-x151.webp": {
+   "part": "part1.zip",
+   "size": 12242,
+   "crc": 585205410
+  },
+  "assets/img/an-11/reel/p21-x152.webp": {
+   "part": "part1.zip",
+   "size": 26598,
+   "crc": 120001733
+  },
+  "assets/img/an-11/reel/p22-x155.webp": {
+   "part": "part1.zip",
+   "size": 16750,
+   "crc": 1931106938
+  },
+  "assets/img/an-11/reel/p23-x158.webp": {
+   "part": "part1.zip",
+   "size": 22470,
+   "crc": 318290758
+  },
+  "assets/img/an-11/reel/p30-x203.webp": {
+   "part": "part1.zip",
+   "size": 14428,
+   "crc": 1378139200
+  },
+  "assets/img/an-11/reel/p30-x204.webp": {
+   "part": "part1.zip",
+   "size": 15458,
+   "crc": 3685056229
+  },
+  "assets/img/an-11/reel/p30-x205.webp": {
+   "part": "part1.zip",
+   "size": 70830,
+   "crc": 1518731467
+  },
+  "assets/img/an-11/reel/p32-x215.webp": {
+   "part": "part1.zip",
+   "size": 24244,
+   "crc": 1967683406
+  },
+  "assets/img/an-11/reel/p32-x216.webp": {
+   "part": "part1.zip",
+   "size": 45356,
+   "crc": 3573790842
+  },
+  "assets/img/an-11/reel/p32-x217.webp": {
+   "part": "part1.zip",
+   "size": 42506,
+   "crc": 2284786442
+  },
+  "assets/img/an-11/reel/p37-x248.webp": {
+   "part": "part1.zip",
+   "size": 30894,
+   "crc": 339924600
+  },
+  "assets/img/an-11/reel/p37-x249.webp": {
+   "part": "part1.zip",
+   "size": 50214,
+   "crc": 2749003580
+  },
+  "assets/img/an-11/reel/p38-x257.webp": {
+   "part": "part1.zip",
+   "size": 64580,
+   "crc": 771153765
+  },
+  "assets/img/an-11/reel/p38-x258.webp": {
+   "part": "part1.zip",
+   "size": 195942,
+   "crc": 266714934
+  },
+  "assets/img/an-11/tableaux.webp": {
+   "part": "part1.zip",
+   "size": 101896,
+   "crc": 57232714
+  },
+  "assets/img/an-11/tnm.webp": {
+   "part": "part1.zip",
+   "size": 106544,
+   "crc": 1706336280
+  },
+  "assets/img/an-11/total.webp": {
+   "part": "part1.zip",
+   "size": 105802,
+   "crc": 3191052481
+  },
+  "assets/img/an-13/biologiques.webp": {
+   "part": "part1.zip",
+   "size": 226392,
+   "crc": 2882243352
+  },
+  "assets/img/an-13/chimiques.webp": {
+   "part": "part1.zip",
+   "size": 156044,
+   "crc": 547380117
+  },
+  "assets/img/an-13/cycle.webp": {
+   "part": "part1.zip",
+   "size": 85700,
+   "crc": 458690453
+  },
+  "assets/img/an-13/etapes.webp": {
+   "part": "part1.zip",
+   "size": 172862,
+   "crc": 733090591
+  },
+  "assets/img/an-13/genes.webp": {
+   "part": "part1.zip",
+   "size": 190114,
+   "crc": 1790274382
+  },
+  "assets/img/an-13/hero.webp": {
+   "part": "part1.zip",
+   "size": 141206,
+   "crc": 3970588661
+  },
+  "assets/img/an-13/intrinseques.webp": {
+   "part": "part1.zip",
+   "size": 125898,
+   "crc": 777589205
+  },
+  "assets/img/an-13/mindmap.webp": {
+   "part": "part1.zip",
+   "size": 176612,
+   "crc": 2013815770
+  },
+  "assets/img/an-13/physiques.webp": {
+   "part": "part1.zip",
+   "size": 99144,
+   "crc": 132703750
+  },
+  "assets/img/an-13/reel/image1.webp": {
+   "part": "part1.zip",
+   "size": 24184,
+   "crc": 1975880755
+  },
+  "assets/img/an-13/reel/image2.webp": {
+   "part": "part1.zip",
+   "size": 10080,
+   "crc": 2199406781
+  },
+  "assets/img/an-13/reel/image3.webp": {
+   "part": "part1.zip",
+   "size": 19934,
+   "crc": 2443921519
+  },
+  "assets/img/an-13/reel/image4.webp": {
+   "part": "part1.zip",
+   "size": 57386,
+   "crc": 885998423
+  },
+  "assets/img/an-13/reel/image5.webp": {
+   "part": "part1.zip",
+   "size": 30358,
+   "crc": 2837610985
+  },
+  "assets/img/an-13/reel/image6.webp": {
+   "part": "part1.zip",
+   "size": 44572,
+   "crc": 2119593752
+  },
+  "assets/img/an-13/stroma.webp": {
+   "part": "part1.zip",
+   "size": 257010,
+   "crc": 516703400
+  },
+  "assets/img/an-13/total.webp": {
+   "part": "part1.zip",
+   "size": 154900,
+   "crc": 1505987349
+  },
+  "assets/img/an-14/atypies.webp": {
+   "part": "part1.zip",
+   "size": 120298,
+   "crc": 142176674
+  },
+  "assets/img/an-14/benin-malin.webp": {
+   "part": "part1.zip",
+   "size": 332574,
+   "crc": 1394828507
+  },
+  "assets/img/an-14/differenciation.webp": {
+   "part": "part1.zip",
+   "size": 266662,
+   "crc": 3857173723
+  },
+  "assets/img/an-14/flash-total.webp": {
+   "part": "part1.zip",
+   "size": 222738,
+   "crc": 1929945164
+  },
+  "assets/img/an-14/germinales.webp": {
+   "part": "part1.zip",
+   "size": 190098,
+   "crc": 2680642357
+  },
+  "assets/img/an-14/hero.webp": {
+   "part": "part1.zip",
+   "size": 146626,
+   "crc": 3238087738
+  },
+  "assets/img/an-14/methodes.webp": {
+   "part": "part1.zip",
+   "size": 141100,
+   "crc": 1559857897
+  },
+  "assets/img/an-14/mindmap.webp": {
+   "part": "part1.zip",
+   "size": 196570,
+   "crc": 1683863379
+  },
+  "assets/img/an-14/nomenclature.webp": {
+   "part": "part1.zip",
+   "size": 75086,
+   "crc": 385578613
+  },
+  "assets/img/an-14/reel/image1.webp": {
+   "part": "part1.zip",
+   "size": 25528,
+   "crc": 3830249559
+  },
+  "assets/img/an-14/reel/image10.webp": {
+   "part": "part1.zip",
+   "size": 19978,
+   "crc": 1060058484
+  },
+  "assets/img/an-14/reel/image11.webp": {
+   "part": "part1.zip",
+   "size": 21426,
+   "crc": 2798587431
+  },
+  "assets/img/an-14/reel/image12.webp": {
+   "part": "part1.zip",
+   "size": 22456,
+   "crc": 2995460523
+  },
+  "assets/img/an-14/reel/image13.webp": {
+   "part": "part1.zip",
+   "size": 37058,
+   "crc": 486727534
+  },
+  "assets/img/an-14/reel/image14.webp": {
+   "part": "part1.zip",
+   "size": 63470,
+   "crc": 235060789
+  },
+  "assets/img/an-14/reel/image15.webp": {
+   "part": "part1.zip",
+   "size": 38770,
+   "crc": 2952140138
+  },
+  "assets/img/an-14/reel/image16.webp": {
+   "part": "part1.zip",
+   "size": 80714,
+   "crc": 4017252201
+  },
+  "assets/img/an-14/reel/image17.webp": {
+   "part": "part1.zip",
+   "size": 96714,
+   "crc": 2617009066
+  },
+  "assets/img/an-14/reel/image18.webp": {
+   "part": "part1.zip",
+   "size": 44576,
+   "crc": 1276353198
+  },
+  "assets/img/an-14/reel/image19.webp": {
+   "part": "part1.zip",
+   "size": 225084,
+   "crc": 749233228
+  },
+  "assets/img/an-14/reel/image2.webp": {
+   "part": "part1.zip",
+   "size": 442228,
+   "crc": 2180399189
+  },
+  "assets/img/an-14/reel/image20.webp": {
+   "part": "part1.zip",
+   "size": 115518,
+   "crc": 1008253777
+  },
+  "assets/img/an-14/reel/image21.webp": {
+   "part": "part1.zip",
+   "size": 62488,
+   "crc": 236668959
+  },
+  "assets/img/an-14/reel/image22.webp": {
+   "part": "part1.zip",
+   "size": 62786,
+   "crc": 1248268181
+  },
+  "assets/img/an-14/reel/image23.webp": {
+   "part": "part1.zip",
+   "size": 65428,
+   "crc": 2763667684
+  },
+  "assets/img/an-14/reel/image24.webp": {
+   "part": "part1.zip",
+   "size": 127528,
+   "crc": 3510953512
+  },
+  "assets/img/an-14/reel/image25.webp": {
+   "part": "part1.zip",
+   "size": 113078,
+   "crc": 4074997497
+  },
+  "assets/img/an-14/reel/image26.webp": {
+   "part": "part1.zip",
+   "size": 184426,
+   "crc": 604478646
+  },
+  "assets/img/an-14/reel/image27.webp": {
+   "part": "part1.zip",
+   "size": 67672,
+   "crc": 1590259126
+  },
+  "assets/img/an-14/reel/image28.webp": {
+   "part": "part1.zip",
+   "size": 125854,
+   "crc": 2694130212
+  },
+  "assets/img/an-14/reel/image29.webp": {
+   "part": "part1.zip",
+   "size": 121732,
+   "crc": 3636657801
+  },
+  "assets/img/an-14/reel/image3.webp": {
+   "part": "part1.zip",
+   "size": 341482,
+   "crc": 4230174783
+  },
+  "assets/img/an-14/reel/image30.webp": {
+   "part": "part1.zip",
+   "size": 51362,
+   "crc": 3808186210
+  },
+  "assets/img/an-14/reel/image31.webp": {
+   "part": "part1.zip",
+   "size": 53610,
+   "crc": 1671515906
+  },
+  "assets/img/an-14/reel/image4.webp": {
+   "part": "part1.zip",
+   "size": 186996,
+   "crc": 424318817
+  },
+  "assets/img/an-14/reel/image5.webp": {
+   "part": "part1.zip",
+   "size": 482510,
+   "crc": 1826416021
+  },
+  "assets/img/an-14/reel/image6.webp": {
+   "part": "part1.zip",
+   "size": 321818,
+   "crc": 2096344185
+  },
+  "assets/img/an-14/reel/image7.webp": {
+   "part": "part1.zip",
+   "size": 64930,
+   "crc": 2433320712
+  },
+  "assets/img/an-14/reel/image8.webp": {
+   "part": "part1.zip",
+   "size": 70394,
+   "crc": 1286687576
+  },
+  "assets/img/an-14/reel/image9.webp": {
+   "part": "part1.zip",
+   "size": 70078,
+   "crc": 1021128639
+  },
+  "assets/img/an-14/tissus.webp": {
+   "part": "part1.zip",
+   "size": 208448,
+   "crc": 3601827948
+  }
+ },
+ "nb": 98,
+ "entrees_data_js_retirees": [
+  "an-11",
+  "an-12",
+  "an-13",
+  "an-14"
+ ]
+}

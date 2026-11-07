@@ -1,0 +1,265 @@
+/* ============================================================
+   SEENmed — cine.js · v3
+   v3 (delta 19, 31/10/2026) : la bascule ع/FR depuis le mini-lecteur du résumé
+   ne fonctionnait pas — charger() réinitialisait la langue partagée en français
+   dès que le chapitre courant du lecteur central n'avait pas de piste arabe.
+   Corrigé : plus de reset (piste() replie en FR avec la note « ع en préparation »),
+   et le bouton langue du lecteur central reste visible tant que lang='ar'.
+   Ciné-révision : la leçon racontée.
+
+   v2 : en plus du lecteur central (#cinePlayer), des MINI-LECTEURS
+   de section <div class="cine-spot" data-ch="N"></div> placés sous
+   la planche de chaque section rejouent le chapitre N de cineData.
+   Langue partagée (seenmed-cine-lang) ; un seul son à la fois.
+
+   Contrat d'auteur (voir analysis/CHARTE-CINE.md) :
+   - la page porte <script type="application/json" id="cineData"> :
+     { "chapitres": [ { "t": "titre", "imgs": ["chemin.webp", …],
+                        "fr": "chemin.mp3", "ar": "chemin.mp3" | null }, … ] }
+   - rien ne se lance sans un clic (site silencieux) ; audio preload=none.
+   ============================================================ */
+(function () {
+    'use strict';
+
+    var dataEl = document.getElementById('cineData');
+    if (!dataEl) return;
+    var DATA;
+    try { DATA = JSON.parse(dataEl.textContent); } catch (e) { return; }
+    var CH = DATA && DATA.chapitres;
+    if (!Array.isArray(CH) || !CH.length) return;
+
+    var K_LANG = 'seenmed-cine-lang', K_RATE = 'seenmed-cine-rate';
+    var lang = 'fr', rate = 1;
+    try {
+        lang = localStorage.getItem(K_LANG) === 'ar' ? 'ar' : 'fr';
+        var r0 = parseFloat(localStorage.getItem(K_RATE));
+        if (r0 >= 1 && r0 <= 2) rate = r0;
+    } catch (e) {}
+    var VITESSES = [1, 1.25, 1.5, 2];
+
+    /* -- coordination globale : un seul son, une seule langue -- */
+    var PLAYERS = [];                       /* tous les <audio> du module   */
+    var LANGSUBS = [];                      /* callbacks de changement ع/FR */
+    function solo(a) {
+        PLAYERS.forEach(function (x) { if (x !== a && !x.paused) x.pause(); });
+    }
+    function setLang(l) {
+        lang = (l === 'ar') ? 'ar' : 'fr';
+        try { localStorage.setItem(K_LANG, lang); } catch (e) {}
+        LANGSUBS.forEach(function (f) { f(); });
+    }
+    function fmt(s) {
+        if (!isFinite(s)) s = 0;
+        var m = Math.floor(s / 60), x = Math.floor(s % 60);
+        return m + ':' + (x < 10 ? '0' : '') + x;
+    }
+    var I_PLAY = '<i class="fa-solid fa-play"></i>';
+    var I_PAUSE = '<i class="fa-solid fa-pause"></i>';
+
+    /* ============================================================
+       1. LE LECTEUR CENTRAL  (#cinePlayer)
+       ============================================================ */
+    var mount = document.getElementById('cinePlayer');
+    if (mount) (function () {
+        var cur = 0, imgIdx = -1;
+
+        mount.innerHTML =
+            '<div class="cine-wrap">' +
+            '  <div class="cine-stage">' +
+            '    <img alt="Planche du chapitre en cours de narration" loading="lazy">' +
+            '    <span class="cine-note" hidden></span>' +
+            '    <div class="cine-overlay"><span class="cine-chap-num"></span><span class="cine-chap-titre"></span></div>' +
+            '    <button type="button" class="cine-bigplay" title="Écouter">' + I_PLAY + '</button>' +
+            '  </div>' +
+            '  <div class="cine-time">' +
+            '    <span class="cine-clock">0:00 / 0:00</span>' +
+            '    <input type="range" class="cine-seek" min="0" max="1000" value="0" aria-label="Position dans le chapitre">' +
+            '  </div>' +
+            '  <div class="cine-controls">' +
+            '    <button type="button" class="cine-btn cine-prev" title="Chapitre précédent"><i class="fa-solid fa-backward-step"></i></button>' +
+            '    <button type="button" class="cine-btn cine-play" title="Lecture / pause">' + I_PLAY + '</button>' +
+            '    <button type="button" class="cine-btn cine-next" title="Chapitre suivant"><i class="fa-solid fa-forward-step"></i></button>' +
+            '    <button type="button" class="cine-pill cine-rate" title="Vitesse de lecture"></button>' +
+            '    <button type="button" class="cine-pill cine-lang" title="Piste française / arabe">\u0639/FR</button>' +
+            '  </div>' +
+            '  <ol class="cine-chapitres"></ol>' +
+            '</div>';
+
+        var wrap = mount.querySelector('.cine-wrap');
+        var img = mount.querySelector('.cine-stage img');
+        var note = mount.querySelector('.cine-note');
+        var oNum = mount.querySelector('.cine-chap-num');
+        var oTitre = mount.querySelector('.cine-chap-titre');
+        var bigplay = mount.querySelector('.cine-bigplay');
+        var clock = mount.querySelector('.cine-clock');
+        var seek = mount.querySelector('.cine-seek');
+        var bPlay = mount.querySelector('.cine-play');
+        var bPrev = mount.querySelector('.cine-prev');
+        var bNext = mount.querySelector('.cine-next');
+        var bRate = mount.querySelector('.cine-rate');
+        var bLang = mount.querySelector('.cine-lang');
+        var liste = mount.querySelector('.cine-chapitres');
+
+        var audio = new Audio();
+        audio.preload = 'none';
+        PLAYERS.push(audio);
+
+        CH.forEach(function (c, i) {
+            var li = document.createElement('li');
+            var b = document.createElement('button');
+            b.type = 'button';
+            b.className = 'cine-chap';
+            b.innerHTML = '<span class="n">' + (i + 1) + '</span><span>' + c.t + '</span>';
+            b.addEventListener('click', function () { charger(i, true); });
+            li.appendChild(b);
+            liste.appendChild(li);
+        });
+
+        function majListe() {
+            liste.querySelectorAll('.cine-chap').forEach(function (b, i) {
+                b.classList.toggle('active', i === cur);
+            });
+        }
+        function piste(c) {
+            if (lang === 'ar') {
+                if (c.ar) return { src: c.ar, manque: false };
+                return { src: c.fr || null, manque: true };
+            }
+            return { src: c.fr || c.ar || null, manque: !c.fr };
+        }
+        function charger(i, jouer) {
+            cur = (i + CH.length) % CH.length;
+            var c = CH[cur];
+            bLang.hidden = !c.ar && lang !== 'ar';
+            imgIdx = -1;
+            majImage(0, 1);
+            oNum.textContent = cur + 1;
+            oTitre.textContent = c.t;
+            var p = piste(c);
+            note.hidden = !p.manque;
+            if (p.manque) note.textContent = p.src ? '\u0639 en pr\u00e9paration \u2014 piste fran\u00e7aise'
+                                                   : 'narration en pr\u00e9paration \u2014 prochain lot';
+            if (p.src) { audio.src = p.src; }
+            else { audio.removeAttribute('src'); majPlay(false); }
+            audio.playbackRate = rate;
+            seek.value = 0;
+            clock.textContent = '0:00 / 0:00';
+            majListe();
+            if (jouer && p.src) audio.play();
+        }
+        function majImage(t, d) {
+            var c = CH[cur];
+            var n = c.imgs.length;
+            var k = (d > 0 && n > 1) ? Math.min(n - 1, Math.floor((t / d) * n)) : 0;
+            if (k !== imgIdx) { imgIdx = k; img.src = c.imgs[k]; }
+        }
+        function majPlay(p) {
+            wrap.classList.toggle('playing', p);
+            bPlay.innerHTML = p ? I_PAUSE : I_PLAY;
+        }
+        function basculer() { if (audio.paused) audio.play(); else audio.pause(); }
+
+        bigplay.addEventListener('click', basculer);
+        bPlay.addEventListener('click', basculer);
+        bPrev.addEventListener('click', function () { charger(cur - 1, !audio.paused); });
+        bNext.addEventListener('click', function () { charger(cur + 1, !audio.paused); });
+        audio.addEventListener('play', function () { solo(audio); majPlay(true); });
+        audio.addEventListener('pause', function () { majPlay(false); });
+        audio.addEventListener('ended', function () {
+            if (cur < CH.length - 1) charger(cur + 1, true);
+            else majPlay(false);
+        });
+        audio.addEventListener('timeupdate', function () {
+            var d = audio.duration || 0;
+            clock.textContent = fmt(audio.currentTime) + ' / ' + fmt(d);
+            if (d) seek.value = Math.round((audio.currentTime / d) * 1000);
+            majImage(audio.currentTime, d);
+        });
+        seek.addEventListener('input', function () {
+            if (audio.duration) audio.currentTime = (seek.value / 1000) * audio.duration;
+        });
+
+        function majRate() { bRate.innerHTML = '<i class="fa-solid fa-gauge-high"></i> \u00d7' + rate; }
+        bRate.addEventListener('click', function () {
+            rate = VITESSES[(VITESSES.indexOf(rate) + 1) % VITESSES.length];
+            audio.playbackRate = rate;
+            try { localStorage.setItem(K_RATE, String(rate)); } catch (e) {}
+            majRate();
+        });
+        function majLang() { bLang.classList.toggle('on', lang === 'ar'); }
+        bLang.addEventListener('click', function () { setLang(lang === 'ar' ? 'fr' : 'ar'); });
+        LANGSUBS.push(function () {
+            majLang();
+            charger(cur, !audio.paused);
+        });
+
+        majRate(); majLang();
+        charger(0, false);
+    })();
+
+    /* ============================================================
+       2. LES MINI-LECTEURS DE SECTION  (.cine-spot[data-ch])
+       ============================================================ */
+    document.querySelectorAll('.cine-spot[data-ch]').forEach(function (spot) {
+        var n = parseInt(spot.getAttribute('data-ch'), 10);
+        var c = CH[n];
+        if (!c) return;
+
+        spot.innerHTML =
+            '<button type="button" class="cspot-play" title="Écouter ce passage">' + I_PLAY + '</button>' +
+            '<div class="cspot-body">' +
+            '  <div class="cspot-title"><i class="fa-solid fa-headphones"></i> <span>' + c.t + '</span></div>' +
+            '  <div class="cspot-bar">' +
+            '    <input type="range" class="cspot-seek" min="0" max="1000" value="0" aria-label="Position dans le passage">' +
+            '    <span class="cspot-clock">0:00 / 0:00</span>' +
+            '  </div>' +
+            '</div>' +
+            '<button type="button" class="cspot-lang" title="Piste française / arabe">\u0639/FR</button>';
+
+        var bp = spot.querySelector('.cspot-play');
+        var sk = spot.querySelector('.cspot-seek');
+        var ck = spot.querySelector('.cspot-clock');
+        var bl = spot.querySelector('.cspot-lang');
+        bl.hidden = !c.ar;
+
+        var a = new Audio();
+        a.preload = 'none';
+        PLAYERS.push(a);
+        var charge = '';
+
+        function src() { return (lang === 'ar' && c.ar) ? c.ar : (c.fr || c.ar || null); }
+        function majBl() { bl.classList.toggle('on', lang === 'ar'); }
+
+        bp.addEventListener('click', function () {
+            if (a.paused) {
+                var s = src();
+                if (!s) return;
+                if (charge !== s) { a.src = s; charge = s; }
+                a.playbackRate = rate;
+                a.play();
+            } else { a.pause(); }
+        });
+        a.addEventListener('play', function () { solo(a); spot.classList.add('on'); bp.innerHTML = I_PAUSE; });
+        a.addEventListener('pause', function () { spot.classList.remove('on'); bp.innerHTML = I_PLAY; });
+        a.addEventListener('ended', function () { sk.value = 0; ck.textContent = '0:00 / ' + fmt(a.duration); });
+        a.addEventListener('timeupdate', function () {
+            var d = a.duration || 0;
+            ck.textContent = fmt(a.currentTime) + ' / ' + fmt(d);
+            if (d) sk.value = Math.round((a.currentTime / d) * 1000);
+        });
+        sk.addEventListener('input', function () {
+            if (a.duration) a.currentTime = (sk.value / 1000) * a.duration;
+        });
+        bl.addEventListener('click', function () { setLang(lang === 'ar' ? 'fr' : 'ar'); });
+        LANGSUBS.push(function () {
+            majBl();
+            var s = src();
+            if (charge && s && charge !== s) {
+                var jouait = !a.paused;
+                a.src = s; charge = s; sk.value = 0;
+                if (jouait) { a.playbackRate = rate; a.play(); }
+            }
+        });
+        majBl();
+    });
+})();

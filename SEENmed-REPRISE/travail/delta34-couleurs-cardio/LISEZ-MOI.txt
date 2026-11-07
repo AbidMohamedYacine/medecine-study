@@ -1,0 +1,18 @@
+SEENmed — DELTA34 · COULEURS DU FOND CARDIAQUE · 07/11/2026
+
+Ce correctif concerne uniquement les couleurs du fond et des particules des onze leçons de Sémiologie Cardiaque ca-01 à ca-11. Les quatre fonds deviennent respectivement rouge profond (Sombre), bleu (Clair), vert émeraude (Aurore) et ambre-cuivre (Océan). Les noms des thèmes du site restent les mêmes. La planche fixe noir et blanc reste inchangée, comme avant. Aucun contenu médical, média, audio, QCM ou autre module n'est modifié.
+
+INSTALLATION WINDOWS
+1. Extraire complètement le ZIP, puis ouvrir DELTA34_fond-cardiaque_2026-11-07.
+2. Double-cliquer sur INSTALLER-WINDOWS.bat.
+3. Choisir VOTRE dossier medstudy EXISTANT ou son dossier parent ; ne pas choisir le dossier medstudy qui est dans ce ZIP.
+4. Après le message « Done! », ouvrir une leçon de Sémiologie Cardiaque et appuyer sur Ctrl+F5 pour actualiser le moteur en cache.
+
+IMPORTANT : ne pas fusionner/copier le dossier medstudy de ce ZIP dans votre site. Il contient les pages et médias de référence complets des 11 leçons, pas votre site vivant. L'installeur adapte uniquement votre js/cardio-field.js existant. Il vérifie la structure précise de sa palette et refuse de modifier une version incompatible ; il conserve le reste du moteur installé et crée une sauvegarde portant le nom cardio-field.before-delta34-...js dans votre dossier js. Les autres fichiers du site ne sont pas remplacés. En cas de refus ou de message d'erreur, envoyer une capture à l'agent sans changer les paramètres de sécurité.
+
+CONTROLES ET LIMITES
+Sur la base officielle du 28/10 : 11 pages × 4 thèmes, changement au bouton et couleur des particules vérifiés sous Chromium (44/44), défilement vérifié sur les 11 pages ; les 4 modes de fond vérifiés sur ca-02. Comparaison sur ca-02 : couleurs de composants, textes et boutons inchangées entre avant/après pour les 4 thèmes. Les 11 pages, les médias référencés et les autres fichiers de la base sont inchangés ; seule la palette et l'insertion d'une feuille limitée au fond cardio s'ajoutent au moteur. Références locales des 11 pages vérifiées : aucune manquante sur cette base.
+
+L'audit des anciennes leçons ne passe pas toutes les règles récentes, et le vérificateur d'images signale des cas anciens. L'utilisateur a expressément autorisé la livraison des couleurs seules malgré ces résultats préexistants : les leçons antérieures à la nouvelle méthode ne sont pas transformées. Le test runtime standard de ca-02 comporte des échecs avant et après le correctif ; son contrôle de peau cherche le moteur bio et n'est pas adapté au moteur cardio. Aucun résultat n'est présenté comme une validation complète des contenus. Test ciblé de fond indépendant : 44/44. L'installeur a été conçu pour préserver les moteurs compatibles mais son interface n'a pas été exécutée sous Windows sur notre banc Linux ; aucune affirmation n'est faite sur la version exacte déjà installée sur votre ordinateur.
+
+Ce ZIP contient un dossier DELTA34, medstudy/ de référence pour les 11 leçons, l'installeur et MD5SUMS.txt ; ce n'est pas une nouvelle base complète ni une invitation à écraser les autres livraisons. MD5SUMS.txt contrôle les fichiers après extraction.

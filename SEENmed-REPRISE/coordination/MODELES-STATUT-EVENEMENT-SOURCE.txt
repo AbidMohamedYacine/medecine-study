@@ -1,0 +1,37 @@
+SEENmed — MODÈLES À COPIER (équipe dynamique v2)
+================================================
+
+1) STATUT_<AAAA-MM-JJ-HHMM>_<ETAPE>.txt  [dans ton LOCK]
+LECON: <id> — <titre>
+AGENT: AGENT-<n>
+ETAPE: RESERVATION | SOURCE_LUE | IMAGES_LOT1 | IMAGES_LOT2 | PAGE_CONSTRUITE | AUDIO | AUDIT_OK | LIVRAISON_EN_COURS | TERMINE | EN_PAUSE_LIMITE | EN_PAUSE_UTILISATEUR | A_PATCHER
+DATE_HEURE: <AAAA-MM-JJ HH:MM>
+SOURCE: <fichier / ID Drive ou chemin / MD5 / pages-diapos>
+FAIT: <résultat vérifiable, court>
+RESTE: <étapes exactes restantes>
+GENERATIONS CUMUL LECON: images OK <n> / échecs <n> ; audios OK <n> / échecs <n>
+GENERATIONS CE TOUR: images <n>/10 ; audios <n>/10
+DATA: <data_COURANT de départ / data_COURANT publié / non touché>
+FICHIERS: <IDs LOCK, EN-COURS, livraison, ZIP>
+
+2) EVT_<AAAA-MM-JJ-HHMM>_AGENT-<n>_<TYPE>_<id-ou-GLOBAL>.txt  [dans JOURNAL]
+TYPE: DECISION | NOUVELLE_LECON | SOURCE_RECUE | EXCLUSION | REOUVERTURE | PRIORITE | TRANSFERT | LIVRAISON | BLOCAGE | METHODE | DATA
+DATE_HEURE: <AAAA-MM-JJ HH:MM>
+DE: AGENT-<n>
+CONCERNE: <id/titre/module ou GLOBAL>
+FAIT_EXACT: <ce que l'utilisateur a décidé/donné, sans interprétation ajoutée>
+PREUVE_OU_FICHIERS: <IDs Drive / noms / MD5>
+CONSEQUENCE: <registre, data_COURANT, LOCK, priorité, agent concerné>
+ACTION_ATTENDUE: <ce que les autres agents doivent faire ou ne plus faire>
+
+3) FICHE-SOURCE_<id-provisoire>.txt  [dans INBOX-SOURCES, avec le fichier source si copiable]
+RECU_DE: <utilisateur via chat / fichier joint / Git / lien / Drive>
+DATE: <AAAA-MM-JJ>
+FICHIER_OU_LIEN: <nom exact, ID/URL/chemin>
+TAILLE_PAGES_MD5: <valeurs mesurées>
+TITRE_LU_DANS_LA_SOURCE: <verbatim>
+MODULE_SUPPOSE: <module>
+CLASSIFICATION: EXISTANTE <id> | NOUVELLE <nouvel id> | VERSION_N_DE <id> | ALIAS_DE <id> | A_VERIFIER
+ANNALES_TROUVEES: <nombre vérifié + recueil/page, ou 0/non cartographié>
+INSTRUCTION_UTILISATEUR: <construire maintenant / classer seulement / ne pas faire>
+EVENEMENT_JOURNAL: <nom du fichier EVT publié>

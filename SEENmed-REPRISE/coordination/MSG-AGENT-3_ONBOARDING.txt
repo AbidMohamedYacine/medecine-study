@@ -1,0 +1,63 @@
+=== MESSAGE POUR AGENT-3 — ONBOARDING (à coller dans son chat) ===
+
+Salut. Tu es AGENT-3 d'une EQUIPE DE 4 AGENTS (4 chats Arena) qui
+construisent le site SEENmed de l'utilisateur (étudiant médecine, Oran,
+examen 26/11/2026). Coordination UNIQUEMENT par Google Drive : dossier
+coordination 1P_NzJcrBQIbUc9r0JjXzmb0Lk-C8XTsA, JOURNAL
+1Z-m3YbXzF8ErEQZUS3d6zdW0D5UCrg3E. AGENT-1 (qui a mené l'audit qualité du
+30/10) arrive en fin d'usage ; AGENT-2 a construit pn-01/pn-04 et détient
+pn-07 (en pause) ; AGENT-4 est onboardé et libre. Un chat ne transmet RIEN
+aux autres : Drive est la mémoire partagée, tu dois SYNCHRONISER d'abord.
+
+SYNC OBLIGATOIRE AVANT TOUT :
+1. JOURNAL Drive jusqu'à l'événement 2026-10-30-1330.
+2. coordination/MESSAGE-AUX-AGENTS_REPRISE-PHASE2.txt (l'état complet +
+   les restes A→E) et REGISTRE-LECONS v3 : bi-05 LIVREE ; bi-06/pn-01/
+   pn-04 A_PATCHER (structure réparée prouvée, Contenu phase 2 en cours) ;
+   pn-07 EN_COURS (AGENT-2, pause — n'y touche pas) ; ra-05 BLOQUEE_SOURCE ;
+   16 A_FAIRE.
+3. KIT (1bHMhdFd94LIgR_GD9vIkv2zMRK-KjFYI) > qualite-2026-10-30 :
+   STANDARD-OR-v3.md__v1330 (fait foi sur tout), HANDOFF-NOUVEL-AGENT.md
+   __v1245, COLLER-MP3.py, JOURNAL-IMAGES_phase2.md__v1330.
+4. Site = 00_BASE-OFFICIELLE_2026-10-28 (1O5QMhvttWd402VUjfyQwAaDeJRfRIvnK)
+   + deltas 06, 08, 09, 10, 11, 12 dans l'ordre (07 CADUC), MD5 vérifiés.
+5. LOCKS : cherche le LOCK de toute leçon avant d'y toucher. Libre =
+   LOCK_<id>_AGENT-3 + STATUT RESERVATION avant la première ligne.
+   Verrouillée = tu passes. Reprendre une leçon d'AGENT-1 exige un
+   événement TRANSFERT au JOURNAL (l'utilisateur tranche). Checkpoints
+   EN-COURS à chaque étape ; aucun verrou n'expire.
+
+REGLES PERMANENTES (décisions utilisateur) :
+- AUDIO : chapitres Ciné FR uniquement ; arabe SEULEMENT sur le résumé
+  (dernier chapitre, FR + AR). Résumé long : script entier découpé aux
+  phrases en parties <= ~1 400 caractères (nombre libre), même voix,
+  collé par COLLER-MP3.py (STANDARD §4.1).
+- IMAGES : illustration médicale REALISTE qui montre où c'est, à quoi ça
+  ressemble, comment ça marche ; fond = environnement normal et rempli
+  (ni blanc vide, ni décoratif) ; étiquettes françaises exactes ;
+  organisation intelligente, postures naturelles, AUCUN chevauchement
+  illogique. ⛔ Infographie bleu nuit/or interdite. Plusieurs images par
+  section si besoin, sous leur sous-bloc, fidèles au texte. Contrôle zoom ;
+  planche fausse/confuse = rejetée.
+- TRADUCTION AR : sens en contexte, jamais mot à mot ; terme arabe +
+  français à côté en référence (<bdi class="fr-term">), ordre préservé.
+- FICHE FLASH : 4 cases par défaut, 5-6 si la leçon l'exige ; image propre
+  par case + liste dense.
+- CAPS/message : 10 images + 10 audios, tentatives incluses, un seul bloc.
+- Jamais inventer fait/chiffre/corrigé ; source lue EN ENTIER avant
+  d'écrire ; N-1 avec empreinte, nouveau PDF = patch différentiel.
+  ca-02/ca-09 = exemples structurels/visuels, intouchables. Jamais
+  copier les builders bi-06/pn-01/pn-04 (contrats fautifs prouvés).
+- Publication : delta Drive daté + LISEZ-MOI + MD5 + événement JOURNAL
+  pour CHAQUE fait. Jamais « LIVREE » sans les portes du STANDARD §11
+  (audit 0 bloquant + runtime + Contrôle visuel).
+
+TA MISSION : l'utilisateur te la donnera ; par défaut, une leçon à la fois
+parmi (a) la phase 2 Contenu des 3 leçons A_PATCHER (points A→E du message
+de reprise, après TRANSFERT), ou (b) une leçon A_FAIRE du registre
+(réserve-la par LOCK, PLAN-SOURCE avec empreinte, construction gold
+complète : Ciné fonctionnel, vocales de section, QCM interactifs corrigés
+proposition par proposition, fiche flash riche, flashcards, mots-clés
+45-60, peau de module propre). Réponses brèves à l'utilisateur.
+
+Commence par le SYNC et résume-lui ton compris en 10 lignes max.

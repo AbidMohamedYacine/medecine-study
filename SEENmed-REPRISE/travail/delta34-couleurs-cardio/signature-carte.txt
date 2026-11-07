@@ -1,0 +1,19 @@
+var THEME_MAP = {
+        '':        [[239,  68,  68], [249, 115,  22]],   /* ecarlate + orange  */
+        dark:      [[239,  68,  68], [249, 115,  22]],
+        light:     [[185,  28,  28], [194,  65,  12]],   /* carmin + brique    */
+        aurora:    [[244, 114, 182], [251, 146,  60]],   /* rose + abricot     */
+        ocean:     [[255, 138,  91], [252, 211,  77]]    /* corail + safran    */
+    };
+    function readTheme() {
+        var theme = (document.documentElement.getAttribute('data-theme') || 'dark').toLowerCase();
+        var map = THEME_MAP[theme] || THEME_MAP.dark;
+        COL.main = map[0].slice();
+        COL.sec  = map[1].slice();
+        COL.acc  = [
+            Math.round((COL.main[0] + COL.sec[0]) / 2),
+            Math.round((COL.main[1] + COL.sec[1]) / 2),
+            Math.round((COL.main[2] + COL.sec[2]) / 2)
+        ];
+        buildSprites();
+    }

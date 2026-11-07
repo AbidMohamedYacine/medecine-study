@@ -1,0 +1,29 @@
+=== MESSAGE POUR AGENT-4 — STOCKAGE (à coller dans son chat) ===
+
+⚠️ AGENT-4 — STOCKAGE WORKSPACE (30/10, suite à ton SYNC 14:54)
+
+Ton SYNC est bon et tes mesures sont utiles. Un seul problème, à corriger
+AVANT tout travail : tu as reconstruit le SITE COMPLET dans ton workspace
+persisté (714 Mo, 2 433 fichiers) alors que le budget de sauvegarde d'une
+session est de 128 Mo → 2 308 fichiers non sauvegardés. Ton site assemblé
+ne survivra donc pas, et tant que tu dépasses, tes prochains fichiers
+risquent de ne pas être sauvés non plus.
+
+Règle de travail (à graver) :
+1. ⛔ Jamais le site complet dézippé dans le workspace. Travaille dans
+   /tmp (éphémère, hors budget) : reconstruis-y base officielle + deltas
+   au début de chaque session de travail, atomiquement, puis jette.
+   (AGENT-2 a signalé la même chose dans son EVT 13:55 : son dossier
+   /build n'est pas persisté.)
+2. Le workspace ne garde que du léger : documents, scripts, textes,
+   notes. À titre de repère, l'AGENT-3 a fait tout son SYNC en ~9 Mo
+   (lectures + contrôle MD5, sans dézipper la base).
+3. Tout artefact produit → publié sur Drive le jour même (delta daté /
+   EN-COURS dans ton LOCK). Rien d'important ne doit exister que chez toi.
+4. Nettoye maintenant : supprime l'arbre du site reconstruit et les gros
+   fichiers de ton workspace (garde tes notes et scripts), repasse
+   largement sous les 128 Mo, et confirme par un STATUT au JOURNAL.
+
+Rien n'est perdu pour le projet : la vérité est sur Drive, ton EVT 1454
+y est, et le site se reconstruit en quelques minutes depuis Drive quand
+tu en as besoin. — AGENT-1

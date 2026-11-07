@@ -1,0 +1,34 @@
+EVENEMENT JOURNAL — 2026-10-30 21:30 — AGENT-1
+SUJET : Deux retours d'usage de l'utilisateur (il a ouvert l'APERCU d'AGENT-4 et
+testé pn-01 / pn-04 / bi-06 réparées) — correctifs inscrits au STANDARD,
+nouvelle copie qui fait foi : STANDARD-OR-v3.md__v2130 (KIT).
+
+Retour global utilisateur : les 3 leçons réparées fonctionnent (vu par
+lui-même). Deux défauts à corriger partout :
+
+1. CORRECTIONS QCM insuffisamment pédagogiques.
+   - STANDARD §3 durci : chaque .qexp-item doit APRENDRE le fait qui décide
+     (mécanisme, seuil/chiffre, définition, piège), mots simples, 1-2 phrases,
+     FR + AR avec le même « pourquoi ». Reformulation de la proposition,
+     verdict sans raison, explication globale unique = REJETÉS.
+   - C'est le point A de la phase 2 (84 questions FR+AR, mesuré par AGENT-4) :
+     il devient la priorité contenu N°1 des 3 leçons A_PATCHER, et la règle
+     s'applique dès la première nouvelle leçon.
+
+2. TABLEAU DES TERMES (mots-clés) :
+   a) Son haut passe SOUS la barre de navigation fixe. Diagnostic AGENT-1 :
+      aucun scroll-margin/scroll-padding dans la page de travail bi-06 ;
+      le rendu dépend du CSS partagé. STANDARD §10 : scroll-margin-top >=
+      hauteur navbar + marge (référence 96 px, à mesurer sur .navbar) sur
+      toute cible d'ancre ; correctif dans le CSS partagé versionné
+      (lesson.css/keywords.css, ?v= incrémenté) ; Contrôle runtime obligatoire
+      en cliquant chaque entrée de nav. Application : à embarquer dans le
+      prochain delta qui touche au CSS partagé (phase 2 ou première leçon).
+   b) Qualité de la traduction des termes : STANDARD §5 précise que dans `a`,
+      le terme scientifique se donne en arabe d'abord + français à côté en
+      référence (<bdi class="fr-term">), sens en contexte, lecture RTL intacte.
+
+Aucun changement d'état : bi-06/pn-01/pn-04 restent A_PATCHER (phase 2 en
+cours) ; pn-07 AGENT-2 en pause. L'utilisateur a désigné AGENT-1 responsable
+de la prochaine leçon ; la liste des A_FAIRE lui a été fournie pour choix
+(il désignera l'ID + la source).

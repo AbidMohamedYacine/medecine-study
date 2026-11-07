@@ -1,0 +1,17 @@
+tdm-sagittale-compartiments.webp | 736x511 | 46 Ko | source image3.png
+tdm-coronale-etages.webp | 740x520 | 41 Ko | source image4.png
+rx-bords-mediastinaux.webp | 395x329 | 14 Ko | source image5.png
+megaoesophage-face.webp | 443x591 | 10 Ko | source image6.png
+megaoesophage-profil.webp | 579x886 | 18 Ko | source image7.png
+goitre-plongeant-rx.webp | 952x680 | 43 Ko | source image8.png
+thymome-rx.webp | 896x717 | 36 Ko | source image9.png
+thymome-tdm.webp | 554x422 | 24 Ko | source image10.png
+tumeur-germinale-rx.webp | 886x865 | 56 Ko | source image11.png
+tumeur-germinale-tdm.webp | 682x584 | 27 Ko | source image12.png
+lymphome-rx.webp | 451x591 | 22 Ko | source image13.png
+lymphome-tdm.webp | 591x512 | 23 Ko | source image14.png
+elargissement-1.webp | 752x350 | 11 Ko | source image15.png
+elargissement-2.webp | 1043x512 | 25 Ko | source image16.png
+elargissement-3.webp | 1043x511 | 20 Ko | source image17.png
+elargissement-4.webp | 749x350 | 15 Ko | source image18.png
+rx-thorax-normale.webp | 991x1084 | 104 Ko | source image19.png
