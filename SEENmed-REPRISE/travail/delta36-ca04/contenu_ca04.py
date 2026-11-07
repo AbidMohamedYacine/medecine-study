@@ -71,9 +71,11 @@ SECTIONS = [
 {
 'id':'automesure','nav':'Automesure','titre':'Mesures hors cabinet : automesure','source':'Diapositives 36 à 41','img':'automesure.webp','audio':7,
 'fr':["La confirmation associe au dépistage au cabinet une méthode ambulatoire. L'automesure recourt à un appareil oscillométrique ; la règle des trois du support est trois mesures le matin et trois le soir pendant trois jours consécutifs, assis. Noter les résultats et les remettre au soignant, sans ajuster seul le traitement.",
-"Le cours cite des limites : arythmies, troubles cognitifs ou sensoriels, anxiété marquée et évaluation insuffisante de certains appareils chez l'enfant, la femme enceinte ou pour les grands brassards. Les mesures hors cabinet aident à détecter les profils blouse blanche et masqué."],
+"Le cours cite des limites : arythmies, troubles cognitifs ou sensoriels, anxiété marquée et évaluation insuffisante de certains appareils chez l'enfant, la femme enceinte ou pour les grands brassards. Les mesures hors cabinet aident à détecter les profils blouse blanche et masqué.",
+"Le support cite la mesure hors cabinet avant un traitement antihypertenseur pour confirmer la permanence de l'HTA et rechercher l'effet blouse blanche, ainsi que chez le sujet âgé, en cas d'HTA résistante et pour l'évaluation du traitement. Il indique qu'un plus grand nombre de mesures améliore l'estimation et que ces mesures prédisent mieux le risque de décès cardiovasculaire que la seule pression en consultation."],
 'ar':["يجمع تأكيد التقييم بين قياس العيادة وقياس خارجها. يستخدم القياس الذاتي (<bdi class=\"fr-term\">automesure</bdi>) جهازا تذبذبيا؛ وقاعدة الثلاثة في الدرس هي ثلاث قراءات صباحا وثلاث مساء لمدة ثلاثة أيام متتالية جلوسا. تسجل النتائج وتعرض على المهني الصحي دون تغيير العلاج ذاتيا.",
-"من الحدود المذكورة اضطراب النظم والاضطرابات المعرفية أو الحسية والقلق الشديد وقلة تقييم بعض الأجهزة عند الأطفال والحوامل أو الكفات الكبيرة. يساعد القياس خارج العيادة على كشف المعطف الأبيض والضغط المقنع."],
+"من الحدود المذكورة اضطراب النظم والاضطرابات المعرفية أو الحسية والقلق الشديد وقلة تقييم بعض الأجهزة عند الأطفال والحوامل أو الكفات الكبيرة. يساعد القياس خارج العيادة على كشف المعطف الأبيض والضغط المقنع.",
+"يذكر الدرس القياس خارج العيادة قبل بدء علاج ارتفاع الضغط لتأكيد استمراره والبحث عن أثر المعطف الأبيض، وكذلك عند المسن وفي ارتفاع الضغط المقاوم ولتقييم العلاج. ويرى أن زيادة عدد القياسات تحسن التقدير وأن القياس خارج العيادة يتنبأ بخطر الوفاة القلبية الوعائية أفضل من قياس العيادة وحده."],
 'alt':'Patiente à domicile avec brassard au bras relié à un tensiomètre et carnet de mesures sur la table.'},
 {
 'id':'mapa','nav':'MAPA','titre':'Mesure ambulatoire sur 24 heures','source':'Diapositives 38, 42 et 43','img':'mapa.webp','audio':8,

@@ -18,6 +18,9 @@ if not template.exists():
     template.write_text((site/'lecons/ca-04-pression-arterielle.html').read_text(encoding='utf-8'),encoding='utf-8')
 source=template.read_text(encoding='utf-8')
 head=source[:source.index('    <!-- ============ HERO DE LEÇON ============ -->')]
+# Le bandeau du dictionnaire et son bouton Fermer doivent passer devant la
+# navbar fixe. Correction locale à cette leçon, sans modifier les autres pages.
+head=head.replace('</head>', '<style>body[data-lesson-id="ca-04"] .kw-panel{z-index:1102}body[data-lesson-id="ca-04"] .kw-backdrop{z-index:1101}@media(max-width:640px){body[data-lesson-id="ca-04"] .flashsheet.ff-2x2{grid-template-columns:1fr}}</style>\n</head>', 1)
 footer=source[source.index('    <footer class="footer">'):source.index('<script type="application/json" id="cineData">')]
 footer=re.sub(r'<img\b[^>]*>','',footer)
 H=html.escape
@@ -103,18 +106,20 @@ parts.append('</section>')
 # Quatre cellules illustrées, avec contenu bilingue.
 fiche=[(0,1,'Comprendre','الفهم'),(2,3,'Mesurer','القياس'),(5,6,'Cabinet','العيادة'),(7,9,'Confirmer et interpréter','التأكيد والتفسير')]
 parts.append(sec_start('fiche','Fiche flash','Quatre cases illustrées pour réviser les étapes essentielles.'))
-parts.append('<div class="flashsheet"><div class="ff-2x2">')
+parts.append('<div class="flashsheet ff-2x2">')
 for i,(a,b,title,ar_title) in enumerate(fiche):
     s,t=SECTIONS[a],SECTIONS[b]
-    fr='<h4>'+title+'</h4><ul>'+''.join('<li>'+H(x)+'</li>' for x in s['fr'][:2]+t['fr'][:2])+'</ul>'
-    ar='<h4>'+ar_title+'</h4><ul>'+''.join('<li>'+x+'</li>' for x in s['ar'][:2]+t['ar'][:2])+'</ul>'
-    # Les première et troisième images restent provisoirement répétées :
-    # il faut des planches indépendantes correctes avant livraison.
-    fiche_img=[(s['img'],s['alt']),('choix-brassard.webp','Choix du brassard selon la circonférence du bras et sens des erreurs de taille.'),(s['img'],s['alt']),('profils.webp','Comparaison entre consultation et domicile : profils blouse blanche et masqué.')]
+    # Ne jamais séparer les faits du cours de leurs réserves importantes :
+    # dimensions du brassard (case 2) et profils tensionnels (case 4).
+    selection=[[(a,0),(a,1),(b,0),(b,1)],[(a,0),(a,1),(a,2),(b,0),(b,1)],[(a,0),(a,1),(b,0),(b,1),(b,2)],[(a,0),(a,1),(b,0),(b,1),(b,2)]][i]
+    fr='<h4>'+title+'</h4><ul>'+''.join('<li>'+H(SECTIONS[j]['fr'][k])+'</li>' for j,k in selection)+'</ul>'
+    ar='<h4>'+ar_title+'</h4><ul>'+''.join('<li>'+SECTIONS[j]['ar'][k]+'</li>' for j,k in selection)+'</ul>'
+    # Quatre illustrations distinctes adaptées au sujet de chaque case.
+    fiche_img=[('fiche-comprendre.webp','Coupe d’une artère et courbe de pression, avec maximum systolique et minimum diastolique.'),('choix-brassard.webp','Choix du brassard selon la circonférence du bras et sens des erreurs de taille.'),('fiche-cabinet.webp','Patiente au cabinet avec bras nu soutenu, brassard et appareil de mesure.'),('profils.webp','Comparaison entre consultation et domicile : profils blouse blanche et masqué.')]
     src, alt=fiche_img[i]
     # Image stays outside translated text so ar-mode never removes it.
     parts.append('<div class="flash-cell">'+visual(src,alt,cls='fiche-figure').replace('<img ','<img class="flash-img" ')+tr(f'fiche-{i}',fr,ar)+'</div>')
-parts.append('</div></div></section>')
+parts.append('</div></section>')
 # Le deck de référence contient uniquement le châssis et aucun contenu médical.
 fcsec=source[source.index('            <section class="lsection" id="flashcards">'):source.index('            <!-- ═══════════════ RÉSUMÉ TOTAL')]
 fcsec=re.sub(r'<div class="lsub">.*?</div>','<div class="lsub">Cartes de révision à retourner puis à évaluer.</div>',fcsec,count=1,flags=re.S)

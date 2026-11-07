@@ -1,0 +1,5 @@
+AGENT-1 — 2026-11-07 — ca-04 La pression artérielle — DELTA36 EN COURS, NON LIVRÉ
+
+La leçon possède maintenant quatre images distinctes sur la fiche, et les autres illustrations réutilisées ont été examinées et recadrées sans étirement. Audit strict Gold et verifier-images : zéro anomalie. Runtime adapté à la peau cardio : 21/21 ; le runtime officiel inchangé n'a pas été validé dans cet environnement. Les 25 QCM ont été testés fonctionnellement en FR et AR, ainsi que les résumés longs FR/AR et la fermeture du dictionnaire sur mobile/bureau. L'écoute humaine des pistes et la dernière relecture médicale/arabe restent nécessaires ; aucun statut livré.
+
+Sauvegarde avec candidat complet explicitement non déployable : https://drive.google.com/file/d/1Wfe_VjcIuQtIphRxtlFZKK46he6Rcw5d/view — MD5 dd0c07edc6c5f2b93c5ee538eff9875c. Réservation DELTA36 maintenue. Avant livraison, actualiser coordination/data et respecter le paquet et toutes les portes qualité.
