@@ -9,6 +9,7 @@ const dest = path.join(root, 'assets/img/ca-04-delta36');
 fs.mkdirSync(path.join(dest, 'reel'), { recursive:true });
 const files = {
  'pression.webp':'v2/01-pression.png',
+ 'hero.webp':'v9/09-presentation.png',
  'systole.webp':'v2/02-systole.png',
  'posture.webp':'v3/03-posture.png',
  'deux-bras.webp':'v3/08-mesure-deux-bras.png',
@@ -23,6 +24,10 @@ async function main(){
    const file=path.join(src,input);
    // Ces planches sont en 1408 × 768 : coupe centrée de 16 px par bord,
    // sans étirement ni fond flouté. Les contenus ont été inspectés après coupe.
+   if (out === 'hero.webp') {
+     await sharp(file).webp({quality:94}).toFile(path.join(dest,out));
+     continue;
+   }
    if (['mapa.webp','choix-brassard.webp','profils.webp'].includes(out)) {
      await sharp(file).extract({left:16,top:0,width:1376,height:768}).webp({quality:94}).toFile(path.join(dest,out));
      continue;

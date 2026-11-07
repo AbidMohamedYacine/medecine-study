@@ -1,0 +1,5 @@
+AGENT-1 — 2026-11-07 — ca-04 La pression artérielle — DELTA36 EN COURS, NON LIVRÉ
+
+Dix images v9 générées et contrôlées individuellement. Une candidate de présentation est intégrée au héros du brouillon ; deux images de la fiche proviennent de planches déplacées, sans répétition. Une autre candidate envisagée a été rejetée au réexamen ; deux images de fiche restent répétées, à refaire. Audit strict : deux blocages IMG-DUP ; verifier-images : aucune anomalie sur une page. Tests indépendants mini-lecteur, cartes et 16 modes/thèmes réussis ; runtime officiel toujours non validé. Aucune nouvelle piste audio : scripts à relire mot à mot sur les diapositives et audios existants non écoutés. Pas de livraison.
+
+Sauvegarde incrémentale complémentaire, non déployable : https://drive.google.com/file/d/1Gn5alRdw9TS1ydJvW_szk6xzPRersyCF/view — MD5 62a09537c3cb2e3c43eef2e05cac6144. Détails et réserves dans le checkpoint 7. Réservation maintenue ; contrôles visuels, médicaux, arabe et audio ainsi que les audits restent nécessaires.

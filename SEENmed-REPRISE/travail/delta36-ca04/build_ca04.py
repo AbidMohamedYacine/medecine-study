@@ -37,7 +37,7 @@ def visual(src,alt,cls='section-visual'):
 def sec_start(sid,title,sub='',attr=''):
     return f'<section class="lsection" id="{sid}"{attr}><div class="lsection-head"><div class="lsection-num icon-only"><i class="fa-solid fa-heart-pulse"></i></div><div><h2>{title}</h2><div class="lsub">{sub}</div></div></div>'
 
-parts=[head, f'''<header class="lesson-hero"><div class="container"><div class="lesson-hero-grid"><div><div class="crumbs"><a href="../index.html">Accueil</a> › Cardio-respiratoire › ca-04</div><h1>La <span class="highlight">pression artérielle</span></h1><div class="lesson-meta"><span class="chip chip-mod">Cardio-respiratoire · 3e année</span><span class="chip">Cours Dr Seddini A. · EHU Oran</span><span class="chip">Recueil ELITE CARDIO · 9 questions</span></div><div class="lesson-actions"><a href="#vue" class="btn btn-primary">Commencer</a><a href="#annales" class="btn btn-outline">QCM du recueil</a><button class="btn btn-outline" id="markDoneBtn">Marquer comme maîtrisée</button></div></div><div class="lesson-hero-visual"><img src="{imgbase}pression.webp" alt="Illustration schématique du sang exerçant une pression sur la paroi d’une artère." width="1376" height="768"></div></div></div></header>''']
+parts=[head, f'''<header class="lesson-hero"><div class="container"><div class="lesson-hero-grid"><div><div class="crumbs"><a href="../index.html">Accueil</a> › Cardio-respiratoire › ca-04</div><h1>La <span class="highlight">pression artérielle</span></h1><div class="lesson-meta"><span class="chip chip-mod">Cardio-respiratoire · 3e année</span><span class="chip">Cours Dr Seddini A. · EHU Oran</span><span class="chip">Recueil ELITE CARDIO · 9 questions</span></div><div class="lesson-actions"><a href="#vue" class="btn btn-primary">Commencer</a><a href="#annales" class="btn btn-outline">QCM du recueil</a><button class="btn btn-outline" id="markDoneBtn">Marquer comme maîtrisée</button></div></div><div class="lesson-hero-visual"><img src="{imgbase}hero.webp" alt="Médecin et patient examinant un tensiomètre et un carnet de mesures." width="1376" height="768"></div></div></div></header>''']
 nav=[('vue','Vue d’ensemble'),('mindmap','Plan'),('cine','Ciné')]+[(s['id'],f"{i}. {s['nav']}") for i,s in enumerate(SECTIONS,1)]+[('methode','Méthode'),('connexions','Connexions'),('annales','Recueil'),('entrainement','Entraînement'),('fiche','Fiche flash'),('flashcards','Flashcards'),('resume-total','Résumé')]
 parts.append('<div class="lesson-nav" id="lessonNav"><div class="lesson-nav-inner"><div class="lesson-tabs">'+''.join(f'<button class="ltab{" active" if i==0 else ""}" data-target="{sid}">{H(t)}</button>' for i,(sid,t) in enumerate(nav))+'</div><div class="lesson-progress-wrap"><span id="lessonProgressPct">0%</span><div class="lesson-progress-bar"><div class="lesson-progress-fill" id="lessonProgressFill"></div></div></div></div></div><main class="lesson-body"><div class="container">')
 parts.append(sec_start('vue','Vue d’ensemble','Du geste correct à l’interprétation des chiffres.'))
@@ -52,10 +52,6 @@ chapters=[]
 for i,s in enumerate(SECTIONS):
     parts.append(sec_start(s['id'],f'{i+1}. {H(s["titre"])}',H(s['source'])))
     parts.append(visual(s['img'],s['alt']))
-    if s['id']=='brassard':
-        parts.append(visual('choix-brassard.webp','Choix du brassard selon la circonférence du bras : la planche illustre le mètre ruban et la poche gonflable.'))
-    if s['id']=='seuils':
-        parts.append(visual('profils.webp','Comparaison entre consultation et domicile : hypertension blouse blanche et hypertension masquée.'))
     parts.append(f'<div class="cine-spot reveal" data-ch="{i}"></div>')
     for j,(fr,ar) in enumerate(zip(s['fr'],s['ar']),1):
         parts.append(tr(f's{i+1}-{j}',f'<p>{H(fr)}</p>',f'<p>{ar}</p>',cls='lbox reveal'))
@@ -112,8 +108,12 @@ for i,(a,b,title,ar_title) in enumerate(fiche):
     s,t=SECTIONS[a],SECTIONS[b]
     fr='<h4>'+title+'</h4><ul>'+''.join('<li>'+H(x)+'</li>' for x in s['fr'][:2]+t['fr'][:2])+'</ul>'
     ar='<h4>'+ar_title+'</h4><ul>'+''.join('<li>'+x+'</li>' for x in s['ar'][:2]+t['ar'][:2])+'</ul>'
+    # Les première et troisième images restent provisoirement répétées :
+    # il faut des planches indépendantes correctes avant livraison.
+    fiche_img=[(s['img'],s['alt']),('choix-brassard.webp','Choix du brassard selon la circonférence du bras et sens des erreurs de taille.'),(s['img'],s['alt']),('profils.webp','Comparaison entre consultation et domicile : profils blouse blanche et masqué.')]
+    src, alt=fiche_img[i]
     # Image stays outside translated text so ar-mode never removes it.
-    parts.append('<div class="flash-cell">'+visual(s['img'],s['alt'],cls='fiche-figure').replace('<img ','<img class="flash-img" ')+tr(f'fiche-{i}',fr,ar)+'</div>')
+    parts.append('<div class="flash-cell">'+visual(src,alt,cls='fiche-figure').replace('<img ','<img class="flash-img" ')+tr(f'fiche-{i}',fr,ar)+'</div>')
 parts.append('</div></div></section>')
 # Le deck de référence contient uniquement le châssis et aucun contenu médical.
 fcsec=source[source.index('            <section class="lsection" id="flashcards">'):source.index('            <!-- ═══════════════ RÉSUMÉ TOTAL')]
