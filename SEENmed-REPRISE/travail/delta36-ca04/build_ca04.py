@@ -9,7 +9,7 @@ import sys, json, html, re, random
 from pathlib import Path
 from contenu_ca04 import SECTIONS
 from render_qcm_recueil import render_recueil
-from qcm_ar import OPTIONS
+from qcm_ar import QUESTIONS, OPTIONS
 
 if len(sys.argv) != 2 or not sys.argv[1].startswith('/tmp/'):
     raise SystemExit('usage: build_ca04.py /tmp/.../medstudy (site temporaire uniquement)')
@@ -52,6 +52,10 @@ chapters=[]
 for i,s in enumerate(SECTIONS):
     parts.append(sec_start(s['id'],f'{i+1}. {H(s["titre"])}',H(s['source'])))
     parts.append(visual(s['img'],s['alt']))
+    if s['id']=='brassard':
+        parts.append(visual('choix-brassard.webp','Choix du brassard selon la circonférence du bras : la planche illustre le mètre ruban et la poche gonflable.'))
+    if s['id']=='seuils':
+        parts.append(visual('profils.webp','Comparaison entre consultation et domicile : hypertension blouse blanche et hypertension masquée.'))
     parts.append(f'<div class="cine-spot reveal" data-ch="{i}"></div>')
     for j,(fr,ar) in enumerate(zip(s['fr'],s['ar']),1):
         parts.append(tr(f's{i+1}-{j}',f'<p>{H(fr)}</p>',f'<p>{ar}</p>',cls='lbox reveal'))
@@ -88,10 +92,13 @@ for i,chosen in enumerate(exercises,1):
     opts=[]; expfr=[]; expar=[]
     for letter,(n,old) in zip('ABCDE',chosen):
         q=qs[n-1]; fact=q['propositions'][old]; x=q['explications'][old]; good=old in q['reponse_recueil']; c='t' if good else 'f'
-        k=f'{qid}-{letter}'; AR[k]=H(OPTIONS[n-1][ord(old)-65])
-        opts.append(f'<li data-l="{letter}"><span class="ql">{letter}</span><span class="qtxt" data-tr="{k}">{H(fact)}</span><span class="xe"></span></li>')
-        expfr.append(f'<div class="qexp-item {c}"><b>{letter} — {"À COCHER" if good else "À NE PAS COCHER"}.</b> {H(x["fr"])} (recueil Q{n}{old})</div>')
-        expar.append(f'<div class="qexp-item {c}"><b><bdi class="fr-plain">{letter}</bdi> — {"يختار" if good else "لا يختار"}.</b> {H(x["ar"])}</div>')
+        # Une proposition reprise sans son sujet peut changer de sens : préserver
+        # le contexte de la question originale dans les deux langues.
+        context_fr=q['enonce']; context_ar=QUESTIONS[n-1]
+        k=f'{qid}-{letter}'; AR[k]=H(context_ar)+' '+H(OPTIONS[n-1][ord(old)-65])
+        opts.append(f'<li data-l="{letter}"><span class="ql">{letter}</span><span class="qtxt" data-tr="{k}">{H(context_fr)} {H(fact)}</span><span class="xe"></span></li>')
+        expfr.append(f'<div class="qexp-item {c}"><b>{letter} — {"À COCHER" if good else "À NE PAS COCHER"}.</b> Contexte initial : {H(context_fr)} {H(x["fr"])} (recueil Q{n}{old})</div>')
+        expar.append(f'<div class="qexp-item {c}"><b><bdi class="fr-plain">{letter}</bdi> — {"يختار" if good else "لا يختار"}.</b> السياق الأصلي: {H(context_ar)} {H(x["ar"])}</div>')
     AR[qid+'-q']='اختر العبارات الصحيحة عن قياس الضغط الشرياني.'
     AR[qid+'-exp']='<div class="qexp-title">التفسير اقتراحا باقتراح</div>'+''.join(expar)+f'<div class="qexp-memo">الجواب: <bdi class="fr-plain">{"".join(ans)}</bdi>.</div>'
     encoded=H(json.dumps(ans),quote=True)

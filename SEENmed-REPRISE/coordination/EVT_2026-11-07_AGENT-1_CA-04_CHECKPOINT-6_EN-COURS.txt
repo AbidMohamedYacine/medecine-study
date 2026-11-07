@@ -1,0 +1,5 @@
+AGENT-1 — 2026-11-07 — ca-04 La pression artérielle — DELTA36 EN COURS, NON LIVRÉ
+
+Deux planches additionnelles sous réserves (brassard et profils) sont intégrées au seul brouillon temporaire ; vérification séquentielle des flèches. Dix pistes pour un résumé long FR/AR ont été générées et décodées puis assemblées ; elles ne sont pas écoutées ni intégrées. Les propositions recomposées gardent désormais leur contexte original FR/AR. Test ciblé de correction et traduction réussi, non exhaustif. Audit Gold strict : quatre blocages de répétition d'images ; verifier-images : aucune anomalie sur une page. Détails et réserves dans ETAT-CHECKPOINT-6_NON-LIVRABLE.md.
+
+Sauvegarde complémentaire non livrable : https://drive.google.com/file/d/13GdZkFtIC0MR7FnaeWFoh5U6QodOSBgJ/view — MD5 27904e0dcad5797b55019a660e0e5f3d. Complète les checkpoints précédents. Ne pas déployer ; illustrations, revue médicale et arabe, écoute audio et audits restent à terminer. Réservation maintenue.

@@ -15,13 +15,15 @@ const files = {
  'comparaison.webp':'v2/07-deux-bras.png',
  'automesure.webp':'v3/06-automesure.png',
  'mapa.webp':'v7/05-mapa-corrigee.png',
+ 'choix-brassard.webp':'v8/02-brassard.png',
+ 'profils.webp':'v8/01-profils.png',
 };
 async function main(){
  for (const [out, input] of Object.entries(files)) {
    const file=path.join(src,input);
-   // La planche MAPA est en 1408 × 768 : coupe centrée de 16 px par bord,
-   // sans étirement ni fond flouté. Les textes ont été inspectés après coupe.
-   if (out === 'mapa.webp') {
+   // Ces planches sont en 1408 × 768 : coupe centrée de 16 px par bord,
+   // sans étirement ni fond flouté. Les contenus ont été inspectés après coupe.
+   if (['mapa.webp','choix-brassard.webp','profils.webp'].includes(out)) {
      await sharp(file).extract({left:16,top:0,width:1376,height:768}).webp({quality:94}).toFile(path.join(dest,out));
      continue;
    }
