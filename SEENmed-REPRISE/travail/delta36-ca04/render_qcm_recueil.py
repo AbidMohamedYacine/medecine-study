@@ -10,6 +10,7 @@ restent à relire avant intégration. Les 2 libellés incertains sont signalés.
 from html import escape
 from pathlib import Path
 import json
+from qcm_ar import QUESTIONS, OPTIONS
 
 HERE = Path(__file__).resolve().parent
 
@@ -28,8 +29,11 @@ def render_recueil():
         if not ans or any(x not in "ABCDE" for x in ans):
             raise ValueError(f"Q{i}: réponse invalide")
         src = escape(q["source"])
+        ar_data[f'recueil-{i}-q'] = escape(QUESTIONS[i-1])
+        for index, letter in enumerate('ABCDE'):
+            ar_data[f'recueil-{i}-{letter}'] = escape(OPTIONS[i-1][index])
         options = ''.join(f'<li data-l="{letter}"><span class="ql">{letter}</span>'
-                          f'<span class="qtxt">{escape(text)}</span><span class="xe"></span></li>'
+                          f'<span class="qtxt" data-tr="recueil-{i}-{letter}">{escape(text)}</span><span class="xe"></span></li>'
                           for letter, text in q["propositions"].items())
         fr, ar = [], []
         for letter, exp in q["explications"].items():
@@ -45,7 +49,7 @@ def render_recueil():
                                        f'<div class="qexp-memo">جواب المرجع المطبوع: <bdi class="fr-plain">{escape("".join(ans))}</bdi>. ليس هذا بالضرورة تصحيحا رسميا مستقلا.</div>')
         encoded_ans = escape(json.dumps(ans, ensure_ascii=False), quote=True)
         blocks.append(f'''<div class="qblock reveal" data-answer="{encoded_ans}">
-  <div class="qhead"><div class="qtext">{i}. {escape(q["enonce"])}</div><span class="qsrc">Recueil ELITE CARDIO — {src}</span></div>
+  <div class="qhead"><div class="qtext"><span>{i}.</span> <span data-tr="recueil-{i}-q">{escape(q["enonce"])}</span></div><span class="qsrc">Recueil ELITE CARDIO — {src}</span></div>
   <ul class="qch">{options}</ul>
   <div class="qverdict"></div>
   <div class="qexp" data-tr="recueil-{i}-exp"><div class="qexp-title">Corrigé imprimé dans le recueil ; analyse proposition par proposition</div>{''.join(fr)}
