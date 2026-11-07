@@ -33,7 +33,7 @@ SECTIONS = [
 'ar':["تختار الكفة بحسب محيط الذراع، وتوضع على ذراع مكشوفة، على مسار الشريان العضدي وفي مستوى القلب، وفوق ثنية المرفق. قد تبالغ الكفة القصيرة في النتيجة، وقد تخفضها الكفة الواسعة.",
 "تذكر الشريحة ١٥ مسافة تقارب <bdi class=\"fr-plain\">2 cm</bdi> فوق الثنية، بينما تذكر الشريحة ٣٠ ما لا يقل عن <bdi class=\"fr-plain\">2,5 cm</bdi>. وتربط الشريحة ١٣ عرض الكفة بأربعين بالمئة من طول الذراع، وطول الجزء المنفوخ بثمانين بالمئة من محيطها.",
 "تختلف صياغة جمعية القلب الأمريكية: عرض الجزء المنفوخ لا يقل عن أربعين بالمئة من محيط الذراع، وطوله نحو ثمانين بالمئة من المحيط. لا نخلط طول الذراع بمحيطها؛ ونتبع مقاس الجهاز المعتمد."],
-'alt':'Patiente assise, dos soutenu, pieds à plat, bras nu reposant sur la table avec brassard au niveau du cœur.'},
+'alt':'Choix du brassard : mesure de la circonférence du bras et rappel du sens des erreurs de taille.'},
 {
 'id':'auscultation','nav':'Auscultation','titre':'Méthode auscultatoire','source':'Diapositives 15 à 19 et 30','img':'reel/diapo-16.png','audio':3,
 'fr':["Après le repos, placer le stéthoscope sur l'artère humérale au pli du coude, juste en aval du brassard : le pavillon ne doit ni toucher celui-ci ni être glissé dessous. Le cours indique de gonfler jusqu'à abolition du pouls radial puis d'ajouter 20 mmHg.",

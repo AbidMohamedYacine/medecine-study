@@ -10,13 +10,15 @@ fs.mkdirSync(path.join(dest, 'reel'), { recursive:true });
 const files = {
  'pression.webp':'v2/01-pression.png',
  'hero.webp':'v9/09-presentation.png',
- 'fiche-comprendre.webp':'v10/01-comprendre.png',
- 'fiche-cabinet.webp':'v10/02-cabinet.png',
+ 'fiche-comprendre.webp':'v9/07-systole-diastole.png',
+ 'fiche-cabinet.webp':'v9/05-repos-corrige.png',
  'systole.webp':'v2/02-systole.png',
- 'posture.webp':'v10/03-posture.png',
+ 'posture.webp':'v5/05-brassard.png',
  'deux-bras.webp':'v3/08-mesure-deux-bras.png',
- 'comparaison.webp':'v10/05-comparaison.png',
- 'automesure.webp':'v10/06-automesure.png',
+ 'comparaison.webp':'v5/09-interbras.png',
+ 'automesure.webp':'v7/08-automesure.png',
+ 'auscultation-detail.webp':'v8/04-auscultation.png',
+ 'palpation-detail.webp':'v5/10-palpation.png',
  'mapa.webp':'v7/05-mapa-corrigee.png',
  'choix-brassard.webp':'v8/02-brassard.png',
  'profils.webp':'v8/01-profils.png',
@@ -24,25 +26,16 @@ const files = {
 async function main(){
  for (const [out, input] of Object.entries(files)) {
    const file=path.join(src,input);
-   // Ces planches sont en 1408 × 768 : coupe centrée de 16 px par bord,
-   // sans étirement ni fond flouté. Les contenus ont été inspectés après coupe.
-   if (out === 'hero.webp') {
+   const meta=await sharp(file).metadata();
+   if(meta.width===1376 && meta.height===768) {
      await sharp(file).webp({quality:94}).toFile(path.join(dest,out));
-     continue;
-   }
-   // Les planches v10 sont proches du 16:9 : ajustement par rognage centré,
-   // sans déformation. Contrôler que les éléments importants restent visibles.
-   if (input.startsWith('v10/')) {
-     await sharp(file).resize(1376,768,{fit:'cover',position:'centre'}).webp({quality:94}).toFile(path.join(dest,out));
-     continue;
-   }
-   if (['mapa.webp','choix-brassard.webp','profils.webp'].includes(out)) {
+   } else if(meta.width===1408 && meta.height===768) {
+     // Coupe de 16 pixels à chaque bord ; conserver l'image sans étirement.
      await sharp(file).extract({left:16,top:0,width:1376,height:768}).webp({quality:94}).toFile(path.join(dest,out));
-     continue;
+   } else {
+     // Rognage non déformant ; garder les annotations en bas des courbes.
+     await sharp(file).resize(1376,768,{fit:'cover',position:['systole.webp','fiche-comprendre.webp'].includes(out)?'bottom':'centre'}).webp({quality:94}).toFile(path.join(dest,out));
    }
-   // Les trois anciennes planches restantes sont recadrées sans étirement ni
-   // bandes floutées ; la courbe privilégie le bas pour conserver ses axes.
-   await sharp(file).resize(1376,768,{fit:'cover',position:out==='systole.webp'?'bottom':'centre'}).webp({quality:94}).toFile(path.join(dest,out));
  }
  for(const n of [16,20,44,45]) fs.copyFileSync(`/tmp/ca04-pages/${n}.png`,path.join(dest,`reel/diapo-${n}.png`));
  const aud=path.join(root,'assets/audio/ca-04-delta36'); fs.mkdirSync(aud,{recursive:true});

@@ -55,6 +55,10 @@ chapters=[]
 for i,s in enumerate(SECTIONS):
     parts.append(sec_start(s['id'],f'{i+1}. {H(s["titre"])}',H(s['source'])))
     parts.append(visual(s['img'],s['alt']))
+    if s['id']=='auscultation':
+        parts.append(visual('auscultation-detail.webp','Illustration du geste auscultatoire, du brassard, du manomètre et des repères de pression.'))
+    if s['id']=='palpation':
+        parts.append(visual('palpation-detail.webp','Illustration de la palpation au poignet, du dégonflage et de la pression systolique.'))
     parts.append(f'<div class="cine-spot reveal" data-ch="{i}"></div>')
     for j,(fr,ar) in enumerate(zip(s['fr'],s['ar']),1):
         parts.append(tr(f's{i+1}-{j}',f'<p>{H(fr)}</p>',f'<p>{ar}</p>',cls='lbox reveal'))

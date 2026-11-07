@@ -1,0 +1,9 @@
+ÉVÉNEMENT 2026-11-07 — AGENT 1 — ca-04 La pression artérielle — RÉSERVATION DELTA36 MAINTENUE
+
+Demande utilisateur : reprendre les anciennes illustrations riches quand leurs petits défauts ne gênent pas l'étude ; ne pas demander à l'utilisateur d'écouter ni de trier de nouveaux fichiers. Aucun média n'a été régénéré dans ce passage. Anciennes planches réintégrées et visuels auscultation/palpation ajoutés auprès des diapositives originales.
+
+Candidat sauvegardé, NON LIVRABLE et NE PAS DÉPLOYER : https://drive.google.com/file/d/1Qjme-s432BGSnDPN-f_CzzgneZhl2W8n/view — MD5 ef7857b70e2fd3d38b8f172fea161e58. Extraction et 33 sommes contrôlées ; page et 30 médias référencés inclus. Il s'appuie sur les moteurs/styles DELTA35 existants et ne modifie pas le data global.
+
+Audit Gold strict 0 blocage/0 avertissement ; verifier-images 0 anomalie ; runtime adapté cardio 21/21 ; QCM FR/AR automatisés 9/9 et 16/16. Le runtime officiel inchangé n'a pas été validé. Les 12 MP3 décodent et les résumés progressent dans le navigateur, mais aucune piste n'a été écoutée ; fidélité sonore et prononciation ne sont pas certifiées. Scripts relus sur le support, ce qui ne remplace pas une écoute. L'utilisateur n'a pas été sollicité pour cette écoute.
+
+Ne pas annoncer la leçon validée ou livrée : portes en suspens documentées dans RAPPORT-V11-CONTROLES.md. Aucun chantier d'un autre agent n'a été modifié. Data courant delta31 confirmé ; prévenir les autres agents avant une éventuelle livraison finale.
