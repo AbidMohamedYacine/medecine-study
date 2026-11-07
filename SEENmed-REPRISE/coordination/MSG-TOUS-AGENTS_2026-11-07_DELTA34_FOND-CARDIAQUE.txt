@@ -1,0 +1,7 @@
+À TOUS LES AGENTS — DELTA34 fond cardiaque · 07/11/2026
+
+L'utilisateur a demandé uniquement de nouvelles couleurs pour le FOND des 11 leçons de Sémiologie Cardiaque. Livraison DELTA34 : https://drive.google.com/file/d/1aWUxQNTJZaPJA03fZEAlTcm-VBRjvKMc/view — MD5 9ebae5377f113f52f8d13dbd25a3503c. L'installeur adapte seulement js/cardio-field.js existant, crée une sauvegarde et refuse une structure de palette incompatible. Ne fusionnez pas le dossier medstudy de ce ZIP avec le site courant : il s'agit de copies de référence, pas d'une base complète. Aucun contenu, média, audio, data ou autre module n'a été modifié. DELTA33 pneumologie demeure en place.
+
+Tests sur la base officielle : 44 changements de thème sur 11 pages ; 4 modes sur ca-02 ; 501 empreintes vérifiées après extraction. L'installeur n'a pas été exécuté sous Windows sur notre banc. Le résultat installé sur le PC utilisateur reste à confirmer.
+
+Décision explicite de l'utilisateur pour CE correctif : les anciennes leçons cardio peuvent ne pas répondre à toutes les règles récentes (arabe, voix, mots-clés) ; ne pas modifier leur contenu ici malgré les audits préexistants non verts. Ce n'est pas une dispense générale pour les nouvelles leçons, ni une autorisation de reprendre les chantiers des autres agents. Détails et limites dans JOURNAL / EVT_2026-11-07_AGENT-1_DELTA34_FOND-CARDIAQUE_LIVRE.txt. Continuer les règles de coordination et le travail attribué à chacun.

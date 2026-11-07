@@ -1,0 +1,51 @@
+OK ca-01-pericardites.html: 4 thèmes, couleurs du champ et défilement
+OK ca-02-douleurs-thoraciques.html: 4 thèmes, couleurs du champ et défilement
+OK ca-03-bruits-cardiaques.html: 4 thèmes, couleurs du champ et défilement
+OK ca-04-pression-arterielle.html: 4 thèmes, couleurs du champ et défilement
+OK ca-05-bases-trace-ecg.html: 4 thèmes, couleurs du champ et défilement
+OK ca-06-examen-cardiaque.html: 4 thèmes, couleurs du champ et défilement
+OK ca-07-souffles-cardiaques.html: 4 thèmes, couleurs du champ et défilement
+OK ca-08-insuffisance-cardiaque.html: 4 thèmes, couleurs du champ et défilement
+OK ca-09-syncopes.html: 4 thèmes, couleurs du champ et défilement
+OK ca-10-semiologie-veineuse.html: 4 thèmes, couleurs du champ et défilement
+OK ca-11-semiologie-arterielle.html: 4 thèmes, couleurs du champ et défilement
+OK 44/44 thèmes ; aucune pageerror.
+
+=== Runtime standard ca-02 apres (v3 non concu pour cardio) ===
+
+=== ca-02-douleurs-thoraciques.html ===
+  ✗ FAIL QCM — TypeError: Cannot read properties of null (reading 'textContent')
+  ✓ Ciné central monté (chapitres = JSON) — 18 boutons / 9
+  ✓ mini-lecteurs de section montés — 10 spots
+  ✗ FAIL mini-lecteur : lecture audio réelle
+  ✓ Ciné central : lecture audio réelle
+  ✓ dictionnaire ouvert, tous les termes rendus — 57/57
+  ✓ définitions arabes du dictionnaire
+  ✓ mode arabe : blocs traduits + RTL
+  ✓ flashcards : première carte affichée — Carte 1 / 28 — à réviser aujourd'hui
+  ✗ FAIL flashcards : flip au clic
+  ✓ flashcards : notation → carte suivante — Carte 1 / 28 — à réviser aujourd'hui
+  ✗ FAIL peau bio : canvas présent et champ vivant — -1 particules
+  ✓ aucune erreur JS
+  ✓ aucun asset 404 (hors banc incomplet toléré si listé)
+
+================ 10/14 checks OK — ÉCHECS : ca-02-douleurs-thoraciques.html:QCM ; ca-02-douleurs-thoraciques.html:mini-lecteur : lecture audio réelle ; ca-02-douleurs-thoraciques.html:flashcards : flip au clic ; ca-02-douleurs-thoraciques.html:peau bio : canvas présent et champ vivant
+
+=== Runtime standard ca-02 avant ===
+
+=== ca-02-douleurs-thoraciques.html ===
+  ✗ FAIL QCM — TypeError: Cannot read properties of null (reading 'textContent')
+  ✓ Ciné central monté (chapitres = JSON) — 18 boutons / 9
+  ✓ mini-lecteurs de section montés — 10 spots
+  ✗ FAIL Ciné — Error: Node is either not clickable or not an Element
+  ✓ dictionnaire ouvert, tous les termes rendus — 57/57
+  ✓ définitions arabes du dictionnaire
+  ✓ mode arabe : blocs traduits + RTL
+  ✓ flashcards : première carte affichée — Carte 1 / 28 — à réviser aujourd'hui
+  ✗ FAIL flashcards : flip au clic
+  ✓ flashcards : notation → carte suivante — Carte 1 / 28 — à réviser aujourd'hui
+  ✗ FAIL peau bio : canvas présent et champ vivant — -1 particules
+  ✓ aucune erreur JS
+  ✓ aucun asset 404 (hors banc incomplet toléré si listé)
+
+================ 9/13 checks OK — ÉCHECS : ca-02-douleurs-thoraciques.html:QCM ; ca-02-douleurs-thoraciques.html:Ciné ; ca-02-douleurs-thoraciques.html:flashcards : flip au clic ; ca-02-douleurs-thoraciques.html:peau bio : canvas présent et champ vivant
