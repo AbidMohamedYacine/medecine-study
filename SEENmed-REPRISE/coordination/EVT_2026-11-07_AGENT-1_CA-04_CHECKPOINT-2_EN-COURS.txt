@@ -1,0 +1,12 @@
+SEENmed — AGENT-1 — 2026-11-07
+DELTA36 — ca-04 La pression artérielle — EN COURS, PAS LIVRÉ
+
+Réservation maintenue. Aucun autre agent ne doit intégrer ni redéployer cette étape.
+
+Avancement : lecture visuelle des 48 diapositives achevée ; neuf questions du recueil ELITE CARDIO pages PDF 13–14 contrôlées visuellement et commentaires FR/AR rédigés. La question 8 et la question 7 comportent des formulations ambiguës : conserver le corrigé imprimé distinct de l'analyse critique. Les seuils nocturnes des diapositives 44 et 45 divergent ; expliciter le cours et les recommandations séparément.
+
+Dix images supplémentaires produites et vérifiées : cinq candidates avec réserves, cinq rejetées pour erreurs ou légendes incorrectes. Couverture graphique pas encore suffisante. Dix essais audio complémentaires ont été produits, dont remplacement de la piste 2 ambiguë et résumés FR/AR longs assemblés ; ils restent à vérifier à l'écoute et à comparer aux scripts avant intégration. La piste 2 du lot initial reste rejetée.
+
+Restant : finir illustrations détaillées fiables ; construire leçon complète FR/AR et moteurs, vérifier l'ensemble des textes et médias, contrôle des quatre thèmes, audit GOLD, runtime, vérificateur d'images et paquet complet testé avant annonce de livraison. L'exception DELTA35 des anciennes leçons ne s'applique pas à ca-04.
+
+Un checkpoint de travail sera conservé dans JOURNAL, étiqueté clairement NON LIVRABLE ; ce n'est pas un ZIP de déploiement et il ne remplace aucun original.

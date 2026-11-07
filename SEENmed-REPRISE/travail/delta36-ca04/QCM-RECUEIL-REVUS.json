@@ -1,0 +1,353 @@
+[
+  {
+    "numero": 1,
+    "source": "Promo 2022",
+    "enonce": "La mesure de la pression artérielle :",
+    "propositions": {
+      "A": "Le brassard doit être de taille adaptée à la corpulence du patient.",
+      "B": "La hauteur du brassard doit être équivalente à 20 % de la longueur du bras.",
+      "C": "La poche gonflable doit couvrir 80 % de la circonférence du bras.",
+      "D": "La poche gonflable doit idéalement se trouver sur le trajet de l'artère radiale.",
+      "E": "La poche gonflable doit idéalement se trouver sur le trajet de l'artère humérale."
+    },
+    "reponse_recueil": [
+      "A",
+      "C",
+      "E"
+    ],
+    "explications": {
+      "A": {
+        "fr": "retenu par le recueil ; la taille est adaptée à la circonférence.",
+        "ar": "حجم الكفة مناسب لمحيط الذراع."
+      },
+      "B": {
+        "fr": "non retenu ; le support indique 40 % de la longueur du bras, tandis que l'AHA rapporte la largeur de la poche à la circonférence, pas à la longueur : les formulations ne doivent pas être confondues.",
+        "ar": "لم يختر المرجع هذه العبارة؛ ويختلف وصف العرض بين الدرس وتوصية جمعية القلب الأمريكية، ولا يجوز خلط المرجعين."
+      },
+      "C": {
+        "fr": "retenu ; 80 % est la proportion de la circonférence pour la longueur de la poche.",
+        "ar": "طول الجزء القابل للنفخ يغطي ٨٠٪ من محيط الذراع."
+      },
+      "D": {
+        "fr": "non retenu ; l'implantation au bras suit l'humérale et non la radiale du poignet.",
+        "ar": "توضع الكفة على مسار العضدية لا الكعبرية في الرسغ."
+      },
+      "E": {
+        "fr": "retenu ; le cours indique le trajet huméral.",
+        "ar": "يشير الدرس إلى مسار الشريان العضدي."
+      }
+    },
+    "note": "Corrigé imprimé dans le recueil, pas un corrigé officiel indépendant."
+  },
+  {
+    "numero": 2,
+    "source": "Promo 2022",
+    "enonce": "Les conditions pour mesurer la pression artérielle au cabinet sont :",
+    "propositions": {
+      "A": "Prise en position debout.",
+      "B": "Après 10 min de repos.",
+      "C": "Le respect d'un minimum de 5 min après un repas.",
+      "D": "Au moins 4 mesures à 5 min d'intervalle lors de la même consultation.",
+      "E": "À mesurer dans les deux bras."
+    },
+    "reponse_recueil": [
+      "B",
+      "E"
+    ],
+    "explications": {
+      "A": {
+        "fr": "non retenu ; la position debout sert notamment à rechercher une hypotension orthostatique, pas à remplacer la mesure de repos.",
+        "ar": "الوقوف يفيد البحث عن انخفاض الضغط الانتصابي ولا يحل محل قياس الراحة."
+      },
+      "B": {
+        "fr": "retenu ; la diapo 15 décrit dix minutes de repos en décubitus, la diapo 28 plusieurs minutes de repos assis ou allongé.",
+        "ar": "تذكر الشريحة ١٥ عشر دقائق من الراحة، وتذكر الشريحة ٢٨ عدة دقائق جلوسا أو استلقاء."
+      },
+      "C": {
+        "fr": "non retenu ; cinq minutes après un repas n'est pas la règle fournie.",
+        "ar": "لم يعتمد المصحح قاعدة خمس دقائق بعد الأكل."
+      },
+      "D": {
+        "fr": "non retenu ; le cours parle d'au moins deux mesures, pas de quatre imposées à cinq minutes.",
+        "ar": "يذكر الدرس قياسين على الأقل، لا أربعة بالصيغة المذكورة."
+      },
+      "E": {
+        "fr": "retenu ; la première consultation comprend la comparaison des deux bras.",
+        "ar": "تقارن الذراعان عند الزيارة الأولى."
+      }
+    },
+    "note": "Corrigé imprimé dans le recueil, pas un corrigé officiel indépendant."
+  },
+  {
+    "numero": 3,
+    "source": "Promo 2021",
+    "enonce": "Pour dépister une HTA :",
+    "propositions": {
+      "A": "Un seul chiffre élevé trouvé au cabinet médical suffit pour poser le diagnostic.",
+      "B": "On peut utiliser soit l'automesure soit la MAPA.",
+      "C": "La mesure de la PA doit s'effectuer sur un seul bras pour dépister l'anisotension.",
+      "D": "L'HTA des blouses blanches correspond à des chiffres élevés à domicile et normaux au cabinet.",
+      "E": "L'HTA masquée correspond à des chiffres normaux à domicile et élevés au cabinet."
+    },
+    "reponse_recueil": [
+      "B"
+    ],
+    "explications": {
+      "A": {
+        "fr": "non retenu ; une mesure isolée doit être confirmée.",
+        "ar": "لا يكفي قياس واحد مرتفع وحده للتشخيص."
+      },
+      "B": {
+        "fr": "retenu ; le cours présente les deux méthodes hors cabinet.",
+        "ar": "يعرض الدرس القياس الذاتي والمراقبة المتنقلة خارج العيادة."
+      },
+      "C": {
+        "fr": "non retenu ; une différence inter-bras exige la mesure des deux côtés.",
+        "ar": "لا يمكن كشف الفرق بين الذراعين بقياس ذراع واحدة."
+      },
+      "D": {
+        "fr": "non retenu ; l'énoncé inverse le profil : blouse blanche = cabinet élevé, hors cabinet normal.",
+        "ar": "المعطف الأبيض يعني ارتفاع العيادة وطبيعية القياس خارجها."
+      },
+      "E": {
+        "fr": "non retenu ; le profil masqué est l'inverse : cabinet normal, hors cabinet élevé.",
+        "ar": "الضغط المقنع طبيعي في العيادة ومرتفع خارجها."
+      }
+    },
+    "note": "Corrigé imprimé dans le recueil, pas un corrigé officiel indépendant."
+  },
+  {
+    "numero": 4,
+    "source": "Promo 2020",
+    "enonce": "Quels sont les seuils de définition de l'hypertension artérielle en ambulatoire par automesure à domicile ?",
+    "propositions": {
+      "A": "135 et/ou 85 mmHg.",
+      "B": "130 et/ou 80 mmHg.",
+      "C": "140 et/ou 90 mmHg.",
+      "D": "120 et/ou 70 mmHg.",
+      "E": "130 et/ou 85 mmHg."
+    },
+    "reponse_recueil": [
+      "A"
+    ],
+    "explications": {
+      "A": {
+        "fr": "retenu ; le tableau indique 135 systolique et/ou 85 diastolique pour l'automesure.",
+        "ar": "الحد في القياس الذاتي ١٣٥ انقباضي و/أو ٨٥ انبساطي."
+      },
+      "B": {
+        "fr": "non retenu ; 130/80 est le seuil de la moyenne MAPA 24 h du tableau.",
+        "ar": "١٣٠/٨٠ هو حد متوسط المراقبة خلال ٢٤ ساعة."
+      },
+      "C": {
+        "fr": "non retenu ; 140/90 correspond au cabinet.",
+        "ar": "١٤٠/٩٠ هو حد العيادة."
+      },
+      "D": {
+        "fr": "non retenu ; 120/70 est associé à la nuit, pas à l'automesure à domicile.",
+        "ar": "١٢٠/٧٠ يتعلق بالليل لا بالقياس الذاتي."
+      },
+      "E": {
+        "fr": "non retenu ; ce couple n'est pas le seuil d'automesure du tableau.",
+        "ar": "هذا الزوج ليس حد القياس الذاتي في الجدول."
+      }
+    },
+    "note": "Corrigé imprimé dans le recueil, pas un corrigé officiel indépendant."
+  },
+  {
+    "numero": 5,
+    "source": "Promo 2020",
+    "enonce": "Quelles sont les règles de bonne prise de la tension artérielle au cabinet médical ?",
+    "propositions": {
+      "A": "Période de repos non obligatoire.",
+      "B": "Brassard adapté à la circonférence du bras.",
+      "C": "Port de vêtements serrés permis.",
+      "D": "Une seule prise tensionnelle est suffisante.",
+      "E": "La position du bras au même niveau du cœur."
+    },
+    "reponse_recueil": [
+      "B",
+      "E"
+    ],
+    "explications": {
+      "A": {
+        "fr": "non retenu ; le repos précède la mesure.",
+        "ar": "الراحة مطلوبة قبل القياس."
+      },
+      "B": {
+        "fr": "retenu ; choisir une taille adaptée.",
+        "ar": "يجب أن تناسب الكفة محيط الذراع."
+      },
+      "C": {
+        "fr": "non retenu ; le bras doit être dégagé sans vêtement gênant.",
+        "ar": "يجب كشف الذراع وعدم ضغطها بلباس ضيق."
+      },
+      "D": {
+        "fr": "non retenu ; le support demande des mesures répétées.",
+        "ar": "يطلب الدرس تكرار القياسات."
+      },
+      "E": {
+        "fr": "retenu ; le bras et le brassard doivent être à hauteur du cœur.",
+        "ar": "تسند الذراع في مستوى القلب."
+      }
+    },
+    "note": "Corrigé imprimé dans le recueil, pas un corrigé officiel indépendant."
+  },
+  {
+    "numero": 6,
+    "source": "Promo 2019",
+    "enonce": "La mesure de la pression artérielle au cabinet médical nécessite le respect des modalités suivantes :",
+    "propositions": {
+      "A": "Mesure de la PA sans prendre en considération la prise d'un repas, un exercice physique ou le tabac.",
+      "B": "Patient assis pendant plusieurs minutes dans une pièce calme.",
+      "C": "Brassard à hauteur du cœur.",
+      "D": "Le stéthoscope doit être posé sur l'artère brachiale sans toucher le brassard.",
+      "E": "Dégonfler le brassard progressivement à raison de 5 mm/seconde."
+    },
+    "reponse_recueil": [
+      "B",
+      "C",
+      "D"
+    ],
+    "explications": {
+      "A": {
+        "fr": "non retenu ; le contexte alimentaire et les excitants/effort peuvent influencer le résultat.",
+        "ar": "ينبغي مراعاة الطعام والجهد والتدخين عند القياس."
+      },
+      "B": {
+        "fr": "retenu ; le calme et le repos sont nécessaires.",
+        "ar": "الجلوس بهدوء عدة دقائق من شروط القياس."
+      },
+      "C": {
+        "fr": "retenu ; repère de hauteur au niveau du cœur.",
+        "ar": "توضع الكفة في مستوى القلب."
+      },
+      "D": {
+        "fr": "retenu ; au pli du coude sur l'humérale, sans toucher ni placer sous le brassard.",
+        "ar": "توضع السماعة على العضدية دون لمس الكفة أو إدخالها تحتها."
+      },
+      "E": {
+        "fr": "non retenu par le recueil ; le support demande un dégonflage lent, et l'AHA recommande environ 2 mmHg/s pour une mesure auscultatoire.",
+        "ar": "لم يعتمد المصحح سرعة خمسة؛ ويوصي الدرس بالتفريغ البطيء، وتذكر جمعية القلب الأمريكية سرعة تقارب ٢ ملم زئبق في الثانية."
+      }
+    },
+    "note": "Corrigé imprimé dans le recueil, pas un corrigé officiel indépendant."
+  },
+  {
+    "numero": 7,
+    "source": "Promo 2018",
+    "enonce": "Selon l'ESH-ESC, une HTA de grade 2 se définit par des chiffres de pression artérielle :",
+    "propositions": {
+      "A": "PAS 130–139 mmHg ; PAD 90–99 mmHg.",
+      "B": "PAS 145–159 mmHg ; PAD 95–99 mmHg.",
+      "C": "PAS 160–169 mmHg ; PAD 95–100 mmHg.",
+      "D": "PAS 160–179 mmHg ; PAD 100–109 mmHg.",
+      "E": "PAS 165–175 mmHg ; PAD 100–109 mmHg."
+    },
+    "reponse_recueil": [
+      "D"
+    ],
+    "explications": {
+      "A": {
+        "fr": "non retenu ; les plages proposées ne reproduisent pas les deux bornes du grade 2.",
+        "ar": "المجالان المذكوران لا يطابقان حدود الدرجة الثانية كاملة."
+      },
+      "B": {
+        "fr": "non retenu ; ce n'est pas l'intervalle définissant le grade 2.",
+        "ar": "ليس هذا مجال تعريف الدرجة الثانية."
+      },
+      "C": {
+        "fr": "non retenu par le recueil ; il décrit seulement une partie du domaine systolique et une plage diastolique chevauchante.",
+        "ar": "يذكر جزءا من المجال الانقباضي ومجالا انبساطيا متداخلا فقط."
+      },
+      "D": {
+        "fr": "retenu ; ESH 2023 décrit grade 2 PAS 160–179 et/ou PAD 100–109.",
+        "ar": "حدود الدرجة الثانية ١٦٠–١٧٩ انقباضيا و/أو ١٠٠–١٠٩ انبساطيا."
+      },
+      "E": {
+        "fr": "non retenu par le recueil ; 165–175 est inclus dans la plage systolique du grade 2 mais ne décrit pas toutes ses bornes : question ambiguë si elle vise des exemples plutôt qu'une définition complète.",
+        "ar": "القيمة ١٦٥–١٧٥ تقع داخل المجال لكنها لا تمثل حدوده كاملة؛ لذا يحتمل السؤال اللبس إذا قصد أمثلة لا تعريفا شاملا."
+      }
+    },
+    "note": "Corrigé imprimé dans le recueil, pas un corrigé officiel indépendant."
+  },
+  {
+    "numero": 8,
+    "source": "Promo 2018",
+    "enonce": "La mesure ambulatoire de la pression artérielle :",
+    "propositions": {
+      "A": "Assure une surveillance automatisée de la PA et un profil de PA sur 24 heures.",
+      "B": "Est utile en cas d'HTA blouse blanche.",
+      "C": "Permet de dévoiler une hypotension orthostatique.",
+      "D": "Se réalise avec un appareil oscillométrique.",
+      "E": "Permet de définir une HTA à un seuil de PAS = 125 mmHg ; PAD = 85 mmHg."
+    },
+    "reponse_recueil": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explications": {
+      "A": {
+        "fr": "retenu ; un enregistreur recueille des mesures répétées sur 24 h.",
+        "ar": "يسجل الجهاز قياسات متكررة لمدة ٢٤ ساعة."
+      },
+      "B": {
+        "fr": "retenu ; la comparaison au cabinet peut révéler un profil blouse blanche.",
+        "ar": "تساعد مقارنة العيادة وخارجها على كشف نمط المعطف الأبيض."
+      },
+      "C": {
+        "fr": "retenu par le recueil, mais formulation à nuancer : la MAPA peut suggérer des chutes en vie courante en lien avec les activités ; elle ne remplace pas une mesure standardisée couchée puis debout pour diagnostiquer l'hypotension orthostatique.",
+        "ar": "اختار المصحح هذه العبارة، لكن المراقبة قد توحي بهبوط مرتبط بالنشاط ولا تغني عن الاختبار المعياري مستلقيا ثم واقفا."
+      },
+      "D": {
+        "fr": "retenu ; la méthode présentée utilise un dispositif oscillométrique.",
+        "ar": "الجهاز المذكور تذبذبي."
+      },
+      "E": {
+        "fr": "non retenu par le recueil comme formulation du seuil : le tableau indique 130/80 pour la moyenne des 24 h, et non 125/85. Attention à l'ambiguïté : si 125/85 désigne une moyenne mesurée plutôt qu'un seuil, la diastolique 85 dépasse 80, ce qui peut suffire pour franchir le seuil des 24 h.",
+        "ar": "لم يعتمد المصحح هذا الزوج بوصفه حدود التعريف؛ فالحد ١٣٠/٨٠. لكن إذا كانت ١٢٥/٨٥ نتيجة متوسطة مقاسة، فإن الانبساطي ٨٥ يتجاوز حد ٨٠ وقد يكفي لتجاوز العتبة."
+      }
+    },
+    "note": "Corrigé imprimé dans le recueil, pas un corrigé officiel indépendant."
+  },
+  {
+    "numero": 9,
+    "source": "Rattrapage 2022",
+    "enonce": "Quels sont les seuils de la définition de l'hypertension artérielle au cabinet médical ?",
+    "propositions": {
+      "A": "135 et/ou 85 mmHg.",
+      "B": "130 et/ou 80 mmHg.",
+      "C": "140 et/ou 90 mmHg.",
+      "D": "120 et/ou 70 mmHg.",
+      "E": "130 et/ou 85 mmHg."
+    },
+    "reponse_recueil": [
+      "C"
+    ],
+    "explications": {
+      "A": {
+        "fr": "non retenu ; 135/85 correspond à l'automesure ou à la MAPA de jour dans le tableau.",
+        "ar": "١٣٥/٨٥ حد القياس الذاتي أو المراقبة النهارية."
+      },
+      "B": {
+        "fr": "non retenu ; 130/80 correspond à la moyenne MAPA 24 h.",
+        "ar": "١٣٠/٨٠ حد متوسط المراقبة خلال ٢٤ ساعة."
+      },
+      "C": {
+        "fr": "retenu ; 140 et/ou 90 mmHg en consultation.",
+        "ar": "حد العيادة ١٤٠ و/أو ٩٠ ملم زئبق."
+      },
+      "D": {
+        "fr": "non retenu ; 120/70 est associé à la nuit.",
+        "ar": "١٢٠/٧٠ مرتبط بالليل."
+      },
+      "E": {
+        "fr": "non retenu ; ce n'est pas le seuil de consultation du tableau.",
+        "ar": "هذا ليس حد العيادة في الجدول."
+      }
+    },
+    "note": "Corrigé imprimé dans le recueil, pas un corrigé officiel indépendant."
+  }
+]
