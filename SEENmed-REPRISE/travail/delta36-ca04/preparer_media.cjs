@@ -22,6 +22,7 @@ const files = {
  'mapa.webp':'v7/05-mapa-corrigee.png',
  'choix-brassard.webp':'v8/02-brassard.png',
  'profils.webp':'v8/01-profils.png',
+ 'profils-cliniques.webp':'v11/profils-cliniques.png',
 };
 async function main(){
  for (const [out, input] of Object.entries(files)) {
@@ -37,7 +38,15 @@ async function main(){
      await sharp(file).resize(1376,768,{fit:'cover',position:['systole.webp','fiche-comprendre.webp'].includes(out)?'bottom':'centre'}).webp({quality:94}).toFile(path.join(dest,out));
    }
  }
- for(const n of [16,20,44,45]) fs.copyFileSync(`/tmp/ca04-pages/${n}.png`,path.join(dest,`reel/diapo-${n}.png`));
+ // Ne garder du support que les figures réellement utiles, pas les diapositives
+ // de texte ou de tableaux ; recadrer sans déformer ni masquer les légendes.
+ const crops = {
+   'schema-pression-brassard.png': {n:18,left:185,top:315,width:1065,height:670},
+   'schema-bruits-korotkoff.png': {n:19,left:190,top:310,width:1030,height:650},
+   'posture-cours.png': {n:29,left:185,top:25,width:970,height:975},
+ };
+ for (const [out,{n,...area}] of Object.entries(crops))
+   await sharp(`/tmp/ca04-pages/${n}.png`).extract(area).png().toFile(path.join(dest,'reel',out));
  const aud=path.join(root,'assets/audio/ca-04-delta36'); fs.mkdirSync(aud,{recursive:true});
  for (let i=1;i<=10;i++){let n=String(i).padStart(2,'0');fs.copyFileSync(path.join(src,`audio-v3/${n}-fr.mp3`),path.join(aud,`${n}-fr.mp3`));}
  // Résumés longs FR/AR v4 : intégration provisoire, écoute encore requise.

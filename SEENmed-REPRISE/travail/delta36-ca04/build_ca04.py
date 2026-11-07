@@ -33,9 +33,18 @@ def tr(k,fr,ar,tag='div',cls=''):
     AR[k]=ar
     return f'<{tag}{(" class="+chr(34)+cls+chr(34)) if cls else ""} data-tr="{k}">{fr}</{tag}>'
 
-def visual(src,alt,cls='section-visual'):
-    w,h=(1440,1080) if src.startswith('reel/') else (1376,768)
-    return f'<figure class="{cls} reveal"><img src="{imgbase+H(src,quote=True)}" alt="{H(alt,quote=True)}" loading="lazy" width="{w}" height="{h}"></figure>'
+def visual(src,alt,cls='section-visual',caption=None):
+    dimensions={'reel/schema-pression-brassard.png':(1065,670),
+                'reel/schema-bruits-korotkoff.png':(1030,650),
+                'reel/posture-cours.png':(970,975)}
+    w,h=dimensions.get(src,(1376,768))
+    # Les figures ne dépendent pas de l'animation « reveal » : même si le
+    # navigateur tarde à observer le défilement, elles ne restent pas vides.
+    cap = ''
+    if caption:
+        key,fr,ar=caption
+        cap = '<figcaption>'+tr(key,H(fr),H(ar),tag='span')+'</figcaption>'
+    return f'<figure class="{cls}"><img src="{imgbase+H(src,quote=True)}" alt="{H(alt,quote=True)}" loading="lazy" width="{w}" height="{h}">{cap}</figure>'
 
 def sec_start(sid,title,sub='',attr=''):
     return f'<section class="lsection" id="{sid}"{attr}><div class="lsection-head"><div class="lsection-num icon-only"><i class="fa-solid fa-heart-pulse"></i></div><div><h2>{title}</h2><div class="lsub">{sub}</div></div></div>'
@@ -56,17 +65,22 @@ for i,s in enumerate(SECTIONS):
     parts.append(sec_start(s['id'],f'{i+1}. {H(s["titre"])}',H(s['source'])))
     parts.append(visual(s['img'],s['alt']))
     if s['id']=='auscultation':
-        parts.append(visual('auscultation-detail.webp','Illustration du geste auscultatoire, du brassard, du manomètre et des repères de pression.'))
-    if s['id']=='palpation':
-        parts.append(visual('palpation-detail.webp','Illustration de la palpation au poignet, du dégonflage et de la pression systolique.'))
+        parts.append(visual('reel/schema-pression-brassard.png','Courbe de pression artérielle et pression du brassard au cours du dégonflage, avec apparition puis disparition des bruits.',caption=('fig-source-18','Schéma du support : diapositive 18. Cliquer pour agrandir.','مخطط الدرس: الشريحة ١٨. اضغط للتكبير.')))
+        parts.append(visual('reel/schema-bruits-korotkoff.png','Quatre étapes du dégonflage montrant la compression de l’artère, le passage du sang et les bruits.',caption=('fig-source-19','Schéma du support : diapositive 19. Cliquer pour agrandir.','مخطط الدرس: الشريحة ١٩. اضغط للتكبير.')))
+    if s['id']=='cabinet':
+        parts.append(visual('reel/posture-cours.png','Schéma du support : conditions de repos et posture pour la mesure, dos appuyé, pieds au sol et bras soutenu.',caption=('fig-source-29','Illustration du support : diapositive 29. Cliquer pour agrandir.','رسم الدرس: الشريحة ٢٩. اضغط للتكبير.')))
     parts.append(f'<div class="cine-spot reveal" data-ch="{i}"></div>')
     for j,(fr,ar) in enumerate(zip(s['fr'],s['ar']),1):
         parts.append(tr(f's{i+1}-{j}',f'<p>{H(fr)}</p>',f'<p>{ar}</p>',cls='lbox reveal'))
     if i==9:
-        parts.append(visual('reel/diapo-44.png','Diapositive originale indiquant que la pression nocturne normale est inférieure à 120 sur 70 mmHg.'))
         parts.append('<div class="lbox"><b>Références externes :</b> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8109470/">AHA — mesure et brassard</a> · <a href="https://journals.lww.com/jhypertension/fulltext/2023/12000/2023_esh_guidelines_for_the_management_of_arterial.2.aspx">ESH 2023</a> · <a href="https://academic.oup.com/eurheartj/article/45/38/3912/7741010">ESC 2024</a>. Le support pédagogique reste identifié séparément.</div>')
     parts.append('</section>')
-    chapters.append(dict(t=s['titre'],imgs=[imgbase+s['img']],fr=audiobase+f'{i+1:02}-fr.mp3'))
+    chapter_imgs=[imgbase+s['img']]
+    if s['id']=='auscultation':
+        chapter_imgs.extend(imgbase+x for x in ('reel/schema-pression-brassard.png','reel/schema-bruits-korotkoff.png'))
+    if s['id']=='cabinet':
+        chapter_imgs.append(imgbase+'reel/posture-cours.png')
+    chapters.append(dict(t=s['titre'],imgs=chapter_imgs,fr=audiobase+f'{i+1:02}-fr.mp3'))
 parts.append(sec_start('methode','Méthode de révision','Raisonner plutôt que mémoriser un chiffre isolé.'))
 parts.append(tr('methode1','<ol><li>Identifier la méthode, le lieu et les conditions de prise.</li><li>Contrôler le repos, la taille du brassard et le niveau du bras.</li><li>Comparer les deux bras, puis confirmer hors cabinet.</li><li>Lire le seuil applicable et tenir compte du contexte.</li><li>Signaler les divergences du support plutôt que les effacer.</li></ol>','<ol><li>حدد الطريقة والمكان وشروط القياس.</li><li>تحقق من الراحة وحجم الكفة ومستوى الذراع.</li><li>قارن الذراعين ثم أكد القياس خارج العيادة.</li><li>اقرأ الحد المناسب وراع السياق.</li><li>اذكر اختلافات الدرس بدلا من إخفائها.</li></ol>',cls='lbox'))
 parts.append('</section>')
@@ -130,6 +144,7 @@ fcsec=re.sub(r'<div class="lsub">.*?</div>','<div class="lsub">Cartes de révisi
 parts.append(fcsec)
 parts.append(sec_start('resume-total','Résumé total','La leçon de bout en bout.'))
 parts.append(tr('resume1','<p>La pression varie. Mesure fiable : repos, brassard adapté, bras au cœur, méthode et deux bras. Le premier bruit correspond à la systolique ; la disparition correspond habituellement à la diastolique. La palpation donne uniquement la systolique.</p><p>Confirmer hors cabinet par automesure ou MAPA ; comparer aux seuils adaptés au contexte. Blouse blanche : élevé au cabinet seul. Masquée : élevé hors cabinet seul. Le cours diverge sur le seuil nocturne ; voir les deux diapositives et les recommandations distinctes.</p>', '<p>يتغير الضغط. القياس الموثوق يتطلب الراحة وكفة مناسبة وذراعا بمستوى القلب وطريقة صحيحة ومقارنة الذراعين. أول صوت يمثل الانقباضي والاختفاء يمثل عادة الانبساطي؛ أما الجس فيعطي الانقباضي فقط.</p><p>يؤكد التقييم خارج العيادة بالقياس الذاتي أو المراقبة، مع حدود مناسبة للسياق. المعطف الأبيض: مرتفع في العيادة وحدها؛ المقنع: مرتفع خارجها وحدها. يختلف الدرس في حد الليل؛ راجع الشريحتين والتوصيات المستقلة.</p>',cls='lbox'))
+parts.append(tr('resume-seuils','<p><b>Seuils du tableau du cours :</b> cabinet 140/90 ; automesure 135/85 ; MAPA 24 h 130/80 ; MAPA de jour 135/85 mmHg. La diapo 44 indique une pression nocturne normale inférieure à 120/70 ; la diapo 45 donne 120/75 comme seuil. Les références ESH 2023 et ESC 2024 retiennent ≥120 et/ou ≥70 mmHg la nuit. Faire confirmer la réponse attendue à l’examen.</p>', '<p><b>حدود جدول الدرس:</b> العيادة <bdi class="fr-plain">140/90</bdi>؛ القياس الذاتي <bdi class="fr-plain">135/85</bdi>؛ متوسط المراقبة خلال ٢٤ ساعة <bdi class="fr-plain">130/80</bdi>؛ ونهارا <bdi class="fr-plain">135/85 mmHg</bdi>. تذكر الشريحة ٤٤ أن الطبيعي ليلا أقل من <bdi class="fr-plain">120/70</bdi>، بينما تذكر الشريحة ٤٥ حد <bdi class="fr-plain">120/75</bdi>. تعتمد التوصيات الأوروبية المذكورة عتبة <bdi class="fr-plain">120/70 mmHg</bdi>؛ وتراجع الأستاذة لمعرفة المطلوب في الامتحان.</p>',cls='lbox'))
 parts.append(f'<div class="cine-spot reveal" data-ch="{len(chapters)}"></div></section>')
 chapters.append(dict(t='Résumé intégral français et arabe',imgs=[imgbase+'pression.webp',imgbase+'posture.webp',imgbase+'mapa.webp'],fr=audiobase+'resume-fr.mp3',ar=audiobase+'resume-ar.mp3'))
 parts.append('</div></main>'); parts.append(footer)

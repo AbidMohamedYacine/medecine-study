@@ -35,21 +35,21 @@ SECTIONS = [
 "تختلف صياغة جمعية القلب الأمريكية: عرض الجزء المنفوخ لا يقل عن أربعين بالمئة من محيط الذراع، وطوله نحو ثمانين بالمئة من المحيط. لا نخلط طول الذراع بمحيطها؛ ونتبع مقاس الجهاز المعتمد."],
 'alt':'Choix du brassard : mesure de la circonférence du bras et rappel du sens des erreurs de taille.'},
 {
-'id':'auscultation','nav':'Auscultation','titre':'Méthode auscultatoire','source':'Diapositives 15 à 19 et 30','img':'reel/diapo-16.png','audio':3,
+'id':'auscultation','nav':'Auscultation','titre':'Méthode auscultatoire','source':'Diapositives 15 à 19 et 30','img':'auscultation-detail.webp','audio':3,
 'fr':["Après le repos, placer le stéthoscope sur l'artère humérale au pli du coude, juste en aval du brassard : le pavillon ne doit ni toucher celui-ci ni être glissé dessous. Le cours indique de gonfler jusqu'à abolition du pouls radial puis d'ajouter 20 mmHg.",
 "Dégonfler lentement : le premier bruit net repère la systolique ; la disparition des bruits repère habituellement la diastolique. Un trou auscultatoire correspond à une interruption transitoire possible des bruits.",
 "Attention à la nomenclature : la diapo 17 appelle « phase 4 » la disparition. L'AHA distingue phase IV = assourdissement et phase V = disparition. L'observation clinique est préservée mais les deux classifications ne sont pas identiques."],
 'ar':["بعد الراحة توضع السماعة على الشريان العضدي عند ثنية المرفق، بعد الحافة السفلى للكفة، دون لمسها أو إدخال السماعة تحتها. يذكر الدرس النفخ حتى اختفاء النبض الكعبري ثم إضافة <bdi class=\"fr-plain\">20 mmHg</bdi>.",
 "يفرغ الهواء ببطء: أول صوت واضح يحدد الضغط الانقباضي، واختفاء الأصوات يحدد عادة الضغط الانبساطي. وقد تنقطع الأصوات مؤقتا في الفجوة السمعية.",
 "اختلاف التسمية: تسمي الشريحة ١٧ الاختفاء المرحلة الرابعة؛ أما جمعية القلب الأمريكية فتسمي خفوت الأصوات المرحلة الرابعة واختفاءها المرحلة الخامسة. لا نخلط بين التسميتين."],
-'alt':'Diapositive originale illustrant le brassard et le stéthoscope sur le trajet de l’artère humérale au pli du coude.'},
+'alt':'Illustration du brassard, du stéthoscope, du manomètre et des repères de la mesure auscultatoire.'},
 {
-'id':'palpation','nav':'Palpation','titre':'Méthode palpatoire','source':'Diapositives 20 à 22','img':'reel/diapo-20.png','audio':4,
+'id':'palpation','nav':'Palpation','titre':'Méthode palpatoire','source':'Diapositives 20 à 22','img':'palpation-detail.webp','audio':4,
 'fr':["Placer les doigts sur le pouls radial puis gonfler. Après disparition du pouls, la diapo 20 décrit 20 mmHg de gonflage supplémentaire. Pendant le dégonflage progressif, la réapparition du pouls repère la systolique.",
 "La palpation ne donne pas la diastolique. Elle est utile lorsque l'environnement sonore empêche d'utiliser le stéthoscope. Le cours mentionne aussi poignet, cuisse et cheville comme sites possibles, avec un brassard adapté au site."],
 'ar':["توضع الأصابع على النبض الكعبري مع نفخ الكفة. بعد اختفاء النبض تذكر الشريحة ٢٠ زيادة <bdi class=\"fr-plain\">20 mmHg</bdi>. أثناء التفريغ التدريجي يحدد ظهور النبض مجددا الضغط الانقباضي.",
 "لا تعطي طريقة الجس الضغط الانبساطي، وقد تفيد عندما تمنع الضوضاء استعمال السماعة. يذكر الدرس إمكان القياس عند الرسغ أو الفخذ أو الكاحل مع اختيار كفة مناسبة للموقع."],
-'alt':'Diapositive originale expliquant la méthode palpatoire et le retour du pouls radial au dégonflage.'},
+'alt':'Illustration de la palpation au poignet et de la réapparition du pouls lors du dégonflage.'},
 {
 'id':'cabinet','nav':'Au cabinet','titre':'Conditions de mesure au cabinet','source':'Diapositives 28 à 30','img':'deux-bras.webp','audio':5,
 'fr':["Après plusieurs minutes de repos, assis ou allongé, effectuer au moins deux mesures espacées de quelques minutes et retenir la moyenne des deux dernières selon le support. Lors de la première consultation, mesurer aux deux bras et rechercher une hypotension orthostatique, notamment chez la personne âgée ou diabétique.",
@@ -85,12 +85,12 @@ SECTIONS = [
 "توفر المراقبة قراءات كثيرة خارج العيادة وتساعد على كشف الضغط المقنع والمعطف الأبيض. ويذكر الدرس الانزعاج والنمشات ونادرا الورم الدموي وصعوبة التفسير إذا كانت القياسات قليلة أو شاذة."],
 'alt':'Patient portant un brassard au bras relié par un tuyau à un enregistreur ambulatoire à la taille.'},
 {
-'id':'seuils','nav':'Seuils et profils','titre':'Seuils, profils et divergences','source':'Diapositives 23–24 et 44 à 47','img':'reel/diapo-45.png','audio':9,
+'id':'seuils','nav':'Seuils et profils','titre':'Seuils, profils et divergences','source':'Diapositives 23–24 et 44 à 47','img':'profils-cliniques.webp','audio':9,
 'fr':["Tableau du cours, seuils d'hypertension : cabinet 140/90 ; automesure 135/85 ; MAPA moyenne 24 h 130/80 ; MAPA de jour 135/85 mmHg. Ces seuils sont atteints si la systolique et/ou la diastolique franchit sa valeur respective.",
 "Nuit : la diapo 44 donne une normale inférieure à 120/70, alors que la diapo 45 donne 120/75 comme seuil nocturne. Les recommandations ESH 2023 et ESC 2024 retiennent ≥120 systolique et/ou ≥70 diastolique ; ce sont des références externes distinctes. Faire confirmer la réponse attendue à l'examen.",
 "Cabinet élevé et hors cabinet normal : blouse blanche. Cabinet normal et hors cabinet élevé : hypertension masquée. Les deux élevés : hypertension persistante ou non contrôlée sous traitement ; les deux normaux : normotension ou pression contrôlée sous traitement."],
 'ar':["جدول الدرس لحدود ارتفاع الضغط: العيادة <bdi class=\"fr-plain\">140/90</bdi>؛ القياس الذاتي <bdi class=\"fr-plain\">135/85</bdi>؛ متوسط المراقبة خلال ٢٤ ساعة <bdi class=\"fr-plain\">130/80</bdi>؛ ونهارا <bdi class=\"fr-plain\">135/85 mmHg</bdi>. يكفي بلوغ الحد الانقباضي و/أو الانبساطي أو تجاوزه.",
 "في الليل يوجد اختلاف: تذكر الشريحة ٤٤ أن الطبيعي أقل من <bdi class=\"fr-plain\">120/70</bdi>، وتذكر الشريحة ٤٥ حد <bdi class=\"fr-plain\">120/75</bdi>. التوصيات الأوروبية المستقلة تعتمد عتبة <bdi class=\"fr-plain\">120/70</bdi>؛ وتراجع الأستاذة لمعرفة المطلوب في الامتحان.",
 "الضغط مرتفع في العيادة وطبيعي خارجها: المعطف الأبيض؛ طبيعي في العيادة ومرتفع خارجها: الضغط المقنع؛ مرتفع في الحالتين: ارتفاع مستمر أو غير مضبوط بالعلاج؛ طبيعي في الحالتين: ضغط طبيعي أو مضبوط بالعلاج."],
-'alt':'Tableau original des seuils d’hypertension selon le contexte de mesure ; le seuil nocturne diffère de la diapositive précédente.'}
+'alt':'Médecin et patient comparent les mesures ; illustration des profils blouse blanche et hypertension masquée.'}
 ]

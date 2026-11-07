@@ -1,0 +1,14 @@
+DELTA37 — ca-04 La pression artérielle — correction des illustrations — 2026-11-07
+
+Ce paquet complet remplace DELTA36 pour la leçon ca-04 et conserve tous ses contenus, QCM, traductions et MP3. Il contient la page, les 18 images référencées et les 12 MP3. Il ne fournit ni data.js, ni autres leçons, ni moteurs/styles communs : le site déjà assemblé avec DELTA35 reste nécessaire.
+
+CORRECTION
+Les diapositives sources 20 (texte), 44 (texte) et 45 (tableau) ne sont plus affichées sous forme d'images. Leurs informations et l'écart nocturne entre les diapositives 44 et 45 sont écrits dans la leçon et le résumé en FR/AR. La diapo 16 entière a été retirée au profit de l'illustration du geste. Les seuls extraits du support affichés sont les schémas détaillés des diapos 18 et 19 et l'illustration de posture de la diapo 29, recadrés à leur ratio natif et légendés ; cliquer sur l'image pour agrandir. Une image informative des profils a été créée et contrôlée.
+
+Les figures ne dépendent plus de l'animation d'apparition : cette modification évite qu'une figure reste masquée si cette animation tarde ou ne s'exécute pas. Sur le banc de test, toutes les images de la page décodent et s'affichent aux largeurs 390 et 1280 px, les 11 premières images des chapitres Ciné sont chargées, sans erreur ou 404 ; les figures restent affichables même sans JavaScript. Le signalement initial d'images vides n'a pas été reproduit sous forme de fichiers manquants dans ce banc : on ne présume pas sa cause exacte sur l'appareil de l'utilisateur.
+
+INSTALLATION
+Sauvegarder d'abord le site actuel. Extraire le ZIP et vérifier MD5SUMS.txt (Linux : md5sum -c MD5SUMS.txt), puis fusionner le dossier medstudy du paquet dans le dossier medstudy du site existant. Ne pas substituer le dossier medstudy entier. Les anciens fichiers d'images non référencés peuvent rester en place ; ils ne seront plus affichés. Ne pas réinstaller DELTA36 après DELTA37. Le data global reste inchangé ; la référence delta31 contient déjà ca-04 avec 9 QCM, 16 entraînements, recu true et URL correcte.
+
+CONTRÔLES ET LIMITES
+Audit Gold strict et verifier-images sans anomalie ; runtime adapté cardio 21/21 ; 25 QCM testés FR/AR ; 4 cases de fiche et fermeture du dictionnaire testées en mobile/bureau. Le runtime officiel inchangé n'a pas été validé et le test adapté ne doit pas être présenté comme celui-ci. Les MP3 n'ont pas été modifiés : décodables mais non écoutés, leur prononciation et leur fidélité sonore ne sont pas certifiées. Les clés du recueil sont imprimées, pas issues d'un corrigé officiel indépendant. Voir dans la leçon les divergences entre le support, l'AHA et les recommandations européennes.
