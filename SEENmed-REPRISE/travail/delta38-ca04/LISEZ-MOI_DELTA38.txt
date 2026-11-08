@@ -1,0 +1,14 @@
+DELTA38 — ca-04 La pression artérielle — reprise structure et résumé
+Date : 2026-10-28
+
+CONTENU
+Paquet complet de la leçon : page, 21 images distinctes et 12 MP3. Il reprend DELTA37 et ajoute des icônes aux 20 onglets, une vue d'ensemble avec l'essentiel et la feuille de route, un plan illustré et cliquable, des boxes à titres et listes, des notes QCM et deux grandes planches de résumé, suivies du contenu récapitulatif traduit. Les images des diapositives purement textuelles et du tableau restent retirées ; seuls les schémas utiles des diapositives 18, 19 et 29 sont utilisés. Les fichiers audio et les QCM de DELTA37 sont conservés. Data.js et les autres leçons ne sont pas modifiés ; site déjà assemblé avec DELTA35 requis.
+
+INSTALLATION
+Sauvegarder d'abord le site existant. Extraire le ZIP, puis depuis le dossier extrait vérifier « md5sum -c MD5SUMS.txt ». Fusionner le dossier medstudy du paquet dans le medstudy du site : ne pas remplacer le dossier medstudy entier. Ne pas installer DELTA36 ou DELTA37 après ce paquet, au risque de rétablir l'ancienne page. Les anciens fichiers devenus inutilisés peuvent rester présents. Le data global déjà convergent avec DELTA31 référence ca-04, ses 9 QCM et 16 exercices.
+
+CONTRÔLES
+• Audit strict adapté aux grandes planches : 0 blocage et 0 avertissement ; outil images adapté : 0 image absente, étirée ou hors format, 0 section de contenu sans image. Ces deux contrôleurs distincts sont conservés dans le dossier qualité. Leurs contrôles originaux imposent exactement 1376×768 : ils signalent encore un blocage de format pour les deux synthèses 1024×1536 et la carte 1536×1024. Ce n'est pas un résultat vert des outils originaux. Les versions adaptées autorisent uniquement une grande planche explicitement marquée, de dimension minimale contrôlée et de ratio raisonnable, tout en vérifiant l'égalité entre les dimensions déclarées et réelles. Tests négatifs : image manquante, dimension fausse, image trop petite et absence de déclaration restent rejetées.
+• Navigateur : test adapté cardio 21/21, QCM de recueil 9/9 et entraînement 16/16 en FR et en AR. Les 20 onglets ont des icônes et des cibles ; deux images de résumé présentes ; zoom défilable vérifié sur mobile et bureau. Images de page chargées et visibles à 390 et 1280 px ; onze premiers visuels des chapitres Ciné chargés. Ces vérifications concernent uniquement ca-04.
+• Le runtime officiel inchangé échoue à lancer Chromium dans cet environnement (TargetCloseError) et n'a pas été validé. Le test cardio adapté n'est pas le test officiel.
+• Les 12 MP3 sont inchangés, mais n'ont pas été écoutés : prononciation et fidélité sonore ne sont pas certifiées. Les réponses QCM sont imprimées dans le recueil, pas un corrigé officiel indépendant. L'image du résumé montre des valeurs de carnet fictives, explicitement signalées en légende ; les divergences cours / références sur la nuit et le brassard sont expliquées dans la leçon.

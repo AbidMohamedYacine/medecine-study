@@ -1,0 +1,9 @@
+# DELTA38 — ca-04 La pression artérielle
+
+Livraison Drive : `1IjvbKBkykqqfL_uX_x7xsKF1FkEYTpDz`, MD5 `9b58aec3b1e2e154cdc8d0dc6c71a797` ; format ZIP demandé, 35 empreintes vérifiées après extraction. Contient la page, 21 images distinctes, 12 MP3 et le LISEZ-MOI. Une fusion sur copie temporaire laisse 2103 fichiers hors périmètre inchangés. Les 12 MP3 sont identiques à DELTA37, mais non écoutés. Données globales et autres leçons non modifiées. DELTA37 conservé `_v1-REMPLACE`.
+
+Navigation : 20 icônes et cibles ; vue d'ensemble en deux colonnes ; carte mentale et plan ; boxes organisées ; 5 notes QCM ; 4 cellules de fiche ; deux grandes planches de résumé à zoom défilable ; 277 blocs FR/AR. Contenu source et divergences signalés dans la page ; aucun nouveau corrigé présenté comme officiel. Les figures de diapos 18, 19 et 29 demeurent, sans anciennes diapositives textuelles en images.
+
+Contrôles : audit strict adapté aux grandes planches 0 blocage/0 avertissement ; vérificateur images adapté 0 ; dix tests négatifs pour formats et fichiers rejetés ; runtime adapté cardio 21/21 ; QCM FR/AR 9/9 + 16/16 ; affichage des images à 390/1280, 11 premiers visuels Ciné ; structure/zoom et couleurs de quatre thèmes. Vérifications sur la leçon ca-04 uniquement. Les outils originaux signalent toujours 3 formats hors 1376×768 : les versions adaptées sont distinctes et documentées dans `CONTROLE-GRANDES-PLANCHES.md` ; il ne faut pas affirmer que les originaux sont verts. Runtime officiel inchangé : TargetCloseError, non validé.
+
+Versions adaptées et tests Drive : `1aB3HD9O0n_e0zovCpWdZc_YSStAM6d7c`, MD5 `43221f1d23063f8a1b7b329b32c805be`. Registre v22 `1CXrwNJU84_JSaRXNWZ1mwiLt2rwq_Xzl`. Message agents `12UwMPWq4f3_t18G8xarC1CIhGy11lawU`. Checkpoint v2 `1y03ZRvDIdyQwbJbO-0NB1wHEmOXS5usH` non livrable, conservé.
